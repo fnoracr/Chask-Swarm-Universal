@@ -1,0 +1,163 @@
+[18:30:32] [SwarmNet] Enrutador Terminus arrancando...
+[18:30:47] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002092EB9FF50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[18:30:47] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[18:30:47] [SwarmNet] Enrutador listo.
+[18:41:52] [SwarmNet] Enrutador Terminus arrancando...
+[18:42:07] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000016A586CFF50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[18:42:07] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[18:42:07] [SwarmNet] Enrutador listo.
+[07:49:47] [SwarmNet] Enrutador Terminus arrancando...
+[07:49:56] [SwarmNet] Enrutador Terminus arrancando...
+[07:50:02] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000232A3398290>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:50:02] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:50:02] [SwarmNet] Enrutador listo.
+[07:50:11] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002B4A52AA410>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:50:11] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:50:11] [SwarmNet] Enrutador listo.
+[21:05:49] [SwarmNet] Enrutador Terminus arrancando...
+[21:06:00] [SwarmNet] Enrutador Terminus arrancando...
+[21:06:04] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000248446AFE50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[21:06:04] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[21:06:04] [SwarmNet] Enrutador listo.
+[21:06:15] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002517B222210>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[21:06:15] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[21:06:15] [SwarmNet] Enrutador listo.
+[00:36:24] [SwarmNet] Enrutador Terminus arrancando...
+[00:36:39] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002C575E6FC90>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[00:36:39] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[00:36:39] [SwarmNet] Enrutador listo.
+[00:48:46] [SwarmNet] Enrutador Terminus arrancando...
+[00:49:01] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002476300FE50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[00:49:01] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[00:49:01] [SwarmNet] Enrutador listo.
+[02:24:02] [SwarmNet] Enrutador Terminus arrancando...
+[02:24:17] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001E388F6FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[02:24:17] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[02:24:17] [SwarmNet] Enrutador listo.
+[07:15:41] [SwarmNet] Enrutador Terminus arrancando...
+[07:15:50] [SwarmNet] Enrutador Terminus arrancando...
+[07:15:56] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001EA32149050>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:15:56] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:15:56] [SwarmNet] Enrutador listo.
+[07:16:05] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001FF699F8C50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:16:05] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:16:05] [SwarmNet] Enrutador listo.
+[08:49:43] [SwarmNet] Enrutador Terminus arrancando...
+[08:49:58] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000022B7FEABFD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:49:58] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:49:58] [SwarmNet] Enrutador listo.
+[09:07:40] [SwarmNet] Enrutador Terminus arrancando...
+[09:07:55] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000226A7AEFB50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[09:07:55] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[09:07:55] [SwarmNet] Enrutador listo.
+[09:35:42] [SwarmNet] Enrutador Terminus arrancando...
+[09:35:57] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000280884BFB50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[09:35:57] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[09:35:57] [SwarmNet] Enrutador listo.
+[09:40:21] [SwarmNet] Enrutador Terminus arrancando...
+[09:40:36] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000258E3F9FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[09:40:36] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[09:40:36] [SwarmNet] Enrutador listo.
+[09:48:34] [SwarmNet] Enrutador Terminus arrancando...
+[09:48:49] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000265063DFFD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[09:48:49] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[09:48:49] [SwarmNet] Enrutador listo.
+[22:56:58] [SwarmNet] Enrutador Terminus arrancando...
+[23:00:54] [SwarmNet] Enrutador Terminus arrancando...
+[23:01:09] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000020FC2ECFF90>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[23:01:09] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[23:01:09] [SwarmNet] Enrutador listo.
+[23:02:29] [SwarmNet] Enrutador Terminus arrancando...
+[23:02:44] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001C492E8FF90>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[23:02:44] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[23:02:44] [SwarmNet] Enrutador listo.
+[23:53:18] [SwarmNet] Enrutador Terminus arrancando...
+[00:06:04] [SwarmNet] Enrutador Terminus arrancando...
+[00:06:19] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026861778F90>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[00:06:19] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[00:06:19] [SwarmNet] Enrutador listo.
+[00:08:33] [SwarmNet] Enrutador Terminus arrancando...
+[00:08:48] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000018D84EEFB50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[00:08:48] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[00:08:48] [SwarmNet] Enrutador listo.
+[01:35:53] [SwarmNet] Enrutador Terminus arrancando...
+[08:31:24] [SwarmNet] Enrutador Terminus arrancando...
+[08:47:24] [SwarmNet] Enrutador Terminus arrancando...
+[08:47:39] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001BDA023FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:47:39] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:47:39] [SwarmNet] Enrutador listo.
+[08:49:05] [SwarmNet] Enrutador Terminus arrancando...
+[08:49:20] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013CCA27FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:49:20] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:49:20] [SwarmNet] Enrutador listo.
+[10:17:30] [SwarmNet] Enrutador Terminus arrancando...
+[10:25:12] [SwarmNet] Enrutador Terminus arrancando...
+[10:25:27] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000021BEC41FD50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[10:25:27] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[10:25:27] [SwarmNet] Enrutador listo.
+[10:38:40] [SwarmNet] Enrutador Terminus arrancando...
+[10:38:55] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000014B464FFE50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[10:38:55] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[10:38:55] [SwarmNet] Enrutador listo.
+[13:29:58] [SwarmNet] Enrutador Terminus arrancando...
+[13:30:13] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000110542FE990>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[13:30:13] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[13:30:13] [SwarmNet] Enrutador listo.
+[13:35:38] [SwarmNet] Enrutador Terminus arrancando...
+[13:35:53] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002473A8AE990>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[13:35:53] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[13:35:53] [SwarmNet] Enrutador listo.
+[18:05:48] [SwarmNet] Enrutador Terminus arrancando...
+[18:06:03] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000021236AAFBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[18:06:03] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[18:06:03] [SwarmNet] Enrutador listo.
+[18:25:22] [SwarmNet] Enrutador Terminus arrancando...
+[18:25:37] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000024D5941FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[18:25:37] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[18:25:37] [SwarmNet] Enrutador listo.
+[18:37:15] [SwarmNet] Enrutador Terminus arrancando...
+[18:37:21] [SwarmNet] Enrutador Terminus arrancando...
+[18:37:36] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001E04CF6FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[18:37:36] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[18:37:36] [SwarmNet] Enrutador listo.
+[18:54:05] [SwarmNet] Enrutador Terminus arrancando...
+[18:54:20] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000021DE8BDFD50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[18:54:20] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[18:54:20] [SwarmNet] Enrutador listo.
+[22:04:39] [SwarmNet] Enrutador Terminus arrancando...
+[22:04:54] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001E13A37FD50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[22:04:54] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[22:04:54] [SwarmNet] Enrutador listo.
+[07:31:35] [SwarmNet] Enrutador Terminus arrancando...
+[07:31:50] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001B4CB64FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:31:50] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:31:50] [SwarmNet] Enrutador listo.
+[07:32:22] [SwarmNet] Enrutador Terminus arrancando...
+[07:32:37] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001C83200FD50>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:32:37] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:32:37] [SwarmNet] Enrutador listo.
+[07:49:28] [SwarmNet] Enrutador Terminus arrancando...
+[07:49:43] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002B2ECC0FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[07:49:43] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[07:49:43] [SwarmNet] Enrutador listo.
+[08:00:56] [SwarmNet] Enrutador Terminus arrancando...
+[08:01:11] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000020A3A44FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:01:11] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:01:11] [SwarmNet] Enrutador listo.
+[08:09:36] [SwarmNet] Enrutador Terminus arrancando...
+[08:09:51] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001488C34FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:09:51] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:09:51] [SwarmNet] Enrutador listo.
+[08:20:24] [SwarmNet] Enrutador Terminus arrancando...
+[08:20:39] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001576ED2FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:20:39] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:20:39] [SwarmNet] Enrutador listo.
+[08:24:57] [SwarmNet] Enrutador Terminus arrancando...
+[08:25:23] [SwarmNet] Enrutador Terminus arrancando...
+[08:25:38] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000211E681FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:25:38] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:25:38] [SwarmNet] Enrutador listo.
+[08:31:36] [SwarmNet] Enrutador Terminus arrancando...
+[08:31:51] [SwarmNet] POST http://31.97.152.240:51400/hub/router/online fallo: HTTPConnectionPool(host='31.97.152.240', port=51400): Max retries exceeded with url: /hub/router/online (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002A51C84FBD0>, 'Connection to 31.97.152.240 timed out. (connect timeout=15)'))
+[08:31:51] [SwarmNet] Hub no disponible. Operando con enrutadores en cache.
+[08:31:51] [SwarmNet] Enrutador listo.

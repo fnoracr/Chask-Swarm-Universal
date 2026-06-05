@@ -1,0 +1,43 @@
+{
+    "tasks": [
+        {
+            "name": "Informe Diario",
+            "schedule": "0 8 * * *",
+            "command": "python \"C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Scripts_Mantenimiento\\daily_report.py\"",
+            "description": "Genera y envia por Telegram el resumen de actividad a las 8:00 AM",
+            "active": true
+        },
+        {
+            "name": "Limpieza de Temporales",
+            "schedule": "0 0 * * *",
+            "command": "python -c \"import os, glob; [os.remove(f) for f in glob.glob('_test_*') + glob.glob('_patch_*')]\"",
+            "description": "Limpia archivos basura cada medianoche",
+            "active": true
+        },
+        {
+            "name": "Backup del Sistema",
+            "schedule": "0 2 * * *",
+            "command": "python \"C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Scripts_Mantenimiento\\backup_system.py\"",
+            "description": "Copia de seguridad de configuraciones y memoria a las 2:00 AM",
+            "active": true
+        },
+        {
+            "name": "Auto-Aprendizaje de Skills",
+            "schedule": "0 */2 * * *",
+            "command": "python \"C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\skill_learner.py\" --learn",
+            "description": "Cada 2 horas busca patrones exitosos y genera skills reutilizables automaticamente",
+            "active": true
+        },
+        {
+            "name": "Health Check",
+            "schedule": "*/30 * * * *",
+            "command": "python \"C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Scripts_Mantenimiento\\diagnostics.py\"",
+            "description": "Chequeo de salud del sistema cada 30 minutos",
+            "active": true
+        }
+    ],
+    "settings": {
+        "timezone": "Local",
+        "log_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\cron_log.txt"
+    }
+}

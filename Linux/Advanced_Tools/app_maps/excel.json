@@ -1,0 +1,2451 @@
+{
+  "app_name": "Excel",
+  "scanned_at": "2026-05-16T21:55:00.839953",
+  "hwnd": 526830,
+  "elements": [
+    {
+      "name": "Horario 2025-2026.xlsm - Excel (Error de activación de productos)",
+      "type": "WindowControl",
+      "automation_id": "",
+      "class": "XLMAIN",
+      "depth": 0,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": []
+    },
+    {
+      "name": "Barra de estado",
+      "type": "ToolBarControl",
+      "automation_id": "",
+      "class": "MsoCommandBar",
+      "depth": 2,
+      "rect": {
+        "left": -32000,
+        "top": -30989,
+        "right": -30080,
+        "bottom": -30967
+      },
+      "patterns": []
+    },
+    {
+      "name": "Barra de estado",
+      "type": "PaneControl",
+      "automation_id": "",
+      "class": "MsoWorkPane",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -30989,
+        "right": -30080,
+        "bottom": -30967
+      },
+      "patterns": []
+    },
+    {
+      "name": "Barra de estado",
+      "type": "StatusBarControl",
+      "automation_id": "",
+      "class": "NetUInetpane",
+      "depth": 6,
+      "rect": {
+        "left": -32000,
+        "top": -30989,
+        "right": -30080,
+        "bottom": -30967
+      },
+      "patterns": []
+    },
+    {
+      "name": "Modo de celda Listo",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUISimpleButton",
+      "depth": 7,
+      "rect": {
+        "left": -32000,
+        "top": -30989,
+        "right": -31933,
+        "bottom": -30967
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Normal",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIStickyButton",
+      "depth": 7,
+      "rect": {
+        "left": -30375,
+        "top": -30989,
+        "right": -30337,
+        "bottom": -30967
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Diseño de página",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIStickyButton",
+      "depth": 7,
+      "rect": {
+        "left": -30337,
+        "top": -30989,
+        "right": -30299,
+        "bottom": -30967
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Vista previa de salto de página",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIStickyButton",
+      "depth": 7,
+      "rect": {
+        "left": -30299,
+        "top": -30989,
+        "right": -30261,
+        "bottom": -30967
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Alejar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 7,
+      "rect": {
+        "left": -30260,
+        "top": -30983,
+        "right": -30246,
+        "bottom": -30973
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Zoom",
+      "type": "SliderControl",
+      "automation_id": "",
+      "class": "NetUISlider",
+      "depth": 7,
+      "rect": {
+        "left": -30246,
+        "top": -30989,
+        "right": -30146,
+        "bottom": -30968
+      },
+      "patterns": [
+        "Value",
+        "Selection"
+      ]
+    },
+    {
+      "name": "Página a la izquierda",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 8,
+      "rect": {
+        "left": -30246,
+        "top": -30989,
+        "right": -30198,
+        "bottom": -30968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Página a la derecha",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 8,
+      "rect": {
+        "left": -30194,
+        "top": -30989,
+        "right": -30146,
+        "bottom": -30968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Acercar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 7,
+      "rect": {
+        "left": -30146,
+        "top": -30986,
+        "right": -30126,
+        "bottom": -30970
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Zoom 100 %",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUISimpleButton",
+      "depth": 7,
+      "rect": {
+        "left": -30126,
+        "top": -30989,
+        "right": -30080,
+        "bottom": -30967
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Ribbon",
+      "type": "ToolBarControl",
+      "automation_id": "",
+      "class": "MsoCommandBar",
+      "depth": 2,
+      "rect": {
+        "left": -32000,
+        "top": -32000,
+        "right": -30080,
+        "bottom": -31847
+      },
+      "patterns": []
+    },
+    {
+      "name": "Ribbon",
+      "type": "PaneControl",
+      "automation_id": "",
+      "class": "MsoWorkPane",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -32000,
+        "right": -30080,
+        "bottom": -31847
+      },
+      "patterns": []
+    },
+    {
+      "name": "Ribbon",
+      "type": "PaneControl",
+      "automation_id": "",
+      "class": "NetUInetpane",
+      "depth": 6,
+      "rect": {
+        "left": -32000,
+        "top": -32000,
+        "right": -30080,
+        "bottom": -31847
+      },
+      "patterns": []
+    },
+    {
+      "name": "Barra de herramientas de acceso rápido",
+      "type": "ToolBarControl",
+      "automation_id": "",
+      "class": "NetUIElement",
+      "depth": 7,
+      "rect": {
+        "left": -31985,
+        "top": -31999,
+        "right": -31858,
+        "bottom": -31964
+      },
+      "patterns": []
+    },
+    {
+      "name": "Guardar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRibbonButton",
+      "depth": 8,
+      "rect": {
+        "left": -31985,
+        "top": -31999,
+        "right": -31957,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Deshacer",
+      "type": "SplitButtonControl",
+      "automation_id": "",
+      "class": "NetUISplitButtonAnchor",
+      "depth": 8,
+      "rect": {
+        "left": -31956,
+        "top": -31999,
+        "right": -31922,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke"
+      ]
+    },
+    {
+      "name": "Rehacer",
+      "type": "SplitButtonControl",
+      "automation_id": "",
+      "class": "NetUISplitButtonAnchor",
+      "depth": 8,
+      "rect": {
+        "left": -31921,
+        "top": -31999,
+        "right": -31887,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke"
+      ]
+    },
+    {
+      "name": "Personalizar barra de herramientas",
+      "type": "MenuItemControl",
+      "automation_id": "",
+      "class": "NetUIAnchor",
+      "depth": 8,
+      "rect": {
+        "left": -31886,
+        "top": -31999,
+        "right": -31858,
+        "bottom": -31964
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Opciones de presentación de la cinta de opciones",
+      "type": "MenuItemControl",
+      "automation_id": "",
+      "class": "NetUIAnchor",
+      "depth": 7,
+      "rect": {
+        "left": -30264,
+        "top": -31999,
+        "right": -30218,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Minimizar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIAppFrameHelper",
+      "depth": 7,
+      "rect": {
+        "left": -30218,
+        "top": -31999,
+        "right": -30172,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Maximizar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIAppFrameHelper",
+      "depth": 7,
+      "rect": {
+        "left": -30172,
+        "top": -31999,
+        "right": -30126,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Cerrar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIAppFrameHelper",
+      "depth": 7,
+      "rect": {
+        "left": -30126,
+        "top": -31999,
+        "right": -30080,
+        "bottom": -31968
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Pestaña Archivo",
+      "type": "ButtonControl",
+      "automation_id": "FileTabButton",
+      "class": "NetUIRibbonTab",
+      "depth": 7,
+      "rect": {
+        "left": -32000,
+        "top": -31964,
+        "right": -31941,
+        "bottom": -31940
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Pestaña de la cinta de opciones",
+      "type": "TabControl",
+      "automation_id": "",
+      "class": "NetUIPanViewer",
+      "depth": 7,
+      "rect": {
+        "left": -31938,
+        "top": -31964,
+        "right": -30080,
+        "bottom": -31940
+      },
+      "patterns": [
+        "Selection"
+      ]
+    },
+    {
+      "name": "Inicio",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31938,
+        "top": -31964,
+        "right": -31881,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Insertar",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31880,
+        "top": -31964,
+        "right": -31813,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Diseño de página",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31812,
+        "top": -31964,
+        "right": -31693,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Fórmulas",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31692,
+        "top": -31964,
+        "right": -31615,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Datos",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31614,
+        "top": -31964,
+        "right": -31556,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Revisar",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31555,
+        "top": -31964,
+        "right": -31490,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Vista",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31489,
+        "top": -31964,
+        "right": -31436,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "Acrobat",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "NetUIRibbonTab",
+      "depth": 8,
+      "rect": {
+        "left": -31435,
+        "top": -31964,
+        "right": -31365,
+        "bottom": -31940
+      },
+      "patterns": []
+    },
+    {
+      "name": "¿Qué desea hacer?",
+      "type": "MenuItemControl",
+      "automation_id": "TellMeControlAnchor",
+      "class": "NetUISearchBoxAnchor",
+      "depth": 8,
+      "rect": {
+        "left": -31356,
+        "top": -31964,
+        "right": -31143,
+        "bottom": -31941
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "",
+      "type": "MenuItemControl",
+      "automation_id": "MeControlWidget",
+      "class": "NetUIAnchor",
+      "depth": 8,
+      "rect": {
+        "left": -30196,
+        "top": -31964,
+        "right": -30194,
+        "bottom": -31940
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Compartir",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUISimpleButton",
+      "depth": 8,
+      "rect": {
+        "left": -30184,
+        "top": -31964,
+        "right": -30080,
+        "bottom": -31940
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Cinta de opciones inferior",
+      "type": "PaneControl",
+      "automation_id": "",
+      "class": "NetUIPanViewer",
+      "depth": 7,
+      "rect": {
+        "left": -32000,
+        "top": -31940,
+        "right": -30109,
+        "bottom": -31847
+      },
+      "patterns": []
+    },
+    {
+      "name": "Inicio",
+      "type": "CustomControl",
+      "automation_id": "",
+      "class": "NetUIOrderedGroup",
+      "depth": 8,
+      "rect": {
+        "left": -32000,
+        "top": -31940,
+        "right": -30109,
+        "bottom": -31847
+      },
+      "patterns": []
+    },
+    {
+      "name": "Contraer la cinta de opciones",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIStickyButton",
+      "depth": 7,
+      "rect": {
+        "left": -30109,
+        "top": -31865,
+        "right": -30080,
+        "bottom": -31848
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "",
+      "type": "ComboBoxControl",
+      "automation_id": "13",
+      "class": "ComboBox",
+      "depth": 2,
+      "rect": {
+        "left": -31994,
+        "top": -31836,
+        "right": -31894,
+        "bottom": -31812
+      },
+      "patterns": [
+        "Value",
+        "Selection"
+      ]
+    },
+    {
+      "name": "",
+      "type": "EditControl",
+      "automation_id": "1001",
+      "class": "Edit",
+      "depth": 3,
+      "rect": {
+        "left": -31991,
+        "top": -31833,
+        "right": -31914,
+        "bottom": -31815
+      },
+      "patterns": [
+        "Value"
+      ]
+    },
+    {
+      "name": "Abrir",
+      "type": "ButtonControl",
+      "automation_id": "DropDown",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -31910,
+        "top": -31835,
+        "right": -31895,
+        "bottom": -31813
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Barra de fórmulas",
+      "type": "EditControl",
+      "automation_id": "",
+      "class": "EXCEL<",
+      "depth": 1,
+      "rect": {
+        "left": -31750,
+        "top": -31847,
+        "right": -30080,
+        "bottom": -31801
+      },
+      "patterns": [
+        "Value"
+      ]
+    },
+    {
+      "name": "Horario 2025-2026.xlsm",
+      "type": "TabControl",
+      "automation_id": "",
+      "class": "EXCEL7",
+      "depth": 2,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -30989
+      },
+      "patterns": [
+        "Selection"
+      ]
+    },
+    {
+      "name": "Vertical",
+      "type": "PaneControl",
+      "automation_id": "1",
+      "class": "NUIScrollbar",
+      "depth": 3,
+      "rect": {
+        "left": -30099,
+        "top": -31801,
+        "right": -30082,
+        "bottom": -31014
+      },
+      "patterns": []
+    },
+    {
+      "name": "Línea arriba",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": -30099,
+        "top": -31801,
+        "right": -30082,
+        "bottom": -31784
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Re Pág",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Posición",
+      "type": "ThumbControl",
+      "automation_id": "",
+      "class": "NetUIThumb",
+      "depth": 6,
+      "rect": {
+        "left": -30099,
+        "top": -31784,
+        "right": -30082,
+        "bottom": -31756
+      },
+      "patterns": []
+    },
+    {
+      "name": "Av Pág",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": -30099,
+        "top": -31756,
+        "right": -30082,
+        "bottom": -31031
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Línea abajo",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": -30099,
+        "top": -31031,
+        "right": -30082,
+        "bottom": -31014
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Horizontal",
+      "type": "PaneControl",
+      "automation_id": "3",
+      "class": "NUIScrollbar",
+      "depth": 3,
+      "rect": {
+        "left": -31112,
+        "top": -31011,
+        "right": -30099,
+        "bottom": -30995
+      },
+      "patterns": []
+    },
+    {
+      "name": "Columna a la izquierda",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": -31112,
+        "top": -31011,
+        "right": -31095,
+        "bottom": -30994
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Página a la izquierda",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Posición",
+      "type": "ThumbControl",
+      "automation_id": "",
+      "class": "NetUIThumb",
+      "depth": 6,
+      "rect": {
+        "left": -31095,
+        "top": -31011,
+        "right": -30174,
+        "bottom": -30994
+      },
+      "patterns": []
+    },
+    {
+      "name": "Página a la derecha",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": -30174,
+        "top": -31011,
+        "right": -30116,
+        "bottom": -30994
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Columna a la derecha",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "NetUIRepeatButton",
+      "depth": 6,
+      "rect": {
+        "left": -30116,
+        "top": -31011,
+        "right": -30099,
+        "bottom": -30994
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "",
+      "type": "PaneControl",
+      "automation_id": "7",
+      "class": "XLCTL",
+      "depth": 3,
+      "rect": {
+        "left": -31140,
+        "top": -31016,
+        "right": -31112,
+        "bottom": -30989
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja 1 Cuat",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Cuadrícula",
+      "type": "DataGridControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 4,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": [
+        "Selection"
+      ]
+    },
+    {
+      "name": "A1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31784,
+        "right": -31858,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31784,
+        "right": -31695,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31784,
+        "right": -31548,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31784,
+        "right": -31423,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31784,
+        "right": -31292,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31784,
+        "right": -31159,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31784,
+        "right": -31026,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H1",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31784,
+        "right": -30885,
+        "bottom": -31764
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31764,
+        "right": -31858,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31764,
+        "right": -31695,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31764,
+        "right": -31548,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31764,
+        "right": -31423,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31764,
+        "right": -31292,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31764,
+        "right": -31159,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31764,
+        "right": -31026,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H2",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31764,
+        "right": -30885,
+        "bottom": -31744
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31744,
+        "right": -31858,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31744,
+        "right": -31695,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31744,
+        "right": -31548,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31744,
+        "right": -31423,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31744,
+        "right": -31292,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31744,
+        "right": -31159,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31744,
+        "right": -31026,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H3",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31744,
+        "right": -30885,
+        "bottom": -31724
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31724,
+        "right": -31858,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31724,
+        "right": -31695,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31724,
+        "right": -31548,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31724,
+        "right": -31423,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31724,
+        "right": -31292,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31724,
+        "right": -31159,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31724,
+        "right": -31026,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H4",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31724,
+        "right": -30885,
+        "bottom": -31704
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31704,
+        "right": -31858,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31704,
+        "right": -31695,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31704,
+        "right": -31548,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31704,
+        "right": -31423,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31704,
+        "right": -31292,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31704,
+        "right": -31159,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31704,
+        "right": -31026,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H5",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31704,
+        "right": -30885,
+        "bottom": -31684
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31684,
+        "right": -31858,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31684,
+        "right": -31695,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31684,
+        "right": -31548,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31684,
+        "right": -31423,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31684,
+        "right": -31292,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31684,
+        "right": -31159,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31684,
+        "right": -31026,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H6",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31684,
+        "right": -30885,
+        "bottom": -31664
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31664,
+        "right": -31858,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31664,
+        "right": -31695,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31664,
+        "right": -31548,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31664,
+        "right": -31423,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31664,
+        "right": -31292,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31664,
+        "right": -31159,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31664,
+        "right": -31026,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H7",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31664,
+        "right": -30885,
+        "bottom": -31644
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31644,
+        "right": -31858,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31644,
+        "right": -31695,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31644,
+        "right": -31548,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31644,
+        "right": -31423,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "E8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31423,
+        "top": -31644,
+        "right": -31292,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "F8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31292,
+        "top": -31644,
+        "right": -31159,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "G8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31159,
+        "top": -31644,
+        "right": -31026,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "H8",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31026,
+        "top": -31644,
+        "right": -30885,
+        "bottom": -31624
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C12",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31564,
+        "right": -31548,
+        "bottom": -31544
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B13",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31544,
+        "right": -31695,
+        "bottom": -31524
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B14",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31524,
+        "right": -31695,
+        "bottom": -31504
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A22",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31364,
+        "right": -31858,
+        "bottom": -31344
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C22",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31364,
+        "right": -31548,
+        "bottom": -31344
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A23",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31344,
+        "right": -31858,
+        "bottom": -31324
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B23",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31344,
+        "right": -31695,
+        "bottom": -31324
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "C23",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31695,
+        "top": -31344,
+        "right": -31548,
+        "bottom": -31324
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "D23",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31548,
+        "top": -31344,
+        "right": -31423,
+        "bottom": -31324
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "A24",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31974,
+        "top": -31324,
+        "right": -31858,
+        "bottom": -31304
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "B24",
+      "type": "DataItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 5,
+      "rect": {
+        "left": -31858,
+        "top": -31324,
+        "right": -31695,
+        "bottom": -31304
+      },
+      "patterns": [
+        "Value",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Hoja 2 Cuat",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Verano",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Gestión",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Pagos",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Presupuesto",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Reservas Curso",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Hucha",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Hoja Hoja1",
+      "type": "TabItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -32000,
+        "top": -31801,
+        "right": -30080,
+        "bottom": -31017
+      },
+      "patterns": []
+    },
+    {
+      "name": "Sistema",
+      "type": "MenuBarControl",
+      "automation_id": "MenuBar",
+      "class": "",
+      "depth": 2,
+      "rect": {
+        "left": -31992,
+        "top": -31992,
+        "right": -31970,
+        "bottom": -31970
+      },
+      "patterns": []
+    },
+    {
+      "name": "Sistema",
+      "type": "MenuItemControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 3,
+      "rect": {
+        "left": -31992,
+        "top": -31992,
+        "right": -31970,
+        "bottom": -31970
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Restaurar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 2,
+      "rect": {
+        "left": -31910,
+        "top": -31998,
+        "right": -31886,
+        "bottom": -31974
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Maximizar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 2,
+      "rect": {
+        "left": -31888,
+        "top": -31998,
+        "right": -31864,
+        "bottom": -31974
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Cerrar",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 2,
+      "rect": {
+        "left": -31866,
+        "top": -31998,
+        "right": -31842,
+        "bottom": -31974
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    }
+  ]
+}

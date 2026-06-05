@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charm Panel — Chask Swarm</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0f;--surface:#12121a;--card:#1a1a2e;--border:#2a2a3e;--primary:#ff6600;--primary-glow:rgba(255,102,0,.15);--accent:#8b5cf6;--text:#e2e2ea;--text-dim:#8888a0;--green:#22c55e;--red:#ef4444;--radius:12px;--font:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);height:100vh;display:flex;overflow:hidden}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+
+/* ── Sidebar ── */
+.sidebar{width:220px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0}
+.sidebar-logo{padding:20px;border-bottom:1px solid var(--border);text-align:center}
+.sidebar-logo h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,var(--primary),#ff8833);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sidebar-logo span{font-size:11px;color:var(--text-dim);display:block;margin-top:2px}
+.nav{flex:1;padding:12px 8px;display:flex;flex-direction:column;gap:2px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:var(--text-dim);transition:all .2s;border:1px solid transparent}
+.nav-item:hover{background:var(--card);color:var(--text)}
+.nav-item.active{background:var(--primary-glow);color:var(--primary);border-color:rgba(255,102,0,.3)}
+.nav-item .icon{font-size:18px;width:24px;text-align:center}
+.sidebar-footer{padding:12px;border-top:1px solid var(--border);font-size:11px;color:var(--text-dim);text-align:center}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;animation:pulse 2s infinite}
+.status-dot.on{background:var(--green)}.status-dot.off{background:var(--red)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ── Main ── */
+.main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.panel{display:none;flex:1;flex-direction:column;overflow:hidden}
+.panel.active{display:flex}
+.panel-header{padding:20px 28px 16px;border-bottom:1px solid var(--border)}
+.panel-header h2{font-size:20px;font-weight:600}.panel-header p{font-size:13px;color:var(--text-dim);margin-top:4px}
+.panel-body{flex:1;overflow-y:auto;padding:20px 28px}
+
+/* ── Chat ── */
+.chat-messages{flex:1;overflow-y:auto;padding:20px 28px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:72%;padding:12px 16px;border-radius:var(--radius);line-height:1.6;font-size:14px;animation:fadeIn .3s}
+.msg.user{background:var(--primary);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
+.msg.ai{background:var(--card);border:1px solid var(--border);align-self:flex-start;border-bottom-left-radius:3px}
+.msg.system{background:var(--card);color:var(--accent);font-size:12px;align-self:center;font-style:italic}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.chat-input{padding:16px 20px;border-top:1px solid var(--border);display:flex;gap:10px;background:var(--surface)}
+.chat-input textarea{flex:1;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font:14px var(--font);resize:none;height:44px;outline:none;transition:border .2s}
+.chat-input textarea:focus{border-color:var(--primary)}
+
+/* ── Buttons ── */
+.btn{padding:8px 18px;border:none;border-radius:8px;font:600 13px var(--font);cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:#e65c00;transform:translateY(-1px)}
+.btn-danger{background:var(--red);color:#fff}.btn-danger:hover{background:#dc2626}
+.btn-ghost{background:transparent;color:var(--text-dim);border:1px solid var(--border)}.btn-ghost:hover{border-color:var(--text-dim)}
+.btn-sm{padding:5px 12px;font-size:12px}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* ── Cards & Forms ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:14px;transition:border .2s}
+.card:hover{border-color:rgba(255,102,0,.3)}
+.card-title{font-size:14px;font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--text);font:14px var(--font);outline:none;transition:border .2s}
+.input:focus{border-color:var(--primary)}
+.input-group{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.input-group label{font-size:12px;color:var(--text-dim);min-width:90px}
+.input-group .input{flex:1}
+.tag{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.tag-green{background:rgba(34,197,94,.15);color:var(--green)}
+.tag-red{background:rgba(239,68,68,.15);color:var(--red)}
+.tag-orange{background:var(--primary-glow);color:var(--primary)}
+.toggle{position:relative;width:40px;height:22px;cursor:pointer}
+.toggle input{opacity:0;width:0;height:0}
+.toggle .slider{position:absolute;inset:0;background:#333;border-radius:11px;transition:.3s}
+.toggle .slider:before{content:'';position:absolute;width:16px;height:16px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
+.toggle input:checked+.slider{background:var(--primary)}
+.toggle input:checked+.slider:before{transform:translateX(18px)}
+
+/* ── Editor ── */
+.editor-wrapper{display:flex;gap:14px;height:100%}
+.file-list{width:200px;flex-shrink:0;display:flex;flex-direction:column;gap:4px}
+.file-item{padding:10px 12px;border-radius:8px;cursor:pointer;font-size:13px;color:var(--text-dim);transition:all .2s;display:flex;align-items:center;gap:8px}
+.file-item:hover{background:var(--card)}.file-item.active{background:var(--primary-glow);color:var(--primary)}
+.editor-area{flex:1;display:flex;flex-direction:column}
+.editor-toolbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px}
+.editor-textarea{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;color:var(--text);font:13px/1.7 'Consolas','Courier New',monospace;resize:none;outline:none;tab-size:2}
+.editor-textarea:focus{border-color:var(--primary)}
+
+/* ── Ollama Grid ── */
+.models-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.model-card{position:relative}.model-card .model-name{font-weight:600;font-size:14px}.model-card .model-meta{font-size:12px;color:var(--text-dim);margin-top:6px}
+.pull-section{display:flex;gap:10px;margin-bottom:20px}
+.pull-section .input{flex:1}
+.progress-bar{width:100%;height:6px;background:#222;border-radius:3px;margin-top:8px;overflow:hidden}
+.progress-bar .fill{height:100%;background:linear-gradient(90deg,var(--primary),#ff8833);border-radius:3px;transition:width .3s;width:0}
+
+/* ── System Grid ── */
+.sys-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.stat-val{font-size:28px;font-weight:700;background:linear-gradient(135deg,var(--primary),#ff8833);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.daemon-list{display:flex;flex-direction:column;gap:6px}
+.daemon-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13px}
+
+/* ── Provider ── */
+.provider-card .provider-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.type-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.type-cloud{background:rgba(99,102,241,.15);color:#818cf8}
+.type-local{background:rgba(34,197,94,.15);color:var(--green)}
+.type-hybrid{background:rgba(251,191,36,.15);color:#fbbf24}
+.add-form{background:var(--card);border:1px solid var(--primary);border-radius:var(--radius);padding:18px;margin-top:14px}
+.add-form h3{font-size:14px;margin-bottom:12px;color:var(--primary)}
+
+/* ── Warning banner ── */
+.warning-banner{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:#f87171;display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+.warning-banner .wb-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.audit-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;z-index:1000;animation:fadeIn .2s}
+.audit-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;max-width:520px;width:90%}
+.audit-box h3{margin-bottom:14px;font-size:16px}
+.audit-warning{padding:8px 12px;border-radius:6px;margin-bottom:8px;font-size:13px;line-height:1.5}
+.audit-warning.critical{background:rgba(239,68,68,.15);color:#f87171;border-left:3px solid var(--red)}
+.audit-warning.warning{background:rgba(251,191,36,.1);color:#fbbf24;border-left:3px solid #f59e0b}
+.audit-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-logo">
+    <h1>⚡ Charm</h1>
+    <span>Chask Swarm Panel</span>
+  </div>
+  <div class="nav">
+    <div class="nav-item active" onclick="switchTab('chat')"><span class="icon">💬</span>Chat</div>
+    <div class="nav-item" onclick="switchTab('ollama')"><span class="icon">🧠</span>Ollama Local</div>
+    <div class="nav-item" onclick="switchTab('providers')"><span class="icon">☁️</span>Proveedores</div>
+    <div class="nav-item" onclick="switchTab('editor')"><span class="icon">📝</span>Archivos</div>
+    <div class="nav-item" onclick="switchTab('system')"><span class="icon">📊</span>Sistema</div>
+  </div>
+  <div class="sidebar-footer">
+    <span class="status-dot on" id="statusDot"></span><span id="statusText">Online</span>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+  <!-- CHAT -->
+  <div class="panel active" id="panel-chat">
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg ai">{{GREETING}}, ¿en qué puedo ayudarte?</div>
+    </div>
+    <div class="chat-input">
+      <textarea id="chatInput" placeholder="Escribe un mensaje..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}"></textarea>
+      <button class="btn btn-primary" onclick="sendChat()">Enviar</button>
+    </div>
+  </div>
+
+  <!-- OLLAMA -->
+  <div class="panel" id="panel-ollama">
+    <div class="panel-header"><h2>🧠 Ollama — Modelos Locales</h2><p>Gestiona los modelos de IA instalados en tu equipo</p></div>
+    <div class="panel-body">
+      <div class="pull-section">
+        <input class="input" id="pullModelName" placeholder="Nombre del modelo (ej: llama3, mistral, nomic-embed-text)">
+        <button class="btn btn-primary" id="btnPull" onclick="pullModel()">⬇️ Pull</button>
+      </div>
+      <div id="pullProgress" style="display:none" class="card"><div class="card-title" id="pullStatus">Descargando...</div><div class="progress-bar"><div class="fill" id="pullFill"></div></div></div>
+      <div class="models-grid" id="modelsGrid">Cargando modelos...</div>
+    </div>
+  </div>
+
+  <!-- PROVIDERS -->
+  <div class="panel" id="panel-providers">
+    <div class="panel-header" style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div><h2>🤖 Modelos LLM</h2><p>Gestiona los proveedores de IA cloud del sistema</p></div>
+      <button class="btn btn-primary" onclick="showAddProvider()" style="margin-top:4px">+ Añadir proveedor</button>
+    </div>
+    <div class="panel-body">
+      <div id="addProviderForm" style="display:none"></div>
+      <div id="providersList">Cargando...</div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-editor">
+    <div class="panel-header"><h2>📝 Editor de Archivos</h2><p>Edita la configuración de tu agente de forma segura <span id="pendingBadge" style="display:none;background:rgba(251,191,36,.15);color:#fbbf24;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;margin-left:8px"></span></p></div>
+    <div class="panel-body" style="padding-bottom:0">
+      <div class="warning-banner"><span class="wb-icon">⚠️</span><div><strong>Precaución:</strong> Estos archivos controlan el comportamiento del sistema. Una modificación incorrecta puede producir un <strong>fallo catastrófico</strong>. Todos los cambios son auditados antes de guardarse.</div></div>
+      <div class="editor-wrapper">
+        <div class="file-list" id="fileList">Cargando...</div>
+        <div class="editor-area">
+          <div class="editor-toolbar">
+            <span id="editorLabel" style="font-size:13px;color:var(--text-dim)">Selecciona un archivo</span>
+            <div><button class="btn btn-ghost btn-sm" id="btnRevert" onclick="revertFile()" style="display:none">↩️ Revertir</button> <button class="btn btn-primary btn-sm" id="btnSave" onclick="saveFile()" style="display:none">💾 Guardar</button></div>
+          </div>
+          <textarea class="editor-textarea" id="editorTextarea" placeholder="Selecciona un archivo del panel izquierdo..." disabled></textarea>
+        </div>
+      </div>
+    </div>
+    <div id="auditModal" style="display:none"></div>
+  </div>
+
+  <!-- SYSTEM -->
+  <div class="panel" id="panel-system">
+    <div class="panel-header"><h2>📊 Monitor del Sistema</h2><p>Estado en tiempo real de la infraestructura</p></div>
+    <div class="panel-body">
+      <div class="sys-grid" id="sysGrid">Cargando...</div>
+      <h3 style="margin:20px 0 12px;font-size:15px">Colecciones Qdrant</h3>
+      <div class="sys-grid" id="qdrantGrid">—</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Al cargar, ocultar Charm detrás del navegador
+fetch('/api/hide_charm', {method:'POST'}).catch(()=>{});
+
+// ── Tab switching ──
+function switchTab(tab) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => { if(n.textContent.trim().toLowerCase().includes(tab.substring(0,4))) n.classList.add('active'); });
+  if(tab === 'ollama') loadModels();
+  if(tab === 'providers') loadProviders();
+  if(tab === 'editor') { loadFileList(); loadPendingBadge(); }
+  if(tab === 'system') loadSystem();
+}
+
+// ── Chat ──
+async function sendChat() {
+  const inp = document.getElementById('chatInput');
+  const text = inp.value.trim();
+  if(!text) return;
+  inp.value = '';
+  addMsg(text, 'user');
+  addMsg('Procesando...', 'system');
+  try {
+    const r = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({message:text})});
+    const data = await r.json();
+    const chat = document.getElementById('chatMessages');
+    if(chat.lastChild && chat.lastChild.classList.contains('system')) chat.lastChild.remove();
+    if(data.escalated) addMsg('Escalado a Chask Swarm IDE — procesando...', 'system');
+    else if(data.response) addMsg(data.response, 'ai');
+  } catch(e) { addMsg('Error de conexión', 'system'); }
+}
+function addMsg(txt, type) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + type;
+  div.textContent = txt;
+  const chat = document.getElementById('chatMessages');
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+const evtSource = new EventSource('/api/stream');
+evtSource.onmessage = e => {
+  const data = JSON.parse(e.data);
+  if(data.response) {
+    const chat = document.getElementById('chatMessages');
+    if(chat.lastChild && chat.lastChild.classList.contains('system')) chat.lastChild.remove();
+    addMsg(data.response, 'ai');
+  }
+};
+
+// ── Ollama ──
+async function loadModels() {
+  try {
+    const r = await fetch('/api/ollama/models');
+    const data = await r.json();
+    const grid = document.getElementById('modelsGrid');
+    if(data.status !== 'online') { grid.innerHTML = '<div class="card"><div class="card-title">⚠️ Ollama offline</div></div>'; return; }
+    if(!data.models.length) { grid.innerHTML = '<div class="card"><div class="card-title">Sin modelos instalados</div></div>'; return; }
+    grid.innerHTML = data.models.map(m => {
+      const essential = m.essential;
+      const badge = essential ? `<span class="tag tag-green" style="margin-left:8px">🔒 Esencial</span>` : '';
+      const role = m.role ? `<div style="font-size:11px;color:var(--green);margin-top:4px">⚙️ ${m.role}</div>` : '';
+      const deleteBtn = essential ? '' : `<button class="btn btn-danger btn-sm" style="margin-top:10px" onclick="deleteModel('${m.name}')">🗑️ Eliminar</button>`;
+      return `
+      <div class="card model-card">
+        <div style="display:flex;align-items:center"><div class="model-name">${m.name}</div>${badge}</div>
+        <div class="model-meta">${m.params || '?'} · ${m.size_gb} GB · ${m.quant || ''}</div>
+        <div class="model-meta">${m.family || ''}</div>
+        ${role}
+        ${deleteBtn}
+      </div>`;
+    }).join('');
+  } catch(e) { document.getElementById('modelsGrid').innerHTML = '<div class="card">Error al cargar</div>'; }
+}
+async function pullModel() {
+  const name = document.getElementById('pullModelName').value.trim();
+  if(!name) return;
+  document.getElementById('pullProgress').style.display = 'block';
+  document.getElementById('btnPull').disabled = true;
+  const es = new EventSource('/api/ollama/pull?model=' + encodeURIComponent(name));
+  // Use POST via fetch with stream
+  const r = await fetch('/api/ollama/pull', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({model:name})});
+  const reader = r.body.getReader();
+  const decoder = new TextDecoder();
+  while(true) {
+    const {done, value} = await reader.read();
+    if(done) break;
+    const text = decoder.decode(value);
+    for(const line of text.split('\n')) {
+      if(line.startsWith('data: ')) {
+        const d = JSON.parse(line.slice(6));
+        document.getElementById('pullStatus').textContent = d.status || 'Descargando...';
+        document.getElementById('pullFill').style.width = (d.progress || 0) + '%';
+        if(d.status === 'done' || d.status === 'error') {
+          setTimeout(() => { document.getElementById('pullProgress').style.display = 'none'; document.getElementById('btnPull').disabled = false; loadModels(); }, 1500);
+        }
+      }
+    }
+  }
+}
+async function deleteModel(name) {
+  if(!confirm('¿Eliminar modelo ' + name + '?')) return;
+  await fetch('/api/ollama/delete', {method:'DELETE', headers:{'Content-Type':'application/json'}, body:JSON.stringify({model:name})});
+  loadModels();
+}
+
+// ── Providers ──
+let providersData = [];
+async function loadProviders() {
+  const r = await fetch('/api/providers');
+  providersData = await r.json();
+  renderProviders();
+}
+function renderProviders() {
+  const el = document.getElementById('providersList');
+  el.innerHTML = providersData.map((p, i) => {
+    const typeIcon = p.type==='local'?'💻':p.type==='hybrid'?'🔄':'☁️';
+    const typeLabel = p.type==='local'?'Local':p.type==='hybrid'?'Híbrido':'Cloud';
+    const typeClass = 'type-'+p.type;
+    const deleteBtn = p.deletable ? `<button class="btn btn-danger btn-sm" onclick="removeProvider(${i})">🗑️</button>` : '';
+    const modelInfo = p.model ? `<div class="input-group"><label>Modelo</label><input class="input" value="${p.model||''}" onchange="updateProviderField(${i},'model',this.value)"></div>` : '';
+    const priorityInfo = p.priority !== undefined ? `<div class="input-group"><label>Prioridad</label><input class="input" type="number" value="${p.priority||0}" style="width:80px" onchange="updateProviderField(${i},'priority',parseInt(this.value))"></div>` : '';
+    const keyField = p.type==='local' ? '' : `<div class="input-group"><label>API Key</label><input class="input" type="password" value="${p.key||''}" onchange="updateProviderKey(${i},this.value)" placeholder="sk-..."></div>`;
+    return `
+      <div class="card provider-card">
+        <div class="provider-header">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="card-title" style="margin:0">${p.label||p.name}</div>
+            <span class="type-badge ${typeClass}">${typeIcon} ${typeLabel}</span>
+          </div>
+          <label class="toggle"><input type="checkbox" ${p.enabled?'checked':''} onchange="toggleProvider(${i},this.checked)"><span class="slider"></span></label>
+        </div>
+        ${keyField}
+        <div class="input-group"><label>Base URL</label><input class="input" value="${p.base_url||''}" onchange="updateProviderUrl(${i},this.value)"></div>
+        ${modelInfo}
+        <div style="display:flex;gap:8px;margin-top:6px;align-items:center">
+          ${p.type!=='local'?`<button class="btn btn-ghost btn-sm" onclick="testProvider(${i})">🔌 Test</button>`:''}
+          ${deleteBtn}
+          <span class="tag" id="provTest${i}"></span>
+          ${p.daily_limit?`<span style="font-size:11px;color:var(--text-dim);margin-left:auto">Límite: ${p.daily_limit.toLocaleString()}/día</span>`:''}
+        </div>
+      </div>`;
+  }).join('');
+}
+function toggleProvider(i, v) { providersData[i].enabled = v; saveProviders(); }
+function updateProviderKey(i, v) { providersData[i].key = v; saveProviders(); }
+function updateProviderUrl(i, v) { providersData[i].base_url = v; saveProviders(); }
+function updateProviderField(i, field, v) { providersData[i][field] = v; saveProviders(); }
+function removeProvider(i) {
+  if(!providersData[i].deletable) return;
+  if(!confirm('¿Eliminar proveedor ' + providersData[i].name + '? Se desconectará de la colmena.')) return;
+  providersData.splice(i, 1);
+  saveProviders();
+  renderProviders();
+}
+function showAddProvider() {
+  const el = document.getElementById('addProviderForm');
+  el.style.display = el.style.display==='none' ? 'block' : 'none';
+  el.innerHTML = `<div class="add-form">
+    <h3>➕ Añadir nuevo proveedor a la colmena</h3>
+    <div class="input-group"><label>Nombre ID</label><input class="input" id="newPName" placeholder="ej: mistral, fireworks"></div>
+    <div class="input-group"><label>Descripción</label><input class="input" id="newPLabel" placeholder="ej: Mistral AI (Gratis, rápido)"></div>
+    <div class="input-group"><label>API Key</label><input class="input" id="newPKey" placeholder="sk-..."></div>
+    <div class="input-group"><label>Base URL</label><input class="input" id="newPUrl" value="https://api.example.com/v1"></div>
+    <div class="input-group"><label>Modelo</label><input class="input" id="newPModel" placeholder="ej: mistral-large-latest"></div>
+    <div class="input-group"><label>Compatible</label><select class="input" id="newPCompat" style="width:auto">
+      <option value="openai">OpenAI Compatible</option>
+      <option value="cohere">Cohere</option>
+      <option value="google">Google Gemini</option>
+      <option value="ollama">Ollama</option>
+    </select></div>
+    <div class="input-group"><label>Prioridad</label><input class="input" id="newPPriority" type="number" value="50" style="width:80px"> <span style="font-size:11px;color:var(--text-dim)">(1-100, mayor = más usado)</span></div>
+    <div style="margin-top:12px;display:flex;gap:8px">
+      <button class="btn btn-primary" onclick="doAddProvider()">✅ Añadir e integrar</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('addProviderForm').style.display='none'">Cancelar</button>
+    </div>
+  </div>`;
+}
+async function doAddProvider() {
+  const name = document.getElementById('newPName').value.trim();
+  const label = document.getElementById('newPLabel').value.trim();
+  const key = document.getElementById('newPKey').value.trim();
+  const url = document.getElementById('newPUrl').value.trim();
+  const model = document.getElementById('newPModel').value.trim();
+  const compat = document.getElementById('newPCompat').value;
+  const priority = parseInt(document.getElementById('newPPriority').value) || 50;
+  if(!name || !url || !model) { alert('Nombre, URL base y modelo son obligatorios'); return; }
+  providersData.push({
+    name, label: label||name, key, api_key: key, base_url: url, model,
+    compatible: compat, daily_limit: 1000, used_today: 0, priority,
+    best_for: ['general'], active: true, enabled: true, type: 'cloud', deletable: true
+  });
+  await saveProviders();
+  document.getElementById('addProviderForm').style.display = 'none';
+  loadProviders();
+}
+async function saveProviders() {
+  await fetch('/api/providers', {method:'PUT', headers:{'Content-Type':'application/json'}, body:JSON.stringify(providersData)});
+}
+async function testProvider(i) {
+  const tag = document.getElementById('provTest'+i);
+  tag.className = 'tag tag-orange'; tag.textContent = 'Probando...';
+  const r = await fetch('/api/providers/test', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(providersData[i])});
+  const d = await r.json();
+  if(d.ok) { tag.className = 'tag tag-green'; tag.textContent = '✓ OK ('+d.models_count+' modelos)'; }
+  else { tag.className = 'tag tag-red'; tag.textContent = '✗ '+d.error; }
+}
+
+// ── File Editor ──
+let currentFileId = null, originalContent = '';
+async function loadFileList() {
+  const r = await fetch('/api/files');
+  const files = await r.json();
+  document.getElementById('fileList').innerHTML = files.map(f => `
+    <div class="file-item ${f.id===currentFileId?'active':''}" onclick="openFile('${f.id}')">
+      <span>${f.icon}</span>
+      <div><div style="font-size:13px">${f.label}</div><div style="font-size:11px;color:var(--text-dim)">${f.readonly?'🔒 Solo lectura':Math.round(f.size/1024)+'KB'}</div></div>
+    </div>`).join('');
+}
+async function openFile(id) {
+  currentFileId = id;
+  const r = await fetch('/api/files/' + id);
+  const data = await r.json();
+  const ta = document.getElementById('editorTextarea');
+  ta.value = data.content;
+  ta.disabled = data.readonly;
+  originalContent = data.content;
+  document.getElementById('editorLabel').textContent = id + (data.readonly?' (solo lectura)':'');
+  document.getElementById('btnSave').style.display = data.readonly ? 'none' : '';
+  document.getElementById('btnRevert').style.display = data.readonly ? 'none' : '';
+  loadFileList();
+}
+async function saveFile() {
+  if(!currentFileId) return;
+  const content = document.getElementById('editorTextarea').value;
+  const r = await fetch('/api/files/' + currentFileId, {method:'PUT', headers:{'Content-Type':'application/json'}, body:JSON.stringify({content})});
+  const d = await r.json();
+  if(d.ok && d.quarantined) {
+    document.getElementById('editorLabel').innerHTML = currentFileId + ' — <span style="color:#fbbf24">⏳ En cuarentena (pendiente de auditoría por Charm)</span>';
+    loadPendingBadge();
+  } else if(d.ok) {
+    document.getElementById('editorLabel').textContent = currentFileId + ' — Sin cambios';
+  }
+}
+function revertFile() { document.getElementById('editorTextarea').value = originalContent; }
+async function loadPendingBadge() {
+  try {
+    const r = await fetch('/api/files/pending');
+    const pending = await r.json();
+    const count = pending.filter(p => p.status === 'pending').length;
+    const badge = document.getElementById('pendingBadge');
+    if(badge) {
+      badge.textContent = count > 0 ? `⏳ ${count} cambio${count>1?'s':''} en cuarentena` : '';
+      badge.style.display = count > 0 ? 'inline-block' : 'none';
+    }
+  } catch(e) {}
+}
+
+// ── System ──
+async function loadSystem() {
+  try {
+    const [sys, gpu] = await Promise.all([fetch('/api/system').then(r=>r.json()), fetch('/api/system/gpu').then(r=>r.json())]);
+    const g = document.getElementById('sysGrid');
+    g.innerHTML = `
+      <div class="card"><div class="card-title">🖥️ GPU</div><div class="stat-val">${gpu.utilization}%</div><div style="font-size:12px;color:var(--text-dim);margin-top:4px">${gpu.name}<br>${gpu.mem_used_mb}/${gpu.mem_total_mb} MB</div></div>
+      <div class="card"><div class="card-title">🧠 Ollama</div><div class="stat-val">${sys.ollama==='online'?'Online':'Offline'}</div><div style="font-size:12px;color:var(--text-dim);margin-top:4px">${sys.ollama_models||0} modelos</div></div>
+      <div class="card"><div class="card-title">🗄️ Qdrant</div><span class="tag ${sys.qdrant_status==='online'?'tag-green':'tag-red'}">${sys.qdrant_status}</span><div style="font-size:12px;color:var(--text-dim);margin-top:4px">${(sys.qdrant||[]).length} colecciones</div></div>
+      <div class="card"><div class="card-title">⚙️ Daemons</div><div class="daemon-list">${(sys.daemons||[]).map(d=>`<div class="daemon-row"><span>${d.name}</span><span class="tag ${d.running?'tag-green':'tag-red'}">${d.running?'Activo':'Detenido'}</span></div>`).join('')}</div></div>`;
+    const q = document.getElementById('qdrantGrid');
+    q.innerHTML = (sys.qdrant||[]).map(c => `<div class="card"><div class="card-title">📦 ${c.name}</div><div class="stat-val">${c.points.toLocaleString()}</div><div style="font-size:12px;color:var(--text-dim)">puntos</div></div>`).join('') || '<div class="card">Sin datos</div>';
+  } catch(e) { document.getElementById('sysGrid').innerHTML = '<div class="card">Error al cargar</div>'; }
+}
+
+// ── Boot ──
+document.getElementById('chatInput').focus();
+setInterval(() => {
+  fetch('/api/system').then(r=>r.json()).then(d=>{
+    document.getElementById('statusDot').className = 'status-dot on';
+    document.getElementById('statusText').textContent = 'Online';
+  }).catch(()=>{
+    document.getElementById('statusDot').className = 'status-dot off';
+    document.getElementById('statusText').textContent = 'Offline';
+  });
+}, 15000);
+</script>
+</body>
+</html>

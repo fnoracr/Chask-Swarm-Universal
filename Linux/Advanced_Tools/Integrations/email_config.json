@@ -1,0 +1,14 @@
+{
+  "email": "nora@chask.fun",
+  "password": "PON_AQUI_TU_CONTRASEÑA",
+  "imap_server": "imap.gmail.com",
+  "imap_port": 993,
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "check_interval_minutes": 15,
+  "keywords": [],
+  "auto_classify": true,
+  "auto_reply": true,
+  "active": true,
+  "note": "Reemplaza la contrasena y ajusta imap_server/smtp_server segun tu proveedor de nora@chask.fun"
+}

@@ -1,0 +1,34 @@
+{
+    "swarm": {
+        "name": "Chask Swarm",
+        "bg": "#121212",
+        "card": "#1e1e1e",
+        "text": "#e0e0e0",
+        "primary": "#FF6600",
+        "heading": "#ffffff",
+        "link": "#FF6600",
+        "code_bg": "#000000",
+        "code_text": "#FF6600",
+        "border": "#333333",
+        "muted": "#888888",
+        "font": "'Outfit', 'Inter', system-ui, sans-serif",
+        "font_import": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap",
+        "custom": true
+    },
+    "www_google_com": {
+        "name": "Bosque Oscuro",
+        "bg": "#1f1f1f",
+        "card": "#444746",
+        "text": "#e3e3e3",
+        "primary": "#0b57d0",
+        "heading": "#c4c7c5",
+        "link": "#0b57d0",
+        "code_bg": "#000000",
+        "code_text": "#0b57d0",
+        "border": "#747775",
+        "muted": "#8e918f",
+        "font": "'Outfit', sans-serif",
+        "font_import": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap",
+        "custom": true
+    }
+}

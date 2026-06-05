@@ -1,0 +1,88 @@
+[2026-05-27 10:15:52] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 10:15:52] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 2988)
+[2026-05-27 10:15:52] [NORA_CORE] Daemon 'guardian' lanzado (PID: 18012)
+[2026-05-27 10:15:52] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 10:15:52] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 9372)
+[2026-05-27 10:16:14] [NORA_CORE] =========================================
+[2026-05-27 10:16:30] [NORA_CORE] =========================================
+[2026-05-27 10:16:50] [NORA_CORE] =========================================
+[2026-05-27 10:17:29] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 10:17:29] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 30160)
+[2026-05-27 10:17:29] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 10:17:29] [NORA_CORE] Daemon 'guardian' lanzado (PID: 6244)
+[2026-05-27 10:17:29] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 29852)
+[2026-05-27 10:17:37] [NORA_CORE] =========================================
+[2026-05-27 10:17:37] [NORA_CORE] ORDEN 66 RECIBIDA VIA IPC (KILL SWITCH)
+[2026-05-27 10:17:37] [NORA_CORE] =========================================
+[2026-05-27 10:17:37] [NORA_CORE] Finalizando unified_channel_v3 (PID: 30160)...
+[2026-05-27 10:17:37] [NORA_CORE] Finalizando guardian (PID: 6244)...
+[2026-05-27 10:17:37] [NORA_CORE] Finalizando n8n_bridge (PID: 29852)...
+[2026-05-27 10:17:38] [NORA_CORE] Docker (Qdrant, N8N) detenidos.
+[2026-05-27 10:17:38] [NORA_CORE] IDE Cerrado. Kill Switch completado.
+[2026-05-27 13:27:45] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 13:27:45] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 19944)
+[2026-05-27 13:27:45] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 13:27:45] [NORA_CORE] Daemon 'guardian' lanzado (PID: 9064)
+[2026-05-27 13:27:45] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 23684)
+[2026-05-27 18:37:14] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 18:37:14] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 15992)
+[2026-05-27 18:37:14] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 18:37:14] [NORA_CORE] Daemon 'guardian' lanzado (PID: 28580)
+[2026-05-27 18:37:14] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 18140)
+[2026-05-27 18:37:16] [NORA_CORE] =========================================
+[2026-05-27 18:37:16] [NORA_CORE] ORDEN 66 RECIBIDA VIA IPC (KILL SWITCH)
+[2026-05-27 18:37:16] [NORA_CORE] =========================================
+[2026-05-27 18:37:16] [NORA_CORE] Finalizando unified_channel_v3 (PID: 15992)...
+[2026-05-27 18:37:16] [NORA_CORE] Finalizando guardian (PID: 28580)...
+[2026-05-27 18:37:16] [NORA_CORE] Finalizando n8n_bridge (PID: 18140)...
+[2026-05-27 18:37:17] [NORA_CORE] Docker (Qdrant, N8N) detenidos.
+[2026-05-27 18:37:17] [NORA_CORE] IDE Cerrado. Kill Switch completado.
+[2026-05-27 18:54:05] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 18:54:05] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 11664)
+[2026-05-27 18:54:05] [NORA_CORE] Daemon 'guardian' lanzado (PID: 35784)
+[2026-05-27 18:54:05] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 18:54:05] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 1104)
+[2026-05-27 18:54:08] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 18:54:08] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 28656)
+[2026-05-27 18:54:08] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 18:54:08] [NORA_CORE] Daemon 'guardian' lanzado (PID: 2504)
+[2026-05-27 18:54:08] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 2940)
+[2026-05-27 18:55:38] [NORA_CORE] ¡ALERTA! El daemon 'guardian' ha muerto. Resucitándolo...
+[2026-05-27 18:55:38] [NORA_CORE] Daemon 'guardian' lanzado (PID: 6872)
+[2026-05-27 22:04:39] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-27 22:04:39] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 37312)
+[2026-05-27 22:04:39] [NORA_CORE] Daemon 'guardian' lanzado (PID: 19792)
+[2026-05-27 22:04:39] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-27 22:04:39] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 30712)
+[2026-05-28 07:31:21] [NORA_CORE] =========================================
+[2026-05-28 07:31:21] [NORA_CORE] ORDEN 66 RECIBIDA VIA IPC (KILL SWITCH)
+[2026-05-28 07:31:21] [NORA_CORE] =========================================
+[2026-05-28 07:31:21] [NORA_CORE] Finalizando unified_channel_v3 (PID: 37312)...
+[2026-05-28 07:31:21] [NORA_CORE] Finalizando guardian (PID: 19792)...
+[2026-05-28 07:31:21] [NORA_CORE] Finalizando n8n_bridge (PID: 30712)...
+[2026-05-28 07:31:21] [NORA_CORE] Docker (Qdrant, N8N) detenidos.
+[2026-05-28 07:31:21] [NORA_CORE] IDE Cerrado. Kill Switch completado.
+[2026-05-28 07:32:21] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-28 07:32:21] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 23180)
+[2026-05-28 07:32:21] [NORA_CORE] Daemon 'guardian' lanzado (PID: 26408)
+[2026-05-28 07:32:21] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-28 07:32:21] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 24980)
+[2026-05-28 07:49:14] [NORA_CORE] =========================================
+[2026-05-28 07:49:14] [NORA_CORE] ORDEN 66 RECIBIDA VIA IPC (KILL SWITCH)
+[2026-05-28 07:49:14] [NORA_CORE] =========================================
+[2026-05-28 07:49:14] [NORA_CORE] Finalizando unified_channel_v3 (PID: 23180)...
+[2026-05-28 07:49:14] [NORA_CORE] Finalizando guardian (PID: 26408)...
+[2026-05-28 07:49:14] [NORA_CORE] Finalizando n8n_bridge (PID: 24980)...
+[2026-05-28 08:24:57] [NORA_CORE] Nora Core Supervisor (V3) Iniciado
+[2026-05-28 08:24:57] [NORA_CORE] Daemon 'unified_channel_v3' lanzado (PID: 13728)
+[2026-05-28 08:24:57] [NORA_CORE] Daemon 'guardian' lanzado (PID: 21968)
+[2026-05-28 08:24:57] [NORA_CORE] Servidor IPC (Zero-Disk) iniciado en puerto 6334
+[2026-05-28 08:24:57] [NORA_CORE] Daemon 'n8n_bridge' lanzado (PID: 9788)
+[2026-05-28 08:24:59] [NORA_CORE] =========================================
+[2026-05-28 08:24:59] [NORA_CORE] ORDEN 66 RECIBIDA VIA IPC (KILL SWITCH)
+[2026-05-28 08:24:59] [NORA_CORE] =========================================
+[2026-05-28 08:24:59] [NORA_CORE] Finalizando unified_channel_v3 (PID: 13728)...
+[2026-05-28 08:24:59] [NORA_CORE] Finalizando guardian (PID: 21968)...
+[2026-05-28 08:24:59] [NORA_CORE] Finalizando n8n_bridge (PID: 9788)...
+[2026-05-28 08:25:00] [NORA_CORE] Docker (Qdrant, N8N) detenidos.
+[2026-05-28 08:25:00] [NORA_CORE] IDE Cerrado. Kill Switch completado.

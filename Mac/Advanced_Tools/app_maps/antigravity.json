@@ -1,0 +1,207 @@
+{
+  "app_name": "[Nombre_IA]",
+  "scanned_at": "2026-05-16T21:55:09.816739",
+  "hwnd": 264142,
+  "elements": [
+    {
+      "name": "Enjambre Datos - [Nombre_IA] - Plan Hermes Viabilidad",
+      "type": "WindowControl",
+      "automation_id": "",
+      "class": "Chrome_WidgetWin_1",
+      "depth": 0,
+      "rect": {
+        "left": -8,
+        "top": -8,
+        "right": 1928,
+        "bottom": 1040
+      },
+      "patterns": []
+    },
+    {
+      "name": "Enjambre Datos - [Nombre_IA] - Plan Hermes Viabilidad",
+      "type": "PaneControl",
+      "automation_id": "",
+      "class": "RootView",
+      "depth": 1,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1032
+      },
+      "patterns": []
+    },
+    {
+      "name": "Minimize",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "WinCaptionButton",
+      "depth": 5,
+      "rect": {
+        "left": 1783,
+        "top": 0,
+        "right": 1828,
+        "bottom": 34
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Maximize",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "WinCaptionButton",
+      "depth": 5,
+      "rect": {
+        "left": 1828,
+        "top": 0,
+        "right": 1874,
+        "bottom": 34
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Restore",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "WinCaptionButton",
+      "depth": 5,
+      "rect": {
+        "left": 1828,
+        "top": 0,
+        "right": 1874,
+        "bottom": 34
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Close",
+      "type": "ButtonControl",
+      "automation_id": "",
+      "class": "WinCaptionButton",
+      "depth": 5,
+      "rect": {
+        "left": 1874,
+        "top": 0,
+        "right": 1920,
+        "bottom": 34
+      },
+      "patterns": [
+        "Invoke",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "Chrome Legacy Window",
+      "type": "PaneControl",
+      "automation_id": "697440",
+      "class": "Chrome_RenderWidgetHostHWND",
+      "depth": 8,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1032
+      },
+      "patterns": []
+    },
+    {
+      "name": "Enjambre Datos - [Nombre_IA] - Plan Hermes Viabilidad",
+      "type": "DocumentControl",
+      "automation_id": "RootWebArea",
+      "class": "",
+      "depth": 9,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 1920,
+        "bottom": 1032
+      },
+      "patterns": [
+        "Value"
+      ]
+    },
+    {
+      "name": "Morning System Status Audit",
+      "type": "TextControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 14,
+      "rect": {
+        "left": 1629,
+        "top": 40,
+        "right": 1796,
+        "bottom": 58
+      },
+      "patterns": []
+    },
+    {
+      "name": "",
+      "type": "GroupControl",
+      "automation_id": "conversation",
+      "class": "relative flex w-full grow flex-col overflow-y-hidden overflow-x-clip pr-px",
+      "depth": 14,
+      "rect": {
+        "left": 1621,
+        "top": 65,
+        "right": 1920,
+        "bottom": 1010
+      },
+      "patterns": []
+    },
+    {
+      "name": "# Estado Actual - Enjambre ## Proyecto: Gestión del Enjambre y Plan Hermes ## Descripción: Atención matutina, seguimiento del PAT token y preparación de la Fase 1 del Plan Hermes. ## Paso actual: ⚠️ DIRECTRIZ CRÍTICA ACTIVADA — Borrado permanente PROHIBIDO. Implementada retención indefinida en carpetas 'Deleted'. ## Hora de última actualización: 2026-05-16 08:14 ## Arquitectura actual (10 procesos pythonw activos): - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - telegram_sentinel.py — Guardián de procesos - shutdown_cleanup.py — Limpieza al apagar - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - borrados_cleaner.py — Limpieza de borrados ## Proyectos activos (8): - [PENDIENTE] Proyecto de Criptografía Aplicada con Python — 7/10 commits - [PENDIENTE] Implementación de PAT — 1/3 commits - [PENDIENTE] Fase 1 del Plan Hermes — 0/5 commits - [PENDIENTE] Plan Hermes completo — 0/20 commits - [INICIADO] Proyecto para la oficina — 1/10 commits - [INICIADO] Proyecto [Nombre_IA] — 2/5 commits - [INICIADO] Python en 10 días — 4/10 commits - [RECIENTE] Tarea de investigación — 1/3 commits ## Observaciones: - [CRÍTICO] Detectada sobrecarga del sistema (memoria > 7GB). Se ha reducido la latencia de respuesta a 5 segundos. - [CRÍTICO] El sentinel detectó 20 reinicios de [Nombre_IA] en el último minuto. - [DIRECTRIZ] Borrado permanente PROHIBIDO. Se ha implementado retención indefinida en carpetas 'Deleted'. - [CRÍTICO] Se ha detectado la inyección de código en el sistema. Protocolo de cuarentena activado. - [REVISIÓN] Protocolo de limpieza automática de borrados: Se ha revisado y modificado para cumplir con la nueva directriz de retención indefinida. # Estado Actual - Enjambre ## Proyecto: Gestión del Enjambre y Plan Hermes ## Descripción: Atención matutina, seguimiento del PAT token y preparación de la Fase 1 del Plan Hermes. ## Paso actual: ⚠️ DIRECTRIZ CRÍTICA ACTIVADA — Borrado permanente PROHIBIDO. Implementada retención indefinida en carpetas 'Deleted'. ## Hora de última actualización: 2026-05-16 08:14 ## Arquitectura actual (10 procesos pythonw activos): - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - telegram_sentinel.py — Guardián de procesos - shutdown_cleanup.py — Limpieza al apagar - unified_daemon.py — Comunicaciones (Telegram/Discord/Web) - data_monitor.py — Supervisión de recursos del sistema - task_scheduler.py — Gestión de tareas programadas - borrados_cleaner.py — Limpieza de borrados ## Proyectos activos (8): - [PENDIENTE] Proyecto de Criptografía Aplicada con Python — 7/10 commits - [PENDIENTE] Implementación de PAT — 1/3 commits - [PENDIENTE] Fase 1 del Plan Hermes — 0/5 commits - [PENDIENTE] Plan Hermes completo — 0/20 commits - [INICIADO] Proyecto para la oficina — 1/10 commits - [INICIADO] Proyecto [Nombre_IA] — 2/5 commits - [INICIADO] Python en 10 días — 4/10 commits - [RECIENTE] Tarea de investigación — 1/3 commits ## Observaciones: - [CRÍTICO] Detectada sobrecarga del sistema (memoria > 7GB). Se ha reducido la latencia de respuesta a 5 segundos. - [CRÍTICO] El sentinel detectó 20 reinicios de [Nombre_IA] en el último minuto. - [DIRECTRIZ] Borrado permanente PROHIBIDO. Se ha implementado retención indefinida en carpetas 'Deleted'. - [CRÍTICO] Se ha detectado la inyección de código en el sistema. Protocolo de cuarentena activado. - [REVISIÓN] Protocolo de limpieza automática de borrados: Se ha revisado y modificado para cumplir con la nueva directriz de retención indefinida. , Inspect this in the accessible view (Alt+F2)",
+      "type": "TextControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 14,
+      "rect": {
+        "left": -12987,
+        "top": 1032,
+        "right": 1866,
+        "bottom": 1068
+      },
+      "patterns": []
+    },
+    {
+      "name": "Typeahead menu",
+      "type": "ListControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 11,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": [
+        "Selection"
+      ]
+    },
+    {
+      "name": "Typeahead menu",
+      "type": "ListControl",
+      "automation_id": "",
+      "class": "",
+      "depth": 11,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": [
+        "Selection"
+      ]
+    }
+  ]
+}

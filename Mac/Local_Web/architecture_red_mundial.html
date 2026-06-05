@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chask Swarm — Arquitectura de Red Mundial (WAN Mesh)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#050512;color:#e0e0e0;overflow:hidden;height:100vh;width:100vw}
+#toolbar{position:fixed;top:0;left:0;right:0;height:56px;background:linear-gradient(135deg,#12122c,#050515);
+  border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 24px;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.5)}
+#toolbar h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#toolbar .controls{margin-left:auto;display:flex;gap:8px}
+#toolbar button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#ccc;
+  padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;transition:.2s}
+#toolbar button:hover{background:rgba(255,255,255,.15);color:#fff}
+#zoom-info{color:#888;font-size:12px;margin-right:16px}
+#tip{color:#666;font-size:11px;margin-right:12px}
+#canvas-wrap{position:absolute;top:56px;left:0;right:0;bottom:0;overflow:hidden;cursor:grab}
+#canvas{position:absolute;transform-origin:0 0}
+.group{position:absolute;border-radius:16px;border:1px solid rgba(255,255,255,.1);
+  padding:48px 16px 16px;min-width:260px;max-width:340px;transition:box-shadow .2s}
+.group-label{position:absolute;top:0;left:0;right:0;height:42px;line-height:42px;padding:0 16px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:.9;
+  cursor:move;border-radius:16px 16px 0 0;user-select:none}
+.group-label:hover{background:rgba(255,255,255,.05)}
+.group.dragging{box-shadow:0 0 40px rgba(139,92,246,.3);z-index:999;opacity:.92}
+.node{background:rgba(10,10,25,.85);border:1px solid rgba(255,255,255,.12);border-radius:12px;
+  padding:12px 16px;margin:6px 0;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;backdrop-filter:blur(8px)}
+.node:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4);border-color:rgba(139,92,246,.4)}
+.node .icon{font-size:18px;margin-right:8px}
+.node .name{font-weight:600;font-size:13px}
+.node .desc{font-size:11px;color:#aaacbb;margin-top:4px;line-height:1.4}
+.node.highlight{border-color:#8b5cf6;box-shadow:0 0 20px rgba(139,92,246,.3)}
+svg.conns{position:absolute;top:0;left:0;pointer-events:none;z-index:50;overflow:visible}
+svg.conns path{pointer-events:stroke;cursor:pointer}
+svg.conns path:hover{opacity:0.9!important;stroke-width:3!important}
+#conn-tooltip{position:fixed;background:rgba(10,10,30,.95);color:#ddd;padding:6px 12px;border-radius:8px;
+  font-size:11px;font-family:'Inter',sans-serif;pointer-events:none;z-index:300;display:none;
+  border:1px solid rgba(255,255,255,.15);box-shadow:0 4px 16px rgba(0,0,0,.5)}
+#detail{position:fixed;bottom:20px;right:20px;width:340px;background:rgba(10,10,30,.95);
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;z-index:200;
+  backdrop-filter:blur(12px);display:none;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+#detail h3{font-size:15px;margin-bottom:8px;color:#8b5cf6}
+#detail p{font-size:12px;color:#aaa;line-height:1.6}
+#detail .close{position:absolute;top:12px;right:16px;cursor:pointer;color:#666;font-size:18px}
+#legend{position:fixed;bottom:20px;left:20px;background:rgba(10,10,30,.9);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:14px 18px;z-index:200;font-size:11px;backdrop-filter:blur(8px)}
+#legend div{display:flex;align-items:center;gap:8px;margin:4px 0}
+#legend .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+#toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:rgba(139,92,246,.9);color:#fff;
+  padding:8px 20px;border-radius:8px;font-size:13px;z-index:999;display:none;font-family:'Inter',sans-serif;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);transition:opacity .3s}
+#toolbar .save-btn{background:rgba(139,92,246,.2);border-color:rgba(139,92,246,.4);color:#8b5cf6}
+#toolbar .save-btn:hover{background:rgba(139,92,246,.35);color:#fff}
+</style></head><body>
+<div id="toolbar">
+  <h1>Chask Swarm — Arquitectura de Red Mundial (WAN P2P Mesh)</h1>
+  <span id="tip">Arrastra los grupos por su título | Scroll = zoom | Clic = detalle</span>
+  <span id="zoom-info">75%</span>
+  <div class="controls">
+    <button onclick="zoomTo(1)">Reset</button>
+    <button onclick="zoomTo(scale*1.3)">+</button>
+    <button onclick="zoomTo(scale/1.3)">-</button>
+    <button onclick="fitAll()">Ajustar</button>
+    <button class="save-btn" onclick="savePositions()">Guardar</button>
+  </div>
+</div>
+<div id="toast"></div>
+<div id="canvas-wrap"><div id="canvas"><svg class="conns" id="svg"></svg></div></div>
+<div id="conn-tooltip"></div>
+<div id="detail"><span class="close" onclick="this.parentElement.style.display='none'">&times;</span><h3 id="d-title"></h3><p id="d-desc"></p></div>
+<div id="legend"></div>
+<script>
+const GROUPS=[
+  {"id": "core_routers", "label": "Enrutadores Troncales Globales (3 Core Routers)", "color": "#ff7a00", "x": 580, "y": 30, "nodes": [
+    {"id": "router_am", "label": "Core Router América (New York)", "desc": "Pasarela principal redundante para el tráfico del hemisferio occidental. Conecta los enjambres americanos con la fibra intercontinental submarina.", "icon": "🗽"},
+    {"id": "router_eu", "label": "Core Router Europa (Frankfurt)", "desc": "Nodo central de enrutamiento del viejo continente. Canaliza el flujo de sincronización de lecciones académicas y la lista negra cooperativa en toda la región.", "icon": "🏰"},
+    {"id": "router_as", "label": "Core Router Asia-Pacífico (Singapore)", "desc": "Puerta de enlace troncal ultra-rápida y de baja latencia transpacífica para los clústeres del sudeste asiático y Oceanía.", "icon": "🦁"}
+  ]},
+  {"id": "swarms_am", "label": "Enjambres América (3 Locales)", "color": "#3b82f6", "x": 50, "y": 140, "nodes": [
+    {"id": "swarm_ny", "label": "Enjambre local New York (US-East)", "desc": "Nodo operativo central norteamericano. Orquesta RPA en entornos corporativos locales, controla APIs y coordina búsquedas semánticas.", "icon": "🏢"},
+    {"id": "swarm_sf", "label": "Enjambre local San Francisco (US-West)", "desc": "Clúster tecnológico local enfocado en procesamiento analítico y compilación en sandbox de recursos externos.", "icon": "🌉"},
+    {"id": "swarm_ba", "label": "Enjambre local Buenos Aires (LATAM)", "desc": "Nodo regional de automatización y RPA con pasarelas móviles integradas para control descentralizado off-grid.", "icon": "🥩"}
+  ]},
+  {"id": "swarms_eu", "label": "Enjambres Europa (4 Locales)", "color": "#10b981", "x": 580, "y": 390, "nodes": [
+    {"id": "swarm_frank", "label": "Enjambre local Frankfurt (EU-Central)", "desc": "Clúster de alto procesamiento. Mantiene los servidores de embeddings de respaldo y base vectorial Qdrant local centralizada.", "icon": "🥨"},
+    {"id": "swarm_mad", "label": "Enjambre local Madrid (EU-South)", "desc": "Nodo local de RPA, automatización de sistemas físicos locales y proxy de red local redundante.", "icon": "💃"},
+    {"id": "swarm_lon", "label": "Enjambre local Londres (EU-West)", "desc": "Nodo de scraping avanzado, purga selectiva de PII sensible y crawlers en frontera local.", "icon": "🎡"},
+    {"id": "swarm_par", "label": "Enjambre local París (EU-West-2)", "desc": "Instancia de respaldo cognitivo local y orquestación didáctica local con balanceo P2P ante caídas.", "icon": "🗼"}
+  ]},
+  {"id": "swarms_as", "label": "Enjambres Asia/Pacífico (3 Locales)", "color": "#ec4899", "x": 1110, "y": 140, "nodes": [
+    {"id": "swarm_tok", "label": "Enjambre local Tokio (AS-East)", "desc": "Nodo avanzado de telemetría física, robótica local, control domótico seguro y coordinación asíncrona.", "icon": "🗼"},
+    {"id": "swarm_sin", "label": "Enjambre local Singapur (AS-South)", "desc": "Clúster de base vectorial local redundante que opera para procesamiento privado de modelos y persistencia vectorial.", "icon": "🏝️"},
+    {"id": "swarm_syd", "label": "Enjambre local Sídney (Oceanía)", "desc": "Enjambre perimetral encargado de agregación, almacenamiento NAS de seguridad y telemetría perimetral.", "icon": "🐨"}
+  ]}
+];
+
+const CONNS=[
+  // Core mesh (Core to Core)
+  {"from": "router_am", "to": "router_eu", "label": "Enlace Troncal Atlántico (Fibra - 100 Gbps)", "color": "#ff7a00", "bidi": true},
+  {"from": "router_eu", "to": "router_as", "label": "Enlace Troncal Euro-Asiático (Terrestre - 100 Gbps)", "color": "#ff7a00", "bidi": true},
+  {"from": "router_as", "to": "router_am", "label": "Enlace Troncal Transpacífico (Submarino - 100 Gbps)", "color": "#ff7a00", "bidi": true},
+
+  // Americas to Core
+  {"from": "swarm_ny", "to": "router_am", "label": "Uplink Fibra Óptica Regional", "color": "#3b82f6", "bidi": true},
+  {"from": "swarm_sf", "to": "router_am", "label": "Uplink Fibra Óptica Regional", "color": "#3b82f6", "bidi": true},
+  {"from": "swarm_ba", "to": "router_am", "label": "Enlace Satelital Cifrado", "color": "#3b82f6", "bidi": true},
+
+  // Europe to Core
+  {"from": "swarm_frank", "to": "router_eu", "label": "Uplink Fibra Óptica Regional", "color": "#10b981", "bidi": true},
+  {"from": "swarm_mad", "to": "router_eu", "label": "Uplink Fibra Óptica Regional", "color": "#10b981", "bidi": true},
+  {"from": "swarm_lon", "to": "router_eu", "label": "Uplink Fibra Óptica Regional", "color": "#10b981", "bidi": true},
+  {"from": "swarm_par", "to": "router_eu", "label": "Uplink Fibra Óptica Regional", "color": "#10b981", "bidi": true},
+
+  // Asia/Pac to Core
+  {"from": "swarm_tok", "to": "router_as", "label": "Uplink Fibra Óptica Regional", "color": "#ec4899", "bidi": true},
+  {"from": "swarm_sin", "to": "router_as", "label": "Uplink Fibra Óptica Regional", "color": "#ec4899", "bidi": true},
+  {"from": "swarm_syd", "to": "router_as", "label": "Enlace Satelital Cifrado", "color": "#ec4899", "bidi": true},
+
+  // Inter-swarm Gossip mesh (decentralized sync)
+  {"from": "swarm_ny", "to": "swarm_lon", "label": "Gossip P2P Transatlántico (Sincronía de Skills & Blacklist)", "color": "#8b5cf6", "bidi": true, "dashed": true},
+  {"from": "swarm_sf", "to": "swarm_tok", "label": "Gossip P2P Transpacífico (Sincronía de Skills & Blacklist)", "color": "#8b5cf6", "bidi": true, "dashed": true},
+  {"from": "swarm_mad", "to": "swarm_ba", "label": "Gossip P2P Iberoamericano (Sincronía de Skills & Blacklist)", "color": "#8b5cf6", "bidi": true, "dashed": true},
+  {"from": "swarm_sin", "to": "swarm_syd", "label": "Gossip P2P Índico-Pacífico (Sincronía de Skills & Blacklist)", "color": "#8b5cf6", "bidi": true, "dashed": true},
+  {"from": "swarm_frank", "to": "swarm_mad", "label": "Gossip P2P Continental Europeo", "color": "#8b5cf6", "bidi": true, "dashed": true},
+  {"from": "swarm_lon", "to": "swarm_par", "label": "Gossip P2P Regional", "color": "#8b5cf6", "bidi": true, "dashed": true},
+  {"from": "swarm_sin", "to": "swarm_tok", "label": "Gossip P2P Extremo Oriente", "color": "#8b5cf6", "bidi": true, "dashed": true}
+];
+
+const canvas=document.getElementById('canvas');
+const wrap=document.getElementById('canvas-wrap');
+const svg=document.getElementById('svg');
+let scale=0.75,tx=50,ty=50;
+const groupEls={};
+
+const savedPos=JSON.parse(localStorage.getItem('chask_global_positions')||'null');
+
+GROUPS.forEach(g=>{
+  const div=document.createElement('div');
+  div.className='group'; div.dataset.gid=g.id;
+  const sx=savedPos&&savedPos[g.id]?savedPos[g.id].x:g.x;
+  const sy=savedPos&&savedPos[g.id]?savedPos[g.id].y:g.y;
+  div.style.cssText=`left:${sx}px;top:${sy}px;background:${g.color}12;border-color:${g.color}40`;
+  const lbl=document.createElement('div');
+  lbl.className='group-label'; lbl.style.color=g.color; lbl.textContent=g.label;
+  div.appendChild(lbl);
+  (g.nodes||[]).forEach(n=>{
+    const nd=document.createElement('div');
+    nd.className='node'; nd.dataset.id=n.id;
+    nd.innerHTML=`<span class="icon">${n.icon||''}</span><span class="name">${n.label}</span><div class="desc">${n.desc||''}</div>`;
+    nd.addEventListener('click',e=>{
+      e.stopPropagation();
+      document.getElementById('d-title').textContent=n.label;
+      document.getElementById('d-desc').textContent=n.desc||'';
+      document.getElementById('detail').style.display='block';
+      document.querySelectorAll('.node').forEach(x=>x.classList.remove('highlight'));
+      nd.classList.add('highlight');
+    });
+    div.appendChild(nd);
+  });
+  canvas.appendChild(div);
+  groupEls[g.id]=div;
+  let draggingG=false,gsx,gsy,gox,goy;
+  lbl.addEventListener('mousedown',e=>{
+    e.stopPropagation();
+    draggingG=true; div.classList.add('dragging');
+    gox=parseInt(div.style.left)||0; goy=parseInt(div.style.top)||0;
+    gsx=e.clientX/scale; gsy=e.clientY/scale;
+    const onMove=ev=>{
+      if(!draggingG)return;
+      const dx=ev.clientX/scale-gsx, dy=ev.clientY/scale-gsy;
+      div.style.left=(gox+dx)+'px'; div.style.top=(goy+dy)+'px';
+      recalcAndDraw();
+    };
+    const onUp=()=>{ draggingG=false; div.classList.remove('dragging'); window.removeEventListener('mousemove',onMove); window.removeEventListener('mouseup',onUp); };
+    window.addEventListener('mousemove',onMove);
+    window.addEventListener('mouseup',onUp);
+  });
+});
+
+document.getElementById('legend').innerHTML='<div style="font-weight:700;margin-bottom:4px">Leyenda</div>'+
+  GROUPS.map(g=>`<div><span class="dot" style="background:${g.color}"></span>${g.label}</div>`).join('');
+
+const tooltip=document.getElementById('conn-tooltip');
+let hoverArrows=[];
+function recalcAndDraw(){
+  const nodePos={};
+  let maxX=0,maxY=0;
+  document.querySelectorAll('.node').forEach(nd=>{
+    const r=nd.getBoundingClientRect();
+    const cr=canvas.getBoundingClientRect();
+    const px=(r.left+r.width/2-cr.left)/scale, py=(r.top+r.height/2-cr.top)/scale;
+    nodePos[nd.dataset.id]={x:px,y:py};
+    if(px>maxX)maxX=px; if(py>maxY)maxY=py;
+  });
+  svg.setAttribute('width',maxX+500); svg.setAttribute('height',maxY+500);
+  const colors=new Set();
+  CONNS.forEach(c=>colors.add(c.color||'#555'));
+  let defs='<defs>';
+  colors.forEach(col=>{
+    const id=col.replace('#','');
+    defs+=`<marker id="af_${id}" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="${col}"/></marker>`;
+    defs+=`<marker id="ar_${id}" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto"><polygon points="10,0 0,3.5 10,7" fill="${col}"/></marker>`;
+  });
+  defs+='</defs>';
+  let h=defs;
+  CONNS.forEach((c,i)=>{
+    const a=nodePos[c.from],b=nodePos[c.to];
+    if(!a||!b)return;
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    const dx=b.x-a.x,dy=b.y-a.y;
+    const cx=mx-dy*0.08,cy=my+dx*0.08;
+    const col=c.color||'#555';
+    const id=col.replace('#','');
+    const dash=c.dashed?'stroke-dasharray="6,4"':'';
+    const mEnd=`marker-end="url(#af_${id})"`;
+    const mStart=c.bidi?`marker-start="url(#ar_${id})"`:''  ;
+    h+=`<path id="conn${i}" d="M${a.x},${a.y} Q${cx},${cy} ${b.x},${b.y}" stroke="${col}" stroke-width="1.5" fill="none" opacity="0.4" ${dash} ${mEnd} ${mStart} data-label="${c.label||''}" data-idx="${i}" data-col="${col}" data-bidi="${c.bidi?1:0}"/>`;
+  });
+  svg.innerHTML=h;
+  svg.querySelectorAll('path[data-idx]').forEach(p=>{
+    p.addEventListener('mouseenter',e=>{
+      const lbl=p.getAttribute('data-label');
+      if(lbl){ tooltip.textContent=lbl; tooltip.style.display='block'; }
+      p.setAttribute('opacity','0.9'); p.setAttribute('stroke-width','3');
+      showFlowArrows(p);
+    });
+    p.addEventListener('mousemove',e=>{
+      tooltip.style.left=(e.clientX+12)+'px'; tooltip.style.top=(e.clientY-24)+'px';
+    });
+    p.addEventListener('mouseleave',()=>{
+      tooltip.style.display='none';
+      p.setAttribute('opacity','0.4'); p.setAttribute('stroke-width','1.5');
+      clearFlowArrows();
+    });
+  });
+}
+function showFlowArrows(pathEl){
+  clearFlowArrows();
+  const col=pathEl.getAttribute('data-col');
+  const bidi=pathEl.getAttribute('data-bidi')==='1';
+  const len=pathEl.getTotalLength();
+  const step=Math.max(40,len/10);
+  for(let d=step;d<len-10;d+=step){
+    const pt=pathEl.getPointAtLength(d);
+    const pt2=pathEl.getPointAtLength(Math.min(d+2,len));
+    const angle=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI;
+    const arrow=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    arrow.setAttribute('points','-5,-3.5 5,0 -5,3.5');
+    arrow.setAttribute('fill',col);arrow.setAttribute('opacity','0.8');
+    arrow.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+    arrow.classList.add('flow-arrow');
+    svg.appendChild(arrow);
+    hoverArrows.push(arrow);
+    if(bidi){
+      const arrowR=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+      arrowR.setAttribute('points','5,-3.5 -5,0 5,3.5');
+      arrowR.setAttribute('fill',col);arrowR.setAttribute('opacity','0.5');
+      arrowR.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+      arrowR.classList.add('flow-arrow');
+      svg.appendChild(arrowR);
+      hoverArrows.push(arrowR);
+    }
+  }
+}
+function clearFlowArrows(){ hoverArrows.forEach(a=>a.remove()); hoverArrows=[]; }
+setTimeout(recalcAndDraw,300);
+
+function applyTransform(){canvas.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;document.getElementById('zoom-info').textContent=Math.round(scale*100)+'%'}
+applyTransform();
+let panning=false,psx,psy;
+wrap.addEventListener('mousedown',e=>{
+  if(e.target===wrap||e.target===canvas||e.target===svg){panning=true;psx=e.clientX-tx;psy=e.clientY-ty;wrap.style.cursor='grabbing'}
+});
+window.addEventListener('mousemove',e=>{if(panning){tx=e.clientX-psx;ty=e.clientY-psy;applyTransform()}});
+window.addEventListener('mouseup',()=>{panning=false;wrap.style.cursor='grab'});
+wrap.addEventListener('wheel',e=>{e.preventDefault();const d=e.deltaY>0?0.9:1.1;const ns=Math.max(0.15,Math.min(3,scale*d));
+  const rect=wrap.getBoundingClientRect();const mx=e.clientX-rect.left;const my=e.clientY-rect.top;
+  tx=mx-(mx-tx)*(ns/scale);ty=my-(my-ty)*(ns/scale);scale=ns;applyTransform();recalcAndDraw()});
+function zoomTo(s){scale=Math.max(0.15,Math.min(3,s));applyTransform();recalcAndDraw()}
+function fitAll(){scale=0.55;tx=30;ty=50;applyTransform();recalcAndDraw()}
+
+function savePositions(){
+  const pos={};
+  document.querySelectorAll('.group').forEach(g=>{
+    pos[g.dataset.gid]={x:parseInt(g.style.left)||0,y:parseInt(g.style.top)||0};
+  });
+  localStorage.setItem('chask_global_positions',JSON.stringify(pos));
+  navigator.clipboard.writeText(JSON.stringify(pos,null,2)).then(()=>{
+    showToast('Posiciones Globales guardadas y copiadas');
+  }).catch(()=>{
+    showToast('Posiciones Globales guardadas localmente');
+  });
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.style.display='block'; t.style.opacity='1';
+  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.style.display='none',300)},2000);
+}
+</script></body></html>

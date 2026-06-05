@@ -1,0 +1,1 @@
+[ENJAMBRE: TELEGRAM] [TELEGRAM 23:58:20] aplica lo mismo a discord y a la interfaz web, hemos resuelto el problema del foco. ¿Crees que funcionaría con la ventana cerrada o con el tamaño mínimo posible? Esto es, abrir la ventana de charm todo lo pequeña que se pudiera, poner el foco en el cuadro de texto e inyectar el texto

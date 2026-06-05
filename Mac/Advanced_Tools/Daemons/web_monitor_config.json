@@ -1,0 +1,13 @@
+{
+  "monitors": [
+    {
+      "name": "Ejemplo — precio Amazon",
+      "url": "https://www.amazon.es/dp/ASIN",
+      "condition": "precio_menor",
+      "threshold": 40.0,
+      "keyword": null,
+      "interval_hours": 6,
+      "active": false
+    }
+  ]
+}

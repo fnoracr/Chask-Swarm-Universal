@@ -1,0 +1,374 @@
+[2026-05-26 08:58:21] ============================================================
+[2026-05-26 08:58:21] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 08:58:21] ============================================================
+[2026-05-26 08:58:21] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 08:58:22] [1/4] Qdrant OK
+[2026-05-26 08:58:22] [2/4] Lanzando daemons...
+[2026-05-26 08:58:22]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 08:58:22]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 08:58:22]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 08:58:22]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 08:58:22]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 08:58:22]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 08:58:22]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 08:58:22]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 08:58:22]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 08:58:22] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 08:58:22] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 08:58:22] [4/4] Inyectando contexto Nora...
+[2026-05-26 08:58:22] [4/4] Boot injection OK
+[2026-05-26 08:58:22] ============================================================
+[2026-05-26 08:58:22] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 08:58:22] ============================================================
+[2026-05-26 09:32:58] ============================================================
+[2026-05-26 09:32:58] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 09:32:58] ============================================================
+[2026-05-26 09:32:58] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 09:32:58] [1/4] Qdrant OK
+[2026-05-26 09:32:58] [2/4] Lanzando daemons...
+[2026-05-26 09:32:58]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 09:32:58]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 09:32:58]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 09:32:58]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 09:32:58]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 09:32:58]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 09:32:58]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 09:32:58]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 09:32:58]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 09:32:58] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 09:32:58] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:32:58] [4/4] Inyectando contexto Nora...
+[2026-05-26 09:32:58] [4/4] Boot injection OK
+[2026-05-26 09:32:58] ============================================================
+[2026-05-26 09:32:58] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 09:32:58] ============================================================
+[2026-05-26 09:38:31] ============================================================
+[2026-05-26 09:38:31] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 09:38:31] ============================================================
+[2026-05-26 09:38:31] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 09:38:32] [1/4] Qdrant OK
+[2026-05-26 09:38:32] [2/4] Lanzando daemons...
+[2026-05-26 09:38:32]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 09:38:32]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 09:38:32]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 09:38:32]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 09:38:32]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 09:38:32]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 09:38:32]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 09:38:32]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 09:38:32]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 09:38:32] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 09:38:32] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:38:32] [4/4] Inyectando contexto Nora...
+[2026-05-26 09:38:32] [4/4] Boot injection OK
+[2026-05-26 09:38:32] ============================================================
+[2026-05-26 09:38:32] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 09:38:32] ============================================================
+[2026-05-26 09:45:45] ============================================================
+[2026-05-26 09:45:45] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 09:45:45] ============================================================
+[2026-05-26 09:45:45] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 09:45:45] [1/4] Qdrant OK
+[2026-05-26 09:45:45] [2/4] Lanzando daemons...
+[2026-05-26 09:45:45]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 09:45:45]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 09:45:45]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 09:45:45]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 09:45:45]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 09:45:45]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 09:45:45]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 09:45:45]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 09:45:45]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 09:45:45] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 09:45:45] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:45:45] [4/4] Inyectando contexto Nora...
+[2026-05-26 09:45:45] [4/4] Boot injection OK
+[2026-05-26 09:45:45] ============================================================
+[2026-05-26 09:45:45] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 09:45:45] ============================================================
+[2026-05-26 09:53:28] ============================================================
+[2026-05-26 09:53:28] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 09:53:28] ============================================================
+[2026-05-26 09:53:28] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 09:53:28] [1/4] Qdrant OK
+[2026-05-26 09:53:28] [2/4] Lanzando daemons...
+[2026-05-26 09:53:28]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 09:53:28]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 09:53:28]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 09:53:28]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 09:53:28]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 09:53:28]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 09:53:28]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 09:53:28]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 09:53:28]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 09:53:28] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 09:53:28] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:53:28] [4/4] Inyectando contexto Nora...
+[2026-05-26 09:53:29] [4/4] Boot injection OK
+[2026-05-26 09:53:29] ============================================================
+[2026-05-26 09:53:29] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 09:53:29] ============================================================
+[2026-05-26 22:21:23] ============================================================
+[2026-05-26 22:21:23] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 22:21:23] ============================================================
+[2026-05-26 22:21:23] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 22:21:23] [1/4] Qdrant OK
+[2026-05-26 22:21:23] [2/4] Lanzando daemons...
+[2026-05-26 22:21:23]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 22:21:23]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 22:21:23]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 22:21:23]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 22:21:23]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 22:21:23]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 22:21:23]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 22:21:23]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 22:21:23]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 22:21:23] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 22:21:23] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 22:21:23] [4/4] Inyectando contexto Nora...
+[2026-05-26 22:21:23] [4/4] Boot injection OK
+[2026-05-26 22:21:23] ============================================================
+[2026-05-26 22:21:23] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 22:21:23] ============================================================
+[2026-05-26 22:37:25] ============================================================
+[2026-05-26 22:37:25] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 22:37:25] ============================================================
+[2026-05-26 22:37:25] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 22:37:25] [1/4] Qdrant OK
+[2026-05-26 22:37:25] [2/4] Lanzando daemons...
+[2026-05-26 22:37:25]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 22:37:25]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 22:37:25]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 22:37:25]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 22:37:25]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 22:37:25]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 22:37:25]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 22:37:25]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 22:37:25]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 22:37:25] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 22:37:25] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 22:37:25] [4/4] Inyectando contexto Nora...
+[2026-05-26 22:37:25] [4/4] Boot injection OK
+[2026-05-26 22:37:25] ============================================================
+[2026-05-26 22:37:25] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 22:37:25] ============================================================
+[2026-05-26 22:40:20] ============================================================
+[2026-05-26 22:40:20] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 22:40:20] ============================================================
+[2026-05-26 22:40:20] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 22:40:20] [1/4] Qdrant OK
+[2026-05-26 22:40:20] [2/4] Lanzando daemons...
+[2026-05-26 22:40:20]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 22:40:20]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 22:40:20]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 22:40:20]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 22:40:20]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 22:40:20]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 22:40:20]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 22:40:20]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 22:40:20]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 22:40:20] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 22:40:20] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 22:40:20] [4/4] Inyectando contexto Nora...
+[2026-05-26 22:40:20] [4/4] Boot injection OK
+[2026-05-26 22:40:20] ============================================================
+[2026-05-26 22:40:20] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 22:40:20] ============================================================
+[2026-05-26 22:49:45] ============================================================
+[2026-05-26 22:49:45] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 22:49:45] ============================================================
+[2026-05-26 22:49:45] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 22:49:45] [1/4] Qdrant OK
+[2026-05-26 22:49:45] [2/4] Lanzando daemons...
+[2026-05-26 22:49:45]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 22:49:45]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 22:49:45]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 22:49:45]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 22:49:45]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 22:49:45]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 22:49:45]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 22:49:45]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 22:49:45]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 22:49:45] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 22:49:45] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 22:49:45] [4/4] Inyectando contexto Nora...
+[2026-05-26 22:49:46] [4/4] Boot injection OK
+[2026-05-26 22:49:46] ============================================================
+[2026-05-26 22:49:46] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 22:49:46] ============================================================
+[2026-05-26 22:54:16] ============================================================
+[2026-05-26 22:54:16] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 22:54:16] ============================================================
+[2026-05-26 22:54:16] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 22:54:16] [1/4] Qdrant OK
+[2026-05-26 22:54:16] [2/4] Lanzando daemons...
+[2026-05-26 22:54:16]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 22:54:16]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 22:54:16]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 22:54:16]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 22:54:16]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 22:54:16]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 22:54:16]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 22:54:16]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 22:54:16]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 22:54:16] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 22:54:16] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 22:54:16] [4/4] Inyectando contexto Nora...
+[2026-05-26 22:54:16] [4/4] Boot injection OK
+[2026-05-26 22:54:16] ============================================================
+[2026-05-26 22:54:16] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 22:54:16] ============================================================
+[2026-05-26 23:53:47] ============================================================
+[2026-05-26 23:53:47] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-26 23:53:47] ============================================================
+[2026-05-26 23:53:47] [1/4] Levantando Docker/Qdrant...
+[2026-05-26 23:53:47] [1/4] Qdrant OK
+[2026-05-26 23:53:47] [2/4] Lanzando daemons...
+[2026-05-26 23:53:47]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-26 23:53:47]   OK — Advanced_Tools\backup_system.py
+[2026-05-26 23:53:47]   OK — Advanced_Tools\daily_report.py
+[2026-05-26 23:53:47]   OK — Advanced_Tools\web_monitor.py
+[2026-05-26 23:53:47]   OK — Advanced_Tools\auto_updater.py
+[2026-05-26 23:53:47]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-26 23:53:47]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-26 23:53:47]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-26 23:53:47]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-26 23:53:47] [3/4] Lanzando Antigravity IDE...
+[2026-05-26 23:53:47] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 23:53:47] [4/4] Inyectando contexto Nora...
+[2026-05-26 23:53:47] [4/4] Boot injection OK
+[2026-05-26 23:53:47] ============================================================
+[2026-05-26 23:53:47] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-26 23:53:47] ============================================================
+[2026-05-27 00:43:32] ============================================================
+[2026-05-27 00:43:32] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-27 00:43:32] ============================================================
+[2026-05-27 00:43:32] [1/4] Levantando Docker/Qdrant...
+[2026-05-27 00:43:32] [1/4] Qdrant OK
+[2026-05-27 00:43:32] [2/4] Lanzando daemons...
+[2026-05-27 00:43:32]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-27 00:43:32]   OK — Advanced_Tools\backup_system.py
+[2026-05-27 00:43:32]   OK — Advanced_Tools\daily_report.py
+[2026-05-27 00:43:32]   OK — Advanced_Tools\web_monitor.py
+[2026-05-27 00:43:32]   OK — Advanced_Tools\auto_updater.py
+[2026-05-27 00:43:32]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-27 00:43:32]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-27 00:43:32]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-27 00:43:32]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-27 00:43:32] [3/4] Lanzando Antigravity IDE...
+[2026-05-27 00:43:32] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-27 00:43:32] [4/4] Inyectando contexto Nora...
+[2026-05-27 00:43:32] [4/4] Boot injection OK
+[2026-05-27 00:43:32] ============================================================
+[2026-05-27 00:43:32] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-27 00:43:32] ============================================================
+[2026-05-27 00:54:59] ============================================================
+[2026-05-27 00:54:59] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-27 00:54:59] ============================================================
+[2026-05-27 00:54:59] [1/4] Levantando Docker/Qdrant...
+[2026-05-27 00:54:59] [1/4] Qdrant OK
+[2026-05-27 00:54:59] [2/4] Lanzando daemons...
+[2026-05-27 00:54:59]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-27 00:54:59]   OK — Advanced_Tools\backup_system.py
+[2026-05-27 00:54:59]   OK — Advanced_Tools\daily_report.py
+[2026-05-27 00:54:59]   OK — Advanced_Tools\web_monitor.py
+[2026-05-27 00:54:59]   OK — Advanced_Tools\auto_updater.py
+[2026-05-27 00:54:59]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-27 00:54:59]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-27 00:54:59]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-27 00:54:59]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-27 00:54:59] [3/4] Lanzando Antigravity IDE...
+[2026-05-27 00:54:59] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-27 00:54:59] [4/4] Inyectando contexto Nora...
+[2026-05-27 00:54:59] [4/4] Boot injection OK
+[2026-05-27 00:54:59] ============================================================
+[2026-05-27 00:54:59] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-27 00:54:59] ============================================================
+[2026-05-27 01:11:50] ============================================================
+[2026-05-27 01:11:50] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-27 01:11:50] ============================================================
+[2026-05-27 01:11:50] [1/4] Levantando Docker/Qdrant...
+[2026-05-27 01:11:50] [1/4] Qdrant OK
+[2026-05-27 01:11:50] [2/4] Lanzando daemons...
+[2026-05-27 01:11:50]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-27 01:11:50]   OK — Advanced_Tools\backup_system.py
+[2026-05-27 01:11:50]   OK — Advanced_Tools\daily_report.py
+[2026-05-27 01:11:50]   OK — Advanced_Tools\web_monitor.py
+[2026-05-27 01:11:50]   OK — Advanced_Tools\auto_updater.py
+[2026-05-27 01:11:50]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-27 01:11:50]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-27 01:11:50]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-27 01:11:50]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-27 01:11:50] [3/4] Lanzando Antigravity IDE...
+[2026-05-27 01:11:50] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-27 01:11:50] [4/4] Inyectando contexto Nora...
+[2026-05-27 01:11:50] [4/4] Boot injection OK
+[2026-05-27 01:11:50] ============================================================
+[2026-05-27 01:11:50] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-27 01:11:50] ============================================================
+[2026-05-27 01:26:59] ============================================================
+[2026-05-27 01:26:59] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-27 01:26:59] ============================================================
+[2026-05-27 01:26:59] [1/4] Levantando Docker/Qdrant...
+[2026-05-27 01:26:59] [1/4] Qdrant OK
+[2026-05-27 01:26:59] [2/4] Lanzando daemons...
+[2026-05-27 01:26:59]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-27 01:26:59]   OK — Advanced_Tools\backup_system.py
+[2026-05-27 01:26:59]   OK — Advanced_Tools\daily_report.py
+[2026-05-27 01:26:59]   OK — Advanced_Tools\web_monitor.py
+[2026-05-27 01:26:59]   OK — Advanced_Tools\auto_updater.py
+[2026-05-27 01:26:59]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-27 01:26:59]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-27 01:26:59]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-27 01:26:59]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-27 01:26:59] [3/4] Lanzando Antigravity IDE...
+[2026-05-27 01:26:59] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-27 01:26:59] [4/4] Inyectando contexto Nora...
+[2026-05-27 01:26:59] [4/4] Boot injection OK
+[2026-05-27 01:26:59] ============================================================
+[2026-05-27 01:26:59] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-27 01:26:59] ============================================================
+[2026-05-27 08:31:56] ============================================================
+[2026-05-27 08:31:56] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-27 08:31:56] ============================================================
+[2026-05-27 08:31:56] [1/4] Levantando Docker/Qdrant...
+[2026-05-27 08:31:56] [1/4] Qdrant OK
+[2026-05-27 08:31:56] [2/4] Lanzando daemons...
+[2026-05-27 08:31:56]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-27 08:31:56]   OK — Advanced_Tools\backup_system.py
+[2026-05-27 08:31:56]   OK — Advanced_Tools\daily_report.py
+[2026-05-27 08:31:56]   OK — Advanced_Tools\web_monitor.py
+[2026-05-27 08:31:56]   OK — Advanced_Tools\auto_updater.py
+[2026-05-27 08:31:56]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-27 08:31:56]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-27 08:31:56]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-27 08:31:56]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-27 08:31:56] [3/4] Lanzando Antigravity IDE...
+[2026-05-27 08:31:56] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-27 08:31:56] [4/4] Inyectando contexto Nora...
+[2026-05-27 08:31:56] [4/4] Boot injection OK
+[2026-05-27 08:31:56] ============================================================
+[2026-05-27 08:31:56] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-27 08:31:56] ============================================================
+[2026-05-27 10:20:06] ============================================================
+[2026-05-27 10:20:06] CHASK SWARM LAUNCHER — INICIANDO
+[2026-05-27 10:20:06] ============================================================
+[2026-05-27 10:20:06] [1/4] Levantando Docker/Qdrant...
+[2026-05-27 10:20:07] [1/4] Qdrant OK
+[2026-05-27 10:20:07] [2/4] Lanzando daemons...
+[2026-05-27 10:20:07]   SKIP — telegram_daemon.py (no encontrado)
+[2026-05-27 10:20:07]   OK — Advanced_Tools\backup_system.py
+[2026-05-27 10:20:07]   OK — Advanced_Tools\daily_report.py
+[2026-05-27 10:20:07]   OK — Advanced_Tools\web_monitor.py
+[2026-05-27 10:20:07]   OK — Advanced_Tools\auto_updater.py
+[2026-05-27 10:20:07]   OK — Advanced_Tools\1_wakeup_daemon.py
+[2026-05-27 10:20:07]   SKIP — Advanced_Tools\web_dashboard.py (no encontrado)
+[2026-05-27 10:20:07]   SKIP — Advanced_Tools\swarm_watchdog.py (no encontrado)
+[2026-05-27 10:20:07]   OK — Advanced_Tools\swarm_ai_watchdog.py
+[2026-05-27 10:20:07] [3/4] Lanzando Antigravity IDE...
+[2026-05-27 10:20:07] [3/4] Antigravity OK: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-27 10:20:07] [4/4] Inyectando contexto Nora...
+[2026-05-27 10:20:07] [4/4] Boot injection OK
+[2026-05-27 10:20:07] ============================================================
+[2026-05-27 10:20:07] CHASK SWARM — TODOS LOS PROCESOS LANZADOS. LAUNCHER SALIENDO.
+[2026-05-27 10:20:07] ============================================================

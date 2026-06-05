@@ -1,0 +1,20 @@
+C:\Users\fnora\AppData\Local\Programs\Python\Python311\Lib\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.4.3)/charset_normalizer (3.4.3) doesn't match a supported version!
+  warnings.warn(
+[20:18:14] [SwarmNet] Iniciando SwarmMesh: Terminus (192.168.2.6)
+[20:18:14] [SwarmNet] Capacidades: llm_chat, llm_vision, sandbox_run, skill_run, skill_create, kb_search
+[20:18:14] [SwarmNet] SwarmMesh activo. Esperando enjambres...
+[Dashboard] SwarmMesh LAN P2P iniciado correctamente en segundo plano.
+ * Serving Flask app 'web_dashboard_pro'
+ * Debug mode: off
+[19:35:06] [SwarmNet] Iniciando SwarmMesh: Terminus (192.168.2.6)
+[19:35:06] [SwarmNet] Capacidades: llm_chat, llm_vision, sandbox_run, skill_run, skill_create, kb_search
+[19:35:06] [SwarmNet] SwarmMesh activo. Esperando enjambres...
+[Dashboard] SwarmMesh LAN P2P iniciado correctamente en segundo plano.
+ * Serving Flask app 'web_dashboard_pro'
+ * Debug mode: off
+[01:52:16] [SwarmNet] Iniciando SwarmMesh: Terminus (192.168.2.6)
+[01:52:16] [SwarmNet] Capacidades: llm_chat, llm_vision, sandbox_run, skill_run, skill_create, kb_search
+[01:52:16] [SwarmNet] SwarmMesh activo. Esperando enjambres...
+[Dashboard] SwarmMesh LAN P2P iniciado correctamente en segundo plano.
+ * Serving Flask app 'web_dashboard_pro'
+ * Debug mode: off

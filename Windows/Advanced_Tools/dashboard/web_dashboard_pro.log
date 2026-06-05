@@ -1,0 +1,6 @@
+[11:53:31] [SwarmNet] Iniciando SwarmMesh: Terminus (192.168.2.6)
+[11:53:31] [SwarmNet] Capacidades: llm_chat, llm_vision, sandbox_run, skill_run, skill_create
+[11:53:31] [SwarmNet] SwarmMesh activo. Esperando enjambres...
+[Dashboard] SwarmMesh LAN P2P iniciado correctamente en segundo plano.
+ * Serving Flask app 'web_dashboard_pro'
+ * Debug mode: off
