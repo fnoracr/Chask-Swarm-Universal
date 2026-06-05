@@ -27,9 +27,9 @@ def create_backup():
     
     os.makedirs(resurrection_dir, exist_ok=True)
     
-    # 2. Copiar Core (Chask_Swarn)
-    src_core = r"C:\Program Files\Chask_Swarn"
-    dst_core = os.path.join(resurrection_dir, "Chask_Swarn")
+    # 2. Copiar Core (Chask_Swarm)
+    src_core = r"C:\Program Files\Chask_Swarm"
+    dst_core = os.path.join(resurrection_dir, "Chask_Swarm")
     print(f"Copiando Core desde {src_core}...")
     shutil.copytree(src_core, dst_core, ignore=ignore_patterns, dirs_exist_ok=True)
     
@@ -74,27 +74,27 @@ set OVERWRITE_MEM=%errorlevel%
 
 echo.
 echo [NORA] 1. Matando procesos antiguos (Purgando Memoria RAM)...
-powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match '(python|pythonw)' -and ($_.CommandLine -match 'Chask_Swarn' -or $_.CommandLine -match 'Advanced_Tools') }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"
+powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match '(python|pythonw)' -and ($_.CommandLine -match 'Chask_Swarm' -or $_.CommandLine -match 'Advanced_Tools') }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"
 timeout /t 2 >nul
 
 if %OVERWRITE_MEM%==2 (
     echo [NORA] Conservando Memoria y Directivas actuales...
     mkdir "%TEMP%\\[Nombre_IA]_MemBackup" >nul 2>&1
-    copy /Y "C:\\Program Files\\Chask_Swarn\\memory.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
-    copy /Y "C:\\Program Files\\Chask_Swarn\\directives.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
-    copy /Y "C:\\Program Files\\Chask_Swarn\\soul.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
-    copy /Y "C:\\Program Files\\Chask_Swarn\\projects_memory.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
+    copy /Y "C:\\Program Files\\Chask_Swarm\\memory.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
+    copy /Y "C:\\Program Files\\Chask_Swarm\\directives.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
+    copy /Y "C:\\Program Files\\Chask_Swarm\\soul.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
+    copy /Y "C:\\Program Files\\Chask_Swarm\\projects_memory.md" "%TEMP%\\[Nombre_IA]_MemBackup\\" >nul 2>&1
 )
 
-echo [NORA] 2. Restaurando Nucleo Base (C:\\Program Files\\Chask_Swarn)...
-if exist "C:\\Program Files\\Chask_Swarn" (
-    rmdir /s /q "C:\\Program Files\\Chask_Swarn"
+echo [NORA] 2. Restaurando Nucleo Base (C:\\Program Files\\Chask_Swarm)...
+if exist "C:\\Program Files\\Chask_Swarm" (
+    rmdir /s /q "C:\\Program Files\\Chask_Swarm"
 )
-xcopy "%~dp0Chask_Swarn" "C:\\Program Files\\Chask_Swarn\\" /E /I /H /Y /Q
+xcopy "%~dp0Chask_Swarm" "C:\\Program Files\\Chask_Swarm\\" /E /I /H /Y /Q
 
 if %OVERWRITE_MEM%==2 (
     echo [NORA] Restaurando Memoria y Directivas preservadas al Nucleo...
-    copy /Y "%TEMP%\\[Nombre_IA]_MemBackup\\*.*" "C:\\Program Files\\Chask_Swarn\\" >nul 2>&1
+    copy /Y "%TEMP%\\[Nombre_IA]_MemBackup\\*.*" "C:\\Program Files\\Chask_Swarm\\" >nul 2>&1
     rmdir /s /q "%TEMP%\\[Nombre_IA]_MemBackup"
     echo [NORA] 3. Omitiendo la restauracion de [Nombre_IA] Datos y Qdrant para preservar tus recuerdos actuales.
 ) else (
@@ -113,7 +113,7 @@ if %OVERWRITE_MEM%==2 (
 )
 
 echo [NORA] 4. Resucitando el Ouroboros (Watchdog + Guardian)...
-start /B "" "C:\\Users\\%USERNAME%\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe" "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Daemons\\process_watchdog.py"
+start /B "" "C:\\Users\\%USERNAME%\\AppData\\Local\\Programs\\Python\\Python311\\pythonw.exe" "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Daemons\\process_watchdog.py"
 
 echo.
 echo [NORA] Resurreccion completada con exito. El enjambre ha vuelto a la vida.

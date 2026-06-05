@@ -105,7 +105,7 @@ Si la tarea es compleja, divídete en estos roles:
 
 **Proyecto:** Charm - Ecosistema Chask Swarm
 **Tarea:** MIGRACION DE NUCLEO COMPLETADA
-**Paso actual:** Nucleo migrado a C:\Program Files\Chask_Swarn. Daemons reiniciandose.
+**Paso actual:** Nucleo migrado a C:\Program Files\Chask_Swarm. Daemons reiniciandose.
 **Hora de inicio de sesion:** 2026-05-12 21:45
 **Hora de ultima actualizacion:** 2026-05-12 21:57
 

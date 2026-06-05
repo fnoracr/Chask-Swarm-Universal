@@ -122,7 +122,7 @@ Si la tarea es compleja, divídete en estos roles:
 
 ## Cambios Realizados (2026-05-13 00:24-00:37)
 
-### Núcleo (C:\Program Files\Chask_Swarn)
+### Núcleo (C:\Program Files\Chask_Swarm)
 - GEMINI.md escrito con identidad completa de Enjambre (persistencia entre sesiones)
 - Knowledge Item creado: chask_identity_and_chask_swarm
 - Chask_Swarm.exe compilado (launcher sin ventana, procesos DETACHED)

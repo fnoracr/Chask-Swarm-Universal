@@ -33,7 +33,7 @@ if sys.stdout and hasattr(sys.stdout, 'buffer'):
     except Exception:
         pass
 
-ROOT = Path(r"C:\Program Files\Chask_Swarn")
+ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS = ROOT / "Advanced_Tools"
 SOUL = ROOT / "soul.md"
 DIRECTIVES = ROOT / "directives.md"

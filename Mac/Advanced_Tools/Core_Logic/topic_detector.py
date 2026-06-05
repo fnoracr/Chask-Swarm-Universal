@@ -28,7 +28,7 @@ from datetime import datetime, timedelta
 log = logging.getLogger("topic_detector")
 
 # ─── Configuración ────────────────────────────────────────────
-STATE_FILE       = r"C:\Program Files\Chask_Swarn\Advanced_Tools\topic_state.json"
+STATE_FILE       = r"C:\Program Files\Chask_Swarm\Advanced_Tools\topic_state.json"
 TRIGGER_COUNT    = 3       # Número de preguntas sobre el mismo tema para activar oferta
 WINDOW_HOURS     = 48      # Ventana de tiempo en horas para considerar recurrencia
 MIN_TOPIC_WORDS  = 2       # Mínimo de palabras en un tema para considerarlo válido

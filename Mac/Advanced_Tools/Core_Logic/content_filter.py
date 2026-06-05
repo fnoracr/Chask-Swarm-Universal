@@ -20,7 +20,7 @@ from pathlib import Path
 if sys.stdout.encoding != 'utf-8':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-ROOT = Path(r"C:\Program Files\Chask_Swarn")
+ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS_DIR = ROOT / "Advanced_Tools"
 FILTER_LOG = ROOT / "content_filter_log.json"
 

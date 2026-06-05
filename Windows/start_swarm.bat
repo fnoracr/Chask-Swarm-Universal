@@ -2,7 +2,7 @@
 REM start_swarm.bat — Arranca el enjambre Chask Swarm (Arquitectura V3)
 REM Motor maestro: process_watchdog.py como orquestador principal.
 
-SET BASE=C:\Program Files\Chask_Swarn
+SET BASE=C:\Program Files\Chask_Swarm
 SET PYTHON=C:\Users\fnora\AppData\Local\Programs\Python\Python311\pythonw.exe
 SET IDE=C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
 

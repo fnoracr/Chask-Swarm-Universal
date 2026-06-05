@@ -19,7 +19,7 @@ import sqlite3
 import win32crypt
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
-BASE_DIR = r"C:\Program Files\Chask_Swarn"
+BASE_DIR = r"C:\Program Files\Chask_Swarm"
 DEFAULT_OUTPUT = os.path.join(r"C:\Users\fnora\Desktop\Enjambre Datos", "youtube_cookies.txt")
 
 def get_chrome_key(local_state_path: str) -> bytes | None:

@@ -19,7 +19,7 @@ import json
 from pathlib import Path
 from flask import Blueprint, request, jsonify, session
 
-ROOT = Path(r"C:\Program Files\Chask_Swarn")
+ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS = ROOT / "Advanced_Tools"
 sys.path.insert(0, str(TOOLS))
 

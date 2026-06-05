@@ -58,7 +58,7 @@ except ImportError:
     sys.exit(1)
 
 # Configurationes por defecto
-BASE_DIR = r"C:\Program Files\Chask_Swarn"
+BASE_DIR = r"C:\Program Files\Chask_Swarm"
 FFMPEG_PATH = os.path.join(BASE_DIR, "Binaries", "ffmpeg.exe")
 OLLAMA_URL = "http://localhost:11434"
 CHECKPOINT_FILE = os.path.join(r"C:\Users\fnora\Desktop\Enjambre Datos", "youtube_indexer_checkpoint.json")
@@ -626,7 +626,7 @@ def main():
             graph_image_path = ""
             grafico_config = academic_data.get("grafico_config")
             if grafico_config and isinstance(grafico_config, dict):
-                graph_dir = r"C:\Program Files\Chask_Swarn\Advanced_Tools\uploads\graphs"
+                graph_dir = r"C:\Program Files\Chask_Swarm\Advanced_Tools\uploads\graphs"
                 graph_filename = f"graph_{point_id_counter}.png"
                 graph_filepath = os.path.join(graph_dir, graph_filename)
                 

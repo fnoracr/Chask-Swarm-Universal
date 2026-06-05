@@ -54,7 +54,7 @@ TOP_K_CONTEXT    = 4    # Chunks de contexto RAG a recuperar
 SCORE_THRESHOLD  = 0.35 # Score mínimo para usar un resultado
 
 BASE_KNOWLEDGE   = r"C:\Users\fnora\Desktop\Enjambre Datos\knowledge_bases"
-TOOLS_DIR        = r"C:\Program Files\Chask_Swarn\Advanced_Tools"
+TOOLS_DIR        = r"C:\Program Files\Chask_Swarm\Advanced_Tools"
 JOBS_FILE        = os.path.join(TOOLS_DIR, "knowledge_jobs.json")
 
 
@@ -411,7 +411,7 @@ class KnowledgeOrchestrator:
             try:
                 subprocess.Popen([
                     sys.executable,
-                    os.path.join(r"C:\Program Files\Chask_Swarn", "charm_telegram.py"),
+                    os.path.join(r"C:\Program Files\Chask_Swarm", "charm_telegram.py"),
                     "send",
                     f"✅ Base de conocimiento '{topic}' lista: "
                     f"{stats['points_inserted']} fragmentos indexados."

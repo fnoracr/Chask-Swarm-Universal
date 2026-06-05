@@ -8,7 +8,7 @@ Poll cada 3s. Al detectar pending:
 """
 import json, time, os, re
 
-QUEUE = r"C:\Program Files\Chask_Swarn\Advanced_Tools\Message_Queues\input_queue.json"
+QUEUE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
 
 def extract_user_message(raw):
     """Extrae solo el texto del usuario del wrapper de contexto."""

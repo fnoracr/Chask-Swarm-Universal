@@ -12,7 +12,7 @@ import subprocess
 import json
 from pathlib import Path
 
-ROOT = Path(r"C:\Program Files\Chask_Swarn")
+ROOT = Path(r"C:\Program Files\Chask_Swarm")
 PYTHON = sys.executable
 NSSM = ROOT / "nssm.exe"  # Optional NSSM binary
 

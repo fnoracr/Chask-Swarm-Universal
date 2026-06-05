@@ -31,7 +31,7 @@ except ImportError:
     ASYMMETRIC_OK = False
 
 # ── Rutas ──────────────────────────────────────────────────────────
-BASE_DIR   = Path(r"C:\Program Files\Chask_Swarn")
+BASE_DIR   = Path(r"C:\Program Files\Chask_Swarm")
 CONFIG_FILE = BASE_DIR / "Configuration/swarm_internet_config.json"
 TOKENS_FILE = BASE_DIR / "Advanced_Tools" / "mesh_invite_tokens.json"
 

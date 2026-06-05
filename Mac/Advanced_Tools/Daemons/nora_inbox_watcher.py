@@ -18,8 +18,8 @@ from datetime import datetime
 if hasattr(sys.stdout, 'buffer'):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-QUEUE_FILE = r"C:\Program Files\Chask_Swarn\Advanced_Tools\Message_Queues\input_queue.json"
-LOG_FILE   = r"C:\Program Files\Chask_Swarn\Advanced_Tools\unified_channel.log"
+QUEUE_FILE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
+LOG_FILE   = r"C:\Program Files\Chask_Swarm\Advanced_Tools\unified_channel.log"
 
 # Clase de ventana de Antigravity (Qt)
 ANTIGRAVITY_CLASS = "Qt51518QWindowIcon"

@@ -48,7 +48,7 @@ def main():
     python_exe = sys.argv[2]   # ruta a pythonw.exe
     script     = sys.argv[3]   # ruta al script .py
 
-    log_file = r"C:\Program Files\Chask_Swarn\System_Logs\swarm_power_audit.log"
+    log_file = r"C:\Program Files\Chask_Swarm\System_Logs\swarm_power_audit.log"
 
     def audit(msg):
         try:

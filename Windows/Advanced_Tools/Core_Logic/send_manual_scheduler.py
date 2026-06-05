@@ -10,9 +10,9 @@ import time
 import requests
 from datetime import datetime, timedelta
 
-CONFIG_PATH = r"C:\Program Files\Chask_Swarn\Configuration\master_credentials.json"
+CONFIG_PATH = r"C:\Program Files\Chask_Swarm\Configuration\master_credentials.json"
 MANUAL_PATH = r"C:\Users\fnora\Desktop\Enjambre Datos\Manual_Enjambre_Chask_Swarm.html"
-LOG_PATH = r"C:\Program Files\Chask_Swarn\Advanced_Tools\scheduler.log"
+LOG_PATH = r"C:\Program Files\Chask_Swarm\Advanced_Tools\scheduler.log"
 
 
 def log_status(message: str):

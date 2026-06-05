@@ -21,7 +21,7 @@ import traceback
 import requests
 from datetime import datetime
 
-os.chdir(r"C:\Program Files\Chask_Swarn")
+os.chdir(r"C:\Program Files\Chask_Swarm")
 
 if sys.stdout and hasattr(sys.stdout, 'buffer'):
     try:
@@ -30,7 +30,7 @@ if sys.stdout and hasattr(sys.stdout, 'buffer'):
         pass
 
 # ── Rutas ─────────────────────────────────────────────────────────────────────
-BASE_DIR        = r"C:\Program Files\Chask_Swarn"
+BASE_DIR        = r"C:\Program Files\Chask_Swarm"
 TOOLS_DIR       = os.path.join(BASE_DIR, "Advanced_Tools")
 CONFIG_PATH     = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
 CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
@@ -154,7 +154,7 @@ def _tg_send(token: str, chat_id: str, text: str, use_keyboard=True):
         pass
 
 def _kill_swarm():
-    audit_log = r"C:\Program Files\Chask_Swarn\System_Logs\swarm_power_audit.log"
+    audit_log = r"C:\Program Files\Chask_Swarm\System_Logs\swarm_power_audit.log"
     def audit(msg):
         with open(audit_log, "a", encoding="utf-8") as f:
             f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
@@ -171,7 +171,7 @@ def _kill_swarm():
         subprocess.run('powershell -Command "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match \'process_watchdog.py\' } | Stop-Process -Force"', shell=True, capture_output=True)
         audit("[ÉXITO] Paso 2: process_watchdog.py aniquilado.")
 
-        subprocess.run('powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match \'python\' -and $_.CommandLine -match \'Chask_Swarn\' -and $_.CommandLine -notmatch \'telegram_sentinel.py\' -and $_.CommandLine -notmatch \'unified_channel_daemon.py\' }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"', shell=True, capture_output=True)
+        subprocess.run('powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match \'python\' -and $_.CommandLine -match \'Chask_Swarm\' -and $_.CommandLine -notmatch \'telegram_sentinel.py\' -and $_.CommandLine -notmatch \'unified_channel_daemon.py\' }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"', shell=True, capture_output=True)
         audit("[ÉXITO] Paso 3: Todos los daemons Python secundarios aniquilados (excepto Sentinel y Unified).")
 
         subprocess.run('powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.Name -match \'node.exe\' -and $_.CommandLine -match \'n8n\' }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"', shell=True, capture_output=True)
@@ -194,7 +194,7 @@ def _kill_swarm():
         audit(f"[CRITICAL ERROR] Fallo durante _kill_swarm: {e}")
 
 def _start_swarm():
-    audit_log = r"C:\Program Files\Chask_Swarn\System_Logs\swarm_power_audit.log"
+    audit_log = r"C:\Program Files\Chask_Swarm\System_Logs\swarm_power_audit.log"
     def audit(msg):
         with open(audit_log, "a", encoding="utf-8") as f:
             f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
@@ -464,7 +464,7 @@ from datetime import datetime
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-BASE_DIR        = r"C:\\Program Files\\Chask_Swarn"
+BASE_DIR        = r"C:\\Program Files\\Chask_Swarm"
 CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
 QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
 LOG_FILE        = os.path.join(BASE_DIR, "Advanced_Tools", "unified_channel.log")
@@ -610,7 +610,7 @@ from datetime import datetime
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-BASE_DIR        = r"C:\\Program Files\\Chask_Swarn"
+BASE_DIR        = r"C:\\Program Files\\Chask_Swarm"
 CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
 QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
 LOG_FILE        = os.path.join(BASE_DIR, "Advanced_Tools", "unified_channel.log")

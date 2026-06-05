@@ -29,7 +29,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ─── Paths ────────────────────────────────────────────────
-ROOT = Path(r"C:\Program Files\Chask_Swarn")
+ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS = ROOT / "Advanced_Tools"
 AUDIT_LOG = ROOT / "sandbox_audit.log"
 SANDBOX_WORKDIR = ROOT / "scratch" / "sandbox_work"

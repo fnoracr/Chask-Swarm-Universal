@@ -30,7 +30,7 @@ def kill_swarm():
         subprocess.run('powershell -Command "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match \'process_watchdog.py\' } | Stop-Process -Force"', shell=True, capture_output=True)
         audit("[ÉXITO] Paso 2: process_watchdog.py aniquilado.")
 
-        subprocess.run('powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match \'python\' -and $_.CommandLine -match \'Chask_Swarn\' -and $_.CommandLine -notmatch \'telegram_sentinel.py\' -and $_.ProcessId -ne $PID }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"', shell=True, capture_output=True)
+        subprocess.run('powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match \'python\' -and $_.CommandLine -match \'Chask_Swarm\' -and $_.CommandLine -notmatch \'telegram_sentinel.py\' -and $_.ProcessId -ne $PID }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"', shell=True, capture_output=True)
         audit("[ÉXITO] Paso 3: Todos los daemons Python secundarios aniquilados (excepto Sentinel y este script).")
 
         subprocess.run('powershell -Command "$procs = Get-CimInstance Win32_Process | Where-Object { $_.Name -match \'node.exe\' -and $_.CommandLine -match \'n8n\' }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force }"', shell=True, capture_output=True)

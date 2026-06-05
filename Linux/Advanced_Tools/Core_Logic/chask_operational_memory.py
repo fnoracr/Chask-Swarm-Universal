@@ -57,7 +57,7 @@ COLLECTIONS = {
 }
 
 # Ficheros core del sistema Chask Swarm
-CORE_DIR = r"C:\Program Files\Chask_Swarn"
+CORE_DIR = r"C:\Program Files\Chask_Swarm"
 TOOLS_DIR = os.path.join(CORE_DIR, "Advanced_Tools")
 
 CORE_FILES = [

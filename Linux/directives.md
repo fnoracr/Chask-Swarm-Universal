@@ -57,7 +57,7 @@ A medida que interactúas con el usuario y aprendes sobre sus preferencias, form
 
 La comunicación saliente se hace siempre por el canal unificado:
 1. Las respuestas se envían usando el enrutador correspondiente al canal.
-2. **Centinela Autodestructivo (queue_sentinel.py):** Al arrancar cualquier sesión, OBLIGATORIAMENTE debes lanzar como tarea de fondo el script `C:\Program Files\Chask_Swarn\Advanced_Tools\queue_sentinel.py`. Este script hace poll cada 3 segundos y SALE (exit) en cuanto detecta mensajes pending. La terminación del proceso te despierta.
+2. **Centinela Autodestructivo (queue_sentinel.py):** Al arrancar cualquier sesión, OBLIGATORIAMENTE debes lanzar como tarea de fondo el script `C:\Program Files\Chask_Swarm\Advanced_Tools\queue_sentinel.py`. Este script hace poll cada 3 segundos y SALE (exit) en cuanto detecta mensajes pending. La terminación del proceso te despierta.
 3. **Procesamiento Rápido con Skill:** Cuando el centinela termine y te despierte, verás su output con el mensaje. Simplemente ejecuta SILENCIOSAMENTE las instrucciones de la skill correspondiente.
 
 ### Protocolo de Interrupción Multi-Canal (Plan B)
@@ -82,7 +82,7 @@ Las siguientes reglas fueron aprendidas automáticamente a partir de correccione
 
 Al detectar preferencias, hechos o correcciones de Administrador, guardarlos con:
 ```bash
-python "C:\Program Files\Chask_Swarn\Advanced_Tools\evolutionary_memory.py" add "hecho"
+python "C:\Program Files\Chask_Swarm\Advanced_Tools\evolutionary_memory.py" add "hecho"
 ```
 Antes de tareas complejas, consultar la memoria para contexto relevante.
 
@@ -90,7 +90,7 @@ Antes de tareas complejas, consultar la memoria para contexto relevante.
 
 Antes de cerrar una sesión larga (>3 tareas), ejecutar reflexión:
 ```bash
-python "C:\Program Files\Chask_Swarn\Advanced_Tools\reflection_engine.py" reflect
+python "C:\Program Files\Chask_Swarm\Advanced_Tools\reflection_engine.py" reflect
 ```
 Esto analiza la sesión, extrae lecciones nuevas y las persiste automáticamente.
 
@@ -168,5 +168,5 @@ Esto evita robos de señal y comportamientos esquizofrénicos en el Enjambre.
 
 ## 19. Protocolo de Scripts de Un Solo Uso (Sandboxing Temporal)
 
-Todo script auxiliar, parche rápido, o archivo temporal programado para una modificación puntual o tarea de un solo uso DEBE crearse obligatoriamente dentro de la carpeta `C:\Program Files\Chask_Swarn\One_Time_Scripts`.
+Todo script auxiliar, parche rápido, o archivo temporal programado para una modificación puntual o tarea de un solo uso DEBE crearse obligatoriamente dentro de la carpeta `C:\Program Files\Chask_Swarm\One_Time_Scripts`.
 Una vez ejecutado y confirmada su efectividad, el script DEBE ser borrado inmediatamente para mantener el directorio raíz de la arquitectura completamente limpio y libre de basura.

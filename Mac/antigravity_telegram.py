@@ -3,7 +3,7 @@ import requests
 import json
 import os
 
-CONFIG_PATH = r"C:\Program Files\Chask_Swarn\Configuration\master_credentials.json"
+CONFIG_PATH = r"C:\Program Files\Chask_Swarm\Configuration\master_credentials.json"
 
 def get_config():
     with open(CONFIG_PATH, 'r') as f:
@@ -31,7 +31,7 @@ if __name__ == "__main__":
             send_message(text)
         elif command == "listen":
             import time
-            QUEUE_FILE = r"C:\Program Files\Chask_Swarn\Advanced_Tools\Message_Queues\input_queue.json"
+            QUEUE_FILE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
             print("Listening for Telegram messages in the background...", flush=True)
             while True:
                 try:

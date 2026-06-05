@@ -4,7 +4,7 @@
       "id": 1,
       "name": "telegram_send",
       "description": "Enviar mensaje por Telegram",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\charm_telegram.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\charm_telegram.py",
       "tags": [
         "telegram",
         "comunicacion"
@@ -18,7 +18,7 @@
       "id": 2,
       "name": "llm_router",
       "description": "Enrutar consultas al pool de IAs gratuitas",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\llm_router.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\llm_router.py",
       "tags": [
         "ia",
         "llm",
@@ -33,7 +33,7 @@
       "id": 3,
       "name": "audit_log",
       "description": "Registrar accion critica en log de auditoria",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\audit_logger.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\audit_logger.py",
       "tags": [
         "seguridad",
         "audit"
@@ -47,7 +47,7 @@
       "id": 4,
       "name": "backup",
       "description": "Sistema de backups automaticos",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Scripts_Mantenimiento\\backup_system.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Scripts_Mantenimiento\\backup_system.py",
       "tags": [
         "backup",
         "seguridad"
@@ -61,7 +61,7 @@
       "id": 5,
       "name": "reflection",
       "description": "Motor de auto-evolucion y lecciones aprendidas",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\reflection_engine.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\reflection_engine.py",
       "tags": [
         "aprendizaje",
         "reflexion"
@@ -75,7 +75,7 @@
       "id": 6,
       "name": "evo_memory",
       "description": "Memoria evolutiva con hechos temporales",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\evolutionary_memory.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\evolutionary_memory.py",
       "tags": [
         "memoria",
         "hechos"
@@ -89,7 +89,7 @@
       "id": 7,
       "name": "qdrant_memory",
       "description": "Memoria vectorial a largo plazo",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\qdrant_memory_manager.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\qdrant_memory_manager.py",
       "tags": [
         "memoria",
         "vectorial"
@@ -103,7 +103,7 @@
       "id": 8,
       "name": "privacy_engine",
       "description": "Anonimizacion de datos sensibles",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\privacy_engine.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\privacy_engine.py",
       "tags": [
         "seguridad",
         "privacidad"
@@ -117,7 +117,7 @@
       "id": 9,
       "name": "mode_router",
       "description": "Deteccion automatica del modo de agente segun el prompt",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\mode_router.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\mode_router.py",
       "tags": [
         "agentes",
         "modos",
@@ -132,7 +132,7 @@
       "id": 10,
       "name": "chask_mcp_server",
       "description": "Servidor Model Context Protocol para integracion estandar de herramientas",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Core_Logic\\chask_mcp_server.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\chask_mcp_server.py",
       "tags": [
         "mcp",
         "anthropic",
@@ -147,7 +147,7 @@
       "id": 11,
       "name": "no_optimizaciones_prematuras",
       "description": "Evita implementar optimizaciones sin solicitud explícita, priorizando la simplicidad.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\learned\\no_optimizaciones_prematuras.md",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\no_optimizaciones_prematuras.md",
       "tags": "learned,auto-evolved",
       "created": "2026-05-17T11:18:52.317702",
       "usage_count": 0,
@@ -158,7 +158,7 @@
       "id": 12,
       "name": "telegram_injection_backup",
       "description": "Asegura la inyección de código en el IDE mediante una cola persistente.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\learned\\telegram_injection_backup.md",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\telegram_injection_backup.md",
       "tags": "learned,auto-evolved",
       "created": "2026-05-17T11:19:02.157239",
       "usage_count": 0,
@@ -169,7 +169,7 @@
       "id": 13,
       "name": "multi_channel_queue_management",
       "description": "Gestionar colas de mensajes para múltiples canales de comunicación.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\learned\\multi_channel_queue_management.md",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\multi_channel_queue_management.md",
       "tags": "learned,auto-evolved",
       "created": "2026-05-17T11:19:07.777349",
       "usage_count": 0,
@@ -180,7 +180,7 @@
       "id": 14,
       "name": "synthesis_and_integration_of_academic_lessons",
       "description": "Sintetizar lecciones universitarias estructuradas con LaTeX y MathJax a partir de transcripciones vectorizadas de Qdrant e integrarlas secuencialmente en el panel web.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\learned\\synthesis_and_integration_of_academic_lessons.md",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\synthesis_and_integration_of_academic_lessons.md",
       "tags": [
         "learned",
         "auto-evolved",
@@ -195,7 +195,7 @@
       "id": 15,
       "name": "doc_renderer",
       "description": "Genera documentos HTML/PDF profesionales desde Markdown con múltiples temas (personalizables).",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\utilities\\doc_renderer.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\utilities\\doc_renderer.py",
       "tags": [
         "documentos",
         "html",
@@ -212,7 +212,7 @@
       "id": 16,
       "name": "html_fusion",
       "description": "Fusiona múltiples ficheros HTML en uno solo, eliminando duplicados y optimizando el tamaño.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\utilities\\html_fusion.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\utilities\\html_fusion.py",
       "tags": [
         "html",
         "fusion",
@@ -228,7 +228,7 @@
       "id": 17,
       "name": "style_extractor",
       "description": "Genera nuevos temas visuales para doc_renderer a partir de una página web (URL) o una imagen.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\utilities\\style_extractor.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\utilities\\style_extractor.py",
       "tags": [
         "estilos",
         "imagen",
@@ -246,7 +246,7 @@
       "id": 18,
       "name": "unified-channel-sender",
       "description": "Inyecta mensajes en panel web y Discord",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\shared_skills_library\\unified-channel-sender\\scripts\\send_channel.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\shared_skills_library\\unified-channel-sender\\scripts\\send_channel.py",
       "tags": [
         "comunicacion",
         "web",
@@ -259,7 +259,7 @@
       "id": 19,
       "name": "universal_scraper",
       "description": "Raspador web universal y robusto",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\utilities\\universal_scraper.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\utilities\\universal_scraper.py",
       "tags": [
         "scraping",
         "web"
@@ -271,7 +271,7 @@
       "id": 20,
       "name": "youtube_transcript_exporter",
       "description": "Exporta subtitulos de YouTube",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\utilities\\export_youtube_transcripts.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\utilities\\export_youtube_transcripts.py",
       "tags": [
         "youtube",
         "video"
@@ -283,7 +283,7 @@
       "id": 21,
       "name": "agentic_chunker",
       "description": "Trocea textos largos de forma agéntica",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\skills\\utilities\\agentic_chunker.py",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\skills\\utilities\\agentic_chunker.py",
       "tags": [
         "texto",
         "nlp",
@@ -296,7 +296,7 @@
       "id": 22,
       "name": "design-taste-frontend",
       "description": "Protocolo Anti-slop para frontend. Evita componentes genéricos en landings y portfolios.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\design-taste-frontend",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\design-taste-frontend",
       "tags": [
         "antigravity",
         "frontend",
@@ -311,7 +311,7 @@
       "id": 23,
       "name": "high-end-visual-design",
       "description": "Arquitectura UI/UX de alto nivel (Awwwards-tier) con sombras, fuentes y animaciones premium.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\high-end-visual-design",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\high-end-visual-design",
       "tags": [
         "antigravity",
         "ui",
@@ -327,7 +327,7 @@
       "id": 24,
       "name": "image-to-code",
       "description": "Workflow Image-First: obliga a generar mockups visuales antes de implementar el frontend.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\image-to-code",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\image-to-code",
       "tags": [
         "antigravity",
         "vision",
@@ -343,7 +343,7 @@
       "id": 25,
       "name": "minimalist-ui",
       "description": "Interfaces estilo editorial minimalista. Paleta monocromática cálida, alto contraste tipográfico, sin gradientes.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\minimalist-ui",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\minimalist-ui",
       "tags": [
         "antigravity",
         "minimalist",
@@ -358,7 +358,7 @@
       "id": 26,
       "name": "brandkit",
       "description": "Gestión de kits de marca (colores, tipografía, logos) para mantener coherencia en la generación de UI.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\brandkit",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\brandkit",
       "tags": [
         "antigravity",
         "branding",
@@ -373,7 +373,7 @@
       "id": 27,
       "name": "design-taste-frontend-v1",
       "description": "Versión legacy del protocolo Anti-slop para frontend.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\design-taste-frontend-v1",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\design-taste-frontend-v1",
       "tags": [
         "antigravity",
         "frontend",
@@ -388,7 +388,7 @@
       "id": 28,
       "name": "full-output-enforcement",
       "description": "Obliga a generar el código completo sin truncamientos ni placeholders vagos.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\full-output-enforcement",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\full-output-enforcement",
       "tags": [
         "antigravity",
         "code",
@@ -403,7 +403,7 @@
       "id": 29,
       "name": "gpt-taste",
       "description": "Directrices generales de buen gusto y diseño aplicadas a modelos GPT/LLMs.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\gpt-taste",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\gpt-taste",
       "tags": [
         "antigravity",
         "design",
@@ -418,7 +418,7 @@
       "id": 30,
       "name": "imagegen-frontend-mobile",
       "description": "Generación de referencias visuales e implementación orientada específicamente a interfaces móviles.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\imagegen-frontend-mobile",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\imagegen-frontend-mobile",
       "tags": [
         "antigravity",
         "mobile",
@@ -434,7 +434,7 @@
       "id": 31,
       "name": "imagegen-frontend-web",
       "description": "Generación de referencias visuales e implementación orientada a interfaces web de escritorio.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\imagegen-frontend-web",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\imagegen-frontend-web",
       "tags": [
         "antigravity",
         "web",
@@ -450,7 +450,7 @@
       "id": 32,
       "name": "industrial-brutalist-ui",
       "description": "Estilo Brutalismo Industrial: bordes duros, tipografía monospace, alto contraste, sin sombras suaves.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\industrial-brutalist-ui",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\industrial-brutalist-ui",
       "tags": [
         "antigravity",
         "brutalism",
@@ -466,7 +466,7 @@
       "id": 33,
       "name": "redesign-existing-projects",
       "description": "Protocolo de rediseño de proyectos existentes respetando componentes core.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\redesign-existing-projects",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\redesign-existing-projects",
       "tags": [
         "antigravity",
         "redesign",
@@ -481,7 +481,7 @@
       "id": 34,
       "name": "stitch-design-taste",
       "description": "Costura y ensamblaje de componentes de diseño manteniendo un gusto estético premium.",
-      "script_path": "C:\\Program Files\\Chask_Swarn\\.agents\\skills\\stitch-design-taste",
+      "script_path": "C:\\Program Files\\Chask_Swarm\\.agents\\skills\\stitch-design-taste",
       "tags": [
         "antigravity",
         "components",

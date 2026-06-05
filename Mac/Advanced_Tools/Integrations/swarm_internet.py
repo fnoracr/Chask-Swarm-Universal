@@ -36,7 +36,7 @@ try:
 except ImportError:
     HTTP_OK = False
 
-ROOT        = Path(r"C:\Program Files\Chask_Swarn")
+ROOT        = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS       = ROOT / "Advanced_Tools"
 INET_CONFIG = ROOT / "Configuration/swarm_internet_config.json"
 ROUTERS_CACHE = ROOT / "cached_routers.json"

@@ -307,7 +307,7 @@ def run(prompt: str) -> str:
         # Intentar ruta absoluta si es relativa al workspace de Enjambre Datos
         if not os.path.isabs(image_path):
             candidate1 = os.path.join(r"C:\Users\fnora\Desktop\Enjambre Datos", image_path)
-            candidate2 = os.path.join(r"C:\Program Files\Chask_Swarn", image_path)
+            candidate2 = os.path.join(r"C:\Program Files\Chask_Swarm", image_path)
             if os.path.exists(candidate1):
                 image_path = candidate1
             elif os.path.exists(candidate2):

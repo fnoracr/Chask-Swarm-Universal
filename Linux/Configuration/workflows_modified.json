@@ -199,7 +199,7 @@
       },
       {
         "parameters": {
-          "command": "C:\\Program Files\\Chask_Swarn\\kill_all_from_n8n.bat"
+          "command": "C:\\Program Files\\Chask_Swarm\\kill_all_from_n8n.bat"
         },
         "id": "4f0a8e4a-5e7d-7d9f-c04d-7a8f6d5e4e04",
         "name": "Execute Kill Script",
@@ -212,7 +212,7 @@
       },
       {
         "parameters": {
-          "command": "C:\\Program Files\\Chask_Swarn\\start_all_from_n8n.bat"
+          "command": "C:\\Program Files\\Chask_Swarm\\start_all_from_n8n.bat"
         },
         "id": "5a1b9f5b-6f8e-8e0a-d15e-8b9a7e6f5f05",
         "name": "Execute Start Script",

@@ -14,7 +14,7 @@ except ImportError:
 
 def inject_to_charm(text: str, source: str = "web") -> tuple[bool, str]:
     # Escribir en el historial silenciosamente (chat_history.md en [Nombre_IA])
-    charm_dir = r"C:\Program Files\Chask_Swarn\[Nombre_IA]"
+    charm_dir = r"C:\Program Files\Chask_Swarm\[Nombre_IA]"
     if not os.path.exists(charm_dir):
         try:
             os.makedirs(charm_dir, exist_ok=True)

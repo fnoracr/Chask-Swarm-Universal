@@ -68,8 +68,8 @@ def kill_system():
         print(f"Error guardando memoria en Qdrant: {e}")
 
     # 2. Matar todos los daemons de Python en CHASK_DIR excepto nosotros
-    subprocess.run('wmic process where "name=\'python.exe\' and commandline like \'%Chask_Swarn%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    subprocess.run('wmic process where "name=\'pythonw.exe\' and commandline like \'%Chask_Swarn%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run('wmic process where "name=\'python.exe\' and commandline like \'%Chask_Swarm%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run('wmic process where "name=\'pythonw.exe\' and commandline like \'%Chask_Swarm%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
     # 3. Cerrar visualmente el IDE (matando todo su árbol de procesos)
     subprocess.run('taskkill /F /IM Antigravity.exe /T', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -87,8 +87,8 @@ def start_system():
             pass
 
     # 2. Matar todos los daemons activos (limpieza profunda y fiable con wmic)
-    subprocess.run('wmic process where "name=\'python.exe\' and commandline like \'%Chask_Swarn%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    subprocess.run('wmic process where "name=\'pythonw.exe\' and commandline like \'%Chask_Swarn%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run('wmic process where "name=\'python.exe\' and commandline like \'%Chask_Swarm%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run('wmic process where "name=\'pythonw.exe\' and commandline like \'%Chask_Swarm%\' and not commandline like \'%charm_kill_switch.py%\'" call terminate', shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     # 3. Lanzar el acceso directo del escritorio garantizando la visibilidad.
     shortcut_path = os.path.join(os.path.expanduser("~"), "Desktop", "Boot Chask Swarm.lnk")

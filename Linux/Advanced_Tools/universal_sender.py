@@ -4,7 +4,7 @@ import os
 import subprocess
 import requests
 
-BASE_DIR = r"C:\Program Files\Chask_Swarn"
+BASE_DIR = r"C:\Program Files\Chask_Swarm"
 CONFIG_FILE = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
 TELEGRAM_SCRIPT = os.path.join(BASE_DIR, "antigravity_telegram.py")
 

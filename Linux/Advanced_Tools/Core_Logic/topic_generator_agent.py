@@ -9,7 +9,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 
 # Configure paths
-BASE_DIR = r"C:\Program Files\Chask_Swarn\Advanced_Tools"
+BASE_DIR = r"C:\Program Files\Chask_Swarm\Advanced_Tools"
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
@@ -41,7 +41,7 @@ def extract_text_from_file(file_path):
 
 def notify_telegram(message):
     try:
-        script = os.path.join(r"C:\Program Files\Chask_Swarn\Advanced_Tools\charm_telegram.py")
+        script = os.path.join(r"C:\Program Files\Chask_Swarm\Advanced_Tools\charm_telegram.py")
         os.system(f'python "{script}" send "{message}"')
     except:
         pass

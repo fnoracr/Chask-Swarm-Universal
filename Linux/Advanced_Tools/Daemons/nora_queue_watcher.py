@@ -28,10 +28,10 @@ from datetime import datetime
 if hasattr(sys.stdout, 'buffer'):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-QUEUE_FILE    = r"C:\Program Files\Chask_Swarn\Advanced_Tools\Message_Queues\input_queue.json"
-LOG_FILE      = r"C:\Program Files\Chask_Swarn\Advanced_Tools\unified_channel.log"
+QUEUE_FILE    = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
+LOG_FILE      = r"C:\Program Files\Chask_Swarm\Advanced_Tools\unified_channel.log"
 PYTHON_EXE    = r"C:\Users\fnora\AppData\Local\Programs\Python\Python311\python.exe"
-BASE_DIR      = r"C:\Program Files\Chask_Swarn"
+BASE_DIR      = r"C:\Program Files\Chask_Swarm"
 POLL_INTERVAL = 2    # segundos entre comprobaciones
 
 def log(msg):

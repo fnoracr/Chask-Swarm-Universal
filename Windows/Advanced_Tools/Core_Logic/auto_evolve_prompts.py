@@ -34,11 +34,11 @@ log = logging.getLogger("auto_evolve")
 
 # ─── Configuración ────────────────────────────────────────────
 DIRECTIVES_FILE  = r"C:\Users\fnora\Desktop\Enjambre Datos\directives.md"
-DIRECTIVES_CORE  = r"C:\Program Files\Chask_Swarn\directives.md"
-LESSONS_FILE     = r"C:\Program Files\Chask_Swarn\Advanced_Tools\learned_lessons.json"
+DIRECTIVES_CORE  = r"C:\Program Files\Chask_Swarm\directives.md"
+LESSONS_FILE     = r"C:\Program Files\Chask_Swarm\Advanced_Tools\learned_lessons.json"
 OLLAMA_URL       = "http://localhost:11434"
 LOCAL_MODEL      = "phi4-mini:latest"
-TOOLS_DIR        = r"C:\Program Files\Chask_Swarn\Advanced_Tools"
+TOOLS_DIR        = r"C:\Program Files\Chask_Swarm\Advanced_Tools"
 
 # ─── Patrones de corrección ───────────────────────────────────
 CORRECTION_PATTERNS = [

@@ -25,7 +25,7 @@ except Exception:
     pass
 
 EXPORT_DIR = r"C:\Users\fnora\Desktop\Enjambre Datos\Lecciones_Sintetizadas"
-TELEGRAM_SCRIPT = r"C:\Program Files\Chask_Swarn\charm_telegram.py"
+TELEGRAM_SCRIPT = r"C:\Program Files\Chask_Swarm\charm_telegram.py"
 QDRANT_HOST = "localhost"
 QDRANT_PORT = 6333
 COLLECTION_NAME = "synthesized_academic_lessons"

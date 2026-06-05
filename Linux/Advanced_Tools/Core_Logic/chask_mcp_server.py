@@ -18,7 +18,7 @@ from mcp.server.stdio import stdio_server
 import mcp.types as types
 
 # ── Paths ──────────────────────────────────────────────────────────
-CHASK_ROOT = r"C:\Program Files\Chask_Swarn"
+CHASK_ROOT = r"C:\Program Files\Chask_Swarm"
 TOOLS_DIR = os.path.join(CHASK_ROOT, "Advanced_Tools")
 DATA_DIR = r"C:\Users\fnora\Desktop\Enjambre Datos"
 PYTHON = sys.executable
@@ -643,13 +643,13 @@ async def handle_list_resources() -> list[types.Resource]:
         ),
         types.Resource(
             uri="enjambre://memory-core",
-            name="Memoria core (Chask_Swarn)",
+            name="Memoria core (Chask_Swarm)",
             description="Memoria del núcleo del sistema en Program Files.",
             mimeType="text/markdown"
         ),
         types.Resource(
             uri="enjambre://directives-core",
-            name="Directivas core (Chask_Swarn)",
+            name="Directivas core (Chask_Swarm)",
             description="Directivas del núcleo del sistema en Program Files.",
             mimeType="text/markdown"
         ),

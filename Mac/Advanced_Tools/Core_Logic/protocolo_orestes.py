@@ -16,7 +16,7 @@ class ProtocoloOrestes:
     Usa el llm_router para derivar la creación y auditoría a diferentes IAs.
     """
     def __init__(self):
-        self.base_path = r"C:\Program Files\Chask_Swarn"
+        self.base_path = r"C:\Program Files\Chask_Swarm"
         self.output_path = os.path.join(self.base_path, "Advanced_Tools")
         self.log_file = os.path.join(self.base_path, "orestes_activity.log")
 

@@ -157,9 +157,9 @@ def main():
                 
                 # Insertar gráfico si existe
                 if graph_path:
-                    # Dado que la ruta es local y relativa a Chask_Swarn\Advanced_Tools\uploads\graphs
+                    # Dado que la ruta es local y relativa a Chask_Swarm\Advanced_Tools\uploads\graphs
                     # la mapeamos a la ruta completa del disco para que el lector markdown local la cargue.
-                    abs_graph_path = os.path.join(r"C:\Program Files\Chask_Swarn\Advanced_Tools", graph_path.lstrip("/"))
+                    abs_graph_path = os.path.join(r"C:\Program Files\Chask_Swarm\Advanced_Tools", graph_path.lstrip("/"))
                     abs_graph_path = abs_graph_path.replace("/", "\\")
                     f.write(f"#### 📈 Gráfico Científico Asociado:\n")
                     f.write(f"![Gráfico Científico de la Sección {idx}](file:///{abs_graph_path.replace(' ', '%20')})\n\n")

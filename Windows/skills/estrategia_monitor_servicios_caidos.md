@@ -62,7 +62,7 @@ def check(host, port):
         return False
 
 def notify(msg):
-    subprocess.run([sys.executable, r"C:\Program Files\Chask_Swarn\charm_telegram.py", "send", msg], timeout=30)
+    subprocess.run([sys.executable, r"C:\Program Files\Chask_Swarm\charm_telegram.py", "send", msg], timeout=30)
 
 for i in range(1, MAX_CHECKS + 1):
     if check(TARGET_HOST, TARGET_PORT):

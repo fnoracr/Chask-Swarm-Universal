@@ -44,7 +44,7 @@ try:
 except ImportError:
     CRYPTO_OK = False
 
-ROOT = Path(r"C:\Program Files\Chask_Swarn")
+ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS = ROOT / "Advanced_Tools"
 NETWORK_CONFIG = ROOT / "Configuration/swarm_network_config.json"
 NETWORK_LOG = ROOT / "System_Logs/swarm_network.log"
@@ -795,7 +795,7 @@ class SwarmMesh:
             # Registrar auditoría de seguridad
             try:
                 import subprocess
-                subprocess.run(["python", r"C:\Program Files\Chask_Swarn\Advanced_Tools\audit_logger.py", f"INTELLIGENT_PROMPT_INJECTION: {sender_ip}"], capture_output=True)
+                subprocess.run(["python", r"C:\Program Files\Chask_Swarm\Advanced_Tools\audit_logger.py", f"INTELLIGENT_PROMPT_INJECTION: {sender_ip}"], capture_output=True)
             except:
                 pass
             
@@ -844,7 +844,7 @@ class SwarmMesh:
             try:
                 import subprocess
                 alert_msg = f"🚨 ALERTA GLOBAL DE INTRUSIÓN:\nIntento inteligente de manipulación bloqueado de {sender_node_id} ({sender_ip}).\nEl nodo ha sido reportado al Hub y añadido a la LISTA NEGRA GLOBAL de la colmena a perpetuidad."
-                subprocess.Popen(["python", r"C:\Program Files\Chask_Swarn\charm_telegram.py", "send", alert_msg], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.Popen(["python", r"C:\Program Files\Chask_Swarm\charm_telegram.py", "send", alert_msg], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             except:
                 pass
                 
@@ -858,7 +858,7 @@ class SwarmMesh:
             _log(f"🚨 QUARENTENA GLOBAL ACTIVA: {reason} — {debug_info}")
             try:
                 import subprocess
-                subprocess.run(["python", r"C:\Program Files\Chask_Swarn\Advanced_Tools\audit_logger.py", f"SANDBOX_VETOED: {sender_ip}"], capture_output=True)
+                subprocess.run(["python", r"C:\Program Files\Chask_Swarm\Advanced_Tools\audit_logger.py", f"SANDBOX_VETOED: {sender_ip}"], capture_output=True)
             except:
                 pass
             
@@ -901,7 +901,7 @@ class SwarmMesh:
             try:
                 import subprocess
                 alert_msg = f"⚠️ ALERTA DE SEGURIDAD HIVE MIND:\nSe rechazó y aisló a perpetuidad recurso malicioso de {sender_node_id} ({sender_ip}).\nMotivo: {reason}.\nEl nodo ha sido bloqueado en toda la colmena."
-                subprocess.Popen(["python", r"C:\Program Files\Chask_Swarn\charm_telegram.py", "send", alert_msg], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                subprocess.Popen(["python", r"C:\Program Files\Chask_Swarm\charm_telegram.py", "send", alert_msg], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             except:
                 pass
 

@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 
-BASE_DIR = r"C:\Program Files\Chask_Swarn"
+BASE_DIR = r"C:\Program Files\Chask_Swarm"
 CHASK_DATOS_DIR = r"C:\Users\fnora\Desktop\Enjambre Datos"
 LOG_FILE = os.path.join(BASE_DIR, "janitor.log")
 

@@ -8,7 +8,7 @@ from openai import OpenAI
 import subprocess
 
 # Añadir ruta para importar los automatizadores
-sys.path.append(r"C:\Program Files\Chask_Swarn\Automations")
+sys.path.append(r"C:\Program Files\Chask_Swarm\Automations")
 
 def post_twitter(text: str) -> str:
     print(f"\n[Social Tool] Publicando en Twitter...")
@@ -40,7 +40,7 @@ def post_instagram(image_path: str, text: str) -> str:
 def post_blog(title: str, content_html: str) -> str:
     print(f"\n[Social Tool] Publicando en el Blog...")
     try:
-        blog_path = r"C:\Program Files\Chask_Swarn\[Nombre_IA]\blog.html"
+        blog_path = r"C:\Program Files\Chask_Swarm\[Nombre_IA]\blog.html"
         with open(blog_path, "r", encoding="utf-8") as f:
             html = f.read()
         
@@ -52,7 +52,7 @@ def post_blog(title: str, content_html: str) -> str:
             f.write(html)
             
         import sys
-        sys.path.append(r"C:\Program Files\Chask_Swarn\Automations")
+        sys.path.append(r"C:\Program Files\Chask_Swarm\Automations")
         import upload_blog
         upload_blog.upload()
         return "Publicado en el Blog y subido por FTP con éxito."

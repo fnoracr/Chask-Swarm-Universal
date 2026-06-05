@@ -3937,7 +3937,7 @@ def get_chat_mode():
 
 @app.route("/uploads/graphs/<path:filename>")
 def serve_graphs(filename):
-    graphs_dir = r"C:\Program Files\Chask_Swarn\Advanced_Tools\uploads\graphs"
+    graphs_dir = r"C:\Program Files\Chask_Swarm\Advanced_Tools\uploads\graphs"
     from flask import send_from_directory
     return send_from_directory(graphs_dir, filename)
 
@@ -4760,7 +4760,7 @@ def get_system_components():
 def api_start_watchdog():
     import subprocess
     try:
-        cmd = r'powershell -Command "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=\'pythonw.exe \"C:\Program Files\Chask_Swarn\Advanced_Tools\process_watchdog.py\"\'}"'
+        cmd = r'powershell -Command "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=\'pythonw.exe \"C:\Program Files\Chask_Swarm\Advanced_Tools\process_watchdog.py\"\'}"'
         subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return jsonify({"success": True})
     except Exception as e:
@@ -5632,7 +5632,7 @@ import os
 import subprocess
 from werkzeug.utils import secure_filename
 
-LEARNING_UPLOADS = r"C:\Program Files\Chask_Swarn\Advanced_Tools\uploads\learning"
+LEARNING_UPLOADS = r"C:\Program Files\Chask_Swarm\Advanced_Tools\uploads\learning"
 os.makedirs(LEARNING_UPLOADS, exist_ok=True)
 
 @app.route('/api/learning/topics', methods=['GET'])
@@ -5734,7 +5734,7 @@ def create_learning_topic():
         saved_files.append(path)
         
     # Trigger background generator agent
-    script_path = r"C:\Program Files\Chask_Swarn\Advanced_Tools\topic_generator_agent.py"
+    script_path = r"C:\Program Files\Chask_Swarm\Advanced_Tools\topic_generator_agent.py"
     cmd = ["python", script_path, "--name", name, "--agent", agent]
     if urls:
         cmd.extend(["--urls", urls])
@@ -5756,8 +5756,8 @@ def delete_learning_topic():
         q_client = QdrantClient(host='127.0.0.1', port=6333)
         if q_client.collection_exists(topic_id):
             try:
-                os.makedirs(r"C:\Program Files\Chask_Swarn\Deleted", exist_ok=True)
-                backup_path = os.path.join(r"C:\Program Files\Chask_Swarn\Deleted", f"{topic_id}_backup.json")
+                os.makedirs(r"C:\Program Files\Chask_Swarm\Deleted", exist_ok=True)
+                backup_path = os.path.join(r"C:\Program Files\Chask_Swarm\Deleted", f"{topic_id}_backup.json")
                 res = q_client.scroll(collection_name=topic_id, limit=100)
                 if res and res[0]:
                     with open(backup_path, 'w', encoding='utf-8') as f:

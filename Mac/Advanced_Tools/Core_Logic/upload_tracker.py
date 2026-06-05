@@ -2,13 +2,13 @@ import ftplib
 import json
 import os
 
-with open(r'C:\Program Files\Chask_Swarn\Configuration\master_credentials.json', 'r') as f:
+with open(r'C:\Program Files\Chask_Swarm\Configuration\master_credentials.json', 'r') as f:
     creds = json.load(f)['credentials']
 
 FTP_HOST = creds['ftp_host']
 FTP_USER = creds['ftp_user']
 FTP_PASS = creds['ftp_pass']
-LOCAL_DIR = r"C:\Program Files\Chask_Swarn\Local_Web"
+LOCAL_DIR = r"C:\Program Files\Chask_Swarm\Local_Web"
 
 files_to_upload = ['charm.php', 'visit_tracker.php']
 

@@ -19,7 +19,7 @@ import shutil
 from datetime import datetime
 
 # Obligar a trabajar siempre en el directorio del enjambre
-os.chdir(r"C:\Program Files\Chask_Swarn")
+os.chdir(r"C:\Program Files\Chask_Swarm")
 
 # ── CONFIGURACIÓN ──
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

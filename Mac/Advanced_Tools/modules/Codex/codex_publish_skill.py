@@ -2,7 +2,7 @@ import json
 import os
 import sys
 
-CREDENTIALS_FILE = r"C:\Program Files\Chask_Swarn\Configuration\master_credentials.json"
+CREDENTIALS_FILE = r"C:\Program Files\Chask_Swarm\Configuration\master_credentials.json"
 
 def load_credentials():
     if not os.path.exists(CREDENTIALS_FILE):

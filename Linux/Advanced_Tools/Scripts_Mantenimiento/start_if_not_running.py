@@ -28,7 +28,7 @@ if __name__ == "__main__":
         cmd_str = f'"{command_to_run[0]}" {args_str}'
         wmic_cmd = ["wmic", "process", "call", "create", cmd_str]
         
-        audit_log = r"C:\Program Files\Chask_Swarn\System_Logs\swarm_power_audit.log"
+        audit_log = r"C:\Program Files\Chask_Swarm\System_Logs\swarm_power_audit.log"
         from datetime import datetime
         import time
         

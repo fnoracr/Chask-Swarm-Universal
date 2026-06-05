@@ -44,8 +44,8 @@ from datetime import datetime
 
 log = logging.getLogger("slash_commands")
 
-TOOLS_DIR  = r"C:\Program Files\Chask_Swarn\Advanced_Tools"
-SWARM_DIR  = r"C:\Program Files\Chask_Swarn"
+TOOLS_DIR  = r"C:\Program Files\Chask_Swarm\Advanced_Tools"
+SWARM_DIR  = r"C:\Program Files\Chask_Swarm"
 
 # ─── Aliases ──────────────────────────────────────────────────
 ALIASES = {
