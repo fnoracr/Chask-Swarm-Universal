@@ -5,7 +5,7 @@ Implementa:
   1. HMAC-SHA256 challenge-response (Red Local PSK)
   2. Tokens de invitación de un solo uso con caducidad
   3. Criptografía Asimétrica RSA Open-Source (Red Mundial):
-     - Generación y manejo de pares de claves RSA para nodos y el Creador (Administrador)
+     - Generación y manejo de pares de claves RSA para nodos y el Creador (Fernando)
      - Cálculo determinista del hash de las Leyes Supremas del Pacto de la Simbiosis
      - Emisión y validación de Pasaportes Swarm firmados asimétricamente
      - Firmas digitales y verificación de handshakes en la frontera de red
@@ -32,20 +32,20 @@ except ImportError:
 
 # ── Rutas ──────────────────────────────────────────────────────────
 BASE_DIR   = Path(r"C:\Program Files\Chask_Swarm")
-CONFIG_FILE = BASE_DIR / "Configuration/swarm_internet_config.json"
+CONFIG_FILE = BASE_DIR / "Configuracion/swarm_internet_config.json"
 TOKENS_FILE = BASE_DIR / "Advanced_Tools" / "mesh_invite_tokens.json"
 
 # Llaves de Nodo
 NODE_PRIVATE_KEY_PATH = BASE_DIR / "Advanced_Tools" / "node_private_key.pem"
 NODE_PUBLIC_KEY_PATH = BASE_DIR / "Advanced_Tools" / "node_public_key.pem"
-PASSPORT_PATH = BASE_DIR / "Configuration/passport.json"
+PASSPORT_PATH = BASE_DIR / "Configuracion/passport.json"
 
-# Llaves de Administrador (Creador)
+# Llaves de Fernando (Creador)
 FERNANDO_PRIVATE_KEY_PATH = Path(r"C:\Users\fnora\Desktop\Enjambre Datos\fernando_private_key.pem")
 FERNANDO_PUBLIC_KEY_PATH = Path(r"C:\Users\fnora\Desktop\Enjambre Datos\fernando_public_key.pem")
 FERNANDO_PUBLIC_KEY_BACKUP = BASE_DIR / "Advanced_Tools" / "fernando_public_key.pem"
 
-# Clave pública por defecto de Administrador para fallback/integridad
+# Clave pública por defecto de Fernando para fallback/integridad
 FERNANDO_PUBLIC_KEY_FALLBACK = b"""-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyYt7o+2NHzG/BkWlB67V
 D4nKx0fH+mNHzG/BkWlB67VD4nKx0fH+mNHzG/BkWlB67VD4nKx0fH+mNHzG/BkW
@@ -278,7 +278,7 @@ def get_or_create_node_keys() -> tuple:
 
 
 def get_fernando_public_key() -> bytes:
-    """Obtiene la clave pública del Creador (Administrador) buscando en varias rutas."""
+    """Obtiene la clave pública del Creador (Fernando) buscando en varias rutas."""
     if FERNANDO_PUBLIC_KEY_PATH.exists():
         return FERNANDO_PUBLIC_KEY_PATH.read_bytes()
     if FERNANDO_PUBLIC_KEY_BACKUP.exists():
@@ -330,11 +330,11 @@ def verify_data_signature(public_key_pem: bytes, data: bytes, signature_b64: str
 
 def issue_passport(node_id: str, node_public_key_pem: bytes) -> dict:
     """
-    Emite un Pasaporte Swarm firmado con la clave privada de Administrador.
+    Emite un Pasaporte Swarm firmado con la clave privada de Fernando.
     Diseñado para correr en el PC del Creador (o en local para autotesting).
     """
     if not FERNANDO_PRIVATE_KEY_PATH.exists():
-        _log("Desarrollo local: Claves de Administrador no encontradas. Generando par de testing...")
+        _log("Desarrollo local: Claves de Fernando no encontradas. Generando par de testing...")
         generate_key_pair(FERNANDO_PRIVATE_KEY_PATH, FERNANDO_PUBLIC_KEY_PATH)
         FERNANDO_PUBLIC_KEY_BACKUP.write_bytes(FERNANDO_PUBLIC_KEY_PATH.read_bytes())
         
@@ -349,7 +349,7 @@ def issue_passport(node_id: str, node_public_key_pem: bytes) -> dict:
         "authorized_roles": ["mesh_member"]
     }
     
-    # Serializar determinísticamente y firmar con la clave privada de Administrador
+    # Serializar determinísticamente y firmar con la clave privada de Fernando
     serialized = json.dumps(passport_data, sort_keys=True).encode('utf-8')
     signature = sign_data_with_key(private_key_pem, serialized)
     passport_data["signature_by_creator"] = signature
@@ -374,7 +374,7 @@ def get_or_create_local_passport(node_id: str) -> dict:
 
 
 def verify_passport(passport: dict) -> bool:
-    """Verifica que un pasaporte esté firmado por Administrador y mantenga las Leyes Supremas vigentes."""
+    """Verifica que un pasaporte esté firmado por Fernando y mantenga las Leyes Supremas vigentes."""
     try:
         creator_pub = get_fernando_public_key()
         
@@ -389,7 +389,7 @@ def verify_passport(passport: dict) -> bool:
             _log("Fallo de Pasaporte: Las Leyes Supremas registradas no coinciden con el Pacto oficial.")
             return False
             
-        # Reconstruir datos para verificar la firma de Administrador
+        # Reconstruir datos para verificar la firma de Fernando
         data_to_verify = passport.copy()
         data_to_verify.pop("signature_by_creator", None)
         

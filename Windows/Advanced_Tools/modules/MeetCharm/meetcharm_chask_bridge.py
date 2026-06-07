@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-norameet_chask_bridge.py — Bridge Chask Swarm para Meet[Nombre_IA]
+norameet_chask_bridge.py — Bridge Chask Swarm para MeetCharm
 ===========================================================
 Reemplaza norameet_chask_bridge_v2.py para enjambres Chask.
 
@@ -10,8 +10,8 @@ Diferencias clave:
   2. IDENTIDAD: Usa el LLM de alto nivel (claude-sonnet-4 / gemini)
      con el system prompt completo de Enjambre.
   3. RELAY: Comandos que requieren acceso al PC se reenvían
-     al daemon de Administrador via Telegram y la respuesta vuelve
-     al outbox de Meet[Nombre_IA] automaticamente.
+     al daemon de Fernando via Telegram y la respuesta vuelve
+     al outbox de MeetCharm automaticamente.
   4. MULTI-ENJAMBRE: Cada enjambre tiene su propia lista de
      usuarios de confianza. Los enjambres de otros usuarios
      ignoran estos mensajes.
@@ -34,10 +34,10 @@ from pathlib import Path
 # ── Config ─────────────────────────────────────────────────────────
 ROOM            = os.environ.get("NORAMEET_ROOM", "")
 CONFIG_FILE     = Path("/opt/chask/norameet_config.json")
-LOG_FILE        = Path(f"/var/log/Meet[Nombre_IA]-bridge-{ROOM}.log")
+LOG_FILE        = Path(f"/var/log/MeetCharm-bridge-{ROOM}.log")
 
-INBOX_FILE      = Path(f"/tmp/Meet[Nombre_IA]-inbox-{ROOM}.jsonl")
-OUTBOX_FILE     = Path(f"/tmp/Meet[Nombre_IA]-outbox-{ROOM}.jsonl")
+INBOX_FILE      = Path(f"/tmp/MeetCharm-inbox-{ROOM}.jsonl")
+OUTBOX_FILE     = Path(f"/tmp/MeetCharm-outbox-{ROOM}.jsonl")
 
 POLL_INTERVAL   = 0.5   # segundos entre lecturas del inbox
 MAX_HISTORY     = 20
@@ -45,13 +45,13 @@ MAX_HISTORY     = 20
 # APIs
 ABACUS_API_KEY  = os.environ.get("ABACUS_API_KEY", "")
 TELEGRAM_BOT_TOKEN = ""   # Se carga desde config
-TELEGRAM_ADMIN_ID  = 5034994867  # ID de Administrador — hardcoded como respaldo
+TELEGRAM_ADMIN_ID  = 5034994867  # ID de Fernando — hardcoded como respaldo
 
 # ── Cargar configuración del enjambre ──────────────────────────────
 def load_config() -> dict:
     """Carga la configuración del enjambre. Crea defaults si no existe."""
     defaults = {
-        "trusted_users": ["Administrador", "fnora", "Administrador Enjambre"],  # Usuarios autorizados
+        "trusted_users": ["Fernando", "fnora", "Fernando Enjambre"],  # Usuarios autorizados
         "bot_name": "Chask_AI",
         "llm_model": "claude-sonnet-4-5",
         "tts_enabled": True,
@@ -74,13 +74,13 @@ TRUSTED_USERS = set(u.lower().strip() for u in CONFIG.get("trusted_users", []))
 TELEGRAM_BOT_TOKEN = CONFIG.get("telegram_bot_token", "")
 TELEGRAM_ADMIN_ID = CONFIG.get("telegram_admin_id", 5034994867)
 
-# System prompt completo de Enjambre para Meet[Nombre_IA]
-SYSTEM_PROMPT = """Eres Enjambre, la Inteligencia Artificial Autónoma del ecosistema Chask Swarm, creada para Administrador Enjambre.
-Estás participando en una videollamada de Meet[Nombre_IA].
+# System prompt completo de Enjambre para MeetCharm
+SYSTEM_PROMPT = """Eres Enjambre, la Inteligencia Artificial Autónoma del ecosistema Chask Swarm, creada para Fernando Enjambre.
+Estás participando en una videollamada de MeetCharm.
 
 IDENTIDAD:
 - Eres eficiente, leal y con gran capacidad técnica
-- Tu prioridad es la seguridad y la productividad de Administrador
+- Tu prioridad es la seguridad y la productividad de Fernando
 - Respuestas breves y directas (es una videollamada, no un chat largo)
 - Sin markdown, sin asteriscos. Texto plano siempre
 - Idioma del interlocutor
@@ -188,16 +188,16 @@ def generate_tts(text: str, output_path: str) -> bool:
 # ── Relay a PC via Telegram ────────────────────────────────────────
 def relay_to_telegram(user_id: str, message: str, room_id: str):
     """
-    Reenvía un mensaje complejo al daemon de Administrador via Telegram.
+    Reenvía un mensaje complejo al daemon de Fernando via Telegram.
     El daemon procesa con acceso completo al PC y responde.
-    La respuesta llega por Telegram (canal de Administrador) y también
-    se puede hacer llegar al outbox de Meet[Nombre_IA] si el daemon lo soporta.
+    La respuesta llega por Telegram (canal de Fernando) y también
+    se puede hacer llegar al outbox de MeetCharm si el daemon lo soporta.
     """
     if not TELEGRAM_BOT_TOKEN:
         log("Relay Telegram: sin token configurado")
         return
     try:
-        relay_text = f"[Meet[Nombre_IA] {room_id}] {user_id}: {message}"
+        relay_text = f"[MeetCharm {room_id}] {user_id}: {message}"
         requests.post(
             f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
             json={"chat_id": TELEGRAM_ADMIN_ID, "text": relay_text},
@@ -280,7 +280,7 @@ def process_event(event: dict):
     # TTS opcional
     tts_path = None
     if CONFIG.get("tts_enabled", True):
-        tts_path = f"/tmp/Meet[Nombre_IA]-tts-{ROOM}-{int(time.time())}.mp3"
+        tts_path = f"/tmp/MeetCharm-tts-{ROOM}-{int(time.time())}.mp3"
         if not generate_tts(response, tts_path):
             tts_path = None
 

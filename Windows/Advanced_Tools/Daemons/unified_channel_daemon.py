@@ -1,5 +1,5 @@
 """
-unified_channel_daemon.py — Daemon Unificado de Canales [Nombre_IA] v2.0
+unified_channel_daemon.py — Daemon Unificado de Canales Nora v2.0
 ==================================================================
 Canales:
   · HILO 1 — TELEGRAM : Long-polling Telegram Bot API 24/7
@@ -32,10 +32,10 @@ if sys.stdout and hasattr(sys.stdout, 'buffer'):
 # ── Rutas ─────────────────────────────────────────────────────────────────────
 BASE_DIR        = r"C:\Program Files\Chask_Swarm"
 TOOLS_DIR       = os.path.join(BASE_DIR, "Advanced_Tools")
-CONFIG_PATH     = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
-CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-QUEUE_FILE      = os.path.join(TOOLS_DIR, "Message_Queues", "input_queue.json")
-STATE_FILE      = os.path.join(BASE_DIR, "Message_Queues", "telegram_state.txt")
+CONFIG_PATH     = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
+CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+QUEUE_FILE      = os.path.join(TOOLS_DIR, "Colas_Mensajes", "input_queue.json")
+STATE_FILE      = os.path.join(BASE_DIR, "Colas_Mensajes", "telegram_state.txt")
 MEDIA_DIR       = os.path.join(BASE_DIR, "telegram_media")
 LOG_FILE        = os.path.join(TOOLS_DIR, "unified_channel.log")
 DISCORD_SCRIPT  = os.path.join(TOOLS_DIR, "Daemons", "discord_worker.py")
@@ -141,7 +141,7 @@ def _tg_send(token: str, chat_id: str, text: str, use_keyboard=True):
         payload = {"chat_id": chat_id, "text": text}
         if use_keyboard:
             payload["reply_markup"] = {
-                "keyboard": [[{"text": "\U0001f534 Off [Nombre_IA]"}, {"text": "\U0001f7e2 On [Nombre_IA]"}]],
+                "keyboard": [[{"text": "\U0001f534 Off Charm"}, {"text": "\U0001f7e2 On Charm"}]],
                 "resize_keyboard": True,
                 "persistent": True
             }
@@ -154,7 +154,7 @@ def _tg_send(token: str, chat_id: str, text: str, use_keyboard=True):
         pass
 
 def _kill_swarm():
-    audit_log = r"C:\Program Files\Chask_Swarm\System_Logs\swarm_power_audit.log"
+    audit_log = r"C:\Program Files\Chask_Swarm\Logs_Sistema\swarm_power_audit.log"
     def audit(msg):
         with open(audit_log, "a", encoding="utf-8") as f:
             f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
@@ -194,7 +194,7 @@ def _kill_swarm():
         audit(f"[CRITICAL ERROR] Fallo durante _kill_swarm: {e}")
 
 def _start_swarm():
-    audit_log = r"C:\Program Files\Chask_Swarm\System_Logs\swarm_power_audit.log"
+    audit_log = r"C:\Program Files\Chask_Swarm\Logs_Sistema\swarm_power_audit.log"
     def audit(msg):
         with open(audit_log, "a", encoding="utf-8") as f:
             f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")
@@ -242,8 +242,8 @@ def _tg_process_update(update: dict, token: str, admin_id: str):
         if text_lower in ["off charm", "/off", "\U0001f534 off charm", "\U0001f534"]:
             log("TG", f"Detected OFF command from chat_id {chat_id}, admin_id is {admin_id}")
             if chat_id != admin_id: return None
-            _tg_send(token, admin_id, "💤 Entendido. Solicitando a [Nombre_IA] que guarde su memoria y desconecte el enjambre...")
-            deliver("[TELEGRAM] [Nombre_IA], por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.", source="telegram")
+            _tg_send(token, admin_id, "💤 Entendido. Solicitando a Nora que guarde su memoria y desconecte el enjambre...")
+            deliver("[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.", source="telegram")
             return None
         
         elif text_lower in ["on charm", "/on", "\U0001f7e2 on charm", "\U0001f7e2", "/start_charm"]:
@@ -290,7 +290,7 @@ def _tg_process_update(update: dict, token: str, admin_id: str):
                 try:
                     from pydub import AudioSegment
                     import speech_recognition as sr
-                    AudioSegment.converter = os.path.join(BASE_DIR, "Binaries", "ffmpeg.exe")
+                    AudioSegment.converter = os.path.join(BASE_DIR, "Binarios", "ffmpeg.exe")
                     wav = local.replace(".ogg", ".wav")
                     AudioSegment.from_ogg(local).export(wav, format="wav")
                     rec  = sr.Recognizer()
@@ -370,7 +370,7 @@ def telegram_thread():
             except Exception:
                 pass
                 
-            _tg_send(token, admin_id, "[Nombre_IA] online — Telegram activo. 🛡️ Kill Switch integrado.")
+            _tg_send(token, admin_id, "Nora online — Telegram activo. 🛡️ Kill Switch integrado.")
 
             errors = 0
             while True:
@@ -456,7 +456,7 @@ def web_thread():
 def _write_discord_worker():
     """Genera discord_worker.py si no existe o está desactualizado."""
     code = '''"""
-discord_worker.py — Worker Discord independiente para [Nombre_IA]
+discord_worker.py — Worker Discord independiente para Nora
 Ejecutado como subproceso por unified_channel_daemon para aislar asyncio.
 """
 import os, sys, io, json, time
@@ -465,8 +465,8 @@ from datetime import datetime
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 BASE_DIR        = r"C:\\Program Files\\Chask_Swarm"
-CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
+CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 LOG_FILE        = os.path.join(BASE_DIR, "Advanced_Tools", "unified_channel.log")
 
 def log(msg):
@@ -601,7 +601,7 @@ def discord_thread():
 def _write_slack_worker():
     """Genera slack_worker.py usando Slack Socket Mode (tiempo real, sin webhooks)."""
     code = '''"""
-slack_worker.py — Worker Slack via Socket Mode para [Nombre_IA]
+slack_worker.py — Worker Slack via Socket Mode para Nora
 Ejecutado como subproceso por unified_channel_daemon para aislar la conexión.
 Requiere: pip install slack-sdk
 """
@@ -611,8 +611,8 @@ from datetime import datetime
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 BASE_DIR        = r"C:\\Program Files\\Chask_Swarm"
-CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
+CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 LOG_FILE        = os.path.join(BASE_DIR, "Advanced_Tools", "unified_channel.log")
 
 def log(msg):
@@ -746,7 +746,7 @@ THREAD_DEFS = [
 
 def main():
     log("MAIN", "=" * 60)
-    log("MAIN", "Unified Channel Daemon v2.0 — [Nombre_IA]")
+    log("MAIN", "Unified Channel Daemon v2.0 — Nora")
     log("MAIN", "Canales: Telegram + Web + Discord")
     log("MAIN", "=" * 60)
 

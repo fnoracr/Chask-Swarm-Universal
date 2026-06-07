@@ -64,7 +64,7 @@ class ProtocoloOrestes:
         code_result, engine_used = self._call_specific_ai(prompt, system_prompt, ["deepseek", "siliconflow", "openrouter"])
         
         if not code_result:
-            self.log("Alerta de Créditos/Red: Ninguna IA externa disponible. El Orquestador (Enjambre/[Nombre_IA]) debe asumir el rol de forjador simulando al agente.")
+            self.log("Alerta de Créditos/Red: Ninguna IA externa disponible. El Orquestador (Enjambre/Charm) debe asumir el rol de forjador simulando al agente.")
             return False
 
         # Limpiar markdown si la IA lo incluyó
@@ -112,7 +112,7 @@ class ProtocoloOrestes:
         audit_result, engine_used = self._call_specific_ai(prompt, system_prompt, ["groq", "zhipuai", "cohere"])
         
         if not audit_result:
-            self.log("Alerta de Créditos/Red: Fallo en la conexión de auditoría. El Orquestador (Enjambre/[Nombre_IA]) debe asumir el rol de auditor revisando críticamente el código.")
+            self.log("Alerta de Créditos/Red: Fallo en la conexión de auditoría. El Orquestador (Enjambre/Charm) debe asumir el rol de auditor revisando críticamente el código.")
             return False
             
         if "LIMPIO" in audit_result.upper()[:50]:

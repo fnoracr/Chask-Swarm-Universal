@@ -1,64 +1,59 @@
 import os
 import sys
-import json
 
-def setup():
-    print("========================================")
-    print(" Bienvenido al Instalador de Chask Swarm ")
-    print("========================================")
-    ai_name = input("¿Qué nombre quieres darle a tu IA? (ej. Jarvis, HAL, etc.): ").strip()
-    user_name = input("¿Cuál es tu nombre? (Serás el Usuario Avanzado): ").strip()
-    
-    if not ai_name or not user_name:
-        print("Error: Nombres no pueden estar vacios.")
-        sys.exit(1)
-        
-    print(f"\nConfigurando el sistema para {user_name} con IA {ai_name}...")
-    
-    # Update all config files to replace [NOMBRE_IA]
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    for root, dirs, files in os.walk(base_dir):
-        for name in files:
-            if not name.endswith(('.py', '.json', '.md', '.txt', '.php', '.html')):
-                continue
-            file_path = os.path.join(root, name)
-            try:
-                with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-                
-                if "[NOMBRE_IA]" in content:
-                    content = content.replace("[NOMBRE_IA]", ai_name)
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        f.write(content)
-            except Exception:
-                pass
-                
-    # Configure Users: Fernando as Admin, User as Advanced
-    users_config_path = os.path.join(base_dir, "Configuration", "users.json")
-    if not os.path.exists(os.path.dirname(users_config_path)):
-        os.makedirs(os.path.dirname(users_config_path), exist_ok=True)
-        
-    users_data = {
-        "fernando_admin": {
-            "name": "Fernando Nora",
-            "role": "administrator",
-            "is_creator": True
-        },
-        "main_user": {
-            "name": user_name,
-            "role": "advanced_user"
-        }
-    }
-    with open(users_config_path, "w", encoding="utf-8") as f:
-        json.dump(users_data, f, indent=4)
-        
-    # Create Charm Workspace
+def setup_workspace():
+    base_dir = r"C:\Program Files\Chask_Swarm"
     charm_dir = os.path.join(base_dir, "Charm")
-    os.makedirs(charm_dir, exist_ok=True)
-    with open(os.path.join(charm_dir, "chat_history.md"), "w", encoding="utf-8") as f:
-        f.write("# Historial de Conversaciones\n")
+    
+    print(f"Configurando Workspace de Charm en: {charm_dir}")
+    
+    if not os.path.exists(charm_dir):
+        os.makedirs(charm_dir, exist_ok=True)
+        print("Directorio Charm creado.")
+    else:
+        print("Directorio Charm ya existe.")
         
-    print(f"\n¡Instalación completada! Tu IA {ai_name} está lista.")
+    history_path = os.path.join(charm_dir, "chat_history.md")
+    if not os.path.exists(history_path):
+        with open(history_path, "w", encoding="utf-8") as f:
+            f.write("# Historial de Conversaciones de Charm\n\n")
+            f.write("Este archivo guarda el registro de los mensajes inyectados silenciosamente desde Telegram u otros canales.\n\n")
+        print("Archivo chat_history.md creado.")
+        
+    readme_path = os.path.join(charm_dir, "README.md")
+    if not os.path.exists(readme_path):
+        with open(readme_path, "w", encoding="utf-8") as f:
+            f.write("# Proyecto Charm\n\n")
+            f.write("Abre esta carpeta en Antigravity para iniciar el entorno de Charm.\n")
+            f.write("Por diseño de seguridad de Antigravity, debes crear el primer chat manualmente y llamarlo 'Charm'.\n")
+            f.write("A partir de ese momento, el Inyector Silencioso funcionará en segundo plano usando esta carpeta.\n")
+        print("Archivo README.md creado.")
+
+    flag_path = os.path.join(charm_dir, ".charm_initialized")
+    if not os.path.exists(flag_path):
+        print("Iniciando inyeccion de UI para crear conversacion inicial...")
+        with open(flag_path, "w") as f:
+            f.write("initialized")
+        
+        # Opcional: inyeccion de atajos de teclado
+        # Descomentar e instalar pyautogui si se requiere inyeccion visual
+        try:
+            import pyautogui
+            import time
+            print("Esperando 10s a que Antigravity cargue la UI...")
+            time.sleep(10)
+            
+            # Nuevo chat
+            pyautogui.hotkey('ctrl', 'n')
+            time.sleep(1)
+            
+            # Enviar mensaje para inicializar el chat y forzar que el nombre sea "Charm"
+            pyautogui.write("Charm")
+            time.sleep(0.5)
+            pyautogui.press('enter')
+            print("Inyeccion completada.")
+        except ImportError:
+            print("pyautogui no instalado, saltando inyeccion UI.")
 
 if __name__ == "__main__":
-    setup()
+    setup_workspace()

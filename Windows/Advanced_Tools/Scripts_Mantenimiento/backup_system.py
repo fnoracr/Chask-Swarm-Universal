@@ -14,14 +14,14 @@ BACKUP_DIR = os.path.join(BASE_DIR, "Chask_Backups")
 
 # Archivos y carpetas críticos a respaldar
 BACKUP_TARGETS = [
-    "Configuration/master_credentials.json",
+    "Configuracion/master_credentials.json",
     "memory.md",
     "projects_memory.md",
     "directives.md",
     "security.md",
     "soul.md",
     "Cuestionario_Soul.md",
-    "Prompt_Telegram_[Nombre_IA].md",
+    "Prompt_Telegram_Charm.md",
     "Chask_Hive_Credenciales_y_Config",
     "Advanced_Tools/Data/schedule_template.json",
     "skills",

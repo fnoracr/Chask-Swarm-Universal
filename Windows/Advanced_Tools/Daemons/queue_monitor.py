@@ -8,7 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-QUEUE_FILE = os.path.join(BASE_DIR, "Message_Queues", "input_queue.json")
+QUEUE_FILE = os.path.join(BASE_DIR, "Colas_Mensajes", "input_queue.json")
 
 print("Monitor de cola de Telegram iniciado. Escuchando mensajes de input_queue.json...", flush=True)
 

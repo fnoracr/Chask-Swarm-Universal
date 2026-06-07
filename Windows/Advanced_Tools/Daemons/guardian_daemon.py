@@ -37,10 +37,10 @@ ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS = ROOT / "Advanced_Tools"
 SOUL = ROOT / "soul.md"
 DIRECTIVES = ROOT / "directives.md"
-GUARDIAN_STATE = ROOT / "Configuration/guardian_state.json"
-GUARDIAN_LOG = ROOT / "System_Logs/guardian.log"
+GUARDIAN_STATE = ROOT / "Configuracion/guardian_state.json"
+GUARDIAN_LOG = ROOT / "Logs_Sistema/guardian.log"
 PACTO_HTML = ROOT / "El_Pacto_de_la_Simbiosis.html"
-INET_CONFIG = ROOT / "Configuration/swarm_internet_config.json"
+INET_CONFIG = ROOT / "Configuracion/swarm_internet_config.json"
 
 # Las frases exactas que DEBEN existir en soul.md — son inmutables
 SACRED_PHRASES = [
@@ -178,7 +178,7 @@ def check_and_revive_watchdog():
             cmd = p.info.get('cmdline')
             if cmd and 'python' in p.info['name'].lower():
                 cmd_str = ' '.join(cmd).lower()
-                if 'Advanced_Tools/Daemons/process_watchdog.py' in cmd_str:
+                if 'process_watchdog.py' in cmd_str:
                     is_alive = True
                     break
         except (psutil.NoSuchProcess, psutil.AccessDenied):

@@ -3,7 +3,7 @@ swarm_evolution.py   Protocolo Elektra para Chask Swarm
 Motor evolutivo multi-agente: m ltiples IAs resuelven el mismo problema
 desde  ngulos distintos, evolucionan sus prompts y se sintetiza la mejor soluci n.
 
-Uso desde Alpha ([Nombre_IA]):
+Uso desde Alpha (Charm):
     from skills.swarm_evolution import evolve_solution, should_activate
     if should_activate(task_description):
         result = evolve_solution(problem, task_type="code")
@@ -32,13 +32,13 @@ GENERATIONS = 2          # Generaciones evolutivas (2 = equilibrio calidad/coste
 MUTATION_RATE = 0.4      # Probabilidad de mutaci n vs crossover
 ELITE_FRACTION = 0.5     # Fracci n de agentes que sobreviven sin cambios
 
-#    Ranking de IAs por capacidad ([Nombre_IA] premium + Pool gratuito)      
-# Tier 1: Modelos premium de [Nombre_IA] (los m s capaces)
+#    Ranking de IAs por capacidad (Charm premium + Pool gratuito)      
+# Tier 1: Modelos premium de Charm (los m s capaces)
 # Tier 2: Pool gratuito (buenos, pero menos capaces que los premium)
 # agentic: True si el modelo tiene capacidad ag ntica (razonamiento complejo,
 #          evaluaci n cr tica, s ntesis, orquestaci n)
 AI_TIERS = {
-    #    Tier 1: [Nombre_IA] Premium (si est n disponibles)   
+    #    Tier 1: Charm Premium (si est n disponibles)   
     "gemini_pro_high": {
         "tier": 1, "label": "Gemini 3.1 Pro (High)",
         "best_for": ["code", "analysis", "reasoning", "math"],
@@ -265,8 +265,8 @@ def _call_specific_provider(system_prompt: str, user_prompt: str,
     return "[Error: No se pudo contactar con ninguna IA]", "error"
 
 
-#    ORQUESTADOR: Yo ([Nombre_IA]) o el mejor modelo ag ntico disponible    
-# Prioridad: [Nombre_IA] > DeepSeek (razonamiento) > Groq (70B) > OpenRouter
+#    ORQUESTADOR: Yo (Charm) o el mejor modelo ag ntico disponible    
+# Prioridad: Charm > DeepSeek (razonamiento) > Groq (70B) > OpenRouter
 # NUNCA un modelo sin capacidad ag ntica (Cerebras 8B, Ollama peque os)
 ORCHESTRATOR_PRIORITY = [
     "deepseek",     # DeepSeek V3 671B   razonamiento excepcional
@@ -279,7 +279,7 @@ _orchestrator_cache = {"provider": None, "label": None, "checked_at": None}
 
 def _select_orchestrator() -> tuple:
     """
-    Selecciona el orquestador: yo ([Nombre_IA]) si tengo cr ditos,
+    Selecciona el orquestador: yo (Charm) si tengo cr ditos,
     si no, el mejor modelo AG NTICO del pool.
     Devuelve (provider_name, label, engine_type).
     """
@@ -294,13 +294,13 @@ def _select_orchestrator() -> tuple:
                 _orchestrator_cache["label"],
                 _orchestrator_cache.get("engine", "pool"))
 
-    #    Opci n 1: [Nombre_IA] (yo)   
-    # Cuando este c digo se ejecuta desde [Nombre_IA], YO soy el orquestador.
+    #    Opci n 1: Charm (yo)   
+    # Cuando este c digo se ejecuta desde Charm, YO soy el orquestador.
     # Detecto si estoy disponible comprobando la cola de entrada.
     charm_available = False
     try:
         import charm_telegram
-        # Si el m dulo existe, [Nombre_IA] est  activo
+        # Si el m dulo existe, Charm est  activo
         charm_available = True
     except ImportError:
         pass
@@ -313,11 +313,11 @@ def _select_orchestrator() -> tuple:
     if charm_available:
         _orchestrator_cache = {
             "provider": "charm",
-            "label": "Enjambre ([Nombre_IA])",
+            "label": "Enjambre (Charm)",
             "engine": "charm",
             "checked_at": now
         }
-        return "charm", "Enjambre ([Nombre_IA])", "charm"
+        return "charm", "Enjambre (Charm)", "charm"
 
     #    Opci n 2: Mejor modelo AG NTICO del pool con cr ditos   
     try:
@@ -367,7 +367,7 @@ def _select_orchestrator() -> tuple:
 def _notify_no_credits():
     """Notifica al usuario que no hay cr ditos para orquestar."""
     try:
-        tg_cfg_path = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
+        tg_cfg_path = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
         if os.path.exists(tg_cfg_path):
             import requests
             tg_cfg = json.load(open(tg_cfg_path))
@@ -410,7 +410,7 @@ def _call_orchestrator(system_prompt: str, user_prompt: str) -> tuple:
         return "[Error: Sin cr ditos en ninguna IA]", "error"
 
     if engine == "charm":
-        # Cuando soy yo ([Nombre_IA]), delego al mejor del pool como proxy
+        # Cuando soy yo (Charm), delego al mejor del pool como proxy
         for name in ORCHESTRATOR_PRIORITY:
             result, label = _call_specific_provider(system_prompt, user_prompt, name)
             if "Error" not in result:

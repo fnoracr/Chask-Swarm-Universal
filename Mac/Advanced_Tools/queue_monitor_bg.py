@@ -3,7 +3,7 @@ import time
 import os
 import sys
 
-QUEUE_FILE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
+QUEUE_FILE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Colas_Mensajes\input_queue.json"
 
 def main():
     print("Iniciando monitor de cola ligero en background...", flush=True)

@@ -1,18 +1,18 @@
 """
 telegram_sentinel.py — Centinela de Telegram (siempre activo, INMORTAL)
 ========================================================================
-Este script es el ÚNICO proceso que sobrevive al cierre de [Nombre_IA].
+Este script es el ÚNICO proceso que sobrevive al cierre de Charm.
 Corre SIEMPRE en segundo plano (arranca con Windows via Startup).
 
 Su misión:
 1. Escuchar mensajes de Telegram del administrador 24/7
-2. Si llega un mensaje y [Nombre_IA] NO está corriendo:
+2. Si llega un mensaje y Charm NO está corriendo:
    a. Responde "Recibido. Arrancando sistema..." por Telegram
    b. Guarda el mensaje en input_queue.json
    c. Arranca todo el sistema Chask Swarm (Chask_Swarm.exe o process_watchdog.py)
-   d. Espera a que [Nombre_IA] esté listo
+   d. Espera a que Charm esté listo
    e. El boot_injection.py del launcher se encarga de pasar el mensaje
-3. Si [Nombre_IA] SÍ está corriendo Y unified_daemon está activo: duerme (no interfiere)
+3. Si Charm SÍ está corriendo Y unified_daemon está activo: duerme (no interfiere)
 4. Intercepta /on y /off como kill switch independiente
 
 PROTECCIÓN: shutdown_cleanup.py NUNCA debe matar este proceso.
@@ -32,12 +32,12 @@ from datetime import datetime
 # ── CONSTANTES ──
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ADVANCED_DIR = os.path.join(BASE_DIR, "Advanced_Tools")
-LOG_PATH = os.path.join(BASE_DIR, "System_Logs", "sentinel.log")
-QUEUE_PATH = os.path.join(ADVANCED_DIR, "Message_Queues", "input_queue.json")
-STATE_FILE = os.path.join(BASE_DIR, "Message_Queues", "telegram_sentinel_state.txt")
+LOG_PATH = os.path.join(BASE_DIR, "Logs_Sistema", "sentinel.log")
+QUEUE_PATH = os.path.join(ADVANCED_DIR, "Colas_Mensajes", "input_queue.json")
+STATE_FILE = os.path.join(BASE_DIR, "Colas_Mensajes", "telegram_sentinel_state.txt")
 
 # Credenciales
-MASTER_CREDS = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
+MASTER_CREDS = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
 AGENTS_CONFIG = os.path.join(BASE_DIR, "agents_config.json")
 
 POLL_TIMEOUT = 30
@@ -85,7 +85,7 @@ def get_last_update_id():
         except Exception:
             pass
     # Sincronizar con el daemon
-    daemon_state = os.path.join(BASE_DIR, "Message_Queues", "telegram_state.txt")
+    daemon_state = os.path.join(BASE_DIR, "Colas_Mensajes", "telegram_state.txt")
     if os.path.exists(daemon_state):
         try:
             with open(daemon_state, "r") as f:
@@ -100,7 +100,7 @@ def save_last_update_id(update_id):
         with open(STATE_FILE, "w") as f:
             f.write(str(update_id))
         # Sincronizar para evitar duplicados cuando unified_daemon arranque
-        daemon_state = os.path.join(BASE_DIR, "Message_Queues", "telegram_state.txt")
+        daemon_state = os.path.join(BASE_DIR, "Colas_Mensajes", "telegram_state.txt")
         with open(daemon_state, "w") as f:
             f.write(str(update_id))
     except Exception as e:
@@ -200,11 +200,11 @@ def wait_for_charm():
     elapsed = 0
     while elapsed < STARTUP_WAIT:
         if is_charm_running():
-            log(f"[Nombre_IA] detectado tras {elapsed}s")
+            log(f"Charm detectado tras {elapsed}s")
             return True
         time.sleep(CHECK_INTERVAL)
         elapsed += CHECK_INTERVAL
-    log(f"[Nombre_IA] no arrancó en {STARTUP_WAIT}s")
+    log(f"Charm no arrancó en {STARTUP_WAIT}s")
     return False
 
 
@@ -240,7 +240,7 @@ def main():
             if charm_on and daemon_on:
                 time.sleep(15)
                 # Sincronizar state por si el daemon avanzó
-                daemon_state = os.path.join(BASE_DIR, "Message_Queues", "telegram_state.txt")
+                daemon_state = os.path.join(BASE_DIR, "Colas_Mensajes", "telegram_state.txt")
                 if os.path.exists(daemon_state):
                     try:
                         with open(daemon_state, "r") as f:
@@ -252,7 +252,7 @@ def main():
                         pass
                 continue
 
-            # [Nombre_IA] NO está corriendo → Escuchar Telegram
+            # Charm NO está corriendo → Escuchar Telegram
             resp = requests.get(
                 f"{url_base}/getUpdates?offset={last_update_id + 1}&timeout={POLL_TIMEOUT}",
                 timeout=POLL_TIMEOUT + 5
@@ -289,7 +289,7 @@ def main():
                 if not text:
                     continue
 
-                log(f"MENSAJE ([Nombre_IA] apagado): {text[:80]}")
+                log(f"MENSAJE (Charm apagado): {text[:80]}")
 
                 # Interceptar kill switch
                 text_lower = text.strip().lower()
@@ -309,13 +309,13 @@ def main():
                         time.sleep(10)
                         send_telegram(token, admin_id, "✅ Chask Swarm arrancado correctamente.")
                     else:
-                        send_telegram(token, admin_id, "⚠️ Sistema arrancado pero [Nombre_IA] tardó.")
+                        send_telegram(token, admin_id, "⚠️ Sistema arrancado pero Charm tardó.")
                     time.sleep(COOLDOWN_AFTER_BOOT)
                     continue
 
                 # Mensaje normal — guardar y arrancar
                 send_telegram(token, admin_id,
-                    "🔄 Recibido. [Nombre_IA] estaba apagado.\n"
+                    "🔄 Recibido. Charm estaba apagado.\n"
                     "Arrancando sistema Chask Swarm...\n"
                     "Te avisaré cuando esté listo."
                 )
@@ -327,11 +327,11 @@ def main():
                     if wait_for_charm():
                         time.sleep(15)
                         send_telegram(token, admin_id,
-                            "✅ Chask Swarm arrancado. [Nombre_IA] procesando tu mensaje..."
+                            "✅ Chask Swarm arrancado. Nora procesando tu mensaje..."
                         )
                     else:
                         send_telegram(token, admin_id,
-                            "⚠️ Sistema arrancado pero [Nombre_IA] tardó.\n"
+                            "⚠️ Sistema arrancado pero Charm tardó.\n"
                             "Tu mensaje está en cola."
                         )
                 else:

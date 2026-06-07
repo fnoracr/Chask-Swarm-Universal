@@ -5,7 +5,7 @@ import threading
 import sys
 from qdrant_client import QdrantClient
 
-# [Nombre_IA] Edu Daemon
+# Charm Edu Daemon
 HOST = "0.0.0.0"
 PORT = 51401
 

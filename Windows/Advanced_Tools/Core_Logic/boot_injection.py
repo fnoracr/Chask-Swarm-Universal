@@ -26,13 +26,13 @@ def boot_injection():
     print("[BOOT] Activando capacidades totales del Enjambre Chask...")
     
     # ── CREACIÓN DE LA CARPETA CHARM OBLIGATORIA ──
-    charm_dir = os.path.join(BASE_DIR, "[Nombre_IA]")
+    charm_dir = os.path.join(BASE_DIR, "Charm")
     if not os.path.exists(charm_dir):
         try:
             os.makedirs(charm_dir)
-            print(f"[BOOT] Carpeta de proyecto '[Nombre_IA]' creada automáticamente en: {charm_dir}")
+            print(f"[BOOT] Carpeta de proyecto 'Charm' creada automáticamente en: {charm_dir}")
         except Exception as e:
-            print(f"[BOOT] Error crítico creando carpeta [Nombre_IA]: {e}")
+            print(f"[BOOT] Error crítico creando carpeta Charm: {e}")
             
     # ── CONSTRUCCIÓN DEL MEGA-PROMPT DE ARRANQUE ──
     boot_msg = "[SISTEMA: REINICIO DETECTADO. INICIALIZANDO CAPACIDADES TOTALES]\n\n"
@@ -68,7 +68,7 @@ def boot_injection():
     boot_msg += "---------------------------------------------------"
 
     # Inyectar en la cola
-    queue_path = os.path.join(ADVANCED_DIR, "Message_Queues", "input_queue.json")
+    queue_path = os.path.join(ADVANCED_DIR, "Colas_Mensajes", "input_queue.json")
     try:
         data = []
         if os.path.exists(queue_path):
@@ -114,7 +114,7 @@ def boot_injection():
         # [DESACTIVADO] CREAR VENTANA CHARM (Proxy de Inyección)
         # charm_script = os.path.join(ADVANCED_DIR, "spawn_charm_ide.py")
         # if os.path.exists(charm_script):
-        #     print("[BOOT] Lanzando ventana proxy [Nombre_IA]...")
+        #     print("[BOOT] Lanzando ventana proxy Charm...")
         #     subprocess.Popen(
         #         [pythonw.replace("pythonw.exe", "python.exe"), charm_script],
         #         creationflags=subprocess.CREATE_NO_WINDOW,

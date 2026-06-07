@@ -14,7 +14,7 @@ import requests
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CHASK_DIR = os.path.dirname(BASE_DIR)
-CREDENTIALS_FILE = os.path.join(CHASK_DIR, "Configuration", "master_credentials.json")
+CREDENTIALS_FILE = os.path.join(CHASK_DIR, "Configuracion", "master_credentials.json")
 
 # Python executable (use the main pythonw.exe or python.exe depending on needs)
 PYTHONW_EXE = os.path.join(os.path.expanduser("~"), "AppData", "Local", "Programs", "Python", "Python311", "pythonw.exe")
@@ -36,7 +36,7 @@ def send_message(chat_id, text, use_keyboard=True):
         # Añadimos el teclado visual permanente (ReplyKeyboardMarkup)
         payload["reply_markup"] = {
             "keyboard": [
-                [{"text": "🔴 Off [Nombre_IA]"}, {"text": "🟢 On [Nombre_IA]"}]
+                [{"text": "🔴 Off Charm"}, {"text": "🟢 On Charm"}]
             ],
             "resize_keyboard": True,
             "persistent": True

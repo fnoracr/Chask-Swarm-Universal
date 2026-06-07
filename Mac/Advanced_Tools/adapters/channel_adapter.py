@@ -10,7 +10,7 @@ El ChannelRouter dirige mensajes al canal correcto automáticamente.
 Uso:
   from channel_adapter import ChannelRouter
   router = ChannelRouter()
-  router.send("telegram", "Hola Administrador")
+  router.send("telegram", "Hola Fernando")
   router.broadcast("Tarea completada")  # Envía a todos los canales activos
 """
 import os
@@ -26,8 +26,8 @@ if sys.stdout.encoding != 'utf-8':
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ADVANCED_DIR = os.path.dirname(os.path.abspath(__file__))
-CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-MESSAGE_LOG = os.path.join(BASE_DIR, "Message_Queues", "channel_messages.json")
+CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+MESSAGE_LOG = os.path.join(BASE_DIR, "Colas_Mensajes", "channel_messages.json")
 
 
 class ChannelAdapter(ABC):

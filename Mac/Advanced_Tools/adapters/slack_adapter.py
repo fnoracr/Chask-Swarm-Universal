@@ -25,7 +25,7 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONFIG_PATH = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
+CONFIG_PATH = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
 
 # Cargar config
 def _get_config() -> dict:
@@ -113,7 +113,7 @@ class SlackBot:
 
         blocks.append({
             "type": "context",
-            "elements": [{"type": "mrkdwn", "text": f"_[Nombre_IA] · {datetime.now().strftime('%H:%M')}_"}]
+            "elements": [{"type": "mrkdwn", "text": f"_Nora · {datetime.now().strftime('%H:%M')}_"}]
         })
 
         return self.send(channel, text=title, blocks=blocks)
@@ -204,7 +204,7 @@ class SlackBot:
         except Exception:
             pass # Falla silenciosa al JSON legacy
             
-        queue_path = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
+        queue_path = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
         queue = []
         if os.path.exists(queue_path):
             try:

@@ -73,9 +73,9 @@ CORE_FILES = [
     os.path.join(CORE_DIR, "Advanced_Tools", "process_watchdog.py"),
     os.path.join(CORE_DIR, "charm_telegram.py"),
     os.path.join(CORE_DIR, "charm_discord.py"),
-    os.path.join(CORE_DIR, "Configuration", "channels_config.json"),
-    os.path.join(CORE_DIR, "Configuration", "authorized_users.json"),
-    os.path.join(CORE_DIR, "Configuration", "master_credentials.json"),
+    os.path.join(CORE_DIR, "Configuracion", "channels_config.json"),
+    os.path.join(CORE_DIR, "Configuracion", "authorized_users.json"),
+    os.path.join(CORE_DIR, "Configuracion", "master_credentials.json"),
     # Advanced Tools
     os.path.join(TOOLS_DIR, "chask_stealth_injector.py"),
     os.path.join(TOOLS_DIR, "llm_router.py"),

@@ -1,0 +1,2124 @@
+[2026-06-04 10:11:04] [TG] MSG: [TELEGRAM 10:11:04] Nora, te llegan mis mensajes desde Telegram?
+[2026-06-04 10:11:04] [PING] Error enviando WAKEUP_PING: 'NoneType' object has no attribute 'write'
+[2026-06-04 10:11:05] [INJECT] Fallo al importar/inyectar stealth_uiautomation: No module named 'stealth_uiautomation'
+[2026-06-04 10:15:21] [TG] MSG: [TELEGRAM 10:15:21] Nora, te llegan mis mensajes desde Telegram?
+[2026-06-04 10:15:21] [PING] Error enviando WAKEUP_PING: 'NoneType' object has no attribute 'write'
+[2026-06-04 10:15:23] [INJECT] Fallo al importar/inyectar stealth_uiautomation: No module named 'stealth_uiautomation'
+[2026-06-04 10:21:09] [MAIN] ============================================================
+[2026-06-04 10:21:09] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 10:21:09] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 10:21:09] [MAIN] ============================================================
+[2026-06-04 10:21:09] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 10:21:09] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 10:21:09] [WEB] Hilo Web activo — vigilando cola input_queue.json (Inyector GUI nativo)
+[2026-06-04 10:21:09] [MAIN] Hilo WEB iniciado.
+[2026-06-04 10:21:09] [TG] Escuchando desde update_id > 454855078
+[2026-06-04 10:21:09] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 10:21:09] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 10:21:09] [DISCORD] Subproceso PID 23352
+[2026-06-04 10:21:09] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 59
+[2026-06-04 10:21:09] [DISCORD]     sys.__stdout__.write("[WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-04 10:21:09] [DISCORD]                          ^
+[2026-06-04 10:21:09] [DISCORD] SyntaxError: unterminated string literal (detected at line 59)
+[2026-06-04 10:21:09] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:21:10] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 10:21:10] [QUEUE] Error: [Errno 2] No such file or directory: 'C:\\Program Files\\Chask_Swarn\\Advanced_Tools\\Colas_Mensajes\\input_queue.json'
+[2026-06-04 10:21:19] [DISCORD] Subproceso PID 2928
+[2026-06-04 10:21:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 59
+[2026-06-04 10:21:19] [DISCORD]     sys.__stdout__.write("[WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-04 10:21:19] [DISCORD]                          ^
+[2026-06-04 10:21:19] [DISCORD] SyntaxError: unterminated string literal (detected at line 59)
+[2026-06-04 10:21:19] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:21:29] [DISCORD] Subproceso PID 12064
+[2026-06-04 10:21:29] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 59
+[2026-06-04 10:21:29] [DISCORD]     sys.__stdout__.write("[WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-04 10:21:29] [DISCORD]                          ^
+[2026-06-04 10:21:29] [DISCORD] SyntaxError: unterminated string literal (detected at line 59)
+[2026-06-04 10:21:29] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:21:39] [DISCORD] Subproceso PID 10936
+[2026-06-04 10:21:39] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 59
+[2026-06-04 10:21:39] [DISCORD]     sys.__stdout__.write("[WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-04 10:21:39] [DISCORD]                          ^
+[2026-06-04 10:21:39] [DISCORD] SyntaxError: unterminated string literal (detected at line 59)
+[2026-06-04 10:21:39] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:21:49] [DISCORD] Subproceso PID 18784
+[2026-06-04 10:21:49] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:21:49] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:21:49] [DISCORD]     main()
+[2026-06-04 10:21:49] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:21:49] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:21:49] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:21:49] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:21:49] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:21:59] [DISCORD] Subproceso PID 12944
+[2026-06-04 10:21:59] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:21:59] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:21:59] [DISCORD]     main()
+[2026-06-04 10:21:59] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:21:59] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:21:59] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:21:59] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:21:59] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:22:09] [DISCORD] Subproceso PID 25572
+[2026-06-04 10:22:09] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:22:09] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:22:09] [DISCORD]     main()
+[2026-06-04 10:22:09] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:22:09] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:22:09] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:22:09] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:22:09] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:22:19] [DISCORD] Subproceso PID 21660
+[2026-06-04 10:22:19] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:22:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:22:19] [DISCORD]     main()
+[2026-06-04 10:22:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:22:19] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:22:19] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:22:19] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:22:19] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:22:29] [DISCORD] Subproceso PID 10372
+[2026-06-04 10:22:29] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:22:29] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:22:29] [DISCORD]     main()
+[2026-06-04 10:22:29] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:22:29] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:22:29] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:22:29] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:22:29] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:22:39] [DISCORD] Subproceso PID 15448
+[2026-06-04 10:22:39] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:22:39] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:22:39] [DISCORD]     main()
+[2026-06-04 10:22:39] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:22:39] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:22:39] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:22:39] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:22:39] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:22:49] [DISCORD] Subproceso PID 28028
+[2026-06-04 10:22:49] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:22:49] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:22:49] [DISCORD]     main()
+[2026-06-04 10:22:49] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:22:49] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:22:49] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:22:49] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:22:49] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:22:59] [DISCORD] Subproceso PID 18108
+[2026-06-04 10:22:59] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:22:59] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:22:59] [DISCORD]     main()
+[2026-06-04 10:22:59] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:22:59] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:22:59] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:22:59] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:22:59] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:23:09] [DISCORD] Subproceso PID 1492
+[2026-06-04 10:23:09] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:23:09] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:23:09] [DISCORD]     main()
+[2026-06-04 10:23:09] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:23:09] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:23:09] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:23:09] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:23:09] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:23:19] [DISCORD] Subproceso PID 15148
+[2026-06-04 10:23:19] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:23:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:23:19] [DISCORD]     main()
+[2026-06-04 10:23:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:23:19] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:23:19] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:23:19] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:23:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:23:30] [DISCORD] Subproceso PID 5732
+[2026-06-04 10:23:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:23:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:23:30] [DISCORD]     main()
+[2026-06-04 10:23:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:23:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:23:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:23:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:23:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:23:40] [DISCORD] Subproceso PID 5000
+[2026-06-04 10:23:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:23:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:23:40] [DISCORD]     main()
+[2026-06-04 10:23:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:23:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:23:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:23:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:23:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:23:50] [DISCORD] Subproceso PID 16684
+[2026-06-04 10:23:50] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:23:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:23:50] [DISCORD]     main()
+[2026-06-04 10:23:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:23:50] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:23:50] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:23:50] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:23:50] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:24:00] [DISCORD] Subproceso PID 19312
+[2026-06-04 10:24:00] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:24:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:24:00] [DISCORD]     main()
+[2026-06-04 10:24:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:24:00] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:24:00] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:24:00] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:24:00] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:24:10] [DISCORD] Subproceso PID 19716
+[2026-06-04 10:24:10] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:24:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:24:10] [DISCORD]     main()
+[2026-06-04 10:24:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:24:10] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:24:10] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:24:10] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:24:10] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:24:20] [DISCORD] Subproceso PID 17544
+[2026-06-04 10:24:20] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:24:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:24:20] [DISCORD]     main()
+[2026-06-04 10:24:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:24:20] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:24:20] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:24:20] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:24:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:24:30] [DISCORD] Subproceso PID 24684
+[2026-06-04 10:24:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:24:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:24:30] [DISCORD]     main()
+[2026-06-04 10:24:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:24:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:24:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:24:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:24:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:24:40] [DISCORD] Subproceso PID 3188
+[2026-06-04 10:24:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:24:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:24:40] [DISCORD]     main()
+[2026-06-04 10:24:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:24:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:24:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:24:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:24:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:24:50] [DISCORD] Subproceso PID 11092
+[2026-06-04 10:24:50] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:24:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:24:50] [DISCORD]     main()
+[2026-06-04 10:24:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:24:50] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:24:50] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:24:50] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:24:50] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:25:00] [DISCORD] Subproceso PID 20140
+[2026-06-04 10:25:00] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:25:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:25:00] [DISCORD]     main()
+[2026-06-04 10:25:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:25:00] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:25:00] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:25:00] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:25:00] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:26:10] [MAIN] ============================================================
+[2026-06-04 10:26:10] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 10:26:10] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 10:26:10] [MAIN] ============================================================
+[2026-06-04 10:26:10] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 10:26:10] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 10:26:10] [WEB] Hilo Web activo — vigilando cola input_queue.json (Inyector GUI nativo)
+[2026-06-04 10:26:10] [MAIN] Hilo WEB iniciado.
+[2026-06-04 10:26:10] [TG] Escuchando desde update_id > 454855081
+[2026-06-04 10:26:10] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 10:26:10] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 10:26:10] [DISCORD] Subproceso PID 2220
+[2026-06-04 10:26:10] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:26:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:26:10] [DISCORD]     main()
+[2026-06-04 10:26:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:26:10] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:26:10] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:26:10] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:26:10] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:26:20] [DISCORD] Subproceso PID 17748
+[2026-06-04 10:26:20] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:26:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:26:20] [DISCORD]     main()
+[2026-06-04 10:26:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:26:20] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:26:20] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:26:20] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:26:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:26:30] [DISCORD] Subproceso PID 2924
+[2026-06-04 10:26:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 10:26:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 10:26:30] [DISCORD]     main()
+[2026-06-04 10:26:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 10:26:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 10:26:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 10:26:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 10:26:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 10:26:40] [DISCORD] Subproceso PID 19632
+[2026-06-04 10:26:40] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 10:26:40] [DISCORD] [2026-06-04 10:26:40] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 10:26:43] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 10:26:43] [DISCORD] [2026-06-04 10:26:43] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 10:31:24] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 10:31:26] [INJECT] [telegram] GUI Inyección fallida: No se encontró ventana destino
+[2026-06-04 10:36:47] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 10:36:48] [INJECT] [telegram] GUI Inyección fallida: No se encontró ventana destino
+[2026-06-04 10:36:58] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 10:36:58] [INJECT] [telegram] GUI Inyección fallida: No se encontró ventana destino
+[2026-06-04 10:37:20] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 10:37:20] [INJECT] [telegram] GUI Inyección fallida: No se encontró ventana destino
+[2026-06-04 10:56:01] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 10:56:02] [INJECT] [telegram] GUI Inyección fallida: No se encontró ventana destino
+[2026-06-04 11:02:35] [INBOX_WATCHER] Iniciado.
+[2026-06-04 11:05:20] [INBOX_WATCHER] Iniciado.
+[2026-06-04 11:07:19] [MAIN] ============================================================
+[2026-06-04 11:07:19] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 11:07:19] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 11:07:19] [MAIN] ============================================================
+[2026-06-04 11:07:19] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 11:07:19] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 11:07:19] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 11:07:19] [TG] Escuchando desde update_id > 454855086
+[2026-06-04 11:07:19] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 11:07:19] [DISCORD] Subproceso PID 25784
+[2026-06-04 11:07:19] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:07:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:07:19] [DISCORD]     main()
+[2026-06-04 11:07:19] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:07:19] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:07:19] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:07:19] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:07:19] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:07:21] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 11:07:21] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 11:07:21] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 11:07:25] [INBOX_WATCHER] Inyección en ventana activa: Error inyectando: There are 2 elements that match the criteria {'title_re': '.*(Nora|Antigravity|Chask).*', 'backend': 'uia', 'visible_only': False}
+[2026-06-04 11:07:25] [INBOX_WATCHER] Enviando WAKEUP_PING como fallback
+[2026-06-04 11:07:28] [INBOX_WATCHER] Inyección en ventana activa: Error inyectando: There are 2 elements that match the criteria {'title_re': '.*(Nora|Antigravity|Chask).*', 'backend': 'uia', 'visible_only': False}
+[2026-06-04 11:07:28] [INBOX_WATCHER] Enviando WAKEUP_PING como fallback
+[2026-06-04 11:07:29] [DISCORD] Subproceso PID 12168
+[2026-06-04 11:07:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:07:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:07:30] [DISCORD]     main()
+[2026-06-04 11:07:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:07:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:07:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:07:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:07:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:07:31] [INBOX_WATCHER] Inyección en ventana activa: Error inyectando: There are 2 elements that match the criteria {'title_re': '.*(Nora|Antigravity|Chask).*', 'backend': 'uia', 'visible_only': False}
+[2026-06-04 11:07:31] [INBOX_WATCHER] Enviando WAKEUP_PING como fallback
+[2026-06-04 11:07:40] [DISCORD] Subproceso PID 11024
+[2026-06-04 11:07:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:07:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:07:40] [DISCORD]     main()
+[2026-06-04 11:07:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:07:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:07:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:07:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:07:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:07:50] [DISCORD] Subproceso PID 21772
+[2026-06-04 11:07:50] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:07:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:07:50] [DISCORD]     main()
+[2026-06-04 11:07:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:07:50] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:07:50] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:07:50] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:07:50] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:08:00] [DISCORD] Subproceso PID 16428
+[2026-06-04 11:08:00] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:08:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:08:00] [DISCORD]     main()
+[2026-06-04 11:08:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:08:00] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:08:00] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:08:00] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:08:00] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:08:10] [DISCORD] Subproceso PID 17948
+[2026-06-04 11:08:10] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:08:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:08:10] [DISCORD]     main()
+[2026-06-04 11:08:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:08:10] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:08:10] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:08:10] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:08:10] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:08:20] [DISCORD] Subproceso PID 24672
+[2026-06-04 11:08:20] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:08:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:08:20] [DISCORD]     main()
+[2026-06-04 11:08:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:08:20] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:08:20] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:08:20] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:08:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:08:30] [DISCORD] Subproceso PID 11256
+[2026-06-04 11:08:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:08:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:08:30] [DISCORD]     main()
+[2026-06-04 11:08:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:08:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:08:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:08:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:08:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:08:40] [DISCORD] Subproceso PID 15080
+[2026-06-04 11:08:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:08:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:08:40] [DISCORD]     main()
+[2026-06-04 11:08:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:08:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:08:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:08:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:08:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:08:50] [DISCORD] Subproceso PID 7376
+[2026-06-04 11:08:50] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:08:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:08:50] [DISCORD]     main()
+[2026-06-04 11:08:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:08:50] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:08:50] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:08:50] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:08:50] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:09:00] [DISCORD] Subproceso PID 21648
+[2026-06-04 11:09:00] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:09:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:09:00] [DISCORD]     main()
+[2026-06-04 11:09:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:09:00] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:09:00] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:09:00] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:09:00] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:09:10] [DISCORD] Subproceso PID 10672
+[2026-06-04 11:09:10] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:09:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:09:10] [DISCORD]     main()
+[2026-06-04 11:09:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:09:10] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:09:10] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:09:10] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:09:10] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:09:19] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 11:09:20] [DISCORD] Subproceso PID 4004
+[2026-06-04 11:09:20] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:09:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:09:20] [DISCORD]     main()
+[2026-06-04 11:09:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:09:20] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:09:20] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:09:20] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:09:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:09:30] [DISCORD] Subproceso PID 10500
+[2026-06-04 11:09:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:09:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:09:30] [DISCORD]     main()
+[2026-06-04 11:09:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:09:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:09:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:09:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:09:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:09:40] [DISCORD] Subproceso PID 18852
+[2026-06-04 11:09:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:09:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:09:40] [DISCORD]     main()
+[2026-06-04 11:09:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:09:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:09:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:09:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:09:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:09:50] [DISCORD] Subproceso PID 13944
+[2026-06-04 11:09:50] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:09:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:09:50] [DISCORD]     main()
+[2026-06-04 11:09:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:09:50] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:09:50] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:09:50] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:09:50] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:10:00] [DISCORD] Subproceso PID 10096
+[2026-06-04 11:10:00] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:10:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:10:00] [DISCORD]     main()
+[2026-06-04 11:10:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:10:00] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:10:00] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:10:00] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:10:00] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:10:10] [DISCORD] Subproceso PID 7132
+[2026-06-04 11:10:10] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:10:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:10:10] [DISCORD]     main()
+[2026-06-04 11:10:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:10:10] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:10:10] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:10:10] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:10:10] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:10:20] [DISCORD] Subproceso PID 18684
+[2026-06-04 11:10:20] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:10:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:10:20] [DISCORD]     main()
+[2026-06-04 11:10:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:10:20] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:10:20] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:10:20] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:10:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:10:30] [DISCORD] Subproceso PID 18788
+[2026-06-04 11:10:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:10:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:10:30] [DISCORD]     main()
+[2026-06-04 11:10:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:10:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:10:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:10:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:10:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:10:40] [DISCORD] Subproceso PID 7080
+[2026-06-04 11:10:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:10:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:10:40] [DISCORD]     main()
+[2026-06-04 11:10:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:10:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:10:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:10:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:10:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:10:50] [DISCORD] Subproceso PID 8168
+[2026-06-04 11:10:50] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:10:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:10:50] [DISCORD]     main()
+[2026-06-04 11:10:50] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:10:50] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:10:50] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:10:50] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:10:50] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:11:00] [DISCORD] Subproceso PID 26268
+[2026-06-04 11:11:00] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:11:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:11:00] [DISCORD]     main()
+[2026-06-04 11:11:00] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:11:00] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:11:00] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:11:00] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:11:00] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:11:10] [DISCORD] Subproceso PID 18744
+[2026-06-04 11:11:10] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:11:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:11:10] [DISCORD]     main()
+[2026-06-04 11:11:10] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:11:10] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:11:10] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:11:10] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:11:10] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:11:20] [DISCORD] Subproceso PID 9408
+[2026-06-04 11:11:20] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:11:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:11:20] [DISCORD]     main()
+[2026-06-04 11:11:20] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:11:20] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:11:20] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:11:20] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:11:20] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:11:30] [DISCORD] Subproceso PID 25948
+[2026-06-04 11:11:30] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:11:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:11:30] [DISCORD]     main()
+[2026-06-04 11:11:30] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:11:30] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:11:30] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:11:30] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:11:30] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:11:40] [DISCORD] Subproceso PID 25336
+[2026-06-04 11:11:40] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:11:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:11:40] [DISCORD]     main()
+[2026-06-04 11:11:40] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:11:40] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:11:40] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:11:40] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:11:40] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:11:50] [DISCORD] Subproceso PID 28328
+[2026-06-04 11:11:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:11:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:11:51] [DISCORD]     main()
+[2026-06-04 11:11:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:11:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:11:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:11:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:11:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:12:01] [DISCORD] Subproceso PID 5452
+[2026-06-04 11:12:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:12:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:12:01] [DISCORD]     main()
+[2026-06-04 11:12:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:12:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:12:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:12:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:12:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:12:11] [DISCORD] Subproceso PID 24684
+[2026-06-04 11:12:11] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:12:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:12:11] [DISCORD]     main()
+[2026-06-04 11:12:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:12:11] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:12:11] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:12:11] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:12:11] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:12:21] [DISCORD] Subproceso PID 18012
+[2026-06-04 11:12:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:12:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:12:21] [DISCORD]     main()
+[2026-06-04 11:12:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:12:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:12:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:12:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:12:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:12:31] [DISCORD] Subproceso PID 10668
+[2026-06-04 11:12:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:12:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:12:31] [DISCORD]     main()
+[2026-06-04 11:12:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:12:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:12:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:12:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:12:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:12:31] [QUEUE_WATCHER] Iniciado — vigilando cola (modo sin tokens, max 90s)
+[2026-06-04 11:12:41] [DISCORD] Subproceso PID 16712
+[2026-06-04 11:12:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:12:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:12:41] [DISCORD]     main()
+[2026-06-04 11:12:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:12:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:12:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:12:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:12:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:12:51] [DISCORD] Subproceso PID 8796
+[2026-06-04 11:12:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:12:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:12:51] [DISCORD]     main()
+[2026-06-04 11:12:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:12:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:12:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:12:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:12:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:01] [DISCORD] Subproceso PID 11236
+[2026-06-04 11:13:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:13:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:13:01] [DISCORD]     main()
+[2026-06-04 11:13:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:13:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:13:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:13:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:13:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:11] [DISCORD] Subproceso PID 1856
+[2026-06-04 11:13:11] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:13:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:13:11] [DISCORD]     main()
+[2026-06-04 11:13:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:13:11] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:13:11] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:13:11] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:13:11] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:21] [DISCORD] Subproceso PID 17416
+[2026-06-04 11:13:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:13:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:13:21] [DISCORD]     main()
+[2026-06-04 11:13:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:13:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:13:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:13:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:13:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:31] [DISCORD] Subproceso PID 7288
+[2026-06-04 11:13:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:13:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:13:31] [DISCORD]     main()
+[2026-06-04 11:13:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:13:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:13:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:13:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:13:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:34] [QUEUE_WATCHER] Iniciado — vigilando cola (modo sin tokens, max 90s)
+[2026-06-04 11:13:41] [DISCORD] Subproceso PID 14176
+[2026-06-04 11:13:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:13:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:13:41] [DISCORD]     main()
+[2026-06-04 11:13:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:13:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:13:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:13:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:13:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:51] [DISCORD] Subproceso PID 8908
+[2026-06-04 11:13:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:13:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:13:51] [DISCORD]     main()
+[2026-06-04 11:13:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:13:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:13:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:13:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:13:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:13:52] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 11:13:54] [QUEUE_WATCHER] Ack enviado: Nora, te llegan mis mensajes desde Telegram?
+[2026-06-04 11:13:54] [QUEUE_WATCHER] WAKEUP_PING emitido — relanzando siguiente instancia y terminando
+[2026-06-04 11:13:54] [QUEUE_WATCHER] Nueva instancia de nora_queue_watcher.py lanzada en segundo plano
+[2026-06-04 11:14:01] [DISCORD] Subproceso PID 25728
+[2026-06-04 11:14:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:14:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:14:01] [DISCORD]     main()
+[2026-06-04 11:14:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:14:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:14:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:14:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:14:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:14:07] [QUEUE_WATCHER] Iniciado — vigilando cola (modo sin tokens, max 90s)
+[2026-06-04 11:14:11] [DISCORD] Subproceso PID 26344
+[2026-06-04 11:14:11] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:14:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:14:11] [DISCORD]     main()
+[2026-06-04 11:14:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:14:11] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:14:11] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:14:11] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:14:11] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:14:21] [DISCORD] Subproceso PID 16008
+[2026-06-04 11:14:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:14:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:14:21] [DISCORD]     main()
+[2026-06-04 11:14:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:14:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:14:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:14:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:14:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:14:31] [DISCORD] Subproceso PID 9116
+[2026-06-04 11:14:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:14:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:14:31] [DISCORD]     main()
+[2026-06-04 11:14:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:14:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:14:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:14:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:14:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:14:41] [DISCORD] Subproceso PID 4824
+[2026-06-04 11:14:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:14:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:14:41] [DISCORD]     main()
+[2026-06-04 11:14:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:14:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:14:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:14:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:14:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:14:51] [DISCORD] Subproceso PID 16092
+[2026-06-04 11:14:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:14:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:14:51] [DISCORD]     main()
+[2026-06-04 11:14:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:14:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:14:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:14:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:14:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:15:01] [DISCORD] Subproceso PID 17396
+[2026-06-04 11:15:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:15:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:15:01] [DISCORD]     main()
+[2026-06-04 11:15:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:15:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:15:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:15:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:15:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:15:11] [DISCORD] Subproceso PID 16520
+[2026-06-04 11:15:11] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:15:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:15:11] [DISCORD]     main()
+[2026-06-04 11:15:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:15:11] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:15:11] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:15:11] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:15:11] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:15:21] [DISCORD] Subproceso PID 16368
+[2026-06-04 11:15:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:15:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:15:21] [DISCORD]     main()
+[2026-06-04 11:15:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:15:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:15:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:15:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:15:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:15:31] [DISCORD] Subproceso PID 25640
+[2026-06-04 11:15:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:15:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:15:31] [DISCORD]     main()
+[2026-06-04 11:15:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:15:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:15:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:15:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:15:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:15:37] [QUEUE_WATCHER] Timeout 90s — saliendo para reinicio
+[2026-06-04 11:15:41] [DISCORD] Subproceso PID 24468
+[2026-06-04 11:15:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:15:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:15:41] [DISCORD]     main()
+[2026-06-04 11:15:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:15:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:15:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:15:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:15:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:15:51] [DISCORD] Subproceso PID 12908
+[2026-06-04 11:15:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:15:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:15:51] [DISCORD]     main()
+[2026-06-04 11:15:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:15:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:15:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:15:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:15:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:16:01] [DISCORD] Subproceso PID 28252
+[2026-06-04 11:16:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:16:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:16:01] [DISCORD]     main()
+[2026-06-04 11:16:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:16:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:16:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:16:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:16:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:16:06] [QUEUE_WATCHER] Iniciado — vigilando cola universal (modo sin tokens, max 90s)
+[2026-06-04 11:16:11] [DISCORD] Subproceso PID 23380
+[2026-06-04 11:16:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:16:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:16:12] [DISCORD]     main()
+[2026-06-04 11:16:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:16:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:16:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:16:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:16:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:16:22] [DISCORD] Subproceso PID 9952
+[2026-06-04 11:16:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:16:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:16:22] [DISCORD]     main()
+[2026-06-04 11:16:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:16:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:16:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:16:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:16:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:16:32] [DISCORD] Subproceso PID 5196
+[2026-06-04 11:16:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:16:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:16:32] [DISCORD]     main()
+[2026-06-04 11:16:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:16:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:16:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:16:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:16:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:16:42] [DISCORD] Subproceso PID 27460
+[2026-06-04 11:16:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:16:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:16:42] [DISCORD]     main()
+[2026-06-04 11:16:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:16:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:16:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:16:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:16:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:16:52] [DISCORD] Subproceso PID 6700
+[2026-06-04 11:16:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:16:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:16:52] [DISCORD]     main()
+[2026-06-04 11:16:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:16:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:16:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:16:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:16:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:17:02] [DISCORD] Subproceso PID 15124
+[2026-06-04 11:17:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:17:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:17:02] [DISCORD]     main()
+[2026-06-04 11:17:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:17:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:17:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:17:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:17:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:17:12] [DISCORD] Subproceso PID 18808
+[2026-06-04 11:17:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:17:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:17:12] [DISCORD]     main()
+[2026-06-04 11:17:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:17:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:17:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:17:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:17:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:17:22] [DISCORD] Subproceso PID 20696
+[2026-06-04 11:17:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:17:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:17:22] [DISCORD]     main()
+[2026-06-04 11:17:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:17:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:17:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:17:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:17:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:17:32] [DISCORD] Subproceso PID 17276
+[2026-06-04 11:17:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:17:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:17:32] [DISCORD]     main()
+[2026-06-04 11:17:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:17:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:17:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:17:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:17:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:17:36] [QUEUE_WATCHER] Timeout 90s — saliendo para reinicio
+[2026-06-04 11:17:42] [DISCORD] Subproceso PID 27204
+[2026-06-04 11:17:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:17:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:17:42] [DISCORD]     main()
+[2026-06-04 11:17:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:17:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:17:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:17:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:17:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:17:48] [QUEUE_WATCHER] Iniciado — vigilando cola universal (modo sin tokens, max 90s)
+[2026-06-04 11:17:52] [DISCORD] Subproceso PID 16540
+[2026-06-04 11:17:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:17:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:17:52] [DISCORD]     main()
+[2026-06-04 11:17:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:17:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:17:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:17:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:17:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:18:02] [DISCORD] Subproceso PID 25804
+[2026-06-04 11:18:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:18:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:18:02] [DISCORD]     main()
+[2026-06-04 11:18:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:18:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:18:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:18:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:18:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:18:12] [DISCORD] Subproceso PID 28344
+[2026-06-04 11:18:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:18:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:18:12] [DISCORD]     main()
+[2026-06-04 11:18:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:18:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:18:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:18:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:18:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:18:22] [DISCORD] Subproceso PID 10368
+[2026-06-04 11:18:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:18:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:18:22] [DISCORD]     main()
+[2026-06-04 11:18:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:18:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:18:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:18:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:18:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:18:32] [DISCORD] Subproceso PID 15148
+[2026-06-04 11:18:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:18:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:18:32] [DISCORD]     main()
+[2026-06-04 11:18:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:18:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:18:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:18:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:18:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:18:42] [DISCORD] Subproceso PID 1380
+[2026-06-04 11:18:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:18:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:18:42] [DISCORD]     main()
+[2026-06-04 11:18:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:18:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:18:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:18:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:18:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:18:52] [DISCORD] Subproceso PID 11008
+[2026-06-04 11:18:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:18:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:18:52] [DISCORD]     main()
+[2026-06-04 11:18:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:18:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:18:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:18:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:18:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:19:02] [DISCORD] Subproceso PID 5312
+[2026-06-04 11:19:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:19:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:19:02] [DISCORD]     main()
+[2026-06-04 11:19:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:19:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:19:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:19:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:19:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:19:12] [DISCORD] Subproceso PID 27540
+[2026-06-04 11:19:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:19:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:19:12] [DISCORD]     main()
+[2026-06-04 11:19:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:19:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:19:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:19:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:19:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:19:18] [QUEUE_WATCHER] Timeout 90s — saliendo para reinicio
+[2026-06-04 11:19:22] [DISCORD] Subproceso PID 1148
+[2026-06-04 11:19:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:19:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:19:22] [DISCORD]     main()
+[2026-06-04 11:19:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:19:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:19:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:19:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:19:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:19:32] [DISCORD] Subproceso PID 5780
+[2026-06-04 11:19:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:19:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:19:32] [DISCORD]     main()
+[2026-06-04 11:19:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:19:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:19:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:19:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:19:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:19:42] [DISCORD] Subproceso PID 2304
+[2026-06-04 11:19:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:19:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:19:42] [DISCORD]     main()
+[2026-06-04 11:19:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:19:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:19:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:19:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:19:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:19:52] [DISCORD] Subproceso PID 16348
+[2026-06-04 11:19:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:19:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:19:52] [DISCORD]     main()
+[2026-06-04 11:19:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:19:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:19:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:19:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:19:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:20:02] [DISCORD] Subproceso PID 22316
+[2026-06-04 11:20:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:20:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:20:02] [DISCORD]     main()
+[2026-06-04 11:20:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:20:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:20:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:20:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:20:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:20:12] [DISCORD] Subproceso PID 11912
+[2026-06-04 11:20:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:20:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:20:12] [DISCORD]     main()
+[2026-06-04 11:20:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:20:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:20:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:20:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:20:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:20:22] [DISCORD] Subproceso PID 9096
+[2026-06-04 11:20:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:20:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:20:22] [DISCORD]     main()
+[2026-06-04 11:20:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:20:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:20:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:20:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:20:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:20:32] [DISCORD] Subproceso PID 12160
+[2026-06-04 11:20:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:20:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:20:32] [DISCORD]     main()
+[2026-06-04 11:20:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:20:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:20:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:20:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:20:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:20:43] [DISCORD] Subproceso PID 1700
+[2026-06-04 11:20:43] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:20:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:20:43] [DISCORD]     main()
+[2026-06-04 11:20:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:20:43] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:20:43] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:20:43] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:20:43] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:20:53] [DISCORD] Subproceso PID 27636
+[2026-06-04 11:20:53] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:20:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:20:53] [DISCORD]     main()
+[2026-06-04 11:20:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:20:53] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:20:53] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:20:53] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:20:53] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:03] [DISCORD] Subproceso PID 17860
+[2026-06-04 11:21:03] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:03] [DISCORD]     main()
+[2026-06-04 11:21:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:03] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:03] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:03] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:03] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:13] [DISCORD] Subproceso PID 27448
+[2026-06-04 11:21:13] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:13] [DISCORD]     main()
+[2026-06-04 11:21:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:13] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:13] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:13] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:13] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:21] [MAIN] ============================================================
+[2026-06-04 11:21:21] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 11:21:21] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 11:21:21] [MAIN] ============================================================
+[2026-06-04 11:21:21] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 11:21:21] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 11:21:21] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 11:21:21] [TG] Escuchando desde update_id > 454855091
+[2026-06-04 11:21:21] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 11:21:21] [DISCORD] Subproceso PID 20056
+[2026-06-04 11:21:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:21] [DISCORD]     main()
+[2026-06-04 11:21:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:23] [DISCORD] Subproceso PID 25344
+[2026-06-04 11:21:23] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:23] [DISCORD]     main()
+[2026-06-04 11:21:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:23] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:23] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:23] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:23] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:28] [QUEUE_WATCHER] Iniciado — vigilando cola universal (modo sin tokens, max 90s)
+[2026-06-04 11:21:31] [DISCORD] Subproceso PID 15160
+[2026-06-04 11:21:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:31] [DISCORD]     main()
+[2026-06-04 11:21:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:33] [DISCORD] Subproceso PID 12924
+[2026-06-04 11:21:33] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:33] [DISCORD]     main()
+[2026-06-04 11:21:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:33] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:33] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:33] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:33] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:41] [DISCORD] Subproceso PID 14940
+[2026-06-04 11:21:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:41] [DISCORD]     main()
+[2026-06-04 11:21:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:43] [DISCORD] Subproceso PID 23756
+[2026-06-04 11:21:43] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:43] [DISCORD]     main()
+[2026-06-04 11:21:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:43] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:43] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:43] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:43] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:51] [DISCORD] Subproceso PID 5276
+[2026-06-04 11:21:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:51] [DISCORD]     main()
+[2026-06-04 11:21:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:21:53] [DISCORD] Subproceso PID 14116
+[2026-06-04 11:21:53] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:21:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:21:53] [DISCORD]     main()
+[2026-06-04 11:21:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:21:53] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:21:53] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:21:53] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:21:53] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:01] [DISCORD] Subproceso PID 18796
+[2026-06-04 11:22:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:01] [DISCORD]     main()
+[2026-06-04 11:22:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:03] [DISCORD] Subproceso PID 9076
+[2026-06-04 11:22:03] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:03] [DISCORD]     main()
+[2026-06-04 11:22:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:03] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:03] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:03] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:03] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:11] [DISCORD] Subproceso PID 6416
+[2026-06-04 11:22:11] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:11] [DISCORD]     main()
+[2026-06-04 11:22:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:11] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:11] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:11] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:11] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:13] [DISCORD] Subproceso PID 18604
+[2026-06-04 11:22:13] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:13] [DISCORD]     main()
+[2026-06-04 11:22:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:13] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:13] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:13] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:13] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:21] [DISCORD] Subproceso PID 10952
+[2026-06-04 11:22:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:21] [DISCORD]     main()
+[2026-06-04 11:22:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:23] [DISCORD] Subproceso PID 12908
+[2026-06-04 11:22:23] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:23] [DISCORD]     main()
+[2026-06-04 11:22:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:23] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:23] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:23] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:23] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:31] [DISCORD] Subproceso PID 22072
+[2026-06-04 11:22:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:31] [DISCORD]     main()
+[2026-06-04 11:22:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:33] [DISCORD] Subproceso PID 25888
+[2026-06-04 11:22:33] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:33] [DISCORD]     main()
+[2026-06-04 11:22:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:33] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:33] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:33] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:33] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:41] [DISCORD] Subproceso PID 23016
+[2026-06-04 11:22:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:41] [DISCORD]     main()
+[2026-06-04 11:22:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:43] [DISCORD] Subproceso PID 10544
+[2026-06-04 11:22:43] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:43] [DISCORD]     main()
+[2026-06-04 11:22:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:43] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:43] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:43] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:43] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:51] [DISCORD] Subproceso PID 11200
+[2026-06-04 11:22:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:51] [DISCORD]     main()
+[2026-06-04 11:22:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:51] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:53] [DISCORD] Subproceso PID 27576
+[2026-06-04 11:22:53] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:22:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:22:53] [DISCORD]     main()
+[2026-06-04 11:22:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:22:53] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:22:53] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:22:53] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:22:53] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:22:58] [QUEUE_WATCHER] Timeout 90s — relanzando en segundo plano y saliendo
+[2026-06-04 11:23:01] [DISCORD] Subproceso PID 23968
+[2026-06-04 11:23:01] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:01] [DISCORD]     main()
+[2026-06-04 11:23:01] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:01] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:01] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:01] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:01] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:03] [DISCORD] Subproceso PID 17032
+[2026-06-04 11:23:03] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:03] [DISCORD]     main()
+[2026-06-04 11:23:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:03] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:03] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:03] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:03] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:11] [DISCORD] Subproceso PID 22540
+[2026-06-04 11:23:11] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:11] [DISCORD]     main()
+[2026-06-04 11:23:11] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:11] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:11] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:11] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:11] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:13] [DISCORD] Subproceso PID 20212
+[2026-06-04 11:23:13] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:13] [DISCORD]     main()
+[2026-06-04 11:23:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:13] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:13] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:13] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:13] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:21] [DISCORD] Subproceso PID 20560
+[2026-06-04 11:23:21] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:21] [DISCORD]     main()
+[2026-06-04 11:23:21] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:21] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:21] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:21] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:21] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:23] [DISCORD] Subproceso PID 20388
+[2026-06-04 11:23:23] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:23] [DISCORD]     main()
+[2026-06-04 11:23:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:23] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:23] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:23] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:23] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:31] [DISCORD] Subproceso PID 12908
+[2026-06-04 11:23:31] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:31] [DISCORD]     main()
+[2026-06-04 11:23:31] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:31] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:31] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:31] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:31] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:33] [DISCORD] Subproceso PID 18612
+[2026-06-04 11:23:33] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:33] [DISCORD]     main()
+[2026-06-04 11:23:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:33] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:33] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:33] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:33] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:41] [DISCORD] Subproceso PID 8204
+[2026-06-04 11:23:41] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:41] [DISCORD]     main()
+[2026-06-04 11:23:41] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:41] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:41] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:41] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:41] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:43] [DISCORD] Subproceso PID 3208
+[2026-06-04 11:23:43] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:43] [DISCORD]     main()
+[2026-06-04 11:23:43] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:43] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:43] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:43] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:43] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:51] [DISCORD] Subproceso PID 392
+[2026-06-04 11:23:51] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:51] [DISCORD]     main()
+[2026-06-04 11:23:51] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:51] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:51] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:51] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:23:53] [DISCORD] Subproceso PID 17436
+[2026-06-04 11:23:53] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:23:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:23:53] [DISCORD]     main()
+[2026-06-04 11:23:53] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:23:53] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:23:53] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:23:53] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:23:53] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:02] [DISCORD] Subproceso PID 28316
+[2026-06-04 11:24:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:02] [DISCORD]     main()
+[2026-06-04 11:24:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:03] [DISCORD] Subproceso PID 5220
+[2026-06-04 11:24:03] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:03] [DISCORD]     main()
+[2026-06-04 11:24:03] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:03] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:03] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:03] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:03] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:12] [DISCORD] Subproceso PID 5844
+[2026-06-04 11:24:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:12] [DISCORD]     main()
+[2026-06-04 11:24:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:13] [DISCORD] Subproceso PID 5196
+[2026-06-04 11:24:13] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:13] [DISCORD]     main()
+[2026-06-04 11:24:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:13] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:13] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:13] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:13] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:22] [DISCORD] Subproceso PID 17364
+[2026-06-04 11:24:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:22] [DISCORD]     main()
+[2026-06-04 11:24:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:23] [DISCORD] Subproceso PID 26632
+[2026-06-04 11:24:23] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:23] [DISCORD]     main()
+[2026-06-04 11:24:23] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:23] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:23] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:23] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:23] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:32] [DISCORD] Subproceso PID 20056
+[2026-06-04 11:24:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:32] [DISCORD]     main()
+[2026-06-04 11:24:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:33] [DISCORD] Subproceso PID 25920
+[2026-06-04 11:24:33] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:33] [DISCORD]     main()
+[2026-06-04 11:24:33] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:33] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:33] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:33] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:33] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:42] [DISCORD] Subproceso PID 20388
+[2026-06-04 11:24:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:42] [DISCORD]     main()
+[2026-06-04 11:24:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:43] [DISCORD] Subproceso PID 27180
+[2026-06-04 11:24:44] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:44] [DISCORD]     main()
+[2026-06-04 11:24:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:44] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:44] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:44] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:44] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:52] [DISCORD] Subproceso PID 2900
+[2026-06-04 11:24:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:52] [DISCORD]     main()
+[2026-06-04 11:24:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:24:54] [DISCORD] Subproceso PID 8288
+[2026-06-04 11:24:54] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:24:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:24:54] [DISCORD]     main()
+[2026-06-04 11:24:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:24:54] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:24:54] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:24:54] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:24:54] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:02] [DISCORD] Subproceso PID 6276
+[2026-06-04 11:25:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:02] [DISCORD]     main()
+[2026-06-04 11:25:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:04] [DISCORD] Subproceso PID 15376
+[2026-06-04 11:25:04] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:04] [DISCORD]     main()
+[2026-06-04 11:25:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:04] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:04] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:04] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:04] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:12] [DISCORD] Subproceso PID 18368
+[2026-06-04 11:25:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:12] [DISCORD]     main()
+[2026-06-04 11:25:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:14] [DISCORD] Subproceso PID 15768
+[2026-06-04 11:25:14] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:14] [DISCORD]     main()
+[2026-06-04 11:25:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:14] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:14] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:14] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:14] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:22] [DISCORD] Subproceso PID 16396
+[2026-06-04 11:25:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:22] [DISCORD]     main()
+[2026-06-04 11:25:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:24] [DISCORD] Subproceso PID 12888
+[2026-06-04 11:25:24] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:24] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:24] [DISCORD]     main()
+[2026-06-04 11:25:24] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:24] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:24] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:24] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:24] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:32] [DISCORD] Subproceso PID 22972
+[2026-06-04 11:25:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:32] [DISCORD]     main()
+[2026-06-04 11:25:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:34] [DISCORD] Subproceso PID 16748
+[2026-06-04 11:25:34] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:34] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:34] [DISCORD]     main()
+[2026-06-04 11:25:34] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:34] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:34] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:34] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:34] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:42] [DISCORD] Subproceso PID 4912
+[2026-06-04 11:25:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:42] [DISCORD]     main()
+[2026-06-04 11:25:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:44] [DISCORD] Subproceso PID 22540
+[2026-06-04 11:25:44] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:44] [DISCORD]     main()
+[2026-06-04 11:25:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:44] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:44] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:44] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:44] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:52] [DISCORD] Subproceso PID 16428
+[2026-06-04 11:25:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:52] [DISCORD]     main()
+[2026-06-04 11:25:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:25:54] [DISCORD] Subproceso PID 22008
+[2026-06-04 11:25:54] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:25:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:25:54] [DISCORD]     main()
+[2026-06-04 11:25:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:25:54] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:25:54] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:25:54] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:25:54] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:02] [DISCORD] Subproceso PID 17368
+[2026-06-04 11:26:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:02] [DISCORD]     main()
+[2026-06-04 11:26:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:04] [DISCORD] Subproceso PID 9536
+[2026-06-04 11:26:04] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:04] [DISCORD]     main()
+[2026-06-04 11:26:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:04] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:04] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:04] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:04] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:12] [DISCORD] Subproceso PID 26284
+[2026-06-04 11:26:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:12] [DISCORD]     main()
+[2026-06-04 11:26:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:14] [DISCORD] Subproceso PID 22292
+[2026-06-04 11:26:14] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:14] [DISCORD]     main()
+[2026-06-04 11:26:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:14] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:14] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:14] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:14] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:22] [DISCORD] Subproceso PID 18808
+[2026-06-04 11:26:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:22] [DISCORD]     main()
+[2026-06-04 11:26:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:24] [DISCORD] Subproceso PID 416
+[2026-06-04 11:26:24] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:24] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:24] [DISCORD]     main()
+[2026-06-04 11:26:24] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:24] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:24] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:24] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:24] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:30] [MAIN] ============================================================
+[2026-06-04 11:26:30] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 11:26:30] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 11:26:30] [MAIN] ============================================================
+[2026-06-04 11:26:30] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 11:26:30] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 11:26:30] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 11:26:30] [TG] Escuchando desde update_id > 454855091
+[2026-06-04 11:26:30] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 11:26:30] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 11:26:30] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 11:26:30] [DISCORD] Subproceso PID 24948
+[2026-06-04 11:26:30] [SLACK] Subproceso PID 17544
+[2026-06-04 11:26:30] [SLACK] [2026-06-04 11:26:30] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 11:26:30] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 11:26:30] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 11:26:30] [DISCORD] [2026-06-04 11:26:30] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 11:26:32] [DISCORD] Subproceso PID 5512
+[2026-06-04 11:26:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:32] [DISCORD]     main()
+[2026-06-04 11:26:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:33] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 11:26:33] [DISCORD] [2026-06-04 11:26:33] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 11:26:34] [DISCORD] Subproceso PID 27424
+[2026-06-04 11:26:34] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:34] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:34] [DISCORD]     main()
+[2026-06-04 11:26:34] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:34] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:34] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:34] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:34] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:42] [DISCORD] Subproceso PID 22072
+[2026-06-04 11:26:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:42] [DISCORD]     main()
+[2026-06-04 11:26:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:44] [DISCORD] Subproceso PID 16708
+[2026-06-04 11:26:44] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:44] [DISCORD]     main()
+[2026-06-04 11:26:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:44] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:44] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:44] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:44] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:52] [DISCORD] Subproceso PID 28224
+[2026-06-04 11:26:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:52] [DISCORD]     main()
+[2026-06-04 11:26:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:26:54] [DISCORD] Subproceso PID 13236
+[2026-06-04 11:26:54] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:26:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:26:54] [DISCORD]     main()
+[2026-06-04 11:26:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:26:54] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:26:54] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:26:54] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:26:54] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:02] [DISCORD] Subproceso PID 10508
+[2026-06-04 11:27:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:02] [DISCORD]     main()
+[2026-06-04 11:27:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:04] [DISCORD] Subproceso PID 4004
+[2026-06-04 11:27:04] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:04] [DISCORD]     main()
+[2026-06-04 11:27:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:04] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:04] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:04] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:04] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:12] [DISCORD] Subproceso PID 7152
+[2026-06-04 11:27:12] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:12] [DISCORD]     main()
+[2026-06-04 11:27:12] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:12] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:12] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:12] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:12] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:14] [DISCORD] Subproceso PID 18928
+[2026-06-04 11:27:14] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:14] [DISCORD]     main()
+[2026-06-04 11:27:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:14] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:14] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:14] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:14] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:21] [MAIN] ============================================================
+[2026-06-04 11:27:21] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 11:27:21] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 11:27:21] [MAIN] ============================================================
+[2026-06-04 11:27:21] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 11:27:21] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 11:27:21] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 11:27:21] [TG] Escuchando desde update_id > 454855091
+[2026-06-04 11:27:21] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 11:27:21] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 11:27:21] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 11:27:21] [SLACK] Subproceso PID 3104
+[2026-06-04 11:27:21] [DISCORD] Subproceso PID 12928
+[2026-06-04 11:27:21] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+oken=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 11:27:21] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 11:27:21] [DISCORD] [2026-06-04 11:27:21] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 11:27:22] [DISCORD] Subproceso PID 15968
+[2026-06-04 11:27:22] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:22] [DISCORD]     main()
+[2026-06-04 11:27:22] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:22] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:22] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:22] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:22] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:24] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 11:27:24] [DISCORD] [2026-06-04 11:27:24] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 11:27:24] [DISCORD] Subproceso PID 8800
+[2026-06-04 11:27:24] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:24] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:24] [DISCORD]     main()
+[2026-06-04 11:27:24] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:24] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:24] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:24] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:24] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:32] [DISCORD] Subproceso PID 5512
+[2026-06-04 11:27:32] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:32] [DISCORD]     main()
+[2026-06-04 11:27:32] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:32] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:32] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:32] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:32] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:34] [DISCORD] Subproceso PID 27452
+[2026-06-04 11:27:34] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:34] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:34] [DISCORD]     main()
+[2026-06-04 11:27:34] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:34] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:34] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:34] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:34] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:42] [DISCORD] Subproceso PID 9904
+[2026-06-04 11:27:42] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:42] [DISCORD]     main()
+[2026-06-04 11:27:42] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:42] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:42] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:42] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:42] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:44] [DISCORD] Subproceso PID 22292
+[2026-06-04 11:27:44] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:44] [DISCORD]     main()
+[2026-06-04 11:27:44] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:44] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:44] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:44] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:44] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:52] [DISCORD] Subproceso PID 28624
+[2026-06-04 11:27:52] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:52] [DISCORD]     main()
+[2026-06-04 11:27:52] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:52] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:52] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:52] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:52] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:27:54] [DISCORD] Subproceso PID 13000
+[2026-06-04 11:27:54] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:27:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:27:54] [DISCORD]     main()
+[2026-06-04 11:27:54] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:27:54] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:27:54] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:27:54] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:27:54] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:28:02] [DISCORD] Subproceso PID 14884
+[2026-06-04 11:28:02] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:28:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:28:02] [DISCORD]     main()
+[2026-06-04 11:28:02] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:28:02] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:28:02] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:28:02] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:28:02] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:28:04] [DISCORD] Subproceso PID 19844
+[2026-06-04 11:28:04] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:28:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:28:04] [DISCORD]     main()
+[2026-06-04 11:28:04] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:28:04] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:28:04] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:28:04] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:28:04] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:28:12] [DISCORD] Subproceso PID 276
+[2026-06-04 11:28:13] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:28:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:28:13] [DISCORD]     main()
+[2026-06-04 11:28:13] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:28:13] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:28:13] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:28:13] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:28:13] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:28:14] [DISCORD] Subproceso PID 13308
+[2026-06-04 11:28:14] [DISCORD] Traceback (most recent call last):
+[2026-06-04 11:28:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 105, in <module>
+[2026-06-04 11:28:14] [DISCORD]     main()
+[2026-06-04 11:28:14] [DISCORD]   File "C:\Program Files\Chask_Swarn\Advanced_Tools\discord_worker.py", line 65, in main
+[2026-06-04 11:28:14] [DISCORD]     with open(CHANNELS_CONFIG, "r", encoding="utf-8") as f:
+[2026-06-04 11:28:14] [DISCORD]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-06-04 11:28:14] [DISCORD] FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\Configuracion\\channels_config.json'
+[2026-06-04 11:28:14] [DISCORD] Subproceso terminó (código 1) — reiniciando en 10s
+[2026-06-04 11:29:22] [MAIN] ============================================================
+[2026-06-04 11:29:22] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 11:29:22] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 11:29:22] [MAIN] ============================================================
+[2026-06-04 11:29:22] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 11:29:22] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 11:29:22] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 11:29:22] [TG] Escuchando desde update_id > 454855091
+[2026-06-04 11:29:22] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 11:29:22] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 11:29:22] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 11:29:22] [DISCORD] Subproceso PID 20720
+[2026-06-04 11:29:22] [SLACK] Subproceso PID 11424
+[2026-06-04 11:29:23] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+oken=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 11:29:23] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 11:29:23] [DISCORD] [2026-06-04 11:29:23] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 11:29:24] [QUEUE_WATCHER] Iniciado — vigilando cola universal (modo sin tokens, max 90s)
+[2026-06-04 11:29:26] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 11:29:26] [DISCORD] [2026-06-04 11:29:26] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 11:30:54] [QUEUE_WATCHER] Timeout 90s — relanzando en segundo plano y saliendo
+[2026-06-04 13:31:44] [DISCORD] MSG: [DISCORD 13:31:44 - Emanuela ;)] Mas allá de la realidad https://amzn.eu/d/03rWv
+alidad https://amzn.eu/d/03rWv
+[2026-06-04 13:31:46] [DISCORD] [2026-06-04 13:31:46] [DISCORD] MSG: [DISCORD 13:31:46 - Emanuela ;)] Mas allá de la realidad https://amzn.eu/d/03rWv
+[2026-06-04 21:12:00] [QUEUE_WATCHER] Iniciado — vigilando cola universal (modo daemon infinito)
+[2026-06-04 21:12:01] [QUEUE_WATCHER] Ack enviado a canal 'telegram': mory.md, asegúrate de que el estado en Qdrant quede guardado
+[2026-06-04 21:12:01] [QUEUE_WATCHER] Inyección en ventana activa: No se encontró cuadro de chat en la ventana activa
+[2026-06-04 21:12:01] [QUEUE_WATCHER] Enviando WAKEUP_PING como fallback
+[2026-06-04 21:17:29] [MAIN] ============================================================
+[2026-06-04 21:17:29] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 21:17:29] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 21:17:29] [MAIN] ============================================================
+[2026-06-04 21:17:29] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 21:17:29] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 21:17:29] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 21:17:29] [TG] Escuchando desde update_id > 454855092
+[2026-06-04 21:17:29] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 21:17:29] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 21:17:29] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 21:17:29] [DISCORD] Subproceso PID 10072
+[2026-06-04 21:17:29] [SLACK] Subproceso PID 17212
+[2026-06-04 21:17:29] [SLACK] [2026-06-04 21:17:29] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 21:17:29] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 21:17:29] [DISCORD] [2026-06-04 21:17:29] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 21:17:32] [QUEUE_WATCHER] Ack enviado a canal 'telegram': [TELEGRAM] Comando de apagado recibido. Procediendo a descon
+[2026-06-04 21:17:32] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 21:17:32] [DISCORD] [2026-06-04 21:17:32] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 21:17:32] [QUEUE_WATCHER] Inyección en ventana activa: No se encontró cuadro de chat en la ventana activa
+[2026-06-04 21:17:32] [QUEUE_WATCHER] Enviando WAKEUP_PING como fallback
+[2026-06-04 21:17:41] [SLACK] Subproceso terminó (código 4294967295) — reiniciando en 10s
+[2026-06-04 21:30:19] [QUEUE_WATCHER] Iniciado — vigilando cola universal (modo daemon infinito)
+[2026-06-04 21:30:19] [MAIN] ============================================================
+[2026-06-04 21:30:19] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 21:30:19] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 21:30:19] [MAIN] ============================================================
+[2026-06-04 21:30:19] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 21:30:19] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 21:30:19] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 21:30:19] [TG] Escuchando desde update_id > 454855093
+[2026-06-04 21:30:19] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 21:30:19] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 21:30:19] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 21:30:19] [DISCORD] Subproceso PID 4844
+[2026-06-04 21:30:19] [SLACK] Subproceso PID 26536
+[2026-06-04 21:30:19] [SLACK] [2026-06-04 21:30:19] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 21:34:12] [MAIN] ============================================================
+[2026-06-04 21:34:12] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 21:34:12] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 21:34:12] [MAIN] ============================================================
+[2026-06-04 21:34:12] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 21:34:12] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 21:34:12] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 21:34:12] [TG] Escuchando desde update_id > 454855093
+[2026-06-04 21:34:12] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 21:34:12] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 21:34:12] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 21:34:12] [DISCORD] Subproceso PID 31988
+[2026-06-04 21:34:12] [SLACK] Subproceso PID 30716
+[2026-06-04 21:34:12] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 21:34:12] [SLACK] [2026-06-04 21:34:12] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 21:34:12] [DISCORD] Conectando con token MTQ3NjMzNz...
+ctando con token MTQ3NjMzNz...
+[2026-06-04 21:34:15] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-06-04 21:35:39] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 21:39:49] [MAIN] ============================================================
+[2026-06-04 21:39:49] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 21:39:49] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 21:39:49] [MAIN] ============================================================
+[2026-06-04 21:39:49] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 21:39:49] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 21:39:49] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 21:39:49] [TG] Escuchando desde update_id > 454855098
+[2026-06-04 21:39:49] [MAIN] Hilo SLACK iniciado.
+[2026-06-04 21:39:49] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 21:39:49] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-04 21:39:49] [DISCORD] Subproceso PID 20068
+[2026-06-04 21:39:49] [SLACK] Subproceso PID 31336
+[2026-06-04 21:39:49] [SLACK] [2026-06-04 21:39:49] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-04 21:39:49] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 21:39:49] [DISCORD] [2026-06-04 21:39:49] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 21:39:50] [TG] Detected OFF command from chat_id 5034994867, admin_id is 5034994867
+[2026-06-04 21:39:52] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 21:39:52] [DISCORD] [2026-06-04 21:39:52] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 21:42:09] [TG] Detected OFF command from chat_id 5034994867, admin_id is 5034994867
+[2026-06-04 21:45:03] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 22:30:33] [TG] Detected OFF command from chat_id 5034994867, admin_id is 5034994867
+[2026-06-04 22:31:02] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-04 22:45:22] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 07:22:28] [TG] Detected OFF command from chat_id 5034994867, admin_id is 5034994867
+[2026-06-05 07:58:34] [TG] Detected OFF command from chat_id 5034994867, admin_id is 5034994867
+[2026-06-05 08:01:03] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:08:01] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:09:29] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:14:04] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:18:32] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:23:03] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:32:08] [TG] MSG: [CONTEXTO DE USUARIO]
+Identidad: Fernando (Rol: admin)
+=== INSTRUCCIONES ESPECÍF
+[2026-06-05 08:37:02] [DISCORD] [2026-06-05 08:37:02] [DISCORD] MSG: [DISCORD 08:37:02 - Fernando Nora] Nora, me lees?
+[2026-06-05 08:37:02] [DISCORD] MSG: [DISCORD 08:37:02 - Fernando Nora] Nora, me lees?
+[2026-06-05 08:40:18] [MAIN] ============================================================
+[2026-06-05 08:40:18] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-05 08:40:18] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-05 08:40:18] [MAIN] ============================================================
+[2026-06-05 08:40:18] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-05 08:40:18] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-05 08:40:18] [MAIN] Hilo DISCORD iniciado.
+[2026-06-05 08:40:18] [TG] Escuchando desde update_id > 454855113
+[2026-06-05 08:40:18] [MAIN] Hilo SLACK iniciado.
+[2026-06-05 08:40:18] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-05 08:40:18] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-05 08:40:18] [DISCORD] Subproceso PID 13044
+[2026-06-05 08:40:18] [SLACK] Subproceso PID 3872
+[2026-06-05 08:40:18] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-05 08:40:18] [SLACK] [2026-06-05 08:40:18] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-05 08:40:18] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 08:40:18] [DISCORD] [2026-06-05 08:40:18] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 08:40:21] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-05 08:40:21] [DISCORD] [2026-06-05 08:40:21] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-05 08:49:03] [DISCORD] [2026-06-05 08:49:03] [DISCORD] MSG: [DISCORD 08:49:03 - Fernando Nora] Nora, me lees?
+[2026-06-05 08:49:05] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001EA1C486550>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 08:49:05] [DISCORD] [2026-06-05 08:49:05] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001EA1C486550>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 08:49:05] [DISCORD] [WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-05 08:49:16] [DISCORD] MSG: [DISCORD 08:49:16 - Spidey Bot] ¡Sí, te leo perfectamente desde Discord! El enru
+[2026-06-05 08:49:16] [DISCORD] [2026-06-05 08:49:16] [DISCORD] MSG: [DISCORD 08:49:16 - Spidey Bot] ¡Sí, te leo perfectamente desde Discord! El enru
+[2026-06-05 08:49:18] [DISCORD] [2026-06-05 08:49:18] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000001EA1C48CC50>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 08:49:18] [DISCORD] [WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-05 08:49:58] [MAIN] ============================================================
+[2026-06-05 08:49:58] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-05 08:49:58] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-05 08:49:58] [MAIN] ============================================================
+[2026-06-05 08:49:58] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-05 08:49:58] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-05 08:49:58] [MAIN] Hilo DISCORD iniciado.
+[2026-06-05 08:49:58] [TG] Escuchando desde update_id > 454855113
+[2026-06-05 08:49:58] [MAIN] Hilo SLACK iniciado.
+[2026-06-05 08:49:58] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-05 08:49:58] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-05 08:49:58] [DISCORD] Subproceso PID 25336
+[2026-06-05 08:49:58] [SLACK] Subproceso PID 19324
+[2026-06-05 08:49:58] [SLACK] [2026-06-05 08:49:58] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-05 08:49:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 08:49:58] [DISCORD] [2026-06-05 08:49:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 08:50:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-05 08:50:01] [DISCORD] [2026-06-05 08:50:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-05 08:52:31] [DISCORD] [2026-06-05 08:52:31] [DISCORD] MSG: [DISCORD 08:52:31 - Fernando Nora] Nora, a ver si ahora aparece tu nombre al res
+[2026-06-05 08:52:33] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026F32B36450>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 08:52:33] [DISCORD] [2026-06-05 08:52:33] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026F32B36450>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 08:52:33] [DISCORD] [WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-05 09:03:05] [DISCORD] MSG: [DISCORD 09:03:05 - Fernando Nora] nora, veamos como luces ahora
+[2026-06-05 09:03:05] [DISCORD] [2026-06-05 09:03:05] [DISCORD] MSG: [DISCORD 09:03:05 - Fernando Nora] nora, veamos como luces ahora
+[2026-06-05 09:03:07] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026F32B41090>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 09:03:07] [DISCORD] [2026-06-05 09:03:07] [DISCORD] [IPC] Fallo inyector universal, usando cola legacy: HTTPConnectionPool(host='127.0.0.1', port=6334): Max retries exceeded with url: /enqueue (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026F32B41090>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+[2026-06-05 09:03:07] [DISCORD] [WAKEUP_PING] Nuevo mensaje en input_queue.json
+[2026-06-05 11:27:23] [MAIN] ============================================================
+[2026-06-05 11:27:23] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-05 11:27:23] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-05 11:27:23] [MAIN] ============================================================
+[2026-06-05 11:27:23] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-05 11:27:23] [MAIN] Hilo DISCORD iniciado.
+[2026-06-05 11:27:23] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-05 11:27:23] [MAIN] Hilo SLACK iniciado.
+[2026-06-05 11:27:23] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-05 11:27:23] [TG] Escuchando desde update_id > 454855113
+[2026-06-05 11:27:23] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-05 11:27:23] [DISCORD] Subproceso PID 34012
+[2026-06-05 11:27:23] [SLACK] Subproceso PID 29088
+[2026-06-05 11:27:24] [SLACK] [2026-06-05 11:27:24] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-05 11:27:24] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 11:27:24] [DISCORD] [2026-06-05 11:27:24] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 11:27:27] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-05 11:27:27] [DISCORD] [2026-06-05 11:27:27] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-05 11:43:32] [MAIN] ============================================================
+[2026-06-05 11:43:32] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-05 11:43:32] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-05 11:43:32] [MAIN] ============================================================
+[2026-06-05 11:43:32] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-05 11:43:32] [MAIN] Hilo DISCORD iniciado.
+[2026-06-05 11:43:32] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-05 11:43:32] [MAIN] Hilo SLACK iniciado.
+[2026-06-05 11:43:32] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-05 11:43:32] [TG] Escuchando desde update_id > 454855113
+[2026-06-05 11:43:32] [SLACK] Iniciando subproceso slack_worker.py
+[2026-06-05 11:43:32] [DISCORD] Subproceso PID 30128
+[2026-06-05 11:43:32] [SLACK] Subproceso PID 32904
+[2026-06-05 11:43:32] [SLACK] [2026-06-05 11:43:32] [SLACK] Conectado a Slack via Socket Mode con app_token=xapp-1-A0B6CJKDGLQ-1...
+[2026-06-05 11:43:32] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 11:43:32] [DISCORD] [2026-06-05 11:43:32] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-05 11:43:35] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442

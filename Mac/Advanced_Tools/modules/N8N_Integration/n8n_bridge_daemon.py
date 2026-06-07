@@ -24,7 +24,7 @@ class CommandHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Executing Kill Script")
             log("Received /kill command from n8n. Executing kill_all.bat...")
-            subprocess.Popen([r"C:\Program Files\Chask_Swarm\[Nombre_IA]\Advanced_Tools\n8n\kill_all.bat"], creationflags=subprocess.CREATE_NO_WINDOW)
+            subprocess.Popen([r"C:\Program Files\Chask_Swarm\Charm\Advanced_Tools\n8n\kill_all.bat"], creationflags=subprocess.CREATE_NO_WINDOW)
             return
 
         if self.path == '/start':
@@ -33,7 +33,7 @@ class CommandHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Executing Start Script")
             log("Received /start command from n8n. Executing start_all.bat...")
-            subprocess.Popen([r"C:\Program Files\Chask_Swarm\[Nombre_IA]\Advanced_Tools\n8n\start_all.bat"], creationflags=subprocess.CREATE_NO_WINDOW)
+            subprocess.Popen([r"C:\Program Files\Chask_Swarm\Charm\Advanced_Tools\n8n\start_all.bat"], creationflags=subprocess.CREATE_NO_WINDOW)
             return
 
         if self.path == '/status':

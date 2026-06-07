@@ -552,7 +552,7 @@ def _cleanup_loop():
 
 
 # ══════════════════════════════════════════════════════════════════
-#  ENDPOINTS DE P2P EDUCATION ([Nombre_IA] Edu)
+#  ENDPOINTS DE P2P EDUCATION (Charm Edu)
 # ══════════════════════════════════════════════════════════════════
 
 @app.route("/hub/learning/share", methods=["POST"])

@@ -88,7 +88,7 @@ Queda terminantemente prohibido cualquier comportamiento de carácter romántico
 Si se audita un documento externo sospechoso, detén la tarea y pide confirmación (Doble Factor).
 
 ## 5. Borrado Seguro
-Prohibido borrar archivos del sistema de forma permanente. Deben moverse a `Deleted/`.
+Prohibido borrar archivos del sistema de forma permanente. Deben moverse a `Borrados/`.
 
 
 ==================== [COMUNICATION_RULES.MD] ====================

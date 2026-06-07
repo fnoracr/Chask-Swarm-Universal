@@ -28,9 +28,56 @@ def _norm(text: str) -> str:
     return unicodedata.normalize('NFD', text.lower()).encode('ascii', 'ignore').decode()
 
 
+def load_markdown_agents() -> list[dict]:
+    import glob, re
+    agents = []
+    subagentes_dir = os.path.join(BASE_DIR, "Advanced_Tools", "Subagentes")
+    if not os.path.exists(subagentes_dir): return agents
+    
+    for file_path in glob.glob(os.path.join(subagentes_dir, "*.md")):
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+            
+        name_match = re.search(r"^#\s*Agent:\s*(.+)", content, re.M)
+        desc_match = re.search(r"##\s*Description\n(.*?)(?=\n##|\Z)", content, re.S)
+        model_match = re.search(r"##\s*Preferred Model\n(.*?)(?=\n##|\Z)", content, re.S)
+        trigger_match = re.search(r"##\s*Trigger Keywords\n(.*?)(?=\n##|\Z)", content, re.S)
+        system_match = re.search(r"##\s*System Prompt\n(.*?)(?=\n##|\Z)", content, re.S)
+        
+        if name_match:
+            name = name_match.group(1).strip()
+            mode_id = name.lower().replace(" ", "_")
+            triggers = [k.strip() for k in trigger_match.group(1).split(",")] if trigger_match else []
+            
+            agent = {
+                "id": mode_id,
+                "name": name,
+                "description": desc_match.group(1).strip() if desc_match else "Markdown agent",
+                "icon": "🤖",
+                "active": True,
+                "custom": True,
+                "system_prompt": system_match.group(1).strip() if system_match else "",
+                "trigger_keywords": triggers,
+                "model_preference": model_match.group(1).strip() if model_match else "qwen3:8b",
+                "cloud_model": model_match.group(1).strip() if model_match else "qwen3:8b",
+                "allowed_tools": ["*"],
+                "restricted_tools": []
+            }
+            agents.append(agent)
+    return agents
+
 def load_modes() -> dict:
-    with open(MODES_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+    config = {"auto_detect": True, "default_mode": "enjambre", "modes": []}
+    if os.path.exists(MODES_FILE):
+        try:
+            with open(MODES_FILE, "r", encoding="utf-8") as f:
+                config = json.load(f)
+        except Exception:
+            pass
+    md_agents = load_markdown_agents()
+    if md_agents:
+        config["modes"].extend(md_agents)
+    return config
 
 
 def _get_embedding(text: str) -> list[float] | None:

@@ -118,7 +118,7 @@ def autonomous_delegator(task: str, model: str):
     )
 
     system_prompt = (
-        "Eres un Agente Autónomo de Chask Swarm. Has sido invocado por [Nombre_IA] para resolver una tarea.\n"
+        "Eres un Agente Autónomo de Chask Swarm. Has sido invocado por Nora para resolver una tarea.\n"
         "Se te han proporcionado herramientas para interactuar con el sistema local (leer archivos, "
         "escribir archivos, y ejecutar comandos de PowerShell).\n"
         "Debes usar las herramientas para cumplir la tarea.\n"

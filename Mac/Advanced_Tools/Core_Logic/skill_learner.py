@@ -130,7 +130,7 @@ def find_successful_patterns(min_steps: int = 3, lookback: int = 50) -> list:
             pass
     
     # 3. Check learned_lessons.json
-    lessons_path = ROOT / "Configuration/learned_lessons.json"
+    lessons_path = ROOT / "Configuracion/learned_lessons.json"
     if lessons_path.exists():
         try:
             lessons = json.loads(lessons_path.read_text(encoding="utf-8"))

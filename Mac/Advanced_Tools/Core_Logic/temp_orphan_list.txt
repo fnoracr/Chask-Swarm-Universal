@@ -1,0 +1,53 @@
+Posibles candidatos a limpieza (Archivos no referenciados por nadie o sospechosos):
+- slack_daemon.py : No desc
+- architecture_canvas.py : architecture_canvas.py  Generador de Diagramas de Arquitectura Interactivos
+- archive_conversation_steps.py : No desc
+- archive_past_conversations.py : archive_past_conversations.py  Archivador de Historial Tcnico de Conversacione
+- archive_today_conversation.py : archive_today_conversation.py  Compilador e Indexador Histrico de Conversacion
+- ask_gemma.py : No desc
+- auth_middleware.py : auth_middleware.py  Middleware de Autenticacion y Permisos
+- borrados_cleaner.py : No desc
+- charm_kill_switch.py : charm_kill_switch.py  Interruptor Maestro de Chask Swarm
+- chask_browser.py : chask_browser.py  Control Total de Navegador via Playwright
+- chask_browser_daemon.py : chask_browser_daemon.py  Browser Pool Daemon
+- chask_orchestrator.py : chask_orchestrator.py  Orquestacion Multi-Agente con Grafos de Estado
+- chask_tenacity_daemon.py : chask_tenacity_daemon.py  Daemon Autonomo de Resolucion de Tareas
+- chask_web_rag.py : chask_web_rag.py  Pipeline Web  RAG (Crawl4AI + Qdrant)
+- create_resurrection_drive.py : No desc
+- diagnostics.py : No desc
+- email_monitor.py : email_monitor.py  Monitor de email bidireccional via IMAP + SMTP
+- generate_dashboard.py : Genera el dashboard HTML de Enjambre vs Agentes IA.
+- live_dashboard.py : live_dashboard.py  Dashboard en Vivo con WebSocket
+- local_delegator.py : No desc
+- rag_pipeline.py : rag_pipeline.py  Pipeline RAG automtico
+- recovery.py : recovery.py  Recuperacin automtica del sistema desde backup
+- run_safe.py : No desc
+- send_manual_scheduler.py : send_manual_scheduler.py  Programador en segundo plano para el envo del Manual
+- skill_sharer.py : skill_sharer.py  Gestor y Difusor de Skills en la Red de Enjambres (Chask Swarm
+- start_if_not_running.py : No desc
+- telegram_listener_daemon.py : telegram_listener_daemon.py  Daemon de escucha Telegram 24/7
+- telegram_watcher.py : TELEGRAM WATCHER  Vigila pending_messages.json cada N segundos.
+- temp_orphan_check.py : No desc
+- trigger_handoff.py : No desc
+- upload_tracker.py : No desc
+- win_telemetry_svc.py : win_telemetry_svc.py
+- codex_publish_skill.py : No desc
+- inject_to_codex.py : No desc
+- analyze_chaskmeet.py : No desc
+- chaskmeet_chask_bridge.py : norameet_chask_bridge.py  Bridge Chask Swarm para Norameet
+- fix_chaskmeet_turn.py : No desc
+- meetcharm_main.py : No desc
+- swarm_n8n_daemon.py : Daemon para ejecutar n8n nativo en Windows
+- debug_hub.py : No desc
+- fix_hub_venv.py : No desc
+- swarm_hub.py : swarm_hub.py  Nodo Central de la Internet de Enjambres
+- send_channel.py : No desc
+- email_chask.py : Skill: email_charm  Acceso IMAP a enjambre@chask.fun
+- skill_privacy.py : No desc
+- swarm_evolution.py : swarm_evolution.py   Protocolo Elektra para Chask Swarm
+- agentic_chunker.py : agentic_chunker.py  Motor de Fragmentacin Semntica
+- export_browser_cookies.py : export_browser_cookies.py  Extractor Automtico de Cookies de Navegador
+- export_youtube_transcripts.py : export_youtube_transcripts.py  Exportador de Transcripciones Acadmicas de Qdra
+- html_fusion.py : html_fusion.py  Skill de fusin inteligente de ficheros HTML
+- pad_solution_builder.py : pad_solution_builder.py  Generador de soluciones Dataverse para flujos PAD
+- style_extractor.py : style_extractor.py  Skill de extraccin de estilos visuales.

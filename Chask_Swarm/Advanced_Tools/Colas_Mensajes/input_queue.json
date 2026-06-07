@@ -1,0 +1,212 @@
+[
+  {
+    "ts": "2026-06-04T10:31:24.183692",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 10:31:24] [USER: admin] Nora, te llegan mis mensajes desde Telegram?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T10:36:47.125843",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 10:36:47] [USER: admin] Nora, te llegan mis mensajes desde Telegram?Test from background",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T10:36:58.360353",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 10:36:58] [USER: admin] Nora, te llegan mis mensajes desde Telegram?test",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T10:37:20.109592",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 10:37:20] [USER: admin] Testfrompywinauto",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T10:56:01.090455",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 10:56:01] [USER: admin] Nora, te llegan mis mensajes desde Telegram?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T11:07:21.205514",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 11:07:21] [USER: admin] Nora, responde si te ha llegado este mensaje",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T11:07:21.207094",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 11:07:21] [USER: admin] Nora, te llegan mis mensajes desde Telegram?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T11:07:21.208121",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 11:07:21] [USER: admin] Nora, te llegan mis mensajes desde Telegram?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T11:09:19.502805",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 11:09:19] [USER: admin] Nora, responde si te ha llegado este mensaje",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T11:13:52.972165",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 11:13:52] [USER: admin] Nora, te llegan mis mensajes desde Telegram?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:06:36.013897",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo de forma segura.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:17:31.090292",
+    "source": "telegram",
+    "message": "[TELEGRAM] Comando de apagado recibido. Procediendo a desconectar en 10 segundos.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:34:14.673284",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:34:15.092987",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:35:39.893306",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 21:35:39] [USER: admin] Test Injection",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:36:42.258174",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:39:50.894869",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:42:09.935682",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T21:45:03.598504",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 21:45:03] [USER: admin] Nora, sigue sin funcionar",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T22:30:33.599841",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T22:31:02.628524",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 22:31:02] [USER: admin] Nora, no funciona",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T22:45:22.183837",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 22:45:22] [USER: admin] Nora, me lees?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T07:22:28.691273",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T07:58:35.113529",
+    "source": "telegram",
+    "message": "[TELEGRAM] Nora, por favor guarda tu progreso en memory.md, asegúrate de que el estado en Qdrant quede guardado y procede a apagar el sistema por completo ejecutando el script kill_swarm.py.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:01:03.620504",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:01:03] [USER: admin] Nora, ¿Me lees?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:08:01.847152",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:08:01] [USER: admin] Hola Nora, me lees?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:09:29.302410",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:09:29] [USER: admin] Nora, te llega este mensaje?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:14:04.654649",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:14:04] [USER: admin] Nora, me lees?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:18:32.620253",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:18:32] [USER: admin] Nora, esto es una prueba de respuesta a través de subagente ¿Funciona?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:23:03.298063",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:23:03] [USER: admin] Nora, a ver qué tal va ahora",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:32:08.743724",
+    "source": "telegram",
+    "message": "[CONTEXTO DE USUARIO]\nIdentidad: Fernando (Rol: admin)\n=== INSTRUCCIONES ESPECÍFICAS PARA ESTE USUARIO (soul.md) ===\n# Alma y Personalidad de @admin\n\nDefine cómo Nora debe interactuar contigo (tono, estilo y nivel de formalidad).\n============================================================\nRecuerdos sobre este usuario: # Memoria de Fernando\n\n[TELEGRAM 08:32:08] [USER: admin] Nora, voy a probar de nuevo por Telegram, después probaré por discord y por slack",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:49:05.222271",
+    "source": "discord_Fernando Nora",
+    "message": "[DISCORD 08:49:03 - Fernando Nora] Nora, me lees?",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:49:18.322875",
+    "source": "discord_Spidey Bot",
+    "message": "[DISCORD 08:49:16 - Spidey Bot] ¡Sí, te leo perfectamente desde Discord! El enrutador universal ya funciona al 100%.",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T08:52:33.230224",
+    "source": "discord_Fernando Nora",
+    "message": "[DISCORD 08:52:31 - Fernando Nora] Nora, a ver si ahora aparece tu nombre al responder",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-05T09:03:07.614090",
+    "source": "discord_Fernando Nora",
+    "message": "[DISCORD 09:03:05 - Fernando Nora] nora, veamos como luces ahora",
+    "status": "processed"
+  }
+]

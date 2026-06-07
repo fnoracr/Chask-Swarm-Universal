@@ -1,0 +1,20 @@
+{
+  "authorized_users": [
+    {
+      "platform": "telegram",
+      "user_id": "5034994867",
+      "username": "Fernando Enjambre",
+      "role": "Master"
+    },
+    {
+      "platform": "discord",
+      "user_id": "670021652154679296",
+      "username": "Fernando Enjambre",
+      "role": "Master"
+    }
+  ],
+  "settings": {
+    "zero_trust_mode": true,
+    "allow_guests": false
+  }
+}

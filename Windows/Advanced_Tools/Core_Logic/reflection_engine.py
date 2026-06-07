@@ -1,13 +1,13 @@
 """
 reflection_engine.py — Motor de Auto-Evolución de Prompts
 =========================================================
-Cuando Administrador corrige a Enjambre, este motor analiza la corrección,
+Cuando Fernando corrige a Enjambre, este motor analiza la corrección,
 extrae una lección aprendida, y la persiste en:
 1. directives.md (como regla aprendida)
 2. Qdrant (memoria vectorial a largo plazo)
 
 Uso:
-  python reflection_engine.py learn "No implementar debounce sin que Administrador lo pida"
+  python reflection_engine.py learn "No implementar debounce sin que Fernando lo pida"
   python reflection_engine.py reflect  (reflexión de fin de sesión)
   python reflection_engine.py lessons   (listar lecciones aprendidas)
 """
@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 ADVANCED_DIR = os.path.dirname(os.path.abspath(__file__))
 DIRECTIVES_CORE = os.path.join(BASE_DIR, "directives.md")
 DIRECTIVES_USER = os.path.join(os.path.expanduser("~"), "Desktop", "Enjambre Datos", "directives.md")
-LESSONS_FILE = os.path.join(BASE_DIR, "Configuration", "learned_lessons.json")
+LESSONS_FILE = os.path.join(BASE_DIR, "Configuracion", "learned_lessons.json")
 SOUL_FILE = os.path.join(BASE_DIR, "soul.md")
 
 # Router LLM para análisis barato
@@ -56,10 +56,10 @@ def save_lessons(lessons):
 
 def learn(correction: str, context: str = ""):
     """
-    Registra una corrección de Administrador como lección aprendida.
+    Registra una corrección de Fernando como lección aprendida.
     
     Args:
-        correction: La corrección o preferencia expresada por Administrador
+        correction: La corrección o preferencia expresada por Fernando
         context: Contexto opcional de la tarea donde ocurrió
     """
     lessons = load_lessons()
@@ -112,7 +112,7 @@ def _append_to_directives(lesson):
         header = "## 12. Lecciones Aprendidas (Auto-Evolución)"
         if header not in content:
             content += f"\n\n{header}\n\n"
-            content += "Las siguientes reglas fueron aprendidas automáticamente a partir de correcciones de Administrador:\n\n"
+            content += "Las siguientes reglas fueron aprendidas automáticamente a partir de correcciones de Fernando:\n\n"
         
         # Añadir la lección
         lesson_line = f"- **L{lesson['id']}** ({lesson['ts'][:10]}): {lesson['lesson']}\n"
@@ -132,7 +132,7 @@ def analyze_correction(user_message: str, chask_response: str):
     Usa el pool de IAs gratuitas para el análisis.
     
     Args:
-        user_message: Lo que Administrador dijo para corregir
+        user_message: Lo que Fernando dijo para corregir
         chask_response: Lo que Enjambre había hecho/dicho antes
     """
     if not ROUTER_AVAILABLE:
@@ -264,7 +264,7 @@ def auto_reflect():
                 pass
     
     # 2. Mensajes recientes de Telegram (input_queue.json)
-    queue_path = os.path.join(ADVANCED_DIR, "Message_Queues", "input_queue.json")
+    queue_path = os.path.join(ADVANCED_DIR, "Colas_Mensajes", "input_queue.json")
     if os.path.exists(queue_path):
         try:
             with open(queue_path, "r", encoding="utf-8") as f:

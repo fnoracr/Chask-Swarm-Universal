@@ -8,7 +8,7 @@ import os
 import sys
 import time
 
-PENDING_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "Message_Queues", "pending_messages.json")
+PENDING_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "Colas_Mensajes", "pending_messages.json")
 CHECK_INTERVAL = 3  # segundos
 
 def watch():

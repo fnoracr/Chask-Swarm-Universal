@@ -53,15 +53,15 @@ def check_providers():
             print("❌")
             failed.append(name)
 
-    # 1. Lógica de Traspaso (SDK Model Swapping - [Nombre_IA] 2.0)
+    # 1. Lógica de Traspaso (SDK Model Swapping - Charm 2.0)
     # Si TODOS los proveedores de la nube activos están agotados o fallando:
     total_unavailable = len(set(failed + credits_exhausted))
     if active_cloud_providers > 0 and total_unavailable >= active_cloud_providers:
         print("[Watchdog] ¡ALERTA CRÍTICA! Todos los proveedores de la nube están caídos o sin créditos.")
-        print("[Watchdog] Iniciando reconfiguración dinámica vía [Nombre_IA] SDK...")
-        # Cambiamos la IA de [Nombre_IA] al vuelo a un modelo local usando el SDK
+        print("[Watchdog] Iniciando reconfiguración dinámica vía Charm SDK...")
+        # Cambiamos la IA de Charm al vuelo a un modelo local usando el SDK
         charm_sdk_client.set_agent_model("chask_swarm_main", "ollama/qwen2.5-coder:7b")
-        responder.smart_respond("⚠️ **SWARM ALERT**: He reconfigurado [Nombre_IA] 2.0 para usar inferencia local debido al agotamiento de recursos en la nube.")
+        responder.smart_respond("⚠️ **SWARM ALERT**: He reconfigurado Charm 2.0 para usar inferencia local debido al agotamiento de recursos en la nube.")
         return
 
     if failed or credits_exhausted:

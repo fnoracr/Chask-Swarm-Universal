@@ -3,9 +3,9 @@ from datetime import datetime
 
 # Rutas
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONFIG_PATH = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
-CHANNELS_PATH = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-QUEUE_PATH = os.path.join(BASE_DIR, "", "Advanced_Tools", "Message_Queues", "input_queue.json")
+CONFIG_PATH = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
+CHANNELS_PATH = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+QUEUE_PATH = os.path.join(BASE_DIR, "", "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 WEB_URL = "http://localhost:7860/web_send"
 
 def load_channel_config(channel_name):
@@ -87,10 +87,10 @@ def send_to_meet_charm(msg):
     # En producción esto apuntaría a https://api.chask.fun/meet_charm/webhook
     webhook_url = "http://46.202.172.31:8080/webhook/meet_charm_receive"
     try:
-        requests.post(webhook_url, json={"message": msg, "bot_sender": "Chask_Swarm_[Nombre_IA]"}, timeout=5)
-        print("[Responder] Enviado a Meet [Nombre_IA] VPS")
+        requests.post(webhook_url, json={"message": msg, "bot_sender": "Chask_Swarm_Charm"}, timeout=5)
+        print("[Responder] Enviado a Meet Charm VPS")
     except Exception as e:
-        print(f"[Responder] Error Meet [Nombre_IA]: {e}")
+        print(f"[Responder] Error Meet Charm: {e}")
 
 def get_and_mark_source():
     """Busca el ultimo mensaje sin responder y lo marca."""

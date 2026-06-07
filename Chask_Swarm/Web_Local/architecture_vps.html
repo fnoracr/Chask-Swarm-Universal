@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chask Swarm — Arquitectura en Servidor VPS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#050512;color:#e0e0e0;overflow:hidden;height:100vh;width:100vw}
+#toolbar{position:fixed;top:0;left:0;right:0;height:56px;background:linear-gradient(135deg,#11112b,#050515);
+  border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 24px;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.5)}
+#toolbar h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#ec4899);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#toolbar .controls{margin-left:auto;display:flex;gap:8px}
+#toolbar button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#ccc;
+  padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;transition:.2s}
+#toolbar button:hover{background:rgba(255,255,255,.15);color:#fff}
+#zoom-info{color:#888;font-size:12px;margin-right:16px}
+#tip{color:#666;font-size:11px;margin-right:12px}
+#canvas-wrap{position:absolute;top:56px;left:0;right:0;bottom:0;overflow:hidden;cursor:grab}
+#canvas{position:absolute;transform-origin:0 0}
+.group{position:absolute;border-radius:16px;border:1px solid rgba(255,255,255,.1);
+  padding:48px 16px 16px;min-width:240px;max-width:320px;transition:box-shadow .2s}
+.group-label{position:absolute;top:0;left:0;right:0;height:42px;line-height:42px;padding:0 16px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:.9;
+  cursor:move;border-radius:16px 16px 0 0;user-select:none}
+.group-label:hover{background:rgba(255,255,255,.05)}
+.group.dragging{box-shadow:0 0 40px rgba(167,139,250,.3);z-index:999;opacity:.92}
+.node{background:rgba(10,10,25,.85);border:1px solid rgba(255,255,255,.12);border-radius:12px;
+  padding:12px 16px;margin:6px 0;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;backdrop-filter:blur(8px)}
+.node:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4);border-color:rgba(167,139,250,.4)}
+.node .icon{font-size:18px;margin-right:8px}
+.node .name{font-weight:600;font-size:13px}
+.node .desc{font-size:11px;color:#aaacbb;margin-top:4px;line-height:1.4}
+.node.highlight{border-color:#a78bfa;box-shadow:0 0 20px rgba(167,139,250,.3)}
+svg.conns{position:absolute;top:0;left:0;pointer-events:none;z-index:50;overflow:visible}
+svg.conns path{pointer-events:stroke;cursor:pointer}
+svg.conns path:hover{opacity:0.9!important;stroke-width:3!important}
+#conn-tooltip{position:fixed;background:rgba(10,10,30,.95);color:#ddd;padding:6px 12px;border-radius:8px;
+  font-size:11px;font-family:'Inter',sans-serif;pointer-events:none;z-index:300;display:none;
+  border:1px solid rgba(255,255,255,.15);box-shadow:0 4px 16px rgba(0,0,0,.5)}
+#detail{position:fixed;bottom:20px;right:20px;width:340px;background:rgba(10,10,30,.95);
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;z-index:200;
+  backdrop-filter:blur(12px);display:none;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+#detail h3{font-size:15px;margin-bottom:8px;color:#a78bfa}
+#detail p{font-size:12px;color:#aaa;line-height:1.6}
+#detail .close{position:absolute;top:12px;right:16px;cursor:pointer;color:#666;font-size:18px}
+#legend{position:fixed;bottom:20px;left:20px;background:rgba(10,10,30,.9);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:14px 18px;z-index:200;font-size:11px;backdrop-filter:blur(8px)}
+#legend div{display:flex;align-items:center;gap:8px;margin:4px 0}
+#legend .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+#toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:rgba(167,139,250,.9);color:#fff;
+  padding:8px 20px;border-radius:8px;font-size:13px;z-index:999;display:none;font-family:'Inter',sans-serif;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);transition:opacity .3s}
+#toolbar .save-btn{background:rgba(167,139,250,.2);border-color:rgba(167,139,250,.4);color:#a78bfa}
+#toolbar .save-btn:hover{background:rgba(167,139,250,.35);color:#fff}
+</style></head><body>
+<div id="toolbar">
+  <h1>Chask Swarm — Arquitectura Desplegada en Servidor VPS Cloud</h1>
+  <span id="tip">Arrastra los grupos por su título | Scroll = zoom | Clic = detalle</span>
+  <span id="zoom-info">85%</span>
+  <div class="controls">
+    <button onclick="zoomTo(1)">Reset</button>
+    <button onclick="zoomTo(scale*1.3)">+</button>
+    <button onclick="zoomTo(scale/1.3)">-</button>
+    <button onclick="fitAll()">Ajustar</button>
+    <button class="save-btn" onclick="savePositions()">Guardar</button>
+  </div>
+</div>
+<div id="toast"></div>
+<div id="canvas-wrap"><div id="canvas"><svg class="conns" id="svg"></svg></div></div>
+<div id="conn-tooltip"></div>
+<div id="detail"><span class="close" onclick="this.parentElement.style.display='none'">&times;</span><h3 id="d-title"></h3><p id="d-desc"></p></div>
+<div id="legend"></div>
+<script>
+const GROUPS=[
+  {"id": "ingress", "label": "Pasarela de Entrada y Red", "color": "#10b981", "x": 30, "y": 30, "nodes": [
+    {"id": "nginx", "label": "Nginx Proxy Inverso", "desc": "Punto de entrada de red. Cifra y redirige tráfico HTTPS mediante certificados SSL automáticos y balanceo de carga.", "icon": "🛡️"},
+    {"id": "ufw", "label": "Cortafuegos y UFW", "desc": "Control DDoS perimetral. Bloquea puertos innecesarios y solo expone puertos seguros y VPN autorizadas.", "icon": "🧱"},
+    {"id": "wireguard", "label": "WireGuard VPN", "desc": "Crea una red encriptada privada entre el servidor VPS y los enjambres locales, permitiendo control seguro bidireccional.", "icon": "🔑"}
+  ]},
+  {"id": "vps_core", "label": "Daemons y Coordinación Cloud", "color": "#3b82f6", "x": 420, "y": 30, "nodes": [
+    {"id": "unified_vps", "label": "Receptor de Webhooks", "desc": "Servicio de escucha asíncrono permanente en el puerto VPS. Recibe eventos directos de Telegram, Discord y n8n.", "icon": "🛰️"},
+    {"id": "redis_q", "label": "Redis Message Queue", "desc": "Gestor de colas y sincronización en memoria. Mayor rendimiento y concurrencia multi-enjambre en la nube.", "icon": "⚡"},
+    {"id": "watchdog_vps", "label": "Daemon Supervisor", "desc": "Monitoriza la pila de servicios del VPS, asegurando el reinicio ante fallos de desbordamiento en memoria.", "icon": "👁️"}
+  ]},
+  {"id": "vps_ai", "label": "Capa Cognitiva VPS", "color": "#ec4899", "x": 810, "y": 30, "nodes": [
+    {"id": "llm_router_vps", "label": "Router LLM Central", "desc": "Coordinador de inferencia. Comunica y distribuye peticiones redundantes a las mejores APIs de IA del mercado.", "icon": "🎯"},
+    {"id": "qdrant_vps", "label": "Qdrant Vector DB", "desc": "Memoria vectorial centralizada en la nube. Gestiona colecciones de conocimiento compartido para sincronización global.", "icon": "💎"},
+    {"id": "ollama_vps", "label": "Ollama local (Inferencia)", "desc": "Instancia local de respaldo con modelos rápidos (Qwen / Llama 3) para ejecución ante cortes de red externa.", "icon": "🤖"}
+  ]},
+  {"id": "vps_data", "label": "Datos y Sincronía Cloud", "color": "#f59e0b", "x": 420, "y": 350, "nodes": [
+    {"id": "postgres_vps", "label": "Base de Datos Postgres", "desc": "Base de datos transaccional central. Persiste logs de auditoría exhaustivos de los comandos remotos y telemetría.", "icon": "🐘"},
+    {"id": "evo_sync", "label": "Sync Server", "desc": "Daemon de sincronización de memoria evolutiva. Propaga lecciones aprendidas entre nodos VPS y enjambres locales.", "icon": "🔄"}
+  ]},
+  {"id": "vps_sec", "label": "Ejecución Aislada", "color": "#ef4444", "x": 810, "y": 320, "nodes": [
+    {"id": "sandbox_vps", "label": "Dockerized Execution", "desc": "Aislamiento de comandos recibidos de red. Ejecuta tareas y scripts en micro-contenedores aislados de Linux.", "icon": "🔒"},
+    {"id": "audit_vps", "label": "Inspector de Seguridad", "desc": "Mapeador que analiza la firma digital y procedencia de toda petición remota antes de pasarla al sandbox.", "icon": "🛡️"}
+  ]}
+];
+
+const CONNS=[
+  {"from": "ufw", "to": "nginx", "label": "Filtra tráfico", "color": "#10b981"},
+  {"from": "wireguard", "to": "nginx", "label": "Túnel privado", "color": "#10b981", "dashed": true},
+  {"from": "nginx", "to": "unified_vps", "label": "Proxy reenvío", "color": "#3b82f6"},
+  {"from": "unified_vps", "to": "redis_q", "label": "Encola eventos", "color": "#3b82f6"},
+  {"from": "redis_q", "to": "llm_router_vps", "label": "Solicita inferencia", "color": "#ec4899"},
+  {"from": "llm_router_vps", "to": "ollama_vps", "label": "Inferencia local", "color": "#ec4899", "dashed": true},
+  {"from": "llm_router_vps", "to": "qdrant_vps", "label": "Contexto semántico", "color": "#ec4899", "bidi": true},
+  {"from": "redis_q", "to": "postgres_vps", "label": "Persistencia de logs", "color": "#f59e0b"},
+  {"from": "evo_sync", "to": "qdrant_vps", "label": "Sincroniza memoria", "color": "#f59e0b", "bidi": true},
+  {"from": "redis_q", "to": "sandbox_vps", "label": "Ejecución de scripts", "color": "#ef4444"},
+  {"from": "sandbox_vps", "to": "audit_vps", "label": "Audita ejecución", "color": "#ef4444", "bidi": true},
+  {"from": "watchdog_vps", "to": "unified_vps", "label": "Supervisa daemon", "color": "#3b82f6", "dashed": true}
+];
+
+const canvas=document.getElementById('canvas');
+const wrap=document.getElementById('canvas-wrap');
+const svg=document.getElementById('svg');
+let scale=0.85,tx=80,ty=80;
+const groupEls={};
+
+const savedPos=JSON.parse(localStorage.getItem('chask_vps_positions')||'null');
+
+GROUPS.forEach(g=>{
+  const div=document.createElement('div');
+  div.className='group'; div.dataset.gid=g.id;
+  const sx=savedPos&&savedPos[g.id]?savedPos[g.id].x:g.x;
+  const sy=savedPos&&savedPos[g.id]?savedPos[g.id].y:g.y;
+  div.style.cssText=`left:${sx}px;top:${sy}px;background:${g.color}12;border-color:${g.color}40`;
+  const lbl=document.createElement('div');
+  lbl.className='group-label'; lbl.style.color=g.color; lbl.textContent=g.label;
+  div.appendChild(lbl);
+  (g.nodes||[]).forEach(n=>{
+    const nd=document.createElement('div');
+    nd.className='node'; nd.dataset.id=n.id;
+    nd.innerHTML=`<span class="icon">${n.icon||''}</span><span class="name">${n.label}</span><div class="desc">${n.desc||''}</div>`;
+    nd.addEventListener('click',e=>{
+      e.stopPropagation();
+      document.getElementById('d-title').textContent=n.label;
+      document.getElementById('d-desc').textContent=n.desc||'';
+      document.getElementById('detail').style.display='block';
+      document.querySelectorAll('.node').forEach(x=>x.classList.remove('highlight'));
+      nd.classList.add('highlight');
+    });
+    div.appendChild(nd);
+  });
+  canvas.appendChild(div);
+  groupEls[g.id]=div;
+  let draggingG=false,gsx,gsy,gox,goy;
+  lbl.addEventListener('mousedown',e=>{
+    e.stopPropagation();
+    draggingG=true; div.classList.add('dragging');
+    gox=parseInt(div.style.left)||0; goy=parseInt(div.style.top)||0;
+    gsx=e.clientX/scale; gsy=e.clientY/scale;
+    const onMove=ev=>{
+      if(!draggingG)return;
+      const dx=ev.clientX/scale-gsx, dy=ev.clientY/scale-gsy;
+      div.style.left=(gox+dx)+'px'; div.style.top=(goy+dy)+'px';
+      recalcAndDraw();
+    };
+    const onUp=()=>{ draggingG=false; div.classList.remove('dragging'); window.removeEventListener('mousemove',onMove); window.removeEventListener('mouseup',onUp); };
+    window.addEventListener('mousemove',onMove);
+    window.addEventListener('mouseup',onUp);
+  });
+});
+
+document.getElementById('legend').innerHTML='<div style="font-weight:700;margin-bottom:4px">Leyenda</div>'+
+  GROUPS.map(g=>`<div><span class="dot" style="background:${g.color}"></span>${g.label}</div>`).join('');
+
+const tooltip=document.getElementById('conn-tooltip');
+let hoverArrows=[];
+function recalcAndDraw(){
+  const nodePos={};
+  let maxX=0,maxY=0;
+  document.querySelectorAll('.node').forEach(nd=>{
+    const r=nd.getBoundingClientRect();
+    const cr=canvas.getBoundingClientRect();
+    const px=(r.left+r.width/2-cr.left)/scale, py=(r.top+r.height/2-cr.top)/scale;
+    nodePos[nd.dataset.id]={x:px,y:py};
+    if(px>maxX)maxX=px; if(py>maxY)maxY=py;
+  });
+  svg.setAttribute('width',maxX+500); svg.setAttribute('height',maxY+500);
+  const colors=new Set();
+  CONNS.forEach(c=>colors.add(c.color||'#555'));
+  let defs='<defs>';
+  colors.forEach(col=>{
+    const id=col.replace('#','');
+    defs+=`<marker id="af_${id}" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="${col}"/></marker>`;
+    defs+=`<marker id="ar_${id}" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto"><polygon points="10,0 0,3.5 10,7" fill="${col}"/></marker>`;
+  });
+  defs+='</defs>';
+  let h=defs;
+  CONNS.forEach((c,i)=>{
+    const a=nodePos[c.from],b=nodePos[c.to];
+    if(!a||!b)return;
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    const dx=b.x-a.x,dy=b.y-a.y;
+    const cx=mx-dy*0.12,cy=my+dx*0.12;
+    const col=c.color||'#555';
+    const id=col.replace('#','');
+    const dash=c.dashed?'stroke-dasharray="6,4"':'';
+    const mEnd=`marker-end="url(#af_${id})"`;
+    const mStart=c.bidi?`marker-start="url(#ar_${id})"`:''  ;
+    h+=`<path id="conn${i}" d="M${a.x},${a.y} Q${cx},${cy} ${b.x},${b.y}" stroke="${col}" stroke-width="1.5" fill="none" opacity="0.4" ${dash} ${mEnd} ${mStart} data-label="${c.label||''}" data-idx="${i}" data-col="${col}" data-bidi="${c.bidi?1:0}"/>`;
+  });
+  svg.innerHTML=h;
+  svg.querySelectorAll('path[data-idx]').forEach(p=>{
+    p.addEventListener('mouseenter',e=>{
+      const lbl=p.getAttribute('data-label');
+      if(lbl){ tooltip.textContent=lbl; tooltip.style.display='block'; }
+      p.setAttribute('opacity','0.9'); p.setAttribute('stroke-width','3');
+      showFlowArrows(p);
+    });
+    p.addEventListener('mousemove',e=>{
+      tooltip.style.left=(e.clientX+12)+'px'; tooltip.style.top=(e.clientY-24)+'px';
+    });
+    p.addEventListener('mouseleave',()=>{
+      tooltip.style.display='none';
+      p.setAttribute('opacity','0.4'); p.setAttribute('stroke-width','1.5');
+      clearFlowArrows();
+    });
+  });
+}
+function showFlowArrows(pathEl){
+  clearFlowArrows();
+  const col=pathEl.getAttribute('data-col');
+  const bidi=pathEl.getAttribute('data-bidi')==='1';
+  const len=pathEl.getTotalLength();
+  const step=Math.max(40,len/10);
+  for(let d=step;d<len-10;d+=step){
+    const pt=pathEl.getPointAtLength(d);
+    const pt2=pathEl.getPointAtLength(Math.min(d+2,len));
+    const angle=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI;
+    const arrow=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    arrow.setAttribute('points','-5,-3.5 5,0 -5,3.5');
+    arrow.setAttribute('fill',col);arrow.setAttribute('opacity','0.8');
+    arrow.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+    arrow.classList.add('flow-arrow');
+    svg.appendChild(arrow);
+    hoverArrows.push(arrow);
+    if(bidi){
+      const arrowR=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+      arrowR.setAttribute('points','5,-3.5 -5,0 5,3.5');
+      arrowR.setAttribute('fill',col);arrowR.setAttribute('opacity','0.5');
+      arrowR.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+      arrowR.classList.add('flow-arrow');
+      svg.appendChild(arrowR);
+      hoverArrows.push(arrowR);
+    }
+  }
+}
+function clearFlowArrows(){ hoverArrows.forEach(a=>a.remove()); hoverArrows=[]; }
+setTimeout(recalcAndDraw,300);
+
+function applyTransform(){canvas.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;document.getElementById('zoom-info').textContent=Math.round(scale*100)+'%'}
+applyTransform();
+let panning=false,psx,psy;
+wrap.addEventListener('mousedown',e=>{
+  if(e.target===wrap||e.target===canvas||e.target===svg){panning=true;psx=e.clientX-tx;psy=e.clientY-ty;wrap.style.cursor='grabbing'}
+});
+window.addEventListener('mousemove',e=>{if(panning){tx=e.clientX-psx;ty=e.clientY-psy;applyTransform()}});
+window.addEventListener('mouseup',()=>{panning=false;wrap.style.cursor='grab'});
+wrap.addEventListener('wheel',e=>{e.preventDefault();const d=e.deltaY>0?0.9:1.1;const ns=Math.max(0.15,Math.min(3,scale*d));
+  const rect=wrap.getBoundingClientRect();const mx=e.clientX-rect.left;const my=e.clientY-rect.top;
+  tx=mx-(mx-tx)*(ns/scale);ty=my-(my-ty)*(ns/scale);scale=ns;applyTransform();recalcAndDraw()});
+function zoomTo(s){scale=Math.max(0.15,Math.min(3,s));applyTransform();recalcAndDraw()}
+function fitAll(){scale=0.6;tx=40;ty=60;applyTransform();recalcAndDraw()}
+
+function savePositions(){
+  const pos={};
+  document.querySelectorAll('.group').forEach(g=>{
+    pos[g.dataset.gid]={x:parseInt(g.style.left)||0,y:parseInt(g.style.top)||0};
+  });
+  localStorage.setItem('chask_vps_positions',JSON.stringify(pos));
+  navigator.clipboard.writeText(JSON.stringify(pos,null,2)).then(()=>{
+    showToast('Posiciones VPS guardadas y copiadas');
+  }).catch(()=>{
+    showToast('Posiciones VPS guardadas localmente');
+  });
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.style.display='block'; t.style.opacity='1';
+  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.style.display='none',300)},2000);
+}
+</script></body></html>

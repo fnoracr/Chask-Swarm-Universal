@@ -1,8 +1,8 @@
 """
-shutdown_cleanup.py — Limpieza Automática al Cerrar [Nombre_IA]
+shutdown_cleanup.py — Limpieza Automática al Cerrar Charm
 ================================================================
-Este script corre como daemon (pythonw) y vigila el proceso [Nombre_IA].exe.
-Cuando detecta que [Nombre_IA] se cierra:
+Este script corre como daemon (pythonw) y vigila el proceso Charm.exe.
+Cuando detecta que Charm se cierra:
 1. Espera 5 segundos de gracia (por si es un reinicio rápido del IDE)
 2. Si sigue cerrado, mata TODOS los procesos pythonw (daemons del enjambre)
 3. Se excluye a sí mismo hasta el final
@@ -152,7 +152,7 @@ def cleanup_all_daemons():
     PASO 3: Mata el resto de daemons.
     """
     log("=" * 50)
-    log("INICIO DE LIMPIEZA — [Nombre_IA] cerrado detectado")
+    log("INICIO DE LIMPIEZA — Charm cerrado detectado")
     log("=" * 50)
 
     # PASO 1: Señalar al watchdog que se cierre
@@ -228,10 +228,10 @@ def main():
         cleanup_all_daemons()
         return
 
-    log("Vigilando cierre de [Nombre_IA].exe...")
+    log("Vigilando cierre de Charm.exe...")
     log("=" * 50)
 
-    # Esperar a que [Nombre_IA] arranque primero
+    # Esperar a que Charm arranque primero
     # (este script se lanza junto con los daemons, antes de que el IDE arranque)
     startup_wait = 0
     while not is_charm_running() and startup_wait < 120:
@@ -239,27 +239,27 @@ def main():
         startup_wait += 2
 
     if not is_charm_running():
-        log("[Nombre_IA] no arrancó en 120s. Saliendo sin limpiar.")
+        log("Charm no arrancó en 120s. Saliendo sin limpiar.")
         return
 
-    log("[Nombre_IA] detectado. Comenzando vigilancia.")
+    log("Charm detectado. Comenzando vigilancia.")
 
-    # Bucle principal: vigilar que [Nombre_IA] siga vivo
+    # Bucle principal: vigilar que Charm siga vivo
     while True:
         time.sleep(POLL_INTERVAL)
 
         if not is_charm_running():
-            log(f"[Nombre_IA] NO detectado. Esperando {GRACE_PERIOD}s de gracia...")
+            log(f"Charm NO detectado. Esperando {GRACE_PERIOD}s de gracia...")
 
             # Periodo de gracia (por si es un reinicio rápido)
             time.sleep(GRACE_PERIOD)
 
             if not is_charm_running():
-                # Confirmado: [Nombre_IA] cerrado definitivamente
+                # Confirmado: Charm cerrado definitivamente
                 cleanup_all_daemons()
                 break
             else:
-                log("[Nombre_IA] volvió durante el periodo de gracia. Falsa alarma.")
+                log("Charm volvió durante el periodo de gracia. Falsa alarma.")
 
     log("Shutdown cleanup terminado. Auto-terminando.")
 

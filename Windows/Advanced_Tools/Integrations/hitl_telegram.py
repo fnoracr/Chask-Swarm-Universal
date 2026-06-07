@@ -40,7 +40,7 @@ from datetime import datetime
 log = logging.getLogger("hitl_telegram")
 
 # ─── Configuración ────────────────────────────────────────────
-CONFIG_PATH   = r"C:\Program Files\Chask_Swarm\Configuration\master_credentials.json"
+CONFIG_PATH   = r"C:\Program Files\Chask_Swarm\Configuracion\master_credentials.json"
 APPROVALS_DIR = r"C:\Program Files\Chask_Swarm\approvals"
 
 # Cargar config

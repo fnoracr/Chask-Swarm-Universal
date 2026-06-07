@@ -9,9 +9,9 @@ Secciones:
   /api/network/*      — Red LAN de enjambres
   /api/internet/*     — Internet de Enjambres (hub, enrutadores, opt-in/out)
   /api/filter/*       — Filtro parental
-  /api/config/*       — Configuration general del sistema
+  /api/config/*       — Configuracion general del sistema
   /api/services/*     — Windows Services
-  /api/llm/*          — Configuration de LLM providers
+  /api/llm/*          — Configuracion de LLM providers
 """
 import os
 import sys
@@ -87,12 +87,12 @@ def api_users_list():
     except Exception as e:
         print(f"[Dashboard] Error leyendo user_manager: {e}")
         
-    # Administrador por defecto si no se pudo cargar y es admin
+    # Fernando por defecto si no se pudo cargar y es admin
     if role == "admin":
         if not any(u["username"] == "admin" for u in user_list):
             user_list.append({
                 "username": "admin",
-                "display_name": "Administrador",
+                "display_name": "Fernando",
                 "role": "admin",
                 "type": "human",
                 "channels": ["Telegram"],
@@ -229,7 +229,7 @@ def api_roles():
 
 @config_api.route("/api/network/lan", methods=["GET"])
 def api_network_lan():
-    cfg = _load_json(ROOT / "Configuration/swarm_network_config.json")
+    cfg = _load_json(ROOT / "Configuracion/swarm_network_config.json")
     key = cfg.get("cluster_key", "")
     return jsonify({
         "cluster_key_preview": f"{key[:8]}...{key[-4:]}" if len(key) > 12 else "(no generada)",
@@ -250,19 +250,19 @@ def api_network_genkey():
 
 @config_api.route("/api/network/internet", methods=["GET"])
 def api_network_internet():
-    cfg = _load_json(ROOT / "Configuration/swarm_internet_config.json")
+    cfg = _load_json(ROOT / "Configuracion/swarm_internet_config.json")
     return jsonify(cfg)
 
 @config_api.route("/api/network/internet", methods=["PUT"])
 def api_network_internet_update():
     data = request.json or {}
-    cfg = _load_json(ROOT / "Configuration/swarm_internet_config.json")
+    cfg = _load_json(ROOT / "Configuracion/swarm_internet_config.json")
     allowed_keys = ["hub_url", "api_key", "is_router", "heartbeat_minutes",
                     "max_hops", "inter_swarm_free_only", "global_network_enabled"]
     for k in allowed_keys:
         if k in data:
             cfg[k] = data[k]
-    _save_json(ROOT / "Configuration/swarm_internet_config.json", cfg)
+    _save_json(ROOT / "Configuracion/swarm_internet_config.json", cfg)
     return jsonify({"success": True, "config": cfg})
 
 
@@ -292,7 +292,7 @@ def api_filter_log():
 
 @config_api.route("/api/config/telegram", methods=["GET"])
 def api_config_telegram():
-    cfg = _load_json(ROOT / "Configuration/master_credentials.json")
+    cfg = _load_json(ROOT / "Configuracion/master_credentials.json")
     creds = cfg.get("credentials", {})
     return jsonify({
         "telegram_bot": creds.get("telegram_bot", ""),
@@ -302,7 +302,7 @@ def api_config_telegram():
 @config_api.route("/api/config/telegram", methods=["PUT"])
 def api_config_telegram_update():
     data = request.json or {}
-    cfg = _load_json(ROOT / "Configuration/master_credentials.json")
+    cfg = _load_json(ROOT / "Configuracion/master_credentials.json")
     if "credentials" not in cfg:
         cfg["credentials"] = {}
     
@@ -311,7 +311,7 @@ def api_config_telegram_update():
     if "telegram_admin" in data:
         cfg["credentials"]["telegram_admin"] = data["telegram_admin"]
         
-    _save_json(ROOT / "Configuration/master_credentials.json", cfg)
+    _save_json(ROOT / "Configuracion/master_credentials.json", cfg)
     return jsonify({"success": True})
 # ═══════════════════════════════════════════════════════════
 
@@ -328,13 +328,13 @@ def api_config_llm_update():
 
 @config_api.route("/api/config/channels", methods=["GET"])
 def api_config_channels():
-    cfg = _load_json(ROOT / "Configuration/channels_config.json")
+    cfg = _load_json(ROOT / "Configuracion/channels_config.json")
     return jsonify(cfg)
 
 @config_api.route("/api/config/channels", methods=["PUT"])
 def api_config_channels_update():
     data = request.json or {}
-    _save_json(ROOT / "Configuration/channels_config.json", data)
+    _save_json(ROOT / "Configuracion/channels_config.json", data)
     return jsonify({"success": True})
 
 @config_api.route("/api/config/scheduler", methods=["GET"])
@@ -434,7 +434,7 @@ def api_overview():
         pass
 
     # Internet
-    inet = _load_json(ROOT / "Configuration/swarm_internet_config.json")
+    inet = _load_json(ROOT / "Configuracion/swarm_internet_config.json")
     routers = _load_json(ROOT / "cached_routers.json")
     if not isinstance(routers, list):
         routers = []

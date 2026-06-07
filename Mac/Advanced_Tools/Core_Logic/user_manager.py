@@ -32,7 +32,7 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 ROOT = Path(r"C:\Program Files\Chask_Swarm")
-USERS_FILE = ROOT / "Configuration/users.json"
+USERS_FILE = ROOT / "Configuracion/users.json"
 SESSIONS_DIR = ROOT / "user_sessions"
 
 # ─── Roles y sus capacidades por defecto ──────────────────
@@ -435,18 +435,18 @@ def save_user_memory(username: str, content: str):
 
 
 def init_admin():
-    """Inicializar el usuario admin (Administrador) si no existe."""
+    """Inicializar el usuario admin (Fernando) si no existe."""
     data = load_users()
     if "admin" not in data["users"]:
         create_user(
             username="admin",
             password="N0r4Z0e?*12",
             role="admin",
-            display_name="Administrador",
+            display_name="Fernando",
             telegram_id="5034994867",
             created_by="system"
         )
-        print("[UserManager] Admin creado (Administrador)")
+        print("[UserManager] Admin creado (Fernando)")
     return True
 
 

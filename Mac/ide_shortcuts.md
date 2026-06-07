@@ -1,6 +1,6 @@
-# [Nombre_IA] IDE - Atajos de Teclado (Keybindings)
+# Charm IDE - Atajos de Teclado (Keybindings)
 
-Este archivo sirve como referencia de memoria para que [Nombre_IA] ([Nombre_IA]) pueda interactuar con la interfaz del propio IDE simulando pulsaciones de teclado mediante VBScript o herramientas similares.
+Este archivo sirve como referencia de memoria para que Nora (Charm) pueda interactuar con la interfaz del propio IDE simulando pulsaciones de teclado mediante VBScript o herramientas similares.
 
 ## Ventanas y Paneles
 - **Toggle Sidebar** (Alternar barra lateral): `Ctrl + B`
@@ -43,4 +43,4 @@ Este archivo sirve como referencia de memoria para que [Nombre_IA] ([Nombre_IA])
 - `Flecha Arriba` = `{UP}`
 - `Esc` = `{ESC}`
 
-Ejemplo de flujo para abrir "[Nombre_IA] Telegram": `^k` -> `[Nombre_IA] Telegram` -> `{ENTER}` -> `^l`
+Ejemplo de flujo para abrir "Charm Telegram": `^k` -> `Charm Telegram` -> `{ENTER}` -> `^l`

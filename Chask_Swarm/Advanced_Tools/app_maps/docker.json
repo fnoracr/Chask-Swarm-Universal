@@ -1,0 +1,35 @@
+{
+  "app_name": "Docker",
+  "scanned_at": "2026-05-16T21:55:05.121413",
+  "hwnd": 5704816,
+  "elements": [
+    {
+      "name": "Containers - Docker Desktop",
+      "type": "WindowControl",
+      "automation_id": "",
+      "class": "Chrome_WidgetWin_1",
+      "depth": 0,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": []
+    },
+    {
+      "name": "Containers - Docker Desktop",
+      "type": "PaneControl",
+      "automation_id": "",
+      "class": "RootView",
+      "depth": 1,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "patterns": []
+    }
+  ]
+}

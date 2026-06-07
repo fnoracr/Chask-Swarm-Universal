@@ -9,7 +9,7 @@ import urllib.error
 def send_to_discord(message):
     time.sleep(1) # Simple rate limit
     
-    config_path = r"C:\Program Files\Chask_Swarm\Configuration\channels_config.json"
+    config_path = r"C:\Program Files\Chask_Swarm\Configuracion\channels_config.json"
     if not os.path.exists(config_path):
         sys.stderr.write(f"Error: {config_path} not found.\n")
         sys.exit(1)

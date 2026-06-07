@@ -13,8 +13,8 @@ except ImportError:
     pass # Pywinauto not installed, fallback to disabled
 
 def inject_to_charm(text: str, source: str = "web") -> tuple[bool, str]:
-    # Escribir en el historial silenciosamente (chat_history.md en [Nombre_IA])
-    charm_dir = r"C:\Program Files\Chask_Swarm\[Nombre_IA]"
+    # Escribir en el historial silenciosamente (chat_history.md en Charm)
+    charm_dir = r"C:\Program Files\Chask_Swarm\Charm"
     if not os.path.exists(charm_dir):
         try:
             os.makedirs(charm_dir, exist_ok=True)
@@ -33,7 +33,7 @@ def inject_to_charm(text: str, source: str = "web") -> tuple[bool, str]:
         import pygetwindow as gw
         
         # Find the Antigravity IDE window
-        windows = [w for w in gw.getWindowsWithTitle('') if 'Antigravity' in w.title or '[Nombre_IA]' in w.title or '[Nombre_IA]' in w.title]
+        windows = [w for w in gw.getWindowsWithTitle('') if 'Antigravity' in w.title or 'Nora' in w.title or 'Charm' in w.title]
         if not windows:
             return False, "No se encontró la ventana del IDE"
             

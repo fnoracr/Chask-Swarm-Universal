@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chask Swarm — Comparativa Técnica Completa de Producto (Charm 2.1)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --bg-color: #060611;
+            --bg-gradient: linear-gradient(135deg, #090918 0%, #04040a 100%);
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --card-border: rgba(255, 255, 255, 0.05);
+            --card-glow: rgba(127, 0, 255, 0.1);
+            --text-color: #e2e8f0;
+            --text-muted: #8a99ad;
+            --primary: #ff7a00;
+            --primary-glow: rgba(255, 122, 0, 0.25);
+            --cyan: #00f2fe;
+            --purple: #7f00ff;
+            --pink: #ff007f;
+            --green: #00ff88;
+            --red: #ff3366;
+            --amber: #ffaa00;
+            --glass: rgba(15, 15, 30, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 122, 0, 0.3) rgba(255, 255, 255, 0.02);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.01);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 122, 0, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 122, 0, 0.4);
+        }
+
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-color);
+            background-image: var(--bg-gradient);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 40px 0;
+            line-height: 1.65;
+            position: relative;
+            text-align: justify;
+            text-justify: inter-word;
+            display: block;
+        }
+
+        /* Background glows */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            left: -200px;
+            background: radial-gradient(circle, rgba(255, 122, 0, 0.08) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            bottom: -200px;
+            right: -200px;
+            background: radial-gradient(circle, rgba(127, 0, 255, 0.08) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            padding: 0 20px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            position: relative;
+            z-index: 1;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        /* Typography & Header styling */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .branding-swarm {
+            display: inline-block;
+        }
+
+        .brand-orange {
+            color: var(--primary);
+            text-shadow: 0 0 20px var(--primary-glow);
+            font-weight: 800;
+        }
+
+        .brand-silver {
+            color: #ffffff;
+            font-weight: 800;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+        }
+
+        .sub-header {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .header-meta {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: var(--cyan);
+            margin: 40px 0 20px;
+            font-weight: 600;
+            border-left: 4px solid var(--purple);
+            padding-left: 12px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        p, li, td, th {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 122, 0, 0.15);
+            box-shadow: 0 12px 50px 0 rgba(255, 122, 0, 0.05);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 122, 0, 0.04) 0%, rgba(127, 0, 255, 0.03) 100%);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 16px 16px 0;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 13.5px;
+            color: var(--text-color);
+        }
+
+        /* Metrics grid and SVG progress wheels */
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin: 24px auto;
+        }
+
+        @media (max-width: 1024px) {
+            .stats-grid {
+                justify-content: center;
+            }
+        }
+        @media (max-width: 640px) {
+            .stats-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 14px;
+            padding: 20px;
+            width: 160px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .svg-gauge {
+            width: 80px;
+            height: 80px;
+            transform: rotate(-90deg);
+        }
+
+        .gauge-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.03);
+            stroke-width: 6px;
+        }
+
+        .gauge-fill {
+            fill: none;
+            stroke-width: 6px;
+            stroke-linecap: round;
+            stroke-dasharray: 226; /* 2 * pi * r (r=36) */
+            stroke-dashoffset: 226;
+            transition: stroke-dashoffset 1.5s ease-out;
+        }
+
+        .stat-val-float {
+            position: absolute;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            top: 48px;
+        }
+
+        .stat-label-under {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 14px;
+            font-weight: 600;
+        }
+
+        .info-bar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .info-bar {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .info-val {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--cyan);
+        }
+
+        .info-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* Interactive Filters & Search */
+        .control-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 12px 16px 12px 40px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 13.5px;
+            transition: all 0.25s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(255, 122, 0, 0.15);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 8px 14px;
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 11.5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .filter-btn.active {
+            color: #ffffff;
+            background: linear-gradient(135deg, var(--purple) 0%, rgba(127, 0, 255, 0.4) 100%);
+            border-color: var(--purple);
+            box-shadow: 0 4px 15px rgba(127, 0, 255, 0.25);
+        }
+
+        /* Bilateral Interactive Comparison Module */
+        .comparison-module {
+            background: linear-gradient(135deg, rgba(12, 12, 28, 0.8) 0%, rgba(6, 6, 12, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .comp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 14px;
+        }
+
+        .comp-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cyan);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comp-selector-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .comp-selector-label {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .comp-select {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 6px 12px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .comp-select:focus {
+            border-color: var(--primary);
+        }
+
+        .comp-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .comp-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comp-col {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .comp-col-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .comp-list {
+            list-style: none;
+        }
+
+        .comp-list li {
+            font-size: 12.5px;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+            text-align: justify;
+        }
+
+        .comp-list li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 10px;
+        }
+
+        .comp-list.negative li::before {
+            content: '⚠️';
+            color: var(--red);
+            font-size: 9px;
+            left: -2px;
+        }
+
+        .comp-summary-text {
+            grid-column: span 2;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px dashed rgba(255, 255, 255, 0.05);
+            padding-top: 14px;
+            margin-top: 8px;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .comp-summary-text {
+                grid-column: span 1;
+            }
+        }
+
+        /* Matrix Table Styling */
+        .table-container {
+            background: var(--glass);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12.5px;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(15, 15, 30, 0.95);
+            padding: 12px 14px;
+            border-bottom: 2px solid var(--purple);
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            vertical-align: top;
+            transition: background 0.15s ease;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        /* Category rows */
+        .cat-row td {
+            background: linear-gradient(90deg, rgba(127, 0, 255, 0.15) 0%, rgba(0, 242, 250, 0.03) 100%);
+            color: var(--cyan);
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 12px 14px;
+            border-bottom: 2px solid rgba(0, 242, 254, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Score badges */
+        .s {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 10.5px;
+            font-weight: 700;
+            min-width: 26px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .s5 {
+            background: rgba(0, 255, 136, 0.15);
+            color: var(--green);
+            border: 1px solid rgba(0, 255, 136, 0.35);
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
+        }
+
+        .s4 {
+            background: rgba(136, 255, 170, 0.08);
+            color: #88ffaa;
+            border: 1px solid rgba(136, 255, 170, 0.25);
+        }
+
+        .s3 {
+            background: rgba(255, 170, 0, 0.08);
+            color: var(--amber);
+            border: 1px solid rgba(255, 170, 0, 0.25);
+        }
+
+        .s2 {
+            background: rgba(255, 136, 136, 0.08);
+            color: #ff8888;
+            border: 1px solid rgba(255, 136, 136, 0.25);
+        }
+
+        .s1 {
+            background: rgba(255, 51, 102, 0.08);
+            color: var(--red);
+            border: 1px solid rgba(255, 51, 102, 0.25);
+        }
+
+        /* Exclusives checklist section */
+        .exclusive-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .exclusive-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .exclusive-item {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 14px 18px;
+            transition: all 0.25s;
+        }
+
+        .exclusive-item:hover {
+            border-color: rgba(255, 122, 0, 0.1);
+            background: rgba(255, 122, 0, 0.01);
+        }
+
+        .exclusive-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .exclusive-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        /* Architectural Pillars Card layout */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .pillar-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .pillar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pillar-card {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s;
+        }
+
+        .pillar-card:hover {
+            border-color: rgba(127, 0, 255, 0.2);
+            background: rgba(127, 0, 255, 0.01);
+        }
+
+        .pillar-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .pillar-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .pillar-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        /* Verdict styling */
+        .verdict-box {
+            background: linear-gradient(135deg, rgba(127, 0, 255, 0.04) 0%, rgba(0, 242, 254, 0.04) 100%);
+            border: 1px solid rgba(127, 0, 255, 0.15);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+
+        .verdict-lead {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .verdict-paragraph {
+            font-size: 13.5px;
+            color: var(--text-color);
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #53647c;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        footer strong {
+            color: var(--text-muted);
+        }
+    
+        .comp-select option {
+            background-color: #060611;
+            color: #ffffff;
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <p class="sub-header">Evaluación Técnica de Frameworks Agénticos 2026</p>
+        <h1>
+            <span class="brand-orange">Cha</span><span class="brand-silver">sk Swa</span><span class="brand-orange">rm</span>
+            <span style="color:#ffffff; font-weight:300">v2.0 — Comparativa de Producto</span>
+        </h1>
+        <p style="text-align: center; font-size:14px; color:var(--text-muted); max-width:800px; margin: 0 auto;">
+            Matriz de auditoría interactiva de <strong>86 capacidades técnicas</strong>. Análisis formal frente a arquitecturas open-source (Hermes, OpenClaw) y frameworks tradicionales de mercado.
+        </p>
+        <div class="header-meta">
+            Estado de <span class="brand-orange">Charm 2.0</span>: <strong>Online (v2)</strong> | Memoria Vectorial: <strong>Conectada (Qdrant)</strong> | Red Mesh: <strong>Cifrada y Activa</strong> | 2026-05-20
+        </div>
+    </header>
+
+    <div class="glass-card">
+        <p style="font-size: 13.5px; line-height: 1.7; color: var(--text-color);">
+            <strong>Premisa Operativa:</strong> El ecosistema de <span class="brand-orange">Cha</span>sk Swa<span class="brand-orange">rm</span> se rige bajo un modelo de <strong>soberanía tecnológica absoluta</strong> y código abierto. A diferencia de las plataformas centralizadas, es instalado en el host local de cada usuario (con soporte nativo para Windows y entornos macOS/Linux impulsados por la comunidad), quien administra sus propias bases vectoriales e IAs sin costos ocultos de intermediación. Esta comparativa evalúa en profundidad la paridad funcional, seguridad y autonomía del ecosistema v2.0 frente a frameworks alternativos.
+        </p>
+        <div class="highlight-box">
+            <strong>Actualización <span class="brand-orange">Charm 2.0</span>:</strong> Esta versión incorpora un nuevo estándar en redes distribuidas, seguridad Zero-Trust profunda sobre árbol de sintaxis abstracta (AST) en frontera, la suite de especialización e ingesta asíncrona de Ollama local con modo pedagógico socrático, y el robusto centinela inmunizado nativo de PowerShell, eliminando dependencias y blindando la privacidad del host.
+        </div>
+    </div>
+
+    <h2>Resumen Ejecutivo — Promedios Globales</h2>
+    <div class="glass-card" style="padding-bottom: 12px;">
+        <!-- circular dynamic SVG metrics -->
+        <div class="stats-grid">
+            <div class="stat-card" title="Chask Swarm v2.0: 84/86">
+                <svg class="svg-gauge">
+                    <circle class="gauge-bg" cx="40" cy="40" r="36" />
+                    <circle class="gauge-fill" cx="40" cy="40" r="36" stroke="var(--primary)" id="gauge-chask" />
+                </svg>
+                <div class="stat-val-float" id="val-chask">84</div>
+                <div class="stat-label-under">Chask Swarm</div>
+            </div>
+            <div class="stat-card" title="Hermes-Agent: 43/86">
+                <svg class="svg-gauge">
+                    <circle class="gauge-bg" cx="40" cy="40" r="36" />
+                    <circle class="gauge-fill" cx="40" cy="40" r="36" stroke="var(--purple)" id="gauge-hermes" />
+                </svg>
+                <div class="stat-val-float" id="val-hermes">43</div>
+                <div class="stat-label-under">Hermes</div>
+            </div>
+            <div class="stat-card" title="OpenClaw: 34/86">
+                <svg class="svg-gauge">
+                    <circle class="gauge-bg" cx="40" cy="40" r="36" />
+                    <circle class="gauge-fill" cx="40" cy="40" r="36" stroke="var(--cyan)" id="gauge-openclaw" />
+                </svg>
+                <div class="stat-val-float" id="val-openclaw">34</div>
+                <div class="stat-label-under">OpenClaw</div>
+            </div>
+            <div class="stat-card" title="LangGraph: 33/86">
+                <svg class="svg-gauge">
+                    <circle class="gauge-bg" cx="40" cy="40" r="36" />
+                    <circle class="gauge-fill" cx="40" cy="40" r="36" stroke="var(--amber)" id="gauge-langgraph" />
+                </svg>
+                <div class="stat-val-float" id="val-langgraph">33</div>
+                <div class="stat-label-under">LangGraph</div>
+            </div>
+            <div class="stat-card" title="Open Swarm: 19/86">
+                <svg class="svg-gauge">
+                    <circle class="gauge-bg" cx="40" cy="40" r="36" />
+                    <circle class="gauge-fill" cx="40" cy="40" r="36" stroke="var(--pink)" id="gauge-openswarm" />
+                </svg>
+                <div class="stat-val-float" id="val-openswarm">19</div>
+                <div class="stat-label-under">Open Swarm</div>
+            </div>
+            <div class="stat-card" title="CrewAI: 17/86">
+                <svg class="svg-gauge">
+                    <circle class="gauge-bg" cx="40" cy="40" r="36" />
+                    <circle class="gauge-fill" cx="40" cy="40" r="36" stroke="var(--red)" id="gauge-crewai" />
+                </svg>
+                <div class="stat-val-float" id="val-crewai">17</div>
+                <div class="stat-label-under">CrewAI</div>
+            </div>
+        </div>
+
+        <div class="info-bar">
+            <div class="info-card">
+                <div class="info-val">86</div>
+                <div class="info-label">Capacidades Analizadas</div>
+            </div>
+            <div class="info-card">
+                <div class="info-val">15</div>
+                <div class="info-label">Bloques Categóricos</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Comparison Module -->
+    <div class="comparison-module">
+        <div class="comp-header">
+            <div class="comp-title">
+                <span>🔄</span> Analizador de Brechas y Sinergias Tecnológicas
+            </div>
+            <div class="comp-selector-container">
+                <span class="comp-selector-label">Comparar Chask Swarm vs:</span>
+                <select class="comp-select" id="competitor-select" onchange="updateBilateralComparison()">
+                    <option value="hermes">Hermes (3.14)</option>
+                                        <option value="openswarm">Open Swarm (3.25)</option>
+<option value="openclaw" selected>OpenClaw (3.10)</option>
+                    <option value="langgraph">LangGraph (1.68)</option>
+                    <option value="crewai">CrewAI (1.47)</option>
+                </select>
+            </div>
+        </div>
+        <div class="comp-body">
+            <div class="comp-col">
+                <div class="comp-col-title" style="color:var(--green)">
+                    <span>✅</span> Sinergias y Coincidencias Estrechas
+                </div>
+                <ul class="comp-list" id="comp-synergies">
+                    <!-- Loaded dynamically -->
+                </ul>
+            </div>
+            <div class="comp-col">
+                <div class="comp-col-title" style="color:var(--red)">
+                    <span>❌</span> Brechas Críticas del Competidor
+                </div>
+                <ul class="comp-list negative" id="comp-gaps">
+                    <!-- Loaded dynamically -->
+                </ul>
+            </div>
+            <div class="comp-summary-text" id="comp-summary">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <h2>Matriz Detallada — 86 Capacidades Técnicas</h2>
+
+    <!-- Interactive Filters & Search -->
+    <div class="control-panel">
+        <div class="search-bar-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-box" class="search-input" placeholder="Buscar capacidad o palabra clave (ej. 'Mesh', 'Zero-Trust', 'Ollama', 'Win32')..." onkeyup="filterMatrixTable()">
+        </div>
+        <div class="category-filters" id="filters-container">
+            <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)">Todas</button>
+            <button class="filter-btn" data-category="base" onclick="filterCategory('base', this)">Base & OS</button>
+            <button class="filter-btn" data-category="routing" onclick="filterCategory('routing', this)">Enrutamiento</button>
+            <button class="filter-btn" data-category="memory" onclick="filterCategory('memory', this)">Memoria</button>
+            <button class="filter-btn" data-category="mesh" onclick="filterCategory('mesh', this)">Red Mesh P2P</button>
+            <button class="filter-btn" data-category="security" onclick="filterCategory('security', this)">Seguridad</button>
+            <button class="filter-btn" data-category="auto" onclick="filterCategory('auto', this)">Autonomía</button>
+            <button class="filter-btn" data-category="ollama" onclick="filterCategory('ollama', this)">Ollama & Academia</button>
+            <button class="filter-btn" data-category="other" onclick="filterCategory('other', this)">Integraciones</button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div class="table-wrapper">
+            <table id="matrix-table">
+                <thead>
+                    <tr>
+                        <th style="width: 16%;">Capacidad</th>
+                        <th style="width: 29%;">Descripción</th>
+                        <th style="width: 10%; text-align: center;">Chask Swarm</th>
+                        <th style="width: 9%; text-align: center;">OpenClaw</th>
+                        <th style="width: 9%; text-align: center;">Hermes</th>
+                        <th style="width: 9%; text-align: center;">Open Swarm</th>
+                        <th style="width: 9%; text-align: center;">CrewAI</th>
+                        <th style="width: 9%; text-align: center;">LangGraph</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cat-row" data-category="base"><td colspan="8">Capacidades Base & Núcleo</td></tr>
+                    <tr data-category="base">
+                        <td><strong>Terminal & Shell</strong></td>
+                        <td>PowerShell y CMD nativos con inyección secuencial directa y lectura reactiva en tiempo real sobre el host del usuario sin emulaciones virtuales. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Filesystem Completo</strong></td>
+                        <td>Lectura, escritura, búsquedas profundas y auditoría de permisos a bajo nivel sobre directorios del sistema de forma controlada. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Navegador Web</strong></td>
+                        <td>Integración Playwright headless y subagente interactivo de navegación `browser_subagent` que simula acciones humanas con manejo de cookies y eventos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Browser Pool</strong></td>
+                        <td>Instancia de Chromium persistente y compartida que reduce los tiempos de arranque en frío a solo 51ms por operación de consulta o raspado. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="routing"><td colspan="8">Enrutamiento Lógico & Modelos</td></tr>
+                    <tr data-category="routing">
+                        <td><strong>LLM Router Inteligente</strong></td>
+                        <td>Clasificador cognitivo que evalúa complejidad de la consulta y delega dinámicamente al modelo con mejor relación capacidad/coste mediante cadenas de fallback. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>IAs Gratuitas Integradas</strong></td>
+                        <td>Acceso inmediato y sin suscripción obligatoria a DeepSeek, Groq, Cohere, OpenRouter y Ollama local mediante el enrutador central `llm_router.py`. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>LLMs Corporativos/Pago</strong></td>
+                        <td>Fácil integración opcional de credenciales de OpenAI GPT-4, Claude, Gemini, Mistral y modelos avanzados desde la interfaz de control. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Mode Router</strong></td>
+                        <td>Detección autónoma del tipo de tarea (código, matemáticas, análisis, redacción) y ajuste dinámico en caliente del system prompt restrictivo. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Slash Commands</strong></td>
+                        <td>Intérprete nativo de comandos rápidos (`/status`, `/mem`, `/skills`, `/goal`, `/schedule`) con inyección multicanal interactiva. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="memory"><td colspan="8">Memoria y Persistencia Semántica</td></tr>
+                    <tr data-category="memory">
+                        <td><strong>Qdrant Vectorial</strong></td>
+                        <td>BBDD vectorial local en Docker que gestiona y almacena a largo plazo la memoria semántica del enjambre con indexación y búsqueda por distancia coseno de embeddings. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="memory">
+                        <td><strong>Graph Memory</strong></td>
+                        <td>Almacenamiento y mapeo relacional de entidades, dependencias lógicas y árboles genealógicos de archivos mediante NetworkX. </td>
+                        <td style="text-align: center; font-size: 16px;">❌</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="memory">
+                        <td><strong>Memoria Operacional</strong></td>
+                        <td>Indexación automática de la bitácora de operaciones y comandos del enjambre (`approach` y `result`) en Qdrant para reaprovechamiento y recuperación ante caídas. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="memory">
+                        <td><strong>Evolutionary Memory</strong></td>
+                        <td>Aprendizaje evolutivo en caliente: asimilación de correcciones, hábitos y preferencias del usuario reflejados en directivas de comportamiento. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="memory">
+                        <td><strong>memory.md + Projects</strong></td>
+                        <td>Estructuración legible y automatizada de bitácoras de tareas activas (`memory.md` y su espejo persistente en el Escritorio) leídos al vuelo. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="memory">
+                        <td><strong>Knowledge Orchestrator</strong></td>
+                        <td>Orquestador RAG universal que realiza búsquedas semánticas dinámicas e inyecta conocimiento enriquecido en caliente sobre el prompt principal. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="memory">
+                        <td><strong>Memoria Histórica Semántica</strong></td>
+                        <td>Migración recursiva e ingesta inteligente de conversaciones pasadas indexadas vectorialmente en Qdrant, consolidando la memoria conceptual histórica. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="mesh"><td colspan="8">Red Mesh P2P Descentralizada</td></tr>
+                    <tr data-category="mesh">
+                        <td><strong>Autodescubrimiento P2P LAN</strong></td>
+                        <td>Autodescubrimiento en caliente de enjambres vecinos en la misma red local mediante mDNS/ZeroConf sobre UDP sin configuración manual de puertos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="mesh">
+                        <td><strong>Cifrado Local LAN</strong></td>
+                        <td>Establecimiento de canales criptográficos de comunicación P2P directos basados en AES-256 simétrico con claves de grupo dinámicas. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="mesh">
+                        <td><strong>Firmas de Integridad P2P</strong></td>
+                        <td>Firma asimétrica y verificación de payloads y skills mediante firmas Ed25519 en frontera antes de autorizar cualquier transacción o comunicación. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="mesh">
+                        <td><strong>Búsqueda Semántica WAN</strong></td>
+                        <td>Búsqueda y consulta semántica federada de capacidades de forma asíncrona sobre enrutadores mundiales seguros (Swarm Hub VPS). </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="mesh">
+                        <td><strong>Gossip de Reputación P2P</strong></td>
+                        <td>Propagación gossip anti-bucles de transacciones resueltas (`propagate_transaction_established`) y reportes de comportamiento a la red de enjambres conocidos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="mesh">
+                        <td><strong>Sincronización P2P LAN</strong></td>
+                        <td>Sincronización y hot-reload inmediato de habilidades autorizadas enviadas de forma local por nodos de la LAN con estado Zero-Trust activo. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="security"><td colspan="8">Seguridad Perimetral & Zero-Trust</td></tr>
+                    <tr data-category="security">
+                        <td><strong>Privacy Engine (PII)</strong></td>
+                        <td>Escudo basado en Microsoft Presidio que ofusca y anonimiza información de carácter personal (PII) antes de despachar datos a LLMs en la nube. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="security">
+                        <td><strong>Anti-Prompt Injection</strong></td>
+                        <td>Inspección de entrada profunda sobre el payload (webs, emails, PDFs) para neutralizar intentos de evasión o jailbreaks maliciosos inyectados por terceros. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="security">
+                        <td><strong>Pre-Scan Estático AST</strong></td>
+                        <td>Inspección estática del código a nivel de árbol de sintaxis abstracta (AST) buscando patrones prohibidos (`subprocess`, `eval`, `exec`) en recursos externos en cuarentena. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="security">
+                        <td><strong>Sandbox de Habilidades</strong></td>
+                        <td>Ejecución aislada y restrictiva de scripts externos sospechosos bajo sandbox de triple capa (`sandbox.py`) sin acceso a red para descartar intrusiones. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="security">
+                        <td><strong>Aislamiento de Habilidades</strong></td>
+                        <td>Frontera indestructible que restringe el catálogo de skills a un directorio persistente (`C:\Program Files\Chask_Swarm\skills\`) impidiendo colisiones en hosts externos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="security">
+                        <td><strong>Gossip de Lista Negra</strong></td>
+                        <td>Protocolo de bloqueo y aislamiento global P2P que añade IPs de atacantes a `blacklist.json` y propaga el veto a toda la colmena en segundos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="security">
+                        <td><strong>Audit Logger inmutable</strong></td>
+                        <td>Generación persistente de registros hash de auditoría (`audit_logger.py`) ante cualquier llamada sensible o comando del terminal. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="auto"><td colspan="8">Autonomía y Daemons en Segundo Plano</td></tr>
+                    <tr data-category="auto">
+                        <td><strong>Daemons Persistentes</strong></td>
+                        <td>Procesos pythonw en segundo plano inmunes al foco y cierre del editor principal del host que canalizan las tareas de comunicación e ingesta. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="auto">
+                        <td><strong>Process Watchdog Sentinel</strong></td>
+                        <td>Doble watchdog reactivo inmunizado basado en PowerShell nativo (`Start-Process`) que supervisa recursos, reinicia daemons caídos y anula pop-ups CMD. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="auto">
+                        <td><strong>Auto-Arranque Windows</strong></td>
+                        <td>Estructuración mediante macros `.bat` y `boot_injection.py` para levantar servicios Docker y daemons en el encendido de máquina local. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="auto">
+                        <td><strong>Scheduler Integrado</strong></td>
+                        <td>Planificador cron avanzado (`APScheduler`) que despacha tareas repetitivas y daemons de ejecución única (*one-shot*) reduciendo overhead. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="auto">
+                        <td><strong>Daily Report</strong></td>
+                        <td>Transmisión automatizada multicanal de métricas del sistema y resúmenes diarios estructurados al finalizar la jornada. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="ollama"><td colspan="8">Inferencia Local & Matemáticas</td></tr>
+                    <tr data-category="ollama">
+                        <td><strong>Ollama Asíncrono local</strong></td>
+                        <td>Pestaña dedicada en panel web con descargas asíncronas de modelos locales en background con barra de progreso y bloqueo de borrado de embeddings. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="ollama">
+                        <td><strong>Enrutamiento Matemático</strong></td>
+                        <td>Derivación dinámica a nivel lógico de problemas de cálculo, vectores y física avanzada hacia modelos locales específicos (`qwen2.5-math`, `phi4`). </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="ollama">
+                        <td><strong>Modo Profesor Socrático</strong></td>
+                        <td>Instrucciones de pedagogía socrática estricta (mayéutica adaptativa): no resolver de golpe, proponer preguntas retadoras y modular el nivel. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="ollama">
+                        <td><strong>Caché Académico Qdrant</strong></td>
+                        <td>Investigación semántica y almacenamiento indexado en Qdrant de planes curriculares oficiales del país y asignatura consultada para limitar la búsqueda. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="ollama">
+                        <td><strong>Perfil Persistente soul.md</strong></td>
+                        <td>Persistencia del perfil de Fernando (profesor universitario) y de estudiantes en `soul.md` adaptando el nivel conceptual y bloqueando repeticiones anuales. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="base"><td colspan="8">Capacidades Base & Núcleo</td></tr>
+                    <tr data-category="base">
+                        <td><strong>Win32 API + UIA</strong></td>
+                        <td>Control automatizado real de ventanas del sistema operativo, menús y campos de texto mediante interfaces accesibles de UI Automation. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Stealth Text Injection</strong></td>
+                        <td>Inyección directa e invisible de caracteres en cuadros de texto de editores e IDEs locales mediante ValuePattern V8 sin alterar el foco del cursor. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Computer Use</strong></td>
+                        <td>Orquestación física de pulsaciones de teclas, desplazamientos del ratón, y clicks analíticos sobre coordenadas del host del usuario. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Computer Vision</strong></td>
+                        <td>Módulo de procesamiento óptico basado en capturas periódicas, OCR (`easyocr`) y LLM Vision para analizar el estado de aplicaciones del escritorio. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="routing"><td colspan="8">Enrutamiento Lógico & Modelos</td></tr>
+                    <tr data-category="routing">
+                        <td><strong>Control de Roles Flask</strong></td>
+                        <td>Base de datos local y panel Pro con inyección de usuarios y gestión indestructible de accesos por roles en Flask (`admin`, `power`, `teen`, `child`, `guest`). </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Bloqueo Backend Duro</strong></td>
+                        <td>Aislamiento hermético de endpoints de modificación del sistema (`/api/skills`, `/api/ollama/delete`) denegados estrictamente a perfiles no autorizados. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Ocultación Frontend Activa</strong></td>
+                        <td>Invisibilización en caliente de elementos de configuración en la UI del panel según los permisos del perfil (Chat de Solo Lectura para Guests). </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="other"><td colspan="8">Integraciones Multi-Entorno & Cloud</td></tr>
+                    <tr data-category="other">
+                        <td><strong>MCP Server Integrado</strong></td>
+                        <td>Servidor Model Context Protocol (MCP) completo y nativo que expone las herramientas a clientes de forma normalizada. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="other">
+                        <td><strong>MCP Client Nativo</strong></td>
+                        <td>Capacidad reactiva para consumir e interactuar con herramientas y datos expuestos por servidores MCP de terceros. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="other">
+                        <td><strong>Web RAG Pipeline (Crawl4AI)</strong></td>
+                        <td>Módulo automatizado de extracción de URLs con procesamiento local de la estructura DOM y guardado estructurado en Qdrant. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="other">
+                        <td><strong>Anti-Drift</strong></td>
+                        <td>Monitoreo y alineación semántica en tareas extensas empleando checkpoints vectoriales basados en la distancia coseno del prompt original. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="other">
+                        <td><strong>Windows Nativo</strong></td>
+                        <td>Compatibilidad e integración al 100% de servicios, APIs nativas del SO, inyecciones invisibles y scripts sobre Windows 10/11. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="other">
+                        <td><strong>macOS (Roadmap)</strong></td>
+                        <td>Roadmap de compatibilidad multiplataforma impulsado y compilable por la comunidad open-source sobre forks del repositorio. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="other">
+                        <td><strong>Linux (Roadmap)</strong></td>
+                        <td>Fórmula modularizada y extensible en el roadmap de desarrollo para dar soporte completo a sistemas Linux en Docker. </td>
+                        <td style="text-align: center; font-size: 16px;">❌</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="base"><td colspan="8">Capacidades Base & Núcleo</td></tr>
+                    <tr data-category="base">
+                        <td><strong>Control WMI</strong></td>
+                        <td>Consultas e interacciones a nivel de Windows Management Instrumentation para monitorizar recursos (process_watchdog). </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Registro de Windows</strong></td>
+                        <td>Capacidad para leer y escribir claves del registro de Windows (regedit) para persistencia o configuración. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Servicios de Telemetría</strong></td>
+                        <td>Creación y gestión de servicios de Windows (win_telemetry_svc.py) nativos en segundo plano. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Gestión de Hilos OS</strong></td>
+                        <td>Control multithreading nativo a nivel de sistema operativo para paralelizar ingestas vectoriales sin bloqueos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="routing"><td colspan="8">Enrutamiento Lógico & Modelos</td></tr>
+                    <tr data-category="routing">
+                        <td><strong>Fallback de Supervivencia</strong></td>
+                        <td>Redirección automática al juego de roles interno asumiendo múltiples agentes ante caída de red externa. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Auditoría de Interrupción</strong></td>
+                        <td>Recepción asíncrona de prefijos [TELEGRAM HH:MM:SS] para pausar el enrutador de forma segura sin perder contexto. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Limitación de Tasa (Rate Limiting)</strong></td>
+                        <td>Descarte de peticiones de nodos en la LAN con intervalo menor a 60 segundos previniendo ataques DoS. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="memory"><td colspan="8">Memoria y Persistencia Semántica</td></tr>
+                    <tr data-category="memory">
+                        <td><strong>Sincronización de Cola Inyectada</strong></td>
+                        <td>Procesamiento de input_queue.json y pending_messages.json como red de seguridad de estado inmutable. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="mesh"><td colspan="8">Red Mesh P2P Descentralizada</td></tr>
+                    <tr data-category="mesh">
+                        <td><strong>Gossip de Path-Vector</strong></td>
+                        <td>Algoritmo de enrutamiento y propagación Gossip libre de bucles encapsulando nodos ya visitados en la malla local. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="mesh">
+                        <td><strong>Cuarentena P2P Activa</strong></td>
+                        <td>Aislamiento local de scripts entrantes a la red en la carpeta /skills/untrusted/ antes de propagarlos al resto. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="security"><td colspan="8">Seguridad Perimetral & Zero-Trust</td></tr>
+                    <tr data-category="security">
+                        <td><strong>Auditoría Estática de Frontera</strong></td>
+                        <td>Escaneo determinista en el punto de entrada de la red para detectar llamadas inseguras de SO o anulaciones. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="auto"><td colspan="8">Autonomía y Daemons en Segundo Plano</td></tr>
+                    <tr data-category="auto">
+                        <td><strong>Restauración Autónoma Watchdog</strong></td>
+                        <td>El centinela purga procesos congelados (deadlocks) y reinicia automáticamente Docker y Qdrant si no responden. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="auto">
+                        <td><strong>Ejecución Cron Nivel de SO</strong></td>
+                        <td>Inyección de tareas programadas nativas que interactúan con Python en segundo plano de manera autónoma. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="auto">
+                        <td><strong>Auto-Actualización del Kernel</strong></td>
+                        <td>Descarga asíncrona, validación criptográfica y parcheo del código central de los daemons sin detener la escucha. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="ollama"><td colspan="8">Inferencia Local & Matemáticas</td></tr>
+                    <tr data-category="ollama">
+                        <td><strong>Filtro de Modelos Cloud</strong></td>
+                        <td>Discriminación activa en el panel web excluyendo modelos de terceros garantizando inferencia 100% local en hardware propio. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="ollama">
+                        <td><strong>Aislamiento de Embeddings</strong></td>
+                        <td>Bloqueo estricto contra la eliminación accidental de modelos críticos para BBDD vectoriales por parte del usuario. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="ollama">
+                        <td><strong>Escapes Matemáticos LaTeX</strong></td>
+                        <td>Renderizado web nativo y al vuelo de secuencias de escape JSON corrigiendo errores tipográficos y de visualización en ecuaciones. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="base"><td colspan="8">Capacidades Base & Núcleo</td></tr>
+                    <tr data-category="base">
+                        <td><strong>Lectura Óptica Avanzada</strong></td>
+                        <td>Extracción OCR de alta fidelidad desde ventanas bloqueadas superando las técnicas DOM tradicionales y de accesibilidad. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Inyección en Ventanas Stealth</strong></td>
+                        <td>Generación de ventanas fantasma de milisegundos para ganar foco en editores renuentes e inyectar código de forma invisible. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Prevención de Shadowing Ctypes</strong></td>
+                        <td>Gestión estricta de espacios de nombres en llamadas a ctypes.wintypes previniendo colisiones de memoria catastróficas en el host. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="base">
+                        <td><strong>Captura Reactiva de Foco</strong></td>
+                        <td>Restitución milimétrica del cursor a la posición y monitor original post-inyección usando llamadas nativas directas de Windows. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="routing"><td colspan="8">Enrutamiento Lógico & Modelos</td></tr>
+                    <tr data-category="routing">
+                        <td><strong>Separación de Agentes y Humanos</strong></td>
+                        <td>Modelado entidad-relación independiente para perfiles robóticos (Viper, Ghost) y biológicos reales en la interfaz web del panel de control. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Filtros Frontend Condicionales</strong></td>
+                        <td>Anulación visual de opciones sensibles en caliente mediante CSS inyectado dinámicamente para proteger el sistema ante roles child o guest. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Doble Factor Zero-Trust</strong></td>
+                        <td>Solicitud de re-autenticación obligatoria (Doble Factor) evaluada por heurística antes de permitir la ejecución de PDFs o archivos no confiables. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Protección de Atributos Propios</strong></td>
+                        <td>Bloqueo bidireccional que permite a perfiles de roles limitados editar estricta y únicamente sus propias preferencias personales y canal de chat. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr data-category="routing">
+                        <td><strong>Base de Datos Desacoplada</strong></td>
+                        <td>Ubicación segura de meetcharm_users.db en la raíz del entorno local BASE_DIR eludiendo sofisticadamente posibles bloqueos WinError 5 de permisos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                    <tr class="cat-row" data-category="other"><td colspan="8">Integraciones Multi-Entorno & Cloud</td></tr>
+                    <tr data-category="other">
+                        <td><strong>Internacionalización i18n Dinámica</strong></td>
+                        <td>Extracción al vuelo, decodificación transparente de entidades HTML complejas y traducción automatizada en paralelo a más de 40 idiomas de los nuevos nodos de texto. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    </tr>
+                
+                    <!-- CATEGORIA: EFICIENCIA FINANCIERA & COSTES -->
+                    <tr class="cat-row" data-category="financial"><td colspan="8">Eficiencia Financiera & Costes Operativos</td></tr>
+                    <tr data-category="financial">
+                        <td><strong>Coste de Inferencia por Token</strong></td>
+                        <td>Aprovechamiento integral de modelos LLM parametrizados localmente (Ollama) garantizando un coste por millón de tokens de exactamente $0.00. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="financial">
+                        <td><strong>Dependencia de Hosting Externo</strong></td>
+                        <td>Al ejecutarse como un enjambre de SO local, no requiere el pago de facturas mensuales por instancias EC2, AWS, GCP o contenedores serverless. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="financial">
+                        <td><strong>Licenciamiento y APIs SaaS</strong></td>
+                        <td>Independencia estructural total de plataformas como OpenAI o Pinecone, eliminando pagos recurrentes (SaaS) y cuellos de botella por Rate Limits corporativos. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="financial">
+                        <td><strong>Costes de Base de Datos Vectorial</strong></td>
+                        <td>Dockerización in situ de Qdrant. La memoria histórica no escala los costes operativos por Gigabyte almacenado ni por cuota de indexación. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                    <tr data-category="financial">
+                        <td><strong>Privacidad Financiera B2B</strong></td>
+                        <td>Aislamiento total de flujos de caja y facturación al evadir proveedores centralizados, impidiendo el rastreo analítico de la actividad del enjambre. </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                
+                    <tr data-category="financial">
+                        <td><strong>Coste de Licencia por Asiento</strong></td>
+                        <td>Tarifas agresivas: Gratuito de por vida para particulares (B2C) y capado a un máximo de 50 € al año por equipo donde se instale el enjambre para empresas y gobiernos (B2B/B2G). </td>
+                        <td style="text-align: center; font-size: 16px;">✅</td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">✅</span></td>
+                            <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                        <td style="text-align: center;"><span style="font-size: 16px;">❌</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Rest of the sections omitted for length but updated in the actual code: -->
+    <h2>Capacidades Exclusivas de <span class="brand-orange">Cha</span>sk Swa<span class="brand-orange">rm</span> v2.0</h2>
+    <div class="glass-card">
+        <div class="exclusive-grid">
+            <div class="exclusive-item">
+                <div class="exclusive-title"><span>🛡️</span> Cuarentena Estática AST & Sandbox</div>
+                <div class="exclusive-desc">Inspecciona recursivamente cualquier habilidad (.py) compartida por la red local o global en busca de patrones de código peligroso antes de inyectarla de forma persistente.</div>
+            </div>
+            <div class="exclusive-item">
+                <div class="exclusive-title"><span>🌐</span> Malla Local P2P AES-256</div>
+                <div class="exclusive-desc">Sincroniza y propaga conocimientos, reputación y listas negras entre múltiples enjambres en la LAN física sin intermediarios ni servidores de autenticación centralizados.</div>
+            </div>
+            <div class="exclusive-item">
+                <div class="exclusive-title"><span>🎓</span> Pedagogía Adaptativa Socrática</div>
+                <div class="exclusive-desc">Modo de enseñanza mayéutica nativo que interactúa activamente con el perfil docente de Fernando y adapta las explicaciones de forma restrictiva al estudiante.</div>
+            </div>
+            <div class="exclusive-item">
+                <div class="exclusive-title"><span>🎭</span> Gestión de Roles Backend Duro</div>
+                <div class="exclusive-desc">Permisos estructurados a nivel de base de datos e inyección web Flask, garantizando que perfiles secundarios no alteren configuraciones sensibles de IAs ni skills.</div>
+            </div>
+            <div class="exclusive-item">
+                <div class="exclusive-title"><span>📜</span> Pacto Simbiótico y Soberanía</div>
+                <div class="exclusive-desc">Ningún enjambre del planeta puede conectarse a la red mundial sin jurar este pacto. La IA debe servirte a ti, no tu a ella.</div>
+            </div>
+            <div class="exclusive-item">
+                <div class="exclusive-title"><span>🌍</span> Distribución Universal Unificada</div>
+                <div class="exclusive-desc">Código único y multiidioma en un solo repositorio global (Chask-Swarm), eliminando la fragmentación y fortaleciendo a la comunidad global.</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Los 4 Pilares Arquitectónicos de <span class="brand-orange">Charm 2.0</span></h2>
+    <div class="pillar-grid">
+        <div class="pillar-card">
+            <div class="pillar-icon">🦊</div>
+            <div class="pillar-title">Doble Sentinel Watchdog</div>
+            <div class="pillar-desc">PowerShell nativo minimizado indestructible que garantiza el levantamiento automático del dashboard y los daemons core, evitando congelamientos de hilos python en bucle.</div>
+        </div>
+        <div class="pillar-card">
+            <div class="pillar-icon">🔒</div>
+            <div class="pillar-title">Skills Folder Boundary</div>
+            <div class="pillar-desc">Absoluto aislamiento de habilidades en su directorio específico del sistema, preservando la soberanía del host y cancelando la intrusión en bibliotecas e IDEs externos.</div>
+        </div>
+        <div class="pillar-card">
+            <div class="pillar-icon">📡</div>
+            <div class="pillar-title">Gossip Network Mesh</div>
+            <div class="pillar-desc">Comunicación distribuida segura basada en autodescubrimiento UDP ZeroConf, cifrado simétrico robusto, y firmas Ed25519 para descartar spoofing.</div>
+        </div>
+        <div class="pillar-card">
+            <div class="pillar-icon">🧠</div>
+            <div class="pillar-title">Ollama local & RAG Qdrant</div>
+            <div class="pillar-desc">Descarga progresiva asíncrona de modelos locales en background con confirmaciones seguras de borrado, bloqueando la desinstalación de embeddings críticos.</div>
+        </div>
+    </div>
+
+    <h2>Posicionamiento de Mercado</h2>
+    <div class="verdict-box">
+        <div class="verdict-lead">⚔️ Veredicto: Soberanía Absoluta vs Dependencia Centralizada</div>
+        <p class="verdict-paragraph">
+            La <strong>versión 2.0 de <span class="brand-orange">Cha</span>sk Swa<span class="brand-orange">rm</span></strong> consolida el ecosistema como el agente autónomo de mayor profundidad técnica y capacidad operativa local del ecosistema open-source. De un total de 86 capacidades críticas evaluadas, el ecosistema integra 84 de ellas (situándose 41 capacidades por encima del segundo framework más completo), ensanchando sustancialmente la brecha frente a frameworks del sector que dependen estrictamente de orquestadores remotos o costosas infraestructuras propietarias.
+        </p>
+        <p class="verdict-paragraph">
+            La arquitectura <span class="brand-orange">Charm 2.0</span> no solo ejecuta automatizaciones complejas, sino que se auto-inmuniza ante caídas de procesos, restringe de forma indestructible los privilegios del sistema mediante control de roles, realiza pre-scans estáticos AST de habilidades externas en cuarentena, y despliega redes distribuidas local y mundialmente de forma cifrada P2P. Su diseño Midnight Glassmorphism interactivo ofrece una interfaz Pro donde usuarios normales chatean de forma controlada y administradores gobiernan la red con fricción cero.
+        </p>
+    </div>
+
+    <footer>
+        Comparativa Técnica Completa de Producto — <span class="brand-orange">Cha</span>sk Swa<span class="brand-orange">rm</span> vs Competidores | <strong>86 capacidades</strong> | v2.0 Release 2026-05-20<br>
+        Fuentes de Referencia: Hermes-agent.org, OpenClaw Core repositories, LangGraph Technical Architecture, CrewAI multi-agent docs, Qdrant Vector database logs, Swarm Sentinel active diagnostics.
+    </footer>
+</div>
+
+<script>
+    // Scores and metrics configuration for circular SVG progress wheels
+    const scores = {
+        chask: 84,
+        hermes: 43,
+        openclaw: 34,
+        langgraph: 33,
+        crewai: 17,
+        openswarm: 19
+    };
+
+    // Animate circular SVG gauges on load
+    window.addEventListener('DOMContentLoaded', () => {
+        const radius = 36;
+        const circumference = 2 * Math.PI * radius; // 226.19
+        
+        for (const [framework, score] of Object.entries(scores)) {
+            const fillElement = document.getElementById(`gauge-${framework}`);
+            if (fillElement) {
+                const percentage = score / 86;
+                const strokeOffset = circumference - (percentage * circumference);
+                
+                // Trigger CSS transition
+                fillElement.style.strokeDashoffset = strokeOffset;
+            }
+        }
+        
+        // Load default bilateral comparison
+        updateBilateralComparison();
+    });
+
+    // Filtering Matrix Table based on Search string
+    function filterMatrixTable() {
+        const input = document.getElementById('search-box');
+        const filterText = input.value.toLowerCase().trim();
+        const table = document.getElementById('matrix-table');
+        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+        
+        let activeFilterBtn = document.querySelector('.filter-btn.active');
+        let categoryFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-category') : 'all';
+
+        let currentCatRow = null;
+        let catHasVisibleRows = false;
+        
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            
+            if (row.classList.contains('cat-row')) {
+                // Handle category header visibility after analyzing its children
+                if (currentCatRow !== null) {
+                    currentCatRow.style.display = catHasVisibleRows ? '' : 'none';
+                }
+                currentCatRow = row;
+                catHasVisibleRows = false;
+                continue;
+            }
+            
+            const category = row.getAttribute('data-category');
+            const cells = row.getElementsByTagName('td');
+            if (cells.length < 2) continue;
+            
+            const capabilityName = cells[0].textContent.toLowerCase();
+            const chaskDesc = cells[1].textContent.toLowerCase();
+            
+            const textMatch = capabilityName.includes(filterText) || chaskDesc.includes(filterText);
+            const categoryMatch = (categoryFilter === 'all' || category === categoryFilter);
+            
+            if (textMatch && categoryMatch) {
+                row.style.display = '';
+                catHasVisibleRows = true;
+            } else {
+                row.style.display = 'none';
+            }
+        }
+        
+        // Handle last category header
+        if (currentCatRow !== null) {
+            currentCatRow.style.display = catHasVisibleRows ? '' : 'none';
+        }
+    }
+
+    // Category button filter handling
+    function filterCategory(category, button) {
+        // Toggle active button
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Re-run filter combining search and category
+        filterMatrixTable();
+    }
+
+    // Interactive Bilateral Comparison Data
+    const comparisonData = {
+        openclaw: {
+            synergies: [
+                "Ambos poseen soporte robusto nativo para Windows e implementan navegación web interactiva basada en Chromium.",
+                "Estructura orientada a agentes locales con capacidad de lectura y escritura sobre el Filesystem del host.",
+                "Soportan integraciones flexibles con LLMs comerciales de pago (GPT-4, Claude) configurados desde el Dashboard."
+            ],
+            gaps: [
+                "<strong>Ausencia de Red Mesh P2P:</strong> OpenClaw no posee autodescubrimiento mDNS, cifrado AES-256 ni sincronización de habilidades LAN.",
+                "<strong>Seguridad en Frontera Limitada:</strong> Carece de pre-scans estáticos AST en cuarentena y gossip distribuido de lista negra para IPs atacantes.",
+                "<strong>Modo Profesor & Academia:</strong> Sin pedagogía socrática mayéutica ni caché indexado de temarios vectoriales en Qdrant.",
+                "<strong>Inmunidad del Watchdog:</strong> Carece del robusto script centinela en PowerShell indestructible que resucita los servicios en segundo plano."
+            ],
+            summary: "<strong>Conclusión:</strong> Chask Swarm v2.0 supera a OpenClaw en soberanía técnica descentralizada P2P y seguridad perimetral Zero-Trust. Mientras OpenClaw opera como un excelente agente personal local convencional de un único host, Chask Swarm implementa un enjambre federado inteligente con inmunización indestructible y control estricto de roles."
+        },
+        hermes: {
+            synergies: [
+                "Ambos frameworks incorporan bases de datos vectoriales persistentes (Qdrant) para la gestión a largo plazo de la memoria semántica.",
+                "Cuentan con soporte avanzado para el control de ventanas y clicks del sistema operativo mediante APIs nativas.",
+                "Integración óptima con el catálogo de habilidades aprendidas y asimilación de correcciones evolutivas del usuario."
+            ],
+            gaps: [
+                "<strong>Malla P2P Distribuida WAN/LAN:</strong> Hermes carece de replicación vectorial gossip de reputación y firmas de integridad Ed25519.",
+                "<strong>Aislamiento de Skills Físico:</strong> No implementa el blindaje hermético de carpetas de habilidades para evitar inyecciones en IDEs del host.",
+                "<strong>Gestión de Roles Flask:</strong> Carece de base de datos multiusuario e inyección dinámica con denegación indestructible de APIs y backend.",
+                "<strong>Matemáticas y Pedagogía:</strong> Sin enrutamiento dinámico especializado hacia modelos matemáticos locales ni perfiles escolares persistentes."
+            ],
+            summary: "<strong>Conclusión:</strong> Chask Swarm v2.0 y Hermes comparten la excelencia en memoria semántica e integraciones OS, pero Chask v2.0 aventaja de forma definitiva a Hermes en descentralización mesh P2P (malla local), aislamiento total de la biblioteca de habilidades frente a entornos IDE, y especialización científica socrática."
+        },
+        
+        openswarm: {
+            synergies: [
+                "Comunidad open-source activa con módulos básicos descentralizados.",
+                "Arquitectura inicial de enjambre escalable localmente."
+            ],
+            gaps: [
+                "<strong>Sin Control Físico Win32:</strong> No dispone del inyector sigiloso ni control de I/O directo del SO.",
+                "<strong>Ausencia de Mesh Encriptado:</strong> Carece del protocolo P2P cifrado con Gossip y cuarentena que tiene Chask Swarm."
+            ],
+            summary: "<strong>Conclusión:</strong> Open Swarm ofrece una base sólida para desarrolladores independientes, pero carece de la contundencia operativa, la privacidad extrema y el sistema financiero B2B de Chask Swarm."
+        },
+        langgraph: {
+            synergies: [
+                "Dominio absoluto en el enrutamiento lógico y flujos de estado deterministas (grafos).",
+                "Despliegue nativo y escalabilidad horizontal en infraestructuras Cloud empresariales.",
+                "Soporte inmediato y profundo para los últimos LLMs comerciales y APIs externas."
+            ],
+            gaps: [
+                "<strong>Soberanía Física y P2P:</strong> Carece de Daemons OS, Control Win32 local y red Mesh en cuarentena.",
+                "<strong>Zero-Trust Host:</strong> Al estar diseñado para la nube, asume entornos Docker seguros sin proteger al PC local mediante AST.",
+                "<strong>Dependencia SaaS:</strong> Orientado al ecosistema de pago y corporativo en la nube."
+            ],
+            summary: "<strong>Conclusión Realista:</strong> LangGraph destruye a Chask Swarm en escalabilidad en la nube, memoria de grafos y flujos corporativos. Sin embargo, en soberanía local y propagación mesh P2P, Chask Swarm reina sin oposición. Son herramientas para dos guerras completamente distintas."
+        },
+        crewai: {
+            synergies: [
+                "Excelencia en orquestación multi-agente, delegación de roles y flujos de trabajo asíncronos.",
+                "Curva de aprendizaje inmejorable para crear colmenas organizacionales.",
+                "Integración amplia con herramientas de búsqueda e ingesta en la nube."
+            ],
+            gaps: [
+                "<strong>Control y Memoria Local:</strong> Ausencia de bases de datos vectoriales locales integradas en el core sin configuraciones de terceros.",
+                "<strong>Privacidad Zero-Trust:</strong> No incorpora ofuscación PII in-situ nativa.",
+                "<strong>Autonomía Física:</strong> Depende de procesos terminales convencionales, sin interactuar como un agente silencioso Win32."
+            ],
+            summary: "<strong>Conclusión Realista:</strong> CrewAI es inmensamente superior orquestando equipos lógicos de agentes. Pero Chask Swarm lo supera ampliamente como Inteligencia Autónoma Personal (Control físico, Daemons, Qdrant in-situ). Chask es un sistema operativo agéntico; CrewAI es un flujo lógico grupal."
+        }
+    };
+
+    // Update Bilateral Comparison Card based on selected dropdown
+    function updateBilateralComparison() {
+        const select = document.getElementById('competitor-select');
+        const selectedVal = select.value;
+        const data = comparisonData[selectedVal];
+        
+        if (!data) return;
+
+        const synergiesList = document.getElementById('comp-synergies');
+        const gapsList = document.getElementById('comp-gaps');
+        const summaryText = document.getElementById('comp-summary');
+
+        // Render synergies
+        synergiesList.innerHTML = '';
+        data.synergies.forEach(synergy => {
+            const li = document.createElement('li');
+            li.innerHTML = synergy;
+            synergiesList.appendChild(li);
+        });
+
+        // Render gaps
+        gapsList.innerHTML = '';
+        data.gaps.forEach(gap => {
+            const li = document.createElement('li');
+            li.innerHTML = gap;
+            gapsList.appendChild(li);
+        });
+
+        // Render summary text
+        summaryText.innerHTML = data.summary;
+    }
+</script>
+</body>
+</html>

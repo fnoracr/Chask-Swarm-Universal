@@ -5,8 +5,8 @@ import subprocess
 import requests
 
 BASE_DIR = r"C:\Program Files\Chask_Swarm"
-CONFIG_FILE = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-TELEGRAM_SCRIPT = os.path.join(BASE_DIR, "antigravity_telegram.py")
+CONFIG_FILE = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+TELEGRAM_SCRIPT = os.path.join(BASE_DIR, "telegram_sender.py")
 
 def load_config():
     try:
@@ -27,7 +27,7 @@ def send_webhook(url, message, platform):
     if platform == "discord":
         payload = {
             "content": message,
-            "username": "[Nombre_IA] (Chask Swarm)",
+            "username": "Nora (Chask Swarm)",
             "avatar_url": "https://files.catbox.moe/r054at.JPG"
         }
     elif platform == "slack":

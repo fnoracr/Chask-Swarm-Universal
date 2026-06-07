@@ -255,7 +255,7 @@ def merge_htmls(analyses: list, output_path: str) -> dict:
     # Footer
     final_html += f"""
     <div style="text-align: center; margin-top: 50px; color: #666; padding-bottom: 50px;">
-        <p>Chask Swarm Ecosystem &copy; 2026 &mdash; Desarrollado por Administrador Enjambre</p>
+        <p>Chask Swarm Ecosystem &copy; 2026 &mdash; Desarrollado por Fernando Enjambre</p>
         <p style="margin-top:6px;font-size:13px;">{version}</p>
     </div>
 </div>
@@ -302,8 +302,8 @@ def run(prompt: str) -> str:
         if os.path.isdir(rel_path):
             search_dirs.append(rel_path)
 
-    # Directorio por defecto: [Nombre_IA]_ES
-    search_dirs.append(os.path.join(base, "[Nombre_IA]_ES"))
+    # Directorio por defecto: Charm_ES
+    search_dirs.append(os.path.join(base, "Charm_ES"))
     search_dirs.append(base)
 
     # Buscar HTMLs

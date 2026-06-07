@@ -2,7 +2,7 @@
 html_builder.py — Skill para generar HTMLs largos sin exceder tokens
 =====================================================================
 Genera archivos HTML grandes mediante plantillas Python, evitando que
-[Nombre_IA] exceda el límite de tokens al escribir HTML inline.
+Charm exceda el límite de tokens al escribir HTML inline.
 
 Uso:
   from html_builder import HTMLBuilder

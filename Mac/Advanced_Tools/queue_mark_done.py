@@ -1,7 +1,7 @@
 """Marca todos los mensajes 'processing' como 'processed' y relanza el centinela."""
 import json, subprocess, sys, os
 
-QUEUE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
+QUEUE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Colas_Mensajes\input_queue.json"
 SENTINEL = r"C:\Program Files\Chask_Swarm\Advanced_Tools\queue_sentinel.py"
 PYTHON = sys.executable
 

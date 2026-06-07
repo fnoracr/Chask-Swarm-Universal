@@ -1,5 +1,5 @@
 """
-slack_worker.py — Worker Slack via Socket Mode para [Nombre_IA]
+slack_worker.py — Worker Slack via Socket Mode para Nora
 Ejecutado como subproceso por unified_channel_daemon para aislar la conexión.
 Requiere: pip install slack-sdk
 """
@@ -9,8 +9,8 @@ from datetime import datetime
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 BASE_DIR        = r"C:\Program Files\Chask_Swarm"
-CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
+CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 LOG_FILE        = os.path.join(BASE_DIR, "Advanced_Tools", "unified_channel.log")
 
 def log(msg):

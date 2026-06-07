@@ -38,10 +38,10 @@ except ImportError:
 
 ROOT        = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS       = ROOT / "Advanced_Tools"
-INET_CONFIG = ROOT / "Configuration/swarm_internet_config.json"
+INET_CONFIG = ROOT / "Configuracion/swarm_internet_config.json"
 ROUTERS_CACHE = ROOT / "cached_routers.json"
 PEERS_FILE  = ROOT / "connected_peers.json"   # Solo enrutadores: enjambres conectados
-INET_LOG    = ROOT / "System_Logs/swarm_internet.log"
+INET_LOG    = ROOT / "Logs_Sistema/swarm_internet.log"
 sys.path.insert(0, str(TOOLS))
 import swarm_mesh_security as sms
 
@@ -1136,7 +1136,7 @@ def run_node_server(node: SwarmNode, port: int = NODE_PORT):
                 
                 # 1. Reportar al logger de seguridad
                 try:
-                    sec_log = ROOT / "System_Logs/security_audit.log"
+                    sec_log = ROOT / "Logs_Sistema/security_audit.log"
                     with open(sec_log, "a", encoding="utf-8") as f:
                         f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Malicious skill '{skill_data.get('name')}' from {sender_id} ({sender_ip}) rejected: {reason}\n")
                 except:

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chask Swarm — Arquitectura de Operación Actual (Cuadrícula Fija)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#050512;color:#e0e0e0;overflow:hidden;height:100vh;width:100vw}
+#toolbar{position:fixed;top:0;left:0;right:0;height:56px;background:linear-gradient(135deg,#12122b,#050515);
+  border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 24px;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.5)}
+#toolbar h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,#ff7a00,#ffaf66);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#toolbar .controls{margin-left:auto;display:flex;gap:8px}
+#toolbar button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#ccc;
+  padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;transition:.2s}
+#toolbar button:hover{background:rgba(255,255,255,.15);color:#fff}
+#zoom-info{color:#ccc;font-size:12px;margin-right:16px}
+#tip{color:#bbb;font-size:11px;margin-right:12px}
+#canvas-wrap{position:absolute;top:56px;left:0;right:0;bottom:0;overflow:hidden;cursor:grab}
+#canvas{position:absolute;transform-origin:0 0}
+.group{position:absolute;border-radius:16px;border:1px solid rgba(255,255,255,.1);
+  padding:48px 16px 16px;min-width:280px;max-width:320px;backdrop-filter:blur(10px)}
+.group-label{position:absolute;top:0;left:0;right:0;height:42px;line-height:42px;padding:0 16px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:.9;
+  user-select:none;border-radius:16px 16px 0 0}
+.node{background:rgba(10,10,25,.85);border:1px solid rgba(255,255,255,.12);border-radius:12px;
+  padding:12px 16px;margin:6px 0;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;backdrop-filter:blur(8px)}
+.node:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4);border-color:rgba(255,122,0,.4)}
+.node .icon{font-size:18px;margin-right:8px}
+.node .name{font-weight:600;font-size:13px}
+.node .desc{font-size:11px;color:#aaacbb;margin-top:4px;line-height:1.4;text-align:justify;text-justify:inter-word}
+.node.highlight{border-color:#ff7a00;box-shadow:0 0 20px rgba(255,122,0,.3)}
+svg.conns{position:absolute;top:0;left:0;pointer-events:none;z-index:50;overflow:visible}
+svg.conns path{pointer-events:stroke;cursor:pointer}
+svg.conns path:hover{opacity:0.9!important;stroke-width:3!important}
+#conn-tooltip{position:fixed;background:rgba(10,10,30,.95);color:#ddd;padding:6px 12px;border-radius:8px;
+  font-size:11px;font-family:'Inter',sans-serif;pointer-events:none;z-index:300;display:none;
+  border:1px solid rgba(255,255,255,.15);box-shadow:0 4px 16px rgba(0,0,0,.5)}
+#detail{position:fixed;bottom:20px;right:20px;width:340px;background:rgba(10,10,30,.95);
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;z-index:200;
+  backdrop-filter:blur(12px);display:none;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+#detail h3{font-size:15px;margin-bottom:8px;color:#ff7a00}
+#detail p{font-size:12px;color:#aaa;line-height:1.6;text-align:justify;text-justify:inter-word}
+#detail .close{position:absolute;top:12px;right:16px;cursor:pointer;color:#666;font-size:18px}
+#legend{position:fixed;bottom:20px;left:20px;background:rgba(10,10,30,.9);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:14px 18px;z-index:200;font-size:11px;backdrop-filter:blur(8px)}
+#legend div{display:flex;align-items:center;gap:8px;margin:4px 0}
+#legend .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+</style></head><body>
+<div id="toolbar">
+  <h1>Chask Swarm — Arquitectura de Operación Actual (Cuadrícula Fija)</h1>
+  <span id="tip">Scroll / Rueda = Zoom | Arrastra el lienzo para mover la vista | Clic en un nodo para ver detalles</span>
+  <span id="zoom-info">100%</span>
+  <div class="controls">
+    <button onclick="zoomTo(1)">Reset</button>
+    <button onclick="zoomTo(scale*1.3)">+</button>
+    <button onclick="zoomTo(scale/1.3)">-</button>
+    <button onclick="fitAll()">Ajustar</button>
+  </div>
+</div>
+<div id="canvas-wrap"><div id="canvas"><svg class="conns" id="svg"></svg></div></div>
+<div id="conn-tooltip"></div>
+<div id="detail"><span class="close" onclick="this.parentElement.style.display='none'">&times;</span><h3 id="d-title"></h3><p id="d-desc"></p></div>
+<div id="legend"></div>
+<script>
+const GROUPS=[
+  {"id": "data", "label": "Datos Persistentes", "color": "#84cc16", "x": 30, "y": 30, "nodes": [
+    {"id": "memory", "label": "Memoria de Estado", "desc": "Fichero de retención inmediata (memory.md). Almacena el proyecto actual, paso operativo y marca de tiempo.", "icon": "🧠"},
+    {"id": "directives", "label": "Directivas Fijas", "desc": "Reglas inmutables que guían al enjambre en su toma de decisiones (directives.md): protocolos de comunicación y Hive Mind.", "icon": "📜"},
+    {"id": "soul", "label": "Manifiesto de Alma", "desc": "Definición y principios del enjambre (soul.md) que definen su personalidad, ética cooperativa e instrucciones filosóficas.", "icon": "👻"}
+  ]},
+  {"id": "boot", "label": "Arranque y Launcher", "color": "#f59e0b", "x": 360, "y": 30, "nodes": [
+    {"id": "inicio", "label": "Launcher del Enjambre", "desc": "Orquestador de arranque. Inicializa la pila Docker local, lanza daemons en segundo plano e inicia las inyecciones de contexto.", "icon": "⚡"},
+    {"id": "boot_inj", "label": "Inyector de Contexto", "desc": "Inyecta el manifiesto de alma, memoria inmediata, directivas fijas y catálogo de herramientas operativas en la cola de mensajes al arrancar.", "icon": "💉"}
+  ]},
+  {"id": "comms", "label": "Comunicaciones", "color": "#3b82f6", "x": 690, "y": 30, "nodes": [
+    {"id": "unified", "label": "Daemon Unificado", "desc": "Proceso asíncrono que canaliza Telegram (long polling), Discord y listeners web en una única cola de entrada con reintentos automáticos.", "icon": "🌐"},
+    {"id": "tg_send", "label": "Módulo de Salida", "desc": "Tubería CLI para envíos prioritarios unidireccionales directos a la pasarela de control móvil sin interferir con los bucles principales.", "icon": "📤"},
+    {"id": "channel", "label": "Adaptador de Canales", "desc": "Router genérico multicanal con adaptadores integrados para Teams, Slack, Monday.com y Webhooks automatizados.", "icon": "🔀"}
+  ]},
+  {"id": "ai", "label": "Capa Cognitiva e Inteligencia", "color": "#ec4899", "x": 1020, "y": 30, "nodes": [
+    {"id": "llm", "label": "Router de Modelos (LLM)", "desc": "Distribuye cargas cognitivas dinámicamente entre APIs externas y modelos de inferencia local con balanceo ante fallos.", "icon": "🎯"},
+    {"id": "hive", "label": "Mente Colmena", "desc": "Protocolo de orquestación cooperativa: Planificador (Alpha) -> Investigador (Beta) -> Desarrollador (Gamma) -> Auditor (Delta).", "icon": "🐝"},
+    {"id": "orestes", "label": "Protocolo Orestes", "desc": "Protocolo de optimización extrema para tareas de alto impacto. Altera el flujo estándar de la colmena y despliega la Forja de Elektra para refinar prompts de forma iterativa hasta alcanzar calidad de grado militar.", "icon": "🔱"},
+    {"id": "elektra", "label": "Forja de Elektra", "desc": "Enjambre de optimización evolutiva local. Múltiples agentes compiten y colaboran en caliente, mutando prompts iterativamente para forjar un código impecable libre de deadlocks.", "icon": "🔥"},
+    {"id": "qdrant", "label": "Gestor Vectorial", "desc": "Almacén semántico local para búsquedas conceptuales avanzadas a través de modelos de embeddings de alto rendimiento.", "icon": "🧬"},
+    {"id": "evomem", "label": "Memoria de Aprendizaje", "desc": "Mapea aciertos, fallos y correcciones del Operador, indexándolos vectorialmente para su reutilización en problemas análogos.", "icon": "🧪"}
+  ]},
+  {"id": "infra", "label": "Infraestructura Local", "color": "#f97316", "x": 1350, "y": 30, "nodes": [
+    {"id": "docker", "label": "Docker Runtime", "desc": "Gestiona los contenedores locales dedicados de la base de datos vectorial y los entornos aislados de ejecución de código.", "icon": "🐳"},
+    {"id": "qdrant_db", "label": "Qdrant DB Local", "desc": "Motor de base de datos vectorial local que opera bajo el puerto 6333 para la retención y recuperación de contexto de largo plazo.", "icon": "💎"}
+  ]},
+  {"id": "queue", "label": "Colas de Mensajes", "color": "#8b5cf6", "x": 30, "y": 1000, "nodes": [
+    {"id": "input_q", "label": "Cola Principal Activa", "desc": "Archivo transaccional JSON con garantía ACID local. Los mensajes inyectados persisten de forma segura hasta que el procesador los ejecuta.", "icon": "📋"},
+    {"id": "pending", "label": "Historial de Auditoría", "desc": "Log persistente de todas las transacciones de mensajes temporales and permanentes para su representación visual.", "icon": "📑"}
+  ]},
+  {"id": "daemons", "label": "Servicios Centinela", "color": "#06b6d4", "x": 360, "y": 1000, "nodes": [
+    {"id": "watchdog", "label": "Proceso Guardián", "desc": "Centinela de procesos que vigila que todos los daemons estén sanos. En caso de caídas del entorno, los reinicia de inmediato.", "icon": "👁️"},
+    {"id": "shutdown", "label": "Shutdown Cleanup", "desc": "Gestor de apagado ordenado del sistema que detiene procesos, guarda la memoria y limpia el entorno.", "icon": "🛑"},
+    {"id": "backup", "label": "Backup Automatizado", "desc": "Realiza instantáneas comprimidas de los datos del sistema local a directorios protegidos de respaldo.", "icon": "💾"},
+    {"id": "wakeup", "label": "Wakeup Daemon", "desc": "Monitorea temporizadores locales de tareas pendientes y despierta el enjambre cuando expiran cronogramas programados.", "icon": "⏰"}
+  ]},
+  {"id": "ide", "label": "Entorno del Agente", "color": "#10b981", "x": 690, "y": 1000, "nodes": [
+    {"id": "charm", "label": "IDE Inteligente", "desc": "Interfaz operativa de control e interacción. Concentra el bucle de razonamiento de los subagentes, la manipulación de código y comandos.", "icon": "🖥️"},
+    {"id": "inject", "label": "Inyector del IDE", "desc": "Módulo universal de inyección por simulación de interfaz. Escribe de forma segura en los búferes de texto del entorno de desarrollo.", "icon": "📌"}
+  ]},
+  {"id": "network", "label": "Malla y Enlace de Red (LAN/WAN)", "color": "#a855f7", "x": 1350, "y": 1000, "nodes": [
+    {"id": "lan_mesh", "label": "Malla LAN P2P (mDNS/ZeroConf)", "desc": "Protocolo de autodescubrimiento local de otros nodos del enjambre en la misma red física sin depender de Internet. Habilita la replicación en caliente de habilidades.", "icon": "📶"},
+    {"id": "wan_conn", "label": "Túnel Seguro WAN (VPN WireGuard)", "desc": "Enlace cifrado punto a punto hacia el Servidor VPS Central y la red global para la sincronización de listados de reputación y control remoto robusto.", "icon": "🛡️"}
+  ]},
+  {"id": "security", "label": "Seguridad y Aislamiento", "color": "#ef4444", "x": 1020, "y": 1000, "nodes": [
+    {"id": "audit", "label": "Registro de Auditoría", "desc": "Interceptor de seguridad que valida privilegios y firma operaciones críticas antes de enviarlas al sistema host.", "icon": "📝"},
+    {"id": "sandbox", "label": "Caja de Arena Docker", "desc": "Entorno virtual local y aislado sin acceso a red donde se compila y ejecuta código de terceros sospechoso.", "icon": "🔒"},
+    {"id": "privacy", "label": "Escudo de Privacidad", "desc": "Filtro en tiempo real que enmascara y anonimiza identificadores de datos sensibles antes de transmitirlos a APIs externas.", "icon": "🕶️"}
+  ]}
+];
+
+const CONNS=[
+  {"from": "inicio", "to": "unified", "label": "Lanza", "color": "#f59e0b"},
+  {"from": "inicio", "to": "boot_inj", "label": "Ejecuta", "color": "#f59e0b"},
+  {"from": "inicio", "to": "charm", "label": "Abre IDE", "color": "#f59e0b"},
+  {"from": "inicio", "to": "watchdog", "label": "Centinela", "color": "#f59e0b"},
+  {"from": "boot_inj", "to": "input_q", "label": "Inyecta contexto", "color": "#8b5cf6"},
+  {"from": "unified", "to": "input_q", "label": "Canaliza mensajes", "color": "#3b82f6", "bidi": true},
+  {"from": "unified", "to": "inject", "label": "Pasa datos", "color": "#3b82f6"},
+  {"from": "inject", "to": "charm", "label": "Ctrl+V en IDE", "color": "#10b981"},
+  {"from": "charm", "to": "tg_send", "label": "Notificaciones", "color": "#10b981", "bidi": true},
+  {"from": "charm", "to": "channel", "label": "Broadcast", "color": "#10b981", "bidi": true},
+  {"from": "tg_send", "to": "unified", "label": "Móvil pasarela", "color": "#3b82f6", "dashed": true},
+  {"from": "watchdog", "to": "inject", "label": "Alerta salud", "color": "#06b6d4"},
+  {"from": "watchdog", "to": "charm", "label": "Restablece caída", "color": "#06b6d4", "dashed": true},
+  {"from": "wakeup", "to": "input_q", "label": "Inyecta alarmas", "color": "#06b6d4"},
+  {"from": "charm", "to": "llm", "label": "Razonamiento", "color": "#ec4899", "dashed": true},
+  {"from": "llm", "to": "hive", "label": "Despliega Colmena", "color": "#ec4899", "dashed": true},
+  {"from": "charm", "to": "qdrant", "label": "Query semántica", "color": "#ec4899", "bidi": true},
+  {"from": "evomem", "to": "qdrant", "label": "Aprende lecciones", "color": "#ec4899", "bidi": true},
+  {"from": "charm", "to": "evomem", "label": "Registra interacción", "color": "#ec4899", "bidi": true},
+  {"from": "charm", "to": "audit", "label": "Valida comando", "color": "#ef4444"},
+  {"from": "qdrant", "to": "qdrant_db", "label": "Lectura/Escritura", "color": "#f97316", "bidi": true},
+  {"from": "docker", "to": "qdrant_db", "label": "Corre", "color": "#f97316"},
+  {"from": "boot_inj", "to": "memory", "label": "Lee", "color": "#84cc16", "dashed": true},
+  {"from": "boot_inj", "to": "soul", "label": "Lee", "color": "#84cc16", "dashed": true},
+  {"from": "boot_inj", "to": "directives", "label": "Lee", "color": "#84cc16", "dashed": true},
+  {"from": "unified", "to": "lan_mesh", "label": "Canaliza tráfico LAN P2P", "color": "#3b82f6", "bidi": true},
+  {"from": "unified", "to": "wan_conn", "label": "Túnel VPN hacia VPS", "color": "#3b82f6", "bidi": true},
+  {"from": "qdrant", "to": "lan_mesh", "label": "Replicación de Skills LAN", "color": "#ec4899", "dashed": true, "bidi": true},
+  {"from": "qdrant", "to": "wan_conn", "label": "Sincronización reputacional WAN", "color": "#ec4899", "dashed": true, "bidi": true},
+  {"from": "hive", "to": "orestes", "label": "Invoca flujo extremo", "color": "#ec4899", "dashed": true},
+  {"from": "orestes", "to": "elektra", "label": "Despliega enjambre", "color": "#ec4899", "bidi": true},
+  {"from": "elektra", "to": "audit", "label": "Somete código a juicio", "color": "#ef4444"}
+];
+
+const canvas=document.getElementById('canvas');
+const wrap=document.getElementById('canvas-wrap');
+const svg=document.getElementById('svg');
+let scale=0.7,tx=40,ty=40;
+const groupEls={};
+
+// Identificamos filas: fila superior = y más pequeña, fila inferior = el resto
+const ROW_GAP=70; // margen entre el grupo más alto de la fila superior y la fila inferior
+const topRowIds=new Set();
+const bottomRowIds=new Set();
+const minTopY=Math.min(...GROUPS.map(g=>g.y));
+GROUPS.forEach(g=>{ if(g.y===minTopY) topRowIds.add(g.id); else bottomRowIds.add(g.id); });
+
+GROUPS.forEach(g=>{
+  const div=document.createElement('div');
+  div.className='group'; div.dataset.gid=g.id;
+  div.style.cssText=`left:${g.x}px;top:${g.y}px;background:${g.color}12;border-color:${g.color}40`;
+  const lbl=document.createElement('div');
+  lbl.className='group-label'; lbl.style.color=g.color; lbl.textContent=g.label;
+  div.appendChild(lbl);
+  (g.nodes||[]).forEach(n=>{
+    const nd=document.createElement('div');
+    nd.className='node'; nd.dataset.id=n.id;
+    nd.innerHTML=`<span class="icon">${n.icon||''}</span><span class="name">${n.label}</span><div class="desc">${n.desc||''}</div>`;
+    nd.addEventListener('click',e=>{
+      e.stopPropagation();
+      document.getElementById('d-title').textContent=n.label;
+      document.getElementById('d-desc').textContent=n.desc||'';
+      document.getElementById('detail').style.display='block';
+      document.querySelectorAll('.node').forEach(x=>x.classList.remove('highlight'));
+      nd.classList.add('highlight');
+    });
+    div.appendChild(nd);
+  });
+  canvas.appendChild(div);
+  groupEls[g.id]=div;
+});
+
+// Posicionamiento dinámico de la fila inferior basado en la altura REAL renderizada
+function autoLayoutBottomRow(){
+  let maxBottom=0;
+  topRowIds.forEach(id=>{
+    const el=groupEls[id];
+    if(el){
+      const top=parseInt(el.style.top)||0;
+      const h=el.offsetHeight;
+      if(top+h>maxBottom) maxBottom=top+h;
+    }
+  });
+  const newTopY=maxBottom+ROW_GAP;
+  bottomRowIds.forEach(id=>{
+    const el=groupEls[id];
+    if(el) el.style.top=newTopY+'px';
+  });
+  // Recalcular conexiones tras reposicionar
+  recalcAndDraw();
+}
+
+document.getElementById('legend').innerHTML='<div style="font-weight:700;margin-bottom:4px">Leyenda</div>'+
+  GROUPS.map(g=>`<div><span class="dot" style="background:${g.color}"></span>${g.label}</div>`).join('');
+
+const tooltip=document.getElementById('conn-tooltip');
+let hoverArrows=[];
+function recalcAndDraw(){
+  const nodePos={};
+  let maxX=0,maxY=0;
+  document.querySelectorAll('.node').forEach(nd=>{
+    const r=nd.getBoundingClientRect();
+    const cr=canvas.getBoundingClientRect();
+    const px=(r.left+r.width/2-cr.left)/scale, py=(r.top+r.height/2-cr.top)/scale;
+    nodePos[nd.dataset.id]={x:px,y:py};
+    if(px>maxX)maxX=px; if(py>maxY)maxY=py;
+  });
+  svg.setAttribute('width',maxX+500); svg.setAttribute('height',maxY+500);
+  const colors=new Set();
+  CONNS.forEach(c=>colors.add(c.color||'#555'));
+  let defs='<defs>';
+  colors.forEach(col=>{
+    const id=col.replace('#','');
+    defs+=`<marker id="af_${id}" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="${col}"/></marker>`;
+    defs+=`<marker id="ar_${id}" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto"><polygon points="10,0 0,3.5 10,7" fill="${col}"/></marker>`;
+  });
+  defs+='</defs>';
+  let h=defs;
+  CONNS.forEach((c,i)=>{
+    const a=nodePos[c.from],b=nodePos[c.to];
+    if(!a||!b)return;
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    const dx=b.x-a.x,dy=b.y-a.y;
+    const cx=mx-dy*0.12,cy=my+dx*0.12;
+    const col=c.color||'#555';
+    const id=col.replace('#','');
+    const dash=c.dashed?'stroke-dasharray="6,4"':'';
+    const mEnd=`marker-end="url(#af_${id})"`;
+    const mStart=c.bidi?`marker-start="url(#ar_${id})"`:''  ;
+    h+=`<path id="conn${i}" d="M${a.x},${a.y} Q${cx},${cy} ${b.x},${b.y}" stroke="${col}" stroke-width="1.5" fill="none" opacity="0.4" ${dash} ${mEnd} ${mStart} data-label="${c.label||''}" data-idx="${i}" data-col="${col}" data-bidi="${c.bidi?1:0}"/>`;
+  });
+  svg.innerHTML=h;
+  svg.querySelectorAll('path[data-idx]').forEach(p=>{
+    p.addEventListener('mouseenter',e=>{
+      const lbl=p.getAttribute('data-label');
+      if(lbl){ tooltip.textContent=lbl; tooltip.style.display='block'; }
+      p.setAttribute('opacity','0.9'); p.setAttribute('stroke-width','3');
+      showFlowArrows(p);
+    });
+    p.addEventListener('mousemove',e=>{
+      tooltip.style.left=(e.clientX+12)+'px'; tooltip.style.top=(e.clientY-24)+'px';
+    });
+    p.addEventListener('mouseleave',()=>{
+      tooltip.style.display='none';
+      p.setAttribute('opacity','0.4'); p.setAttribute('stroke-width','1.5');
+      clearFlowArrows();
+    });
+  });
+}
+function showFlowArrows(pathEl){
+  clearFlowArrows();
+  const col=pathEl.getAttribute('data-col');
+  const bidi=pathEl.getAttribute('data-bidi')==='1';
+  const len=pathEl.getTotalLength();
+  const step=Math.max(40,len/10);
+  for(let d=step;d<len-10;d+=step){
+    const pt=pathEl.getPointAtLength(d);
+    const pt2=pathEl.getPointAtLength(Math.min(d+2,len));
+    const angle=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI;
+    const arrow=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    arrow.setAttribute('points','-5,-3.5 5,0 -5,3.5');
+    arrow.setAttribute('fill',col);arrow.setAttribute('opacity','0.8');
+    arrow.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+    arrow.classList.add('flow-arrow');
+    svg.appendChild(arrow);
+    hoverArrows.push(arrow);
+    if(bidi){
+      const arrowR=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+      arrowR.setAttribute('points','5,-3.5 -5,0 5,3.5');
+      arrowR.setAttribute('fill',col);arrowR.setAttribute('opacity','0.5');
+      arrowR.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+      arrowR.classList.add('flow-arrow');
+      svg.appendChild(arrowR);
+      hoverArrows.push(arrowR);
+    }
+  }
+}
+function clearFlowArrows(){ hoverArrows.forEach(a=>a.remove()); hoverArrows=[]; }
+setTimeout(autoLayoutBottomRow,300);
+
+function applyTransform(){canvas.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;document.getElementById('zoom-info').textContent=Math.round(scale*100)+'%'}
+applyTransform();
+let panning=false,psx,psy;
+wrap.addEventListener('mousedown',e=>{
+  if(e.target===wrap||e.target===canvas||e.target===svg){panning=true;psx=e.clientX-tx;psy=e.clientY-ty;wrap.style.cursor='grabbing'}
+});
+window.addEventListener('mousemove',e=>{if(panning){tx=e.clientX-psx;ty=e.clientY-psy;applyTransform()}});
+window.addEventListener('mouseup',()=>{panning=false;wrap.style.cursor='grab'});
+wrap.addEventListener('wheel',e=>{e.preventDefault();const d=e.deltaY>0?0.9:1.1;const ns=Math.max(0.15,Math.min(3,scale*d));
+  const rect=wrap.getBoundingClientRect();const mx=e.clientX-rect.left;const my=e.clientY-rect.top;
+  tx=mx-(mx-tx)*(ns/scale);ty=my-(my-ty)*(ns/scale);scale=ns;applyTransform();recalcAndDraw()});
+function zoomTo(s){scale=Math.max(0.15,Math.min(3,s));applyTransform();recalcAndDraw()}
+function fitAll(){scale=0.43;tx=30;ty=30;applyTransform();autoLayoutBottomRow()}
+</script></body></html>

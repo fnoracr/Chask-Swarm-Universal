@@ -46,8 +46,8 @@ except ImportError:
 
 ROOT = Path(r"C:\Program Files\Chask_Swarm")
 TOOLS = ROOT / "Advanced_Tools"
-NETWORK_CONFIG = ROOT / "Configuration/swarm_network_config.json"
-NETWORK_LOG = ROOT / "System_Logs/swarm_network.log"
+NETWORK_CONFIG = ROOT / "Configuracion/swarm_network_config.json"
+NETWORK_LOG = ROOT / "Logs_Sistema/swarm_network.log"
 
 # Ports
 DISCOVERY_PORT = 51337
@@ -820,7 +820,7 @@ class SwarmMesh:
                 import requests
                 hub_url = "http://localhost:51400"
                 try:
-                    inet_cfg_path = ROOT / "Configuration/swarm_internet_config.json"
+                    inet_cfg_path = ROOT / "Configuracion/swarm_internet_config.json"
                     if inet_cfg_path.exists():
                         inet_cfg = json.loads(inet_cfg_path.read_text(encoding="utf-8"))
                         hub_url = inet_cfg.get("hub_url", hub_url).rstrip("/")
@@ -840,7 +840,7 @@ class SwarmMesh:
             except Exception as e:
                 _log(f"No se pudo comunicar el aislamiento al Hub central: {e}")
 
-            # Alerta crítica Telegram a Administrador
+            # Alerta crítica Telegram a Fernando
             try:
                 import subprocess
                 alert_msg = f"🚨 ALERTA GLOBAL DE INTRUSIÓN:\nIntento inteligente de manipulación bloqueado de {sender_node_id} ({sender_ip}).\nEl nodo ha sido reportado al Hub y añadido a la LISTA NEGRA GLOBAL de la colmena a perpetuidad."
@@ -879,7 +879,7 @@ class SwarmMesh:
                 import requests
                 hub_url = "http://localhost:51400"
                 try:
-                    inet_cfg_path = ROOT / "Configuration/swarm_internet_config.json"
+                    inet_cfg_path = ROOT / "Configuracion/swarm_internet_config.json"
                     if inet_cfg_path.exists():
                         inet_cfg = json.loads(inet_cfg_path.read_text(encoding="utf-8"))
                         hub_url = inet_cfg.get("hub_url", hub_url).rstrip("/")

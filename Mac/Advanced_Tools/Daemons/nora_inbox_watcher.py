@@ -4,7 +4,7 @@ nora_inbox_watcher.py — Vigía de la cola de mensajes + Inyección en conversa
 1. Monitorea input_queue.json cada 2 segundos.
 2. Cuando detecta un mensaje con status=pending:
    a. Intenta inyectarlo en el campo de texto de la ventana Antigravity activa
-      (cualquier conversación que esté abierta en ese momento, no solo [Nombre_IA]).
+      (cualquier conversación que esté abierta en ese momento, no solo Charm).
    b. Emite [WAKEUP_PING] en stdout para notificar al runtime de Antigravity.
 """
 import os
@@ -18,7 +18,7 @@ from datetime import datetime
 if hasattr(sys.stdout, 'buffer'):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-QUEUE_FILE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
+QUEUE_FILE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Colas_Mensajes\input_queue.json"
 LOG_FILE   = r"C:\Program Files\Chask_Swarm\Advanced_Tools\unified_channel.log"
 
 # Clase de ventana de Antigravity (Qt)

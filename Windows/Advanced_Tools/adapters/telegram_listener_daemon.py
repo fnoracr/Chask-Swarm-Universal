@@ -1,8 +1,8 @@
 """
 telegram_listener_daemon.py — Daemon de escucha Telegram 24/7
 ==============================================================
-Escucha mensajes de Telegram de Administrador y los inyecta directamente
-en el IDE de [Nombre_IA] usando el stealth injector.
+Escucha mensajes de Telegram de Fernando y los inyecta directamente
+en el IDE de Charm usando el stealth injector.
 
 Pipeline:
   Telegram API (long-polling) → inyección directa IDE → input_queue (respaldo)
@@ -25,9 +25,9 @@ if sys.stdout and hasattr(sys.stdout, 'buffer'):
         pass
 
 BASE_DIR   = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONFIG_PATH = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
-STATE_FILE  = os.path.join(BASE_DIR, "Message_Queues", "telegram_state.txt")
-QUEUE_FILE  = os.path.join(BASE_DIR, "Message_Queues", "pending_messages.json")
+CONFIG_PATH = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
+STATE_FILE  = os.path.join(BASE_DIR, "Colas_Mensajes", "telegram_state.txt")
+QUEUE_FILE  = os.path.join(BASE_DIR, "Colas_Mensajes", "pending_messages.json")
 MEDIA_DIR   = os.path.join(BASE_DIR, "telegram_media")
 LOG_FILE    = os.path.join(BASE_DIR, "Advanced_Tools", "telegram_listener.log")
 
@@ -88,7 +88,7 @@ def add_to_queue(message: str, source: str = "telegram"):
 
 # ── Inyección en el IDE ───────────────────────────────────────────────────────
 def inject_to_ide(message: str) -> bool:
-    """Intenta inyectar el mensaje en el IDE de [Nombre_IA]."""
+    """Intenta inyectar el mensaje en el IDE de Charm."""
     try:
         sys.path.insert(0, os.path.join(BASE_DIR, "Advanced_Tools"))
         import chask_stealth_injector as nsi
@@ -177,7 +177,7 @@ def process_update(update: dict, token: str, admin_id: str) -> str | None:
                 try:
                     from pydub import AudioSegment
                     import speech_recognition as sr
-                    ffmpeg = os.path.join(BASE_DIR, "Binaries", "ffmpeg.exe")
+                    ffmpeg = os.path.join(BASE_DIR, "Binarios", "ffmpeg.exe")
                     AudioSegment.converter = ffmpeg
                     wav = local.replace(".ogg", ".wav")
                     AudioSegment.from_ogg(local).export(wav, format="wav")
@@ -235,7 +235,7 @@ def main():
             log(f"Error obteniendo estado inicial: {e}")
 
     log(f"Escuchando desde update_id > {last_id}...")
-    send_telegram(token, admin_id, "✅ [Nombre_IA] en línea y escuchando Telegram.")
+    send_telegram(token, admin_id, "✅ Nora en línea y escuchando Telegram.")
 
     consecutive_errors = 0
 

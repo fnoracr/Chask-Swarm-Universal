@@ -25,9 +25,9 @@ except:
     sys.stderr = _log_f
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-CONFIG_FILE = os.path.join(BASE_DIR, "Configuration", "master_credentials.json")
+CONFIG_FILE = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
 MEMORY_FILE = os.path.join(BASE_DIR, "memory.md")
-QUEUE_FILE  = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
+QUEUE_FILE  = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 
 # Agregar Advanced_Tools al path para importar modulos locales
 sys.path.insert(0, os.path.join(BASE_DIR, "Advanced_Tools"))
@@ -81,7 +81,7 @@ def get_user_name():
                         if name:
                             return name.split()[0]
     except: pass
-    return "Administrador"
+    return "Fernando"
 
 # ── ESTRUCTURA HTML Y DISEÑO ULTRA-PREMIUM ─────────────────
 HTML = r"""<!DOCTYPE html>
@@ -545,17 +545,17 @@ window.MathJax = {
   <h1><span class="or">Cha</span><span class="ch">sk Swa</span><span class="or">rm</span></h1>
   
   <div class="nav-tabs">
-    <button class="tab-btn active" onclick="switchTab('tab-chat')">💬 Chat <span style="color: var(--orange);">[Nombre_IA]</span></button>
+    <button class="tab-btn active" onclick="switchTab('tab-chat')">💬 Chat <span style="color: var(--orange);">Charm</span></button>
     <button class="tab-btn" onclick="switchTab('tab-users')">👥 Users</button>
     <button class="tab-btn" onclick="switchTab('tab-skills')">⚡ Hive Skills</button>
     <button class="tab-btn" onclick="switchTab('tab-local')">🌐 Local Network</button>
     <button class="tab-btn" onclick="switchTab('tab-global')">🌎 Global Network</button>
-    <button class="tab-btn" onclick="switchTab('tab-meetcharm')">🎥 Meet [Nombre_IA]</button>
+    <button class="tab-btn" onclick="switchTab('tab-meetcharm')">🎥 Meet Charm</button>
     <button class="tab-btn" onclick="switchTab('tab-system')">⚙️ Core Components</button>
     <button class="tab-btn" onclick="switchTab('tab-ai-providers')">🧠 Cloud AIs</button>
     <button class="tab-btn" onclick="switchTab('tab-ollama')">🤖 Local Ollama</button>
     <button class="tab-btn" id="btn-tab-telegram" style="display:none;" onclick="switchTab('tab-telegram')">📱 Configure Telegram</button>
-    <button class="tab-btn" onclick="switchTab('tab-youtube')">📚 [Nombre_IA] Edu</button>
+    <button class="tab-btn" onclick="switchTab('tab-youtube')">📚 Charm Edu</button>
   </div>
 
   <div class="hdr-right">
@@ -664,14 +664,14 @@ window.MathJax = {
           <!-- MEET CHARM ACCESS -->
           <div id="mc-access-row" style="display:flex; align-items:center; gap:16px; padding:14px 0; border-top:1px solid rgba(0,245,212,0.1); margin-top:4px;">
             <label style="display:flex; align-items:center; gap:10px; cursor:pointer; user-select:none;">
-              <input type="checkbox" id="usr-meetcharm" onchange="onMeet[Nombre_IA]Toggle()" style="width:18px;height:18px;accent-color:#7b2ff7;cursor:pointer;">
-              <span style="font-size:13px;font-weight:700;color:#fff;">🎥 Acceso a <span style="color:#7b2ff7;">Meet [Nombre_IA]</span></span>
+              <input type="checkbox" id="usr-meetcharm" onchange="onMeetCharmToggle()" style="width:18px;height:18px;accent-color:#7b2ff7;cursor:pointer;">
+              <span style="font-size:13px;font-weight:700;color:#fff;">🎥 Acceso a <span style="color:#7b2ff7;">Meet Charm</span></span>
             </label>
             <span id="mc-access-note" style="font-size:11px;color:var(--text-muted);">Activa para dar acceso a videollamadas. Requiere email.</span>
             <!-- Código de confirmación (aparece tras crear el usuario) -->
             <div id="mc-confirm-row" style="display:none; align-items:center; gap:8px; margin-left:auto;">
               <input type="text" id="mc-confirm-code" maxlength="6" placeholder="Código 6 dígitos" style="width:130px;background:rgba(123,47,247,0.1);border:1px solid rgba(123,47,247,0.4);border-radius:8px;padding:6px 10px;color:#fff;font-size:13px;text-align:center;letter-spacing:4px;outline:none;">
-              <button onclick="confirmMeet[Nombre_IA]Code()" style="background:linear-gradient(135deg,#7b2ff7,#a855f7);border:none;border-radius:8px;padding:6px 14px;color:#fff;font-weight:700;font-size:12px;cursor:pointer;">CONFIRMAR</button>
+              <button onclick="confirmMeetCharmCode()" style="background:linear-gradient(135deg,#7b2ff7,#a855f7);border:none;border-radius:8px;padding:6px 14px;color:#fff;font-weight:700;font-size:12px;cursor:pointer;">CONFIRMAR</button>
             </div>
           </div>
           <div id="usr-msg" style="font-size:12px; font-weight:600; display:none; padding:10px; border-radius:8px; margin-bottom:15px;"></div>
@@ -697,13 +697,13 @@ window.MathJax = {
     <div id="tab-meetcharm" class="tab-panel">
       <div class="panel-body">
         <div class="panel-header">
-          <h2>🎥 Meet <span>[Nombre_IA]</span></h2>
+          <h2>🎥 Meet <span>Charm</span></h2>
           <p>Videollamadas seguras para los usuarios de tu enjambre. Solo los miembros autorizados pueden acceder.</p>
         </div>
 
-        <!-- ADMIN: Gestión de usuarios con Meet [Nombre_IA] -->
+        <!-- ADMIN: Gestión de usuarios con Meet Charm -->
         <div id="mc-admin-panel" style="display:none; margin-bottom:24px;">
-          <div style="font-size:13px; font-weight:700; color:var(--green); margin-bottom:12px;">👑 Usuarios con acceso a Meet [Nombre_IA]</div>
+          <div style="font-size:13px; font-weight:700; color:var(--green); margin-bottom:12px;">👑 Usuarios con acceso a Meet Charm</div>
           <div id="mc-users-list" style="display:flex; flex-wrap:wrap; gap:12px;">
             <div style="color:var(--text-muted); font-size:12px;">Cargando...</div>
           </div>
@@ -712,14 +712,14 @@ window.MathJax = {
         <!-- ENTRADA A SALA -->
         <div style="max-width:520px; margin:0 auto; text-align:center; padding:40px 20px;">
           <div style="font-size:56px; margin-bottom:16px;">🎥</div>
-          <h3 style="font-size:22px; font-weight:800; margin-bottom:8px; color:#fff;">Meet <span style="color:#7b2ff7;">[Nombre_IA]</span></h3>
+          <h3 style="font-size:22px; font-weight:800; margin-bottom:8px; color:#fff;">Meet <span style="color:#7b2ff7;">Charm</span></h3>
           <p style="color:var(--text-muted); font-size:13px; margin-bottom:28px;">Introduce el código de sala o deja el campo vacío para crear una nueva.</p>
 
           <div style="background:rgba(123,47,247,0.08); border:1px solid rgba(123,47,247,0.3); border-radius:16px; padding:28px; margin-bottom:20px;">
             <label style="font-size:11px; color:var(--text-muted); display:block; text-align:left; margin-bottom:6px;">Código de sala</label>
             <input type="text" id="mc-room-code" maxlength="20" placeholder="Dejar vacío = crear sala nueva"
               style="width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(123,47,247,0.4); border-radius:10px; padding:12px 16px; color:#fff; font-size:16px; font-family:monospace; letter-spacing:2px; text-align:center; outline:none; margin-bottom:20px;">
-            <button onclick="enterMeet[Nombre_IA]()" id="mc-enter-btn"
+            <button onclick="enterMeetCharm()" id="mc-enter-btn"
               style="width:100%; background:linear-gradient(135deg,#7b2ff7,#a855f7); border:none; border-radius:12px; padding:16px; color:#fff; font-size:15px; font-weight:800; cursor:pointer; letter-spacing:0.5px; transition:all 0.3s ease; box-shadow: 0 4px 20px rgba(123,47,247,0.4);"
               onmouseover="this.style.filter='brightness(1.15)'" onmouseout="this.style.filter='none'">
               🚀 ENTRAR A MEET CHARM
@@ -728,7 +728,7 @@ window.MathJax = {
 
           <div id="mc-enter-msg" style="font-size:12px; color:var(--text-muted); display:none;"></div>
           <div id="mc-no-access" style="display:none; background:rgba(255,68,102,0.08); border:1px solid rgba(255,68,102,0.2); border-radius:12px; padding:16px; color:var(--red); font-size:13px;">
-            ⛔ Tu cuenta no tiene acceso a Meet [Nombre_IA]. Pide al administrador que lo active.
+            ⛔ Tu cuenta no tiene acceso a Meet Charm. Pide al administrador que lo active.
           </div>
         </div>
       </div>
@@ -1016,7 +1016,7 @@ window.MathJax = {
       <div class="panel-body" style="height: 100%; display: flex; flex-direction: column;">
         <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center;">
           <div>
-            <h2>📚 [Nombre_IA] Edu — Sección de Aprendizaje</h2>
+            <h2>📚 Charm Edu — Sección de Aprendizaje</h2>
             <p>Crea, gestiona y comparte temarios generados dinámicamente por la Colmena.</p>
           </div>
           <button onclick="showCreateTopicForm()" style="background:var(--accent); border:none; border-radius:8px; padding:10px 20px; color:#000; font-weight:800; cursor:pointer; transition:0.3s;">+ NUEVO TEMA</button>
@@ -1024,7 +1024,7 @@ window.MathJax = {
 
         <div class="search-bar" style="display:flex; gap:10px; margin-bottom:20px; max-width: 800px;">
           <input type="text" id="yt-search-inp" placeholder="Buscar por tema en la red P2P o local..." style="flex:1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px 14px; color:#fff; font-family:inherit; font-size:14px; outline:none;" onkeydown="if(event.key==='Enter'){searchP2PTopics();}">
-          <button onclick="searchP2PTopics()" style="background:var(--primary); border:none; border-radius:8px; padding:10px 20px; color:#fff; font-weight:700; font-size:13px; cursor:pointer; outline:none; transition:0.3s;">BUSCAR EN [Nombre_IA] Edu</button>
+          <button onclick="searchP2PTopics()" style="background:var(--primary); border:none; border-radius:8px; padding:10px 20px; color:#fff; font-weight:700; font-size:13px; cursor:pointer; outline:none; transition:0.3s;">BUSCAR EN Charm Edu</button>
         </div>
 
         <div class="learning-grid" style="display:grid; grid-template-columns: 350px 1fr; gap:20px; flex:1; min-height: 500px; margin-top:0px;">
@@ -1241,7 +1241,7 @@ function switchTab(tabId) {
   }
   if(tabId === 'tab-local') loadLocalNetwork();
   if(tabId === 'tab-global') { loadGlobalNetwork(); loadRouterStatus(); }
-  if(tabId === 'tab-meetcharm') loadMeet[Nombre_IA]();
+  if(tabId === 'tab-meetcharm') loadMeetCharm();
   if(tabId === 'tab-system') loadSystemComponents();
   if(tabId === 'tab-ai-providers') loadAIProviders();
   if(tabId === 'tab-ollama') loadOllamaModels();
@@ -1626,7 +1626,7 @@ async function createUserSubmit() {
     msgEl.style.color = 'var(--red)';
     msgEl.style.background = 'rgba(255, 68, 102, 0.1)';
     msgEl.style.border = '1px solid rgba(255, 68, 102, 0.2)';
-    msgEl.textContent = 'El email es obligatorio para activar Meet [Nombre_IA].';
+    msgEl.textContent = 'El email es obligatorio para activar Meet Charm.';
     return;
   }
   
@@ -1666,7 +1666,7 @@ async function createUserSubmit() {
       if (meet_charm && !window.editingUsername) {
         window._mcPendingUser = username;
         document.getElementById('mc-confirm-row').style.display = 'flex';
-        document.getElementById('mc-access-note').textContent = '⏳ Revisa el email. Introduce el código de 6 dígitos para activar Meet [Nombre_IA].';
+        document.getElementById('mc-access-note').textContent = '⏳ Revisa el email. Introduce el código de 6 dígitos para activar Meet Charm.';
         document.getElementById('mc-access-note').style.color = '#ff9f1c';
       }
       
@@ -1736,7 +1736,7 @@ function cancelEditUser() {
   }
   document.getElementById('usr-role').disabled = false;
   document.getElementById('usr-form-card').style.display = (window.currentUserRole === 'admin') ? "block" : "none";
-  // Reset Meet [Nombre_IA]
+  // Reset Meet Charm
   const mc = document.getElementById('usr-meetcharm');
   if (mc) { mc.checked = false; mc.disabled = false; }
   document.getElementById('mc-confirm-row').style.display = 'none';
@@ -1745,11 +1745,11 @@ function cancelEditUser() {
   window._mcPendingUser = null;
 }
 
-// ── Meet [Nombre_IA] JS ──────────────────────────────────────────────────
-function onMeet[Nombre_IA]Toggle() {
+// ── Meet Charm JS ──────────────────────────────────────────────────
+function onMeetCharmToggle() {
   const checked = document.getElementById('usr-meetcharm').checked;
   const reqLbl  = document.getElementById('usr-email-req');
-  reqLbl.textContent = checked ? '(requerido para Meet [Nombre_IA])' : '';
+  reqLbl.textContent = checked ? '(requerido para Meet Charm)' : '';
 }
 
 function onRoleChange() {
@@ -1769,7 +1769,7 @@ function onRoleChange() {
   }
 }
 
-async function confirmMeet[Nombre_IA]Code() {
+async function confirmMeetCharmCode() {
   const code = document.getElementById('mc-confirm-code').value.trim();
   const username = window._mcPendingUser;
   if (!code || code.length !== 6 || !username) {
@@ -1785,7 +1785,7 @@ async function confirmMeet[Nombre_IA]Code() {
     const d = await r.json();
     if (d.success) {
       document.getElementById('mc-confirm-row').style.display = 'none';
-      document.getElementById('mc-access-note').textContent = '✅ Cuenta de Meet [Nombre_IA] activada.';
+      document.getElementById('mc-access-note').textContent = '✅ Cuenta de Meet Charm activada.';
       document.getElementById('mc-access-note').style.color = 'var(--green)';
       window._mcPendingUser = null;
     } else {
@@ -1796,7 +1796,7 @@ async function confirmMeet[Nombre_IA]Code() {
   }
 }
 
-async function loadMeet[Nombre_IA]() {
+async function loadMeetCharm() {
   // Mostrar panel admin si aplica
   if (window.currentUserRole === 'admin') {
     document.getElementById('mc-admin-panel').style.display = 'block';
@@ -1814,7 +1814,7 @@ async function loadMeet[Nombre_IA]() {
             <div style="margin-top:6px;font-size:10px;color:${u.confirmed ? 'var(--green)' : '#ff9f1c'};">
               ${u.confirmed ? '✅ Confirmado' : '⏳ Pendiente confirmación'}
             </div>
-            <button onclick="revokeMeet[Nombre_IA]('${u.username}')" style="margin-top:8px;background:rgba(255,68,102,0.1);border:1px solid rgba(255,68,102,0.3);border-radius:6px;padding:3px 10px;color:var(--red);font-size:10px;cursor:pointer;">Revocar</button>
+            <button onclick="revokeMeetCharm('${u.username}')" style="margin-top:8px;background:rgba(255,68,102,0.1);border:1px solid rgba(255,68,102,0.3);border-radius:6px;padding:3px 10px;color:var(--red);font-size:10px;cursor:pointer;">Revocar</button>
           </div>
         `).join('');
       }
@@ -1833,13 +1833,13 @@ async function loadMeet[Nombre_IA]() {
   } catch(e) {}
 }
 
-async function revokeMeet[Nombre_IA](username) {
-  if (!confirm(`¿Revocar acceso a Meet [Nombre_IA] de @${username}?`)) return;
+async function revokeMeetCharm(username) {
+  if (!confirm(`¿Revocar acceso a Meet Charm de @${username}?`)) return;
   await fetch('/api/meetcharm/revoke', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username})});
-  loadMeet[Nombre_IA]();
+  loadMeetCharm();
 }
 
-async function enterMeet[Nombre_IA]() {
+async function enterMeetCharm() {
   const code = document.getElementById('mc-room-code').value.trim();
   const btn  = document.getElementById('mc-enter-btn');
   const msg  = document.getElementById('mc-enter-msg');
@@ -1860,7 +1860,7 @@ async function enterMeet[Nombre_IA]() {
       msg.style.color = 'var(--green)';
       document.getElementById('mc-room-code').value = d.room_id;
     } else {
-      msg.textContent = d.error || 'No tienes acceso a Meet [Nombre_IA].';
+      msg.textContent = d.error || 'No tienes acceso a Meet Charm.';
       msg.style.display = 'block';
       msg.style.color = 'var(--red)';
     }
@@ -3312,7 +3312,7 @@ function searchP2PTopics() {
     }
     
     if (p2pDiscoverSec) p2pDiscoverSec.style.display = 'flex';
-    p2pList.innerHTML = '<div style="color:var(--text-muted); font-size:12px;">Buscando en [Nombre_IA] Edu (Tracker Global)...</div>';
+    p2pList.innerHTML = '<div style="color:var(--text-muted); font-size:12px;">Buscando en Charm Edu (Tracker Global)...</div>';
     
     fetch(`/api/learning/p2p/search?q=${encodeURIComponent(query)}`)
         .then(r => r.json())
@@ -3562,10 +3562,10 @@ def index():
     if role == "admin":
         pass
     elif role in ["power", "user", "teen"]:
-        # Pueden ver: Chat (1), Usuarios (2), Meet [Nombre_IA] (6). Ocultar el resto (incluye Skills).
+        # Pueden ver: Chat (1), Usuarios (2), Meet Charm (6). Ocultar el resto (incluye Skills).
         hide_styles.append(".nav-tabs button:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(6)) { display: none !important; }")
     else:
-        # child y guest: Solo la primera pestaña (chat). Meet [Nombre_IA] y todo lo demás oculto.
+        # child y guest: Solo la primera pestaña (chat). Meet Charm y todo lo demás oculto.
         hide_styles.append(".nav-tabs button:not(:first-child) { display: none !important; }")
         
     style_content = f"<style>{' '.join(hide_styles)}</style>" if hide_styles else ""
@@ -3629,8 +3629,8 @@ def _extract_attachment_content(tmp_path: str, filename: str) -> tuple:
     """
     Extrae el contenido de un adjunto para enviarlo a la IA.
     Retorna (extracted_text: str, needs_charm: bool)
-    - needs_charm=True cuando la imagen necesita visión nativa de [Nombre_IA]
-    - Imágenes: intenta Groq llama-vision → OCR Tesseract local → flag a [Nombre_IA]
+    - needs_charm=True cuando la imagen necesita visión nativa de Charm
+    - Imágenes: intenta Groq llama-vision → OCR Tesseract local → flag a Charm
     - PDF: PyPDF2 extracción de texto
     - Texto plano (.txt, .md, .csv): lectura directa
     """
@@ -3710,11 +3710,11 @@ def _extract_attachment_content(tmp_path: str, filename: str) -> tuple:
                 except Exception as e_ocr:
                     print(f"[Dashboard] OCR Tesseract falló: {e_ocr}")
 
-            # --- Fallback final: redirigir a [Nombre_IA] (visión nativa Gemini) ---
+            # --- Fallback final: redirigir a Charm (visión nativa Gemini) ---
             if not extracted:
                 needs_charm = True
-                extracted = f"[Imagen '{filename}' — visión API no disponible, redirigiendo a [Nombre_IA] para análisis nativo]"
-                print(f"[Dashboard] Sin visión disponible para {filename} → redirigiendo a [Nombre_IA]")
+                extracted = f"[Imagen '{filename}' — visión API no disponible, redirigiendo a Charm para análisis nativo]"
+                print(f"[Dashboard] Sin visión disponible para {filename} → redirigiendo a Charm")
 
         except Exception as e:
             extracted = f"[Error procesando imagen '{filename}': {e}]"
@@ -3819,7 +3819,7 @@ def send_message():
             f"{message}" if message else attachment_content
         )
 
-    # ── FIX BUG 1: Mensajes dirigidos a [Nombre_IA] o con imagen → inyección directa al IDE ──
+    # ── FIX BUG 1: Mensajes dirigidos a Nora o con imagen → inyección directa al IDE ──
     # --- NEW AUTH MIDDLEWARE INTEGRATION ---
     try:
         import sys
@@ -3844,11 +3844,11 @@ def send_message():
     import re
     addressed_to_nora = bool(re.match(r'^nora?', full_message, re.IGNORECASE))
     has_rich_attachment = bool(attachment_content)
-    # Si la imagen no pudo ser procesada por ninguna API, va directamente a [Nombre_IA]
+    # Si la imagen no pudo ser procesada por ninguna API, va directamente a Charm
     force_charm = locals().get('attachment_needs_charm', False)
 
     if addressed_to_nora or force_charm:
-        # Intentar inyección directa en el IDE de [Nombre_IA]
+        # Intentar inyección directa en el IDE de Charm
         injected = False
         if nsi:
             ide_msg = f"[{display_name} vía Web]: {full_message}"
@@ -3888,7 +3888,7 @@ def send_message():
             cfg = llm_router.load_config()
             score, reason = llm_router.complexity_score(full_message, cfg)
             if score >= 60:
-                # ── FIX BUG 1: escalado a [Nombre_IA] → inyectar en IDE ──
+                # ── FIX BUG 1: escalado a Charm → inyectar en IDE ──
                 injected = False
                 if nsi:
                     try:
@@ -4980,7 +4980,7 @@ def manage_users():
                 email=data.get("email", ""),
                 created_by="admin"
             )
-            # Si se solicitó acceso a Meet [Nombre_IA] y hay email, registrar y enviar código
+            # Si se solicitó acceso a Meet Charm y hay email, registrar y enviar código
             if data.get("meet_charm") and data.get("email") and data.get("role") not in ["child", "guest"]:
                 import random as _r, datetime as _d
                 code = str(_r.randint(100000, 999999))
@@ -4998,7 +4998,7 @@ def manage_users():
                     )
                     conn.commit()
                 except Exception as e:
-                    print(f"[Meet[Nombre_IA]] Error registrando usuario: {e}")
+                    print(f"[MeetCharm] Error registrando usuario: {e}")
                 finally:
                     conn.close()
                 # Enviar email en hilo aparte para no bloquear la respuesta
@@ -5043,12 +5043,12 @@ def manage_users():
         except Exception as e:
             print(f"[Dashboard] Error leyendo user_manager: {e}")
             
-    # Si no hay usuarios reales, añadir a Administrador por defecto
+    # Si no hay usuarios reales, añadir a Fernando por defecto
     if role == "admin":
         if not any(u["username"] == "admin" for u in user_list):
             user_list.append({
                 "username": "admin",
-                "display_name": "Administrador",
+                "display_name": "Fernando",
                 "role": "admin",
                 "type": "human",
                 "channels": ["Telegram", "Web Panel", "IDE Console"],
@@ -5139,7 +5139,7 @@ import sqlite3 as _sq, hashlib as _hl, secrets as _sec, smtplib as _sm, random a
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-MC_DB_PATH = os.path.join(BASE_DIR, "Configuration", "meetcharm_users.db")
+MC_DB_PATH = os.path.join(BASE_DIR, "Configuracion", "meetcharm_users.db")
 MC_HUB     = "http://31.97.152.240:51400"
 
 def _mc_db():
@@ -5170,9 +5170,9 @@ def _mc_db():
     return conn
 
 def _mc_send_email(to_email: str, display_name: str, code: str):
-    """Envía el código de confirmación de Meet [Nombre_IA] por email."""
+    """Envía el código de confirmación de Meet Charm por email."""
     try:
-        cfg_path = os.path.join(BASE_DIR, "..", "Configuration", "master_credentials.json")
+        cfg_path = os.path.join(BASE_DIR, "..", "Configuracion", "master_credentials.json")
         smtp_cfg = {}
         if os.path.exists(cfg_path):
             with open(cfg_path, "r", encoding="utf-8") as f:
@@ -5184,15 +5184,15 @@ def _mc_send_email(to_email: str, display_name: str, code: str):
         smtp_pass = smtp_cfg.get("smtp_pass", "")
 
         msg = MIMEMultipart("alternative")
-        msg["Subject"] = "Tu código de activación para Meet [Nombre_IA]"
-        msg["From"]    = f"Meet [Nombre_IA] <{smtp_user}>"
+        msg["Subject"] = "Tu código de activación para Meet Charm"
+        msg["From"]    = f"Meet Charm <{smtp_user}>"
         msg["To"]      = to_email
 
         html = f"""
         <div style="font-family:sans-serif;max-width:480px;margin:0 auto;background:#0d0d14;padding:32px;border-radius:16px;color:#fff;">
-          <h2 style="color:#7b2ff7;margin-bottom:8px;">🎥 Meet [Nombre_IA]</h2>
+          <h2 style="color:#7b2ff7;margin-bottom:8px;">🎥 Meet Charm</h2>
           <p>Hola <strong>{display_name}</strong>,</p>
-          <p>El administrador de tu enjambre te ha dado acceso a <strong>Meet [Nombre_IA]</strong>.</p>
+          <p>El administrador de tu enjambre te ha dado acceso a <strong>Meet Charm</strong>.</p>
           <p>Tu código de activación de 6 dígitos es:</p>
           <div style="font-size:36px;font-weight:900;letter-spacing:8px;color:#7b2ff7;text-align:center;padding:20px;background:rgba(123,47,247,0.1);border-radius:12px;margin:20px 0;">{code}</div>
           <p style="color:rgba(255,255,255,0.5);font-size:12px;">Válido durante 15 minutos. Introdúcelo en el panel de tu enjambre.</p>
@@ -5202,10 +5202,10 @@ def _mc_send_email(to_email: str, display_name: str, code: str):
         with _sm.SMTP_SSL(smtp_host, smtp_port) as s:
             s.login(smtp_user, smtp_pass)
             s.sendmail(smtp_user, to_email, msg.as_string())
-        print(f"[Meet[Nombre_IA]] Email enviado a {to_email}")
+        print(f"[MeetCharm] Email enviado a {to_email}")
         return True
     except Exception as e:
-        print(f"[Meet[Nombre_IA]] Error enviando email: {e}")
+        print(f"[MeetCharm] Error enviando email: {e}")
         return False
 
 
@@ -5282,7 +5282,7 @@ def mc_enter():
         ).fetchone()
         conn.close()
         if not row:
-            return jsonify({"error": "No tienes acceso a Meet [Nombre_IA] o tu cuenta no está confirmada"}), 403
+            return jsonify({"error": "No tienes acceso a Meet Charm o tu cuenta no está confirmada"}), 403
 
     data      = request.json or {}
     room_code = data.get("room_code", "").strip()
@@ -5302,7 +5302,7 @@ def mc_enter():
     # Leer swarm_api_key
     swarm_key = ""
     try:
-        cfg_path = os.path.join(BASE_DIR, "Configuration", "swarm_internet_config.json")
+        cfg_path = os.path.join(BASE_DIR, "Configuracion", "swarm_internet_config.json")
         if os.path.exists(cfg_path):
             import json as _jj
             swarm_key = _jj.load(open(cfg_path, "r", encoding="utf-8")).get("swarm_api_key", "")
@@ -5440,7 +5440,7 @@ def check_global_host(domain_or_ip, port=443):
 @app.route("/api/network/global/status")
 def get_global_enabled_status():
     """Consulta si la conexion WAN/Global esta activa en la configuracion."""
-    config_path = os.path.join(BASE_DIR, "Configuration", "swarm_internet_config.json")
+    config_path = os.path.join(BASE_DIR, "Configuracion", "swarm_internet_config.json")
     enabled = True
     if os.path.exists(config_path):
         try:
@@ -5454,7 +5454,7 @@ def get_global_enabled_status():
 @app.route("/api/network/global/toggle", methods=["POST"])
 def toggle_global_network():
     """Conecta o desconecta el enjambre de la red mundial."""
-    config_path = os.path.join(BASE_DIR, "Configuration", "swarm_internet_config.json")
+    config_path = os.path.join(BASE_DIR, "Configuracion", "swarm_internet_config.json")
     cfg = {}
     if os.path.exists(config_path):
         try:
@@ -5477,7 +5477,7 @@ def toggle_global_network():
 @app.route("/api/network/router/status", methods=["GET"])
 def get_router_status():
     """Consulta si este nodo está configurado como enrutador."""
-    config_path = os.path.join(BASE_DIR, "Configuration", "swarm_internet_config.json")
+    config_path = os.path.join(BASE_DIR, "Configuracion", "swarm_internet_config.json")
     is_router = False
     if os.path.exists(config_path):
         try:
@@ -5497,7 +5497,7 @@ def toggle_router_mode():
     if session.get("role") not in ["admin", "Admin"]:
         return jsonify({"error": "Solo el administrador puede cambiar el modo enrutador"}), 403
 
-    config_path = os.path.join(BASE_DIR, "Configuration", "swarm_internet_config.json")
+    config_path = os.path.join(BASE_DIR, "Configuracion", "swarm_internet_config.json")
     cfg = {}
     if os.path.exists(config_path):
         try:
@@ -5547,7 +5547,7 @@ def toggle_router_mode():
 def get_global_network():
     """Genera la lista de los servidores globales de la colmena y servicios externos."""
     # 1. Comprobar si la red global esta habilitada
-    config_path = os.path.join(BASE_DIR, "Configuration", "swarm_internet_config.json")
+    config_path = os.path.join(BASE_DIR, "Configuracion", "swarm_internet_config.json")
     enabled = True
     if os.path.exists(config_path):
         try:
@@ -5575,7 +5575,7 @@ def get_global_network():
     nodes.append({
         "name": "GitHub Central Registry",
         "provider": "Version Control Systems",
-        "endpoint": "github.com/Administrador[Nombre_IA]",
+        "endpoint": "github.com/FernandoNora",
         "role": "Sincronización y copias de seguridad del código",
         "region": "Estados Unidos (Seattle)",
         "status": st_gh,
@@ -5756,8 +5756,8 @@ def delete_learning_topic():
         q_client = QdrantClient(host='127.0.0.1', port=6333)
         if q_client.collection_exists(topic_id):
             try:
-                os.makedirs(r"C:\Program Files\Chask_Swarm\Deleted", exist_ok=True)
-                backup_path = os.path.join(r"C:\Program Files\Chask_Swarm\Deleted", f"{topic_id}_backup.json")
+                os.makedirs(r"C:\Program Files\Chask_Swarm\Borrados", exist_ok=True)
+                backup_path = os.path.join(r"C:\Program Files\Chask_Swarm\Borrados", f"{topic_id}_backup.json")
                 res = q_client.scroll(collection_name=topic_id, limit=100)
                 if res and res[0]:
                     with open(backup_path, 'w', encoding='utf-8') as f:

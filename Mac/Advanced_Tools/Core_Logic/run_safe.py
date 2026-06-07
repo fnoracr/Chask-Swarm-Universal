@@ -34,7 +34,7 @@ def main():
             print(result.stdout)
             
         if result.returncode != 0:
-            print("[RunSafe] ¡Se ha detectado un error! Enviando a [Nombre_IA]...")
+            print("[RunSafe] ¡Se ha detectado un error! Enviando a Charm...")
             error_text = result.stderr.strip()
             print(f"Error:\n{error_text}")
             

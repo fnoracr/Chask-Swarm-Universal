@@ -6,8 +6,8 @@ from fastapi.responses import FileResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 import asyncio
 
-app = FastAPI(title="Meet [Nombre_IA] API", version="2.0.0")
-app.mount("/static", StaticFiles(directory="/opt/Meet[Nombre_IA]/static"), name="static")
+app = FastAPI(title="Meet Charm API", version="2.0.0")
+app.mount("/static", StaticFiles(directory="/opt/MeetCharm/static"), name="static")
 
 # ── Base de datos ──────────────────────────────────────────────────
 DB_PATH = Path("/opt/chask/meetcharm_users.db")
@@ -42,15 +42,15 @@ def init_db():
             FOREIGN KEY (user_id) REFERENCES users(id)
         );
     """)
-    # Insertar Administrador como primer usuario
+    # Insertar Fernando como primer usuario
     pw = hashlib.sha256(("N0r4Z0e?*12" + "chaskswarm").encode()).hexdigest()
     c.execute("""
         INSERT OR IGNORE INTO users (username, email, password, full_name, node_id, swarm_ok)
         VALUES (?, ?, ?, ?, ?, 1)
-    """, ("fnoracr", "fnoracr@gmail.com", pw, "Administrador Enjambre", "terminus"))
+    """, ("fnoracr", "fnoracr@gmail.com", pw, "Fernando Enjambre", "terminus"))
     conn.commit()
     conn.close()
-    print("[DB] Base de datos Meet [Nombre_IA] inicializada")
+    print("[DB] Base de datos Meet Charm inicializada")
 
 init_db()
 
@@ -101,7 +101,7 @@ async def cors_middleware(request: Request, call_next):
 # ── Rutas estáticas ────────────────────────────────────────────────
 @app.get("/")
 async def root():
-    return FileResponse("/opt/Meet[Nombre_IA]/static/index.html")
+    return FileResponse("/opt/MeetCharm/static/index.html")
 
 # ══════════════════════════════════════════════════════════════════
 #  AUTH ENDPOINTS
@@ -219,7 +219,7 @@ async def enter_room(request: Request):
     """
     session = get_session_from_request(request)
     if not session:
-        raise HTTPException(401, "Debes iniciar sesión para usar Meet [Nombre_IA]")
+        raise HTTPException(401, "Debes iniciar sesión para usar Meet Charm")
 
     data = await request.json()
     room_id = (data.get("room_id") or "").strip()
@@ -288,7 +288,7 @@ async def websocket_endpoint(ws: WebSocket, room_id: str, display_name: str):
                     pass
 
         # Escribir al inbox del bot
-        inbox_path = Path(f"/tmp/Meet[Nombre_IA]-inbox-{room_id}.jsonl")
+        inbox_path = Path(f"/tmp/MeetCharm-inbox-{room_id}.jsonl")
         try:
             with open(inbox_path, "a") as f:
                 f.write(json.dumps({
@@ -380,7 +380,7 @@ async def websocket_endpoint(ws: WebSocket, room_id: str, display_name: str):
                 pass
         # Inbox: salida
         try:
-            with open(Path(f"/tmp/Meet[Nombre_IA]-inbox-{room_id}.jsonl"), "a") as f:
+            with open(Path(f"/tmp/MeetCharm-inbox-{room_id}.jsonl"), "a") as f:
                 f.write(json.dumps({
                     "ts": datetime.datetime.utcnow().isoformat(),
                     "type": "left",
@@ -411,7 +411,7 @@ except ImportError:
 #  SCREENSHOTS
 # ══════════════════════════════════════════════════════════════════
 import base64 as _b64
-SCREENSHOTS_DIR = "/opt/Meet[Nombre_IA]/screenshots"
+SCREENSHOTS_DIR = "/opt/MeetCharm/screenshots"
 os.makedirs(SCREENSHOTS_DIR, exist_ok=True)
 
 @app.post("/api/screenshot/{room_id}")

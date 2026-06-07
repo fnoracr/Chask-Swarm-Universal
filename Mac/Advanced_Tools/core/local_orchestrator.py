@@ -11,7 +11,7 @@ sys.path.append(BASE_DIR)
 import llm_router
 import responder
 
-# Orquestador Local: Toma el mando si [Nombre_IA] cede el control o cae.
+# Orquestador Local: Toma el mando si Charm cede el control o cae.
 ORCHESTRATOR_MODEL = "qwen2.5-coder:7b"
 HANDOFF_FILE = os.path.join(BASE_DIR, "..", "handoff_context.json")
 
@@ -102,7 +102,7 @@ def run_orchestrator_loop():
     
     # Aquí podríamos engancharnos a pending_messages o telegram
     # Por ahora, un bucle simple de escucha pasiva en pending_messages.json
-    pending_file = os.path.join(BASE_DIR, "..", "Message_Queues", "pending_messages.json")
+    pending_file = os.path.join(BASE_DIR, "..", "Colas_Mensajes", "pending_messages.json")
     
     while True:
         try:

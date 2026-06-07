@@ -10,8 +10,8 @@ Uso desde CLI:
   python chask_browser.py extract "https://example.com" "h1"
 
 Uso desde codigo:
-  from chask_browser import [Nombre_IA]Browser
-  async with [Nombre_IA]Browser() as browser:
+  from chask_browser import NoraBrowser
+  async with NoraBrowser() as browser:
       await browser.go("https://google.com")
       text = await browser.extract("h1")
 """
@@ -31,13 +31,13 @@ if sys.stdout and hasattr(sys.stdout, 'buffer'):
 
 from playwright.async_api import async_playwright
 
-# Configuration
+# Configuracion
 DEFAULT_HEADLESS = True
 DEFAULT_TIMEOUT = 30000  # 30s
 SCREENSHOTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "browser_screenshots")
 
 
-class [Nombre_IA]Browser:
+class NoraBrowser:
     """Control total de navegador con API limpia."""
 
     def __init__(self, headless=DEFAULT_HEADLESS, browser_type="chromium"):
@@ -239,7 +239,7 @@ async def cli_main():
         return
 
     headless = not getattr(args, "visible", False)
-    async with [Nombre_IA]Browser(headless=headless) as browser:
+    async with NoraBrowser(headless=headless) as browser:
         if args.cmd == "go":
             url = await browser.go(args.url)
             title = await browser.get_title()

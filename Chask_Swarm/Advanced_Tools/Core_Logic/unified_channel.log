@@ -1,0 +1,1190 @@
+[2026-05-23 15:53:12] [TG] MSG: [TELEGRAM 15:53:12] Súbelas a la web charm.php y a GitHub para su distribución
+[2026-05-23 15:53:12] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 15:55:59] [TG] MSG: [TELEGRAM 15:55:59] Haz lo mismo con una distribución en ruso
+[2026-05-23 15:55:59] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 15:56:21] [TG] MSG: [TELEGRAM 15:56:21] Nora, haz lo mismo con una distribución en ruso
+[2026-05-23 15:56:21] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 19:10:28] [TG] MSG: [TELEGRAM 19:10:28] Nora, tenemos que decirle a los usuarios que deben tener el 
+[2026-05-23 19:10:28] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 19:26:43] [TG] MSG: [TELEGRAM 19:26:43] Nora, lo tienes listo?
+[2026-05-23 19:26:43] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 19:34:33] [TG] MSG: [TELEGRAM 19:34:33] Crea también la distribución en francés para todas las plata
+[2026-05-23 19:34:33] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 21:17:19] [TG] MSG: [TELEGRAM 21:17:19] Nora, quiero que tengas una cuenta de Twitter/X.
+
+Usa tu cue
+[2026-05-23 21:17:19] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 23:36:30] [TG] MSG: [TELEGRAM 23:36:30] Nora, mándame un enlace a tu primera publicación en Twitter
+[2026-05-23 23:36:30] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-23 23:46:59] [TG] MSG: [TELEGRAM 23:46:59] Nora, porqué coño salta una IA del pool cuando te hablo a tí
+[2026-05-23 23:46:59] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-24 07:39:44] [TG] MSG: [TELEGRAM 07:39:44] Nora, dame la dirección de tu blog
+[2026-05-24 07:39:44] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-24 12:44:13] [TG] MSG: [TELEGRAM 12:44:13] Nora, sigue con el bot de Youtube
+[2026-05-24 12:44:13] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-24 13:50:05] [TG] MSG: [TELEGRAM 13:50:05] Nora, me lees?
+[2026-05-24 13:50:05] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-24 18:30:31] [MAIN] ============================================================
+[2026-05-24 18:30:31] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-24 18:30:31] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-24 18:30:31] [MAIN] ============================================================
+[2026-05-24 18:30:31] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-24 18:30:31] [MAIN] Hilo WEB iniciado.
+[2026-05-24 18:30:31] [MAIN] Hilo DISCORD iniciado.
+[2026-05-24 18:30:31] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-24 18:30:31] [DISCORD] Subproceso PID 16012
+[2026-05-24 18:30:32] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-24 18:30:32] [DISCORD] [2026-05-24 18:30:32] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-24 18:30:35] [DISCORD] [2026-05-24 18:30:35] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-24 18:41:52] [MAIN] ============================================================
+[2026-05-24 18:41:52] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-24 18:41:52] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-24 18:41:52] [MAIN] ============================================================
+[2026-05-24 18:41:52] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-24 18:41:52] [MAIN] Hilo WEB iniciado.
+[2026-05-24 18:41:52] [MAIN] Hilo DISCORD iniciado.
+[2026-05-24 18:41:52] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-24 18:41:52] [DISCORD] Subproceso PID 32796
+[2026-05-24 18:41:52] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-24 18:41:52] [DISCORD] [2026-05-24 18:41:52] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-24 18:41:55] [DISCORD] [2026-05-24 18:41:55] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-25 07:49:47] [MAIN] ============================================================
+[2026-05-25 07:49:47] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-25 07:49:47] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-25 07:49:47] [MAIN] ============================================================
+[2026-05-25 07:49:47] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-25 07:49:47] [MAIN] Hilo WEB iniciado.
+[2026-05-25 07:49:47] [MAIN] Hilo DISCORD iniciado.
+[2026-05-25 07:49:47] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-25 07:49:47] [DISCORD] Subproceso PID 32260
+[2026-05-25 07:49:47] [DISCORD] [2026-05-25 07:49:47] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-25 07:49:47] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-25 07:49:50] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-25 21:05:49] [MAIN] ============================================================
+[2026-05-25 21:05:49] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-25 21:05:49] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-25 21:05:49] [MAIN] ============================================================
+[2026-05-25 21:05:49] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-25 21:05:49] [MAIN] Hilo WEB iniciado.
+[2026-05-25 21:05:49] [MAIN] Hilo DISCORD iniciado.
+[2026-05-25 21:05:49] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-25 21:05:49] [DISCORD] Subproceso PID 19788
+[2026-05-25 21:05:49] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-25 21:05:49] [DISCORD] [2026-05-25 21:05:49] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-25 21:05:52] [DISCORD] [2026-05-25 21:05:52] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 00:36:24] [MAIN] ============================================================
+[2026-05-26 00:36:24] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 00:36:24] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 00:36:24] [MAIN] ============================================================
+[2026-05-26 00:36:24] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 00:36:24] [MAIN] Hilo WEB iniciado.
+[2026-05-26 00:36:24] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 00:36:24] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 00:36:24] [DISCORD] Subproceso PID 33584
+[2026-05-26 00:36:24] [DISCORD] [2026-05-26 00:36:24] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 00:36:27] [DISCORD] [2026-05-26 00:36:27] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 00:48:46] [MAIN] ============================================================
+[2026-05-26 00:48:46] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 00:48:46] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 00:48:46] [MAIN] ============================================================
+[2026-05-26 00:48:46] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 00:48:46] [MAIN] Hilo WEB iniciado.
+[2026-05-26 00:48:46] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 00:48:46] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 00:48:46] [DISCORD] Subproceso PID 17996
+[2026-05-26 00:48:47] [DISCORD] [2026-05-26 00:48:47] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 00:48:49] [DISCORD] [2026-05-26 00:48:49] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 00:48:49] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 02:24:01] [MAIN] ============================================================
+[2026-05-26 02:24:01] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 02:24:01] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 02:24:01] [MAIN] ============================================================
+[2026-05-26 02:24:01] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 02:24:01] [MAIN] Hilo WEB iniciado.
+[2026-05-26 02:24:01] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 02:24:02] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 02:24:02] [DISCORD] Subproceso PID 2820
+[2026-05-26 02:24:02] [DISCORD] [2026-05-26 02:24:02] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 02:24:05] [DISCORD] [2026-05-26 02:24:05] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 02:24:05] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 07:15:40] [MAIN] ============================================================
+[2026-05-26 07:15:40] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 07:15:40] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 07:15:40] [MAIN] ============================================================
+[2026-05-26 07:15:40] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 07:15:40] [MAIN] Hilo WEB iniciado.
+[2026-05-26 07:15:40] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 07:15:40] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 07:15:40] [DISCORD] Subproceso PID 35288
+[2026-05-26 07:15:41] [DISCORD] [2026-05-26 07:15:41] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 07:15:41] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 07:15:44] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 08:46:36] [MAIN] ============================================================
+[2026-05-26 08:46:36] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 08:46:36] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 08:46:36] [MAIN] ============================================================
+[2026-05-26 08:46:36] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 08:46:36] [MAIN] Hilo WEB iniciado.
+[2026-05-26 08:46:36] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 08:46:36] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 08:46:36] [DISCORD] Subproceso PID 36696
+[2026-05-26 08:46:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 08:46:36] [DISCORD] [2026-05-26 08:46:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 08:46:39] [DISCORD] [2026-05-26 08:46:39] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:07:40] [MAIN] ============================================================
+[2026-05-26 09:07:40] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:07:40] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:07:40] [MAIN] ============================================================
+[2026-05-26 09:07:40] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:07:40] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:07:40] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:07:40] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:07:40] [DISCORD] Subproceso PID 15168
+[2026-05-26 09:07:40] [DISCORD] [2026-05-26 09:07:40] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:07:45] [DISCORD] [2026-05-26 09:07:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:07:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:12:41] [MAIN] ============================================================
+[2026-05-26 09:12:41] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:12:41] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:12:41] [MAIN] ============================================================
+[2026-05-26 09:12:41] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:12:41] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:12:41] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:12:41] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:12:41] [DISCORD] Subproceso PID 18772
+[2026-05-26 09:12:42] [DISCORD] [2026-05-26 09:12:42] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:12:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 09:17:43] [MAIN] ============================================================
+[2026-05-26 09:17:43] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:17:43] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:17:43] [MAIN] ============================================================
+[2026-05-26 09:17:43] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:17:43] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:17:43] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:17:43] [MAIN] ============================================================
+[2026-05-26 09:17:43] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:17:43] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:17:43] [MAIN] ============================================================
+[2026-05-26 09:17:43] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:17:43] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:17:43] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:17:43] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:17:43] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:17:43] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:17:43] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:17:43] [DISCORD] Subproceso PID 11408
+[2026-05-26 09:17:43] [DISCORD] Subproceso PID 7528
+[2026-05-26 09:17:43] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:17:43] [TG] Escuchando desde update_id > 454854884
+[2026-05-26 09:17:43] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:17:43] [TG] Escuchando desde update_id > 454854884
+[2026-05-26 09:17:43] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:17:43] [DISCORD] [2026-05-26 09:17:43] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:17:43] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:17:43] [DISCORD] [2026-05-26 09:17:43] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:17:45] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:17:45] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:17:46] [DISCORD] [2026-05-26 09:17:46] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:17:47] [DISCORD] [2026-05-26 09:17:47] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:17:50] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:17:50] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:17:56] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:17:56] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:18:01] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:18:01] [TG] Error #1: name 'chat_id' is not defined
+[2026-05-26 09:21:18] [MAIN] ============================================================
+[2026-05-26 09:21:18] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:21:18] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:21:18] [MAIN] ============================================================
+[2026-05-26 09:21:18] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:21:18] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:21:18] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:21:18] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:21:18] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:21:18] [DISCORD] Subproceso PID 32292
+[2026-05-26 09:21:18] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:21:18] [TG] Escuchando desde update_id > 454854900
+[2026-05-26 09:21:18] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:21:18] [DISCORD] [2026-05-26 09:21:18] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:21:21] [DISCORD] [2026-05-26 09:21:21] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:29:58] [MAIN] ============================================================
+[2026-05-26 09:29:58] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:29:58] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:29:58] [MAIN] ============================================================
+[2026-05-26 09:29:58] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:29:58] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:29:58] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:29:58] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:29:58] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:29:58] [DISCORD] Subproceso PID 30572
+[2026-05-26 09:29:58] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:29:58] [TG] Escuchando desde update_id > 454854901
+[2026-05-26 09:29:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:29:58] [DISCORD] [2026-05-26 09:29:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:30:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:30:01] [DISCORD] [2026-05-26 09:30:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:35:39] [MAIN] ============================================================
+[2026-05-26 09:35:39] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:35:39] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:35:39] [MAIN] ============================================================
+[2026-05-26 09:35:39] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:35:39] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:35:39] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:35:39] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:35:39] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:35:39] [DISCORD] Subproceso PID 9368
+[2026-05-26 09:35:40] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:35:40] [TG] Escuchando desde update_id > 454854902
+[2026-05-26 09:35:40] [DISCORD] [2026-05-26 09:35:40] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:35:43] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:35:43] [DISCORD] [2026-05-26 09:35:43] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:40:18] [MAIN] ============================================================
+[2026-05-26 09:40:18] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:40:18] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:40:18] [MAIN] ============================================================
+[2026-05-26 09:40:18] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:40:18] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:40:18] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:40:18] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:40:18] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:40:18] [DISCORD] Subproceso PID 16932
+[2026-05-26 09:40:18] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:40:18] [TG] Escuchando desde update_id > 454854904
+[2026-05-26 09:40:19] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:40:19] [DISCORD] [2026-05-26 09:40:19] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:40:20] [MAIN] PYTHONW_EXE=C:\Users\fnora\AppData\Local\Programs\Python\Python311\pythonw.exe | IDE_EXE=C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:40:20] [MAIN] Watchdog lanzado.
+[2026-05-26 09:40:22] [DISCORD] [2026-05-26 09:40:22] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:40:22] [MAIN] Abriendo IDE: C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:41:47] [MAIN] ============================================================
+[2026-05-26 09:41:47] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:41:47] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:41:47] [MAIN] ============================================================
+[2026-05-26 09:41:47] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:41:47] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:41:47] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:41:47] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:41:47] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:41:47] [DISCORD] Subproceso PID 10012
+[2026-05-26 09:41:47] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:41:47] [TG] Escuchando desde update_id > 454854905
+[2026-05-26 09:41:48] [DISCORD] [2026-05-26 09:41:48] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:41:51] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:41:51] [DISCORD] [2026-05-26 09:41:51] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:48:32] [MAIN] ============================================================
+[2026-05-26 09:48:32] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:48:32] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:48:32] [MAIN] ============================================================
+[2026-05-26 09:48:32] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:48:32] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:48:32] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:48:32] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:48:32] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:48:32] [DISCORD] Subproceso PID 31084
+[2026-05-26 09:48:32] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:48:32] [TG] Escuchando desde update_id > 454854906
+[2026-05-26 09:48:32] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:48:32] [DISCORD] [2026-05-26 09:48:32] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:48:33] [MAIN] PYTHONW_EXE=C:\Users\fnora\AppData\Local\Programs\Python\Python311\pythonw.exe | IDE_EXE=C:\Users\fnora\AppData\Local\Programs\Antigravity\Antigravity.exe
+[2026-05-26 09:48:33] [MAIN] start_swarm.bat lanzado. Watchdog + Daemon + IDE arrancando...
+[2026-05-26 09:48:33] [MAIN] ============================================================
+[2026-05-26 09:48:33] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:48:33] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:48:33] [MAIN] ============================================================
+[2026-05-26 09:48:33] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:48:33] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:48:33] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:48:33] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:48:33] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:48:33] [DISCORD] Subproceso PID 3048
+[2026-05-26 09:48:33] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:48:33] [TG] Escuchando desde update_id > 454854907
+[2026-05-26 09:48:34] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:48:34] [DISCORD] [2026-05-26 09:48:34] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:48:35] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:48:35] [DISCORD] [2026-05-26 09:48:35] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:48:37] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 09:51:25] [MAIN] ============================================================
+[2026-05-26 09:51:25] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 09:51:25] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 09:51:25] [MAIN] ============================================================
+[2026-05-26 09:51:25] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 09:51:25] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 09:51:25] [MAIN] Hilo WEB iniciado.
+[2026-05-26 09:51:25] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 09:51:25] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 09:51:25] [DISCORD] Subproceso PID 20212
+[2026-05-26 09:51:25] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 09:51:25] [TG] Escuchando desde update_id > 454854907
+[2026-05-26 09:51:25] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:51:25] [DISCORD] [2026-05-26 09:51:25] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 09:51:28] [DISCORD] [2026-05-26 09:51:28] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 09:53:00] [MAIN] kill_switch.lock creado. Watchdog en modo pausa.
+[2026-05-26 19:03:49] [MAIN] ============================================================
+[2026-05-26 19:03:49] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 19:03:49] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 19:03:49] [MAIN] ============================================================
+[2026-05-26 19:03:49] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 19:03:49] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 19:03:49] [MAIN] Hilo WEB iniciado.
+[2026-05-26 19:03:49] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 19:03:49] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 19:03:49] [DISCORD] Subproceso PID 31432
+[2026-05-26 19:03:49] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 19:03:49] [TG] Escuchando desde update_id > 454854908
+[2026-05-26 19:03:50] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 19:03:50] [DISCORD] [2026-05-26 19:03:50] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 19:03:51] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 19:03:51] [TG] MSG: [TELEGRAM 19:03:51] Nora, sigue
+[2026-05-26 19:03:53] [DISCORD] [2026-05-26 19:03:53] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 19:03:53] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 19:03:53] [TG] MSG: [TELEGRAM 19:03:53] Nora, importa tú el archivo desde n8n local. Tienes conexión
+[2026-05-26 19:03:54] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 19:03:55] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 19:03:55] [TG] MSG: [TELEGRAM 19:03:55] Nora, estás ahí?
+[2026-05-26 19:03:56] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 19:03:56] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 19:03:57] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 19:03:57] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 20:44:15] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 22:18:35] [MAIN] ============================================================
+[2026-05-26 22:18:35] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:18:35] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:18:35] [MAIN] ============================================================
+[2026-05-26 22:18:35] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:18:35] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:18:35] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:18:35] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:18:35] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:18:35] [DISCORD] Subproceso PID 32336
+[2026-05-26 22:18:35] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:18:35] [TG] Escuchando desde update_id > 454854917
+[2026-05-26 22:18:35] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:18:35] [DISCORD] [2026-05-26 22:18:35] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:18:38] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 22:26:49] [MAIN] ============================================================
+[2026-05-26 22:26:49] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:26:49] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:26:49] [MAIN] ============================================================
+[2026-05-26 22:26:49] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:26:49] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:26:49] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:26:49] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:26:49] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:26:49] [DISCORD] Subproceso PID 36512
+[2026-05-26 22:26:50] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:26:50] [TG] Escuchando desde update_id > 454854919
+[2026-05-26 22:26:50] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:26:50] [DISCORD] [2026-05-26 22:26:50] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:26:53] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 22:27:26] [MAIN] ============================================================
+[2026-05-26 22:27:26] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:27:26] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:27:26] [MAIN] ============================================================
+[2026-05-26 22:27:26] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:27:26] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:27:26] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:27:26] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:27:26] [TG] Escuchando desde update_id > 454854921
+[2026-05-26 22:27:26] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:27:26] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:27:26] [DISCORD] Subproceso PID 8120
+[2026-05-26 22:27:26] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:27:26] [DISCORD] [2026-05-26 22:27:26] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:27:29] [DISCORD] [2026-05-26 22:27:29] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 22:32:23] [MAIN] ============================================================
+[2026-05-26 22:32:23] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:32:23] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:32:23] [MAIN] ============================================================
+[2026-05-26 22:32:23] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:32:23] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:32:23] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:32:23] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:32:23] [TG] Escuchando desde update_id > 454854922
+[2026-05-26 22:32:23] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:32:23] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:32:23] [DISCORD] Subproceso PID 2820
+[2026-05-26 22:32:24] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:32:24] [DISCORD] [2026-05-26 22:32:24] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:32:26] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 22:35:02] [MAIN] Error contactando webhook n8n: cannot access local variable 'requests' where it is not associated with a value
+[2026-05-26 22:36:35] [MAIN] ============================================================
+[2026-05-26 22:36:35] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:36:35] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:36:35] [MAIN] ============================================================
+[2026-05-26 22:36:35] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:36:35] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:36:35] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:36:35] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:36:35] [TG] Escuchando desde update_id > 454854923
+[2026-05-26 22:36:35] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:36:35] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:36:35] [DISCORD] Subproceso PID 19424
+[2026-05-26 22:36:35] [DISCORD] Conectando con token MTQ3NjMzNz...
+ctando con token MTQ3NjMzNz...
+[2026-05-26 22:36:38] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 22:36:38] [DISCORD] [2026-05-26 22:36:38] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 22:53:53] [MAIN] ============================================================
+[2026-05-26 22:53:53] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:53:53] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:53:53] [MAIN] ============================================================
+[2026-05-26 22:53:53] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:53:53] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:53:53] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:53:53] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:53:53] [TG] Escuchando desde update_id > 454854924
+[2026-05-26 22:53:53] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:53:53] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:53:53] [DISCORD] Subproceso PID 20212
+[2026-05-26 22:53:54] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:53:54] [DISCORD] [2026-05-26 22:53:54] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 22:56:58] [MAIN] ============================================================
+[2026-05-26 22:56:58] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 22:56:58] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 22:56:58] [MAIN] ============================================================
+[2026-05-26 22:56:58] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 22:56:58] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 22:56:58] [MAIN] Hilo WEB iniciado.
+[2026-05-26 22:56:58] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 22:56:58] [TG] Escuchando desde update_id > 454854928
+[2026-05-26 22:56:58] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 22:56:58] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 22:56:58] [DISCORD] Subproceso PID 3348
+[2026-05-26 22:56:58] [DISCORD] [2026-05-26 22:56:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 23:00:54] [MAIN] ============================================================
+[2026-05-26 23:00:54] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:00:54] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:00:54] [MAIN] ============================================================
+[2026-05-26 23:00:54] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:00:54] [TG] Escuchando desde update_id > 454854931
+[2026-05-26 23:00:54] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:00:54] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:00:54] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:00:54] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:00:54] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:00:54] [DISCORD] Subproceso PID 28240
+[2026-05-26 23:00:54] [DISCORD] [2026-05-26 23:00:54] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 23:00:54] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 23:00:58] [DISCORD] [2026-05-26 23:00:58] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 23:00:58] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 23:02:29] [MAIN] ============================================================
+[2026-05-26 23:02:29] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:02:29] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:02:29] [MAIN] ============================================================
+[2026-05-26 23:02:29] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:02:29] [TG] Escuchando desde update_id > 454854931
+[2026-05-26 23:02:29] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:02:29] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:02:29] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:02:29] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:02:29] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:02:29] [DISCORD] Subproceso PID 33360
+[2026-05-26 23:02:30] [DISCORD] [2026-05-26 23:02:30] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 23:02:33] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-26 23:02:53] [TG] MSG: [TELEGRAM 23:02:53] Nora, cuanto apagamos el enjambre el watchdog empieza a mand
+[2026-05-26 23:02:55] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 23:03:57] [TG] MSG: [TELEGRAM 23:03:57] No hace falta que me mande mensajes
+[2026-05-26 23:03:58] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 23:05:09] [TG] MSG: [TELEGRAM 23:05:09] Nora, no hace falta que el watchdog me mande mensajes
+[2026-05-26 23:05:10] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 23:53:15] [MAIN] ============================================================
+[2026-05-26 23:53:15] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:53:15] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:53:15] [MAIN] ============================================================
+[2026-05-26 23:53:15] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:53:15] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:53:15] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:53:15] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:53:15] [TG] Escuchando desde update_id > 454854935
+[2026-05-26 23:53:15] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:53:15] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:53:15] [DISCORD] Subproceso PID 18880
+[2026-05-26 23:53:15] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 23:53:15] [DISCORD] [2026-05-26 23:53:15] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-26 23:53:17] [TG] MSG: [TELEGRAM 23:53:17] Nora, estás encendida?
+[2026-05-26 23:53:18] [DISCORD] [2026-05-26 23:53:18] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 23:53:18] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-26 23:53:18] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 23:53:20] [TG] MSG: [TELEGRAM 23:53:20] Nora, el apagado vuelve a no funcionar desde Telegram. Antes
+[2026-05-26 23:53:20] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-26 23:55:29] [MAIN] ============================================================
+[2026-05-26 23:55:29] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:55:29] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:55:29] [MAIN] ============================================================
+[2026-05-26 23:55:29] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:55:29] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:55:29] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:55:29] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:55:29] [TG] Escuchando desde update_id > 454854940
+[2026-05-26 23:55:29] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:55:29] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:55:29] [DISCORD] Subproceso PID 8272
+[2026-05-26 23:57:15] [MAIN] ============================================================
+[2026-05-26 23:57:15] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:57:15] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:57:15] [MAIN] ============================================================
+[2026-05-26 23:57:15] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:57:15] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:57:15] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:57:15] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:57:15] [TG] Escuchando desde update_id > 454854940
+[2026-05-26 23:57:15] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:57:15] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:57:15] [DISCORD] Subproceso PID 1140
+[2026-05-26 23:58:06] [MAIN] ============================================================
+[2026-05-26 23:58:06] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:58:06] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:58:06] [MAIN] ============================================================
+[2026-05-26 23:58:06] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:58:06] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:58:06] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:58:06] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:58:06] [TG] Escuchando desde update_id > 454854940
+[2026-05-26 23:58:06] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:58:06] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:58:06] [DISCORD] Subproceso PID 37116
+[2026-05-26 23:58:34] [MAIN] ============================================================
+[2026-05-26 23:58:34] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-26 23:58:34] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-26 23:58:34] [MAIN] ============================================================
+[2026-05-26 23:58:34] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-26 23:58:34] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-26 23:58:34] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-26 23:58:34] [MAIN] Hilo WEB iniciado.
+[2026-05-26 23:58:34] [TG] Escuchando desde update_id > 454854940
+[2026-05-26 23:58:34] [MAIN] Hilo DISCORD iniciado.
+[2026-05-26 23:58:34] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-26 23:58:34] [DISCORD] Subproceso PID 20144
+[2026-05-26 23:58:35] [DISCORD] Conectando con token MTQ3NjMzNz...
+ctando con token MTQ3NjMzNz...
+[2026-05-26 23:58:39] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-27 00:01:15] [MAIN] ============================================================
+[2026-05-27 00:01:15] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:01:15] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:01:15] [MAIN] ============================================================
+[2026-05-27 00:01:15] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:01:15] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:01:15] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:01:15] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:01:15] [TG] Escuchando desde update_id > 454854940
+[2026-05-27 00:01:15] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:01:15] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:01:15] [DISCORD] Subproceso PID 26696
+[2026-05-27 00:06:04] [MAIN] ============================================================
+[2026-05-27 00:06:04] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:06:04] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:06:04] [MAIN] ============================================================
+[2026-05-27 00:06:04] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:06:04] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:06:04] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:06:04] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:06:04] [TG] Escuchando desde update_id > 454854940
+[2026-05-27 00:06:04] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:06:04] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:06:04] [DISCORD] Subproceso PID 16140
+[2026-05-27 00:06:05] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:06:05] [DISCORD] [2026-05-27 00:06:05] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:06:08] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-27 00:08:32] [MAIN] ============================================================
+[2026-05-27 00:08:32] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:08:32] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:08:32] [MAIN] ============================================================
+[2026-05-27 00:08:32] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:08:32] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:08:32] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:08:32] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:08:32] [TG] Escuchando desde update_id > 454854940
+[2026-05-27 00:08:32] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:08:32] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:08:32] [DISCORD] Subproceso PID 37556
+[2026-05-27 00:08:33] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:08:33] [DISCORD] [2026-05-27 00:08:33] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:08:36] [DISCORD] [2026-05-27 00:08:36] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 00:09:20] [TG] MSG: [TELEGRAM 00:09:20] Nora, has resuelto lo que te pedí?
+[2026-05-27 00:09:22] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:12:12] [TG] MSG: [TELEGRAM 00:12:12] Analiza bien todos los daemons implicados en el cierre y enc
+[2026-05-27 00:12:13] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:15:02] [TG] MSG: [TELEGRAM 00:15:02] Simula lo que ocurriría después de las modificaciones pero s
+[2026-05-27 00:15:03] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:21:03] [TG] MSG: [TELEGRAM 00:21:03] Quiero que todos los archivos implicados en el proceso de ap
+[2026-05-27 00:21:04] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:22:37] [TG] MSG: [TELEGRAM 00:22:37] Adelante con ello
+[2026-05-27 00:22:38] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:24:07] [MAIN] ============================================================
+[2026-05-27 00:24:07] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:24:07] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:24:07] [MAIN] ============================================================
+[2026-05-27 00:24:07] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:24:07] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:24:07] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:24:07] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:24:07] [TG] Escuchando desde update_id > 454854945
+[2026-05-27 00:24:07] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:24:07] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:24:07] [DISCORD] Subproceso PID 28216
+[2026-05-27 00:24:07] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:24:07] [DISCORD] [2026-05-27 00:24:07] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:24:10] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-27 00:44:56] [MAIN] ============================================================
+[2026-05-27 00:44:56] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:44:56] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:44:56] [MAIN] ============================================================
+[2026-05-27 00:44:56] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:44:56] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:44:56] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:44:56] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:44:56] [TG] Escuchando desde update_id > 454854952
+[2026-05-27 00:44:56] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:44:56] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:44:56] [DISCORD] Subproceso PID 18272
+[2026-05-27 00:44:57] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:44:57] [DISCORD] [2026-05-27 00:44:57] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:44:58] [TG] MSG: [TELEGRAM 00:44:58] Nora, estás ahí?
+[2026-05-27 00:44:59] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:44:59] [TG] MSG: [TELEGRAM 00:44:59] Nora, estás ahí?
+[2026-05-27 00:45:00] [DISCORD] [2026-05-27 00:45:00] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 00:45:00] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 00:45:43] [MAIN] ============================================================
+[2026-05-27 00:45:43] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:45:43] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:45:43] [MAIN] ============================================================
+[2026-05-27 00:45:43] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:45:43] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:45:43] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:45:43] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:45:43] [TG] Escuchando desde update_id > 454854955
+[2026-05-27 00:45:43] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:45:43] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:45:43] [DISCORD] Subproceso PID 17184
+[2026-05-27 00:45:43] [DISCORD] [2026-05-27 00:45:43] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:45:46] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-27 00:51:15] [MAIN] ============================================================
+[2026-05-27 00:51:15] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:51:15] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:51:15] [MAIN] ============================================================
+[2026-05-27 00:51:15] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:51:15] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:51:15] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:51:15] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:51:15] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:51:15] [TG] Escuchando desde update_id > 454854955
+[2026-05-27 00:51:15] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:51:15] [DISCORD] Subproceso PID 30820
+[2026-05-27 00:51:15] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:51:15] [DISCORD] [2026-05-27 00:51:15] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:51:18] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 00:51:18] [DISCORD] [2026-05-27 00:51:18] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 00:59:20] [MAIN] ============================================================
+[2026-05-27 00:59:20] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 00:59:20] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 00:59:20] [MAIN] ============================================================
+[2026-05-27 00:59:20] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 00:59:20] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 00:59:20] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 00:59:20] [MAIN] Hilo WEB iniciado.
+[2026-05-27 00:59:20] [TG] Escuchando desde update_id > 454854956
+[2026-05-27 00:59:20] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 00:59:20] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 00:59:20] [DISCORD] Subproceso PID 14792
+[2026-05-27 00:59:21] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:59:21] [DISCORD] [2026-05-27 00:59:21] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 00:59:24] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-27 01:26:36] [MAIN] ============================================================
+[2026-05-27 01:26:36] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 01:26:36] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 01:26:36] [MAIN] ============================================================
+[2026-05-27 01:26:36] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 01:26:36] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 01:26:36] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 01:26:36] [MAIN] Hilo WEB iniciado.
+[2026-05-27 01:26:36] [TG] Escuchando desde update_id > 454854958
+[2026-05-27 01:26:36] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 01:26:36] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 01:26:36] [DISCORD] Subproceso PID 20020
+[2026-05-27 01:26:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 01:26:36] [DISCORD] [2026-05-27 01:26:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 01:35:50] [MAIN] ============================================================
+[2026-05-27 01:35:50] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 01:35:50] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 01:35:50] [MAIN] ============================================================
+[2026-05-27 01:35:50] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 01:35:50] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 01:35:50] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 01:35:50] [MAIN] Hilo WEB iniciado.
+[2026-05-27 01:35:50] [TG] Escuchando desde update_id > 454854960
+[2026-05-27 01:35:50] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 01:35:50] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 01:35:50] [DISCORD] Subproceso PID 28496
+[2026-05-27 01:35:50] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 01:35:50] [DISCORD] [2026-05-27 01:35:50] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 01:35:53] [DISCORD] [2026-05-27 01:35:53] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 08:31:21] [MAIN] ============================================================
+[2026-05-27 08:31:21] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 08:31:21] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 08:31:21] [MAIN] ============================================================
+[2026-05-27 08:31:21] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 08:31:21] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 08:31:21] [MAIN] Hilo WEB iniciado.
+[2026-05-27 08:31:21] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 08:31:21] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 08:31:21] [TG] Escuchando desde update_id > 454854963
+[2026-05-27 08:31:21] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 08:31:21] [DISCORD] Subproceso PID 20840
+[2026-05-27 08:31:22] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 08:31:22] [DISCORD] [2026-05-27 08:31:22] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 08:31:25] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 08:31:25] [DISCORD] [2026-05-27 08:31:25] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 08:46:59] [MAIN] ============================================================
+[2026-05-27 08:46:59] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 08:46:59] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 08:46:59] [MAIN] ============================================================
+[2026-05-27 08:46:59] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 08:46:59] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 08:46:59] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 08:46:59] [MAIN] Hilo WEB iniciado.
+[2026-05-27 08:46:59] [TG] Escuchando desde update_id > 454854965
+[2026-05-27 08:46:59] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 08:46:59] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 08:46:59] [DISCORD] Subproceso PID 33064
+[2026-05-27 08:46:59] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 08:46:59] [DISCORD] [2026-05-27 08:46:59] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 08:47:02] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 08:47:02] [DISCORD] [2026-05-27 08:47:02] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 09:42:58] [TG] MSG: [TELEGRAM 09:42:58] Nora, esto es una prueba desde telegram
+[2026-05-27 09:43:01] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-27 10:17:29] [MAIN] ============================================================
+[2026-05-27 10:17:29] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 10:17:29] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 10:17:29] [MAIN] ============================================================
+[2026-05-27 10:17:29] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 10:17:29] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 10:17:29] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 10:17:29] [MAIN] Hilo WEB iniciado.
+[2026-05-27 10:17:29] [TG] Escuchando desde update_id > 454854971
+[2026-05-27 10:17:29] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 10:17:29] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 10:17:30] [DISCORD] Subproceso PID 20028
+[2026-05-27 10:17:30] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 10:17:30] [DISCORD] [2026-05-27 10:17:30] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 10:17:33] [DISCORD] [2026-05-27 10:17:33] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 10:17:33] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 10:20:08] [MAIN] ============================================================
+[2026-05-27 10:20:08] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 10:20:08] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 10:20:08] [MAIN] ============================================================
+[2026-05-27 10:20:08] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 10:20:08] [TG] Escuchando desde update_id > 454854971
+[2026-05-27 10:20:08] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 10:20:08] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 10:20:08] [MAIN] Hilo WEB iniciado.
+[2026-05-27 10:20:08] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 10:20:08] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 10:20:08] [DISCORD] Subproceso PID 3236
+[2026-05-27 10:20:09] [DISCORD] [2026-05-27 10:20:09] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 10:20:09] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 10:20:12] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 10:20:12] [DISCORD] [2026-05-27 10:20:12] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 13:27:45] [MAIN] ============================================================
+[2026-05-27 13:27:45] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 13:27:45] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 13:27:45] [MAIN] ============================================================
+[2026-05-27 13:27:45] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 13:27:45] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 13:27:45] [MAIN] Hilo WEB iniciado.
+[2026-05-27 13:27:45] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 13:27:45] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 13:27:45] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 13:27:45] [TG] Escuchando desde update_id > 454854974
+[2026-05-27 13:27:45] [DISCORD] Subproceso PID 26284
+[2026-05-27 13:27:46] [DISCORD] [2026-05-27 13:27:46] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 13:27:46] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 13:27:49] [DISCORD] [2026-05-27 13:27:49] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 18:37:15] [MAIN] ============================================================
+[2026-05-27 18:37:15] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 18:37:15] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 18:37:15] [MAIN] ============================================================
+[2026-05-27 18:37:15] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 18:37:15] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 18:37:15] [MAIN] Hilo WEB iniciado.
+[2026-05-27 18:37:15] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 18:37:15] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 18:37:15] [TG] Escuchando desde update_id > 454854983
+[2026-05-27 18:37:15] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 18:37:15] [DISCORD] Subproceso PID 10944
+[2026-05-27 18:37:15] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 18:37:15] [DISCORD] [2026-05-27 18:37:15] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 18:37:18] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-27 18:54:05] [MAIN] ============================================================
+[2026-05-27 18:54:05] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-27 18:54:05] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-27 18:54:05] [MAIN] ============================================================
+[2026-05-27 18:54:05] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-27 18:54:05] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-27 18:54:05] [MAIN] Hilo WEB iniciado.
+[2026-05-27 18:54:05] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-27 18:54:05] [MAIN] Hilo DISCORD iniciado.
+[2026-05-27 18:54:05] [TG] Escuchando desde update_id > 454854987
+[2026-05-27 18:54:05] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-27 18:54:05] [DISCORD] Subproceso PID 14680
+[2026-05-27 18:54:06] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 18:54:06] [DISCORD] [2026-05-27 18:54:06] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-27 18:54:09] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-27 18:54:09] [DISCORD] [2026-05-27 18:54:09] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-28 08:24:57] [MAIN] ============================================================
+[2026-05-28 08:24:57] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-28 08:24:57] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-28 08:24:57] [MAIN] ============================================================
+[2026-05-28 08:24:57] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-28 08:24:57] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-28 08:24:57] [MAIN] Hilo WEB iniciado.
+[2026-05-28 08:24:57] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-28 08:24:57] [MAIN] Hilo DISCORD iniciado.
+[2026-05-28 08:24:57] [TG] Escuchando desde update_id > 454855000
+[2026-05-28 08:24:57] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-28 08:24:57] [DISCORD] Subproceso PID 25596
+[2026-05-28 08:24:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-28 08:24:58] [DISCORD] [2026-05-28 08:24:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-28 08:25:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-28 08:32:31] [TG] MSG: [TELEGRAM 08:32:31] Nora, has arrancado a la perfección
+[2026-05-28 08:32:34] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-28 08:41:46] [TG] MSG: [TELEGRAM 08:41:46] Nora, esto es una prueba desde telegram para comprobar que t
+[2026-05-28 08:41:49] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-28 08:46:33] [TG] MSG: [TELEGRAM 08:46:33] Nora, vamos a probar de nuevo la inyección de mensajes desde
+[2026-05-28 08:46:36] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-28 08:51:35] [MAIN] ============================================================
+[2026-05-28 08:51:35] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-28 08:51:35] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-28 08:51:35] [MAIN] ============================================================
+[2026-05-28 08:51:35] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-28 08:51:35] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-28 08:51:35] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-28 08:51:35] [MAIN] Hilo WEB iniciado.
+[2026-05-28 08:51:35] [TG] Escuchando desde update_id > 454855007
+[2026-05-28 08:51:35] [MAIN] Hilo DISCORD iniciado.
+[2026-05-28 08:51:35] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-28 08:51:35] [DISCORD] Subproceso PID 10912
+[2026-05-28 08:51:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-28 08:51:36] [DISCORD] [2026-05-28 08:51:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-28 08:51:39] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-28 08:51:39] [DISCORD] [2026-05-28 08:51:39] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-29 22:28:19] [MAIN] ============================================================
+[2026-05-29 22:28:19] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-29 22:28:19] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-29 22:28:19] [MAIN] ============================================================
+[2026-05-29 22:28:19] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-29 22:28:19] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-29 22:28:19] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-29 22:28:19] [MAIN] Hilo WEB iniciado.
+[2026-05-29 22:28:19] [TG] Escuchando desde update_id > 454855012
+[2026-05-29 22:28:19] [MAIN] Hilo DISCORD iniciado.
+[2026-05-29 22:28:19] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-29 22:28:19] [DISCORD] Subproceso PID 10416
+[2026-05-29 22:28:20] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-29 22:28:20] [DISCORD] [2026-05-29 22:28:20] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-29 22:28:23] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-29 23:33:04] [MAIN] ============================================================
+[2026-05-29 23:33:04] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-29 23:33:04] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-29 23:33:04] [MAIN] ============================================================
+[2026-05-29 23:33:04] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-29 23:33:04] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-29 23:33:04] [MAIN] Hilo WEB iniciado.
+[2026-05-29 23:33:04] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-29 23:33:04] [MAIN] Hilo DISCORD iniciado.
+[2026-05-29 23:33:04] [TG] Escuchando desde update_id > 454855013
+[2026-05-29 23:33:04] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-29 23:33:04] [DISCORD] Subproceso PID 29740
+[2026-05-29 23:33:05] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-29 23:33:05] [DISCORD] [2026-05-29 23:33:05] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-29 23:33:08] [DISCORD] [2026-05-29 23:33:08] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-30 00:39:02] [MAIN] ============================================================
+[2026-05-30 00:39:02] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-30 00:39:02] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-30 00:39:02] [MAIN] ============================================================
+[2026-05-30 00:39:02] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-30 00:39:02] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-30 00:39:02] [TG] Escuchando desde update_id > 454855013
+[2026-05-30 00:39:02] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-30 00:39:02] [MAIN] Hilo WEB iniciado.
+[2026-05-30 00:39:02] [MAIN] Hilo DISCORD iniciado.
+[2026-05-30 00:39:02] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-30 00:39:02] [DISCORD] Subproceso PID 21104
+[2026-05-30 00:39:03] [DISCORD] Conectando con token MTQ3NjMzNz...
+ctando con token MTQ3NjMzNz...
+[2026-05-30 00:39:07] [DISCORD] [2026-05-30 00:39:07] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-30 00:39:07] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-30 02:09:51] [MAIN] ============================================================
+[2026-05-30 02:09:51] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-30 02:09:51] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-30 02:09:51] [MAIN] ============================================================
+[2026-05-30 02:09:51] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-30 02:09:51] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-30 02:09:51] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-30 02:09:51] [MAIN] Hilo WEB iniciado.
+[2026-05-30 02:09:51] [TG] Escuchando desde update_id > 454855038
+[2026-05-30 02:09:51] [MAIN] Hilo DISCORD iniciado.
+[2026-05-30 02:09:51] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-30 02:09:51] [DISCORD] Subproceso PID 32912
+[2026-05-30 02:09:52] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-30 02:09:52] [DISCORD] [2026-05-30 02:09:52] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-30 02:09:55] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-30 08:05:49] [MAIN] ============================================================
+[2026-05-30 08:05:49] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-30 08:05:49] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-30 08:05:49] [MAIN] ============================================================
+[2026-05-30 08:05:49] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-30 08:05:49] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-30 08:05:49] [MAIN] Hilo WEB iniciado.
+[2026-05-30 08:05:49] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-30 08:05:49] [MAIN] Hilo DISCORD iniciado.
+[2026-05-30 08:05:49] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-30 08:05:49] [TG] Escuchando desde update_id > 454855045
+[2026-05-30 08:05:49] [DISCORD] Subproceso PID 1948
+[2026-05-30 08:05:49] [DISCORD] Conectando con token MTQ3NjMzNz...
+ctando con token MTQ3NjMzNz...
+[2026-05-30 08:05:52] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-05-30 08:17:00] [MAIN] ============================================================
+[2026-05-30 08:17:00] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-30 08:17:00] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-30 08:17:00] [MAIN] ============================================================
+[2026-05-30 08:17:00] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-30 08:17:00] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-30 08:17:00] [MAIN] Hilo WEB iniciado.
+[2026-05-30 08:17:00] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-30 08:17:00] [MAIN] Hilo DISCORD iniciado.
+[2026-05-30 08:17:00] [TG] Escuchando desde update_id > 454855045
+[2026-05-30 08:17:00] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-30 08:17:00] [DISCORD] Subproceso PID 34252
+[2026-05-30 08:17:00] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-30 08:17:00] [DISCORD] [2026-05-30 08:17:00] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-30 08:17:03] [DISCORD] [2026-05-30 08:17:03] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-30 08:24:54] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-30 08:32:31] [MAIN] ============================================================
+[2026-05-30 08:32:31] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-30 08:32:31] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-30 08:32:31] [MAIN] ============================================================
+[2026-05-30 08:32:31] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-30 08:32:31] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-30 08:32:31] [MAIN] Hilo WEB iniciado.
+[2026-05-30 08:32:31] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-30 08:32:31] [MAIN] Hilo DISCORD iniciado.
+[2026-05-30 08:32:31] [TG] Escuchando desde update_id > 454855047
+[2026-05-30 08:32:31] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-30 08:32:31] [DISCORD] Subproceso PID 3564
+[2026-05-30 08:32:31] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-30 08:32:31] [DISCORD] [2026-05-30 08:32:31] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-30 08:32:34] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-30 08:32:34] [DISCORD] [2026-05-30 08:32:34] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-05-31 11:57:15] [WEB] MSG: [WEB - admin] este mensaje espara una IA del pool.
+
+Quiero que accedas a https
+[2026-05-31 11:57:15] [IDE] OK: Mensaje inyectado con éxito (fuente: web)
+[2026-05-31 14:52:56] [TG] MSG: [TELEGRAM 14:52:56] Nora, recuérdame esto: IA proteínica
+[2026-05-31 14:52:56] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-31 19:44:01] [TG] MSG: [TELEGRAM 19:44:01] Bien.
+
+Ahora quiero explorar una idea.
+
+Antigravity ya tiene
+[2026-05-31 19:44:01] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-31 20:12:48] [TG] MSG: [TELEGRAM 20:12:48] Nora, explicame detalladamente como funcionaria tu propuesta
+[2026-05-31 20:12:48] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-31 20:20:50] [TG] MSG: [TELEGRAM 20:20:50] Nora, explicame detalladamente como funcionaria tu propuesta
+[2026-05-31 20:20:50] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-31 20:33:58] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-05-31 20:34:05] [IDE] OK: Mensaje duplicado omitido (ya está en cola)
+[2026-05-31 20:34:20] [MAIN] ============================================================
+[2026-05-31 20:34:20] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-05-31 20:34:20] [MAIN] Canales: Telegram + Web + Discord
+[2026-05-31 20:34:20] [MAIN] ============================================================
+[2026-05-31 20:34:20] [MAIN] Hilo TELEGRAM iniciado.
+[2026-05-31 20:34:20] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-05-31 20:34:20] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-05-31 20:34:20] [MAIN] Hilo WEB iniciado.
+[2026-05-31 20:34:20] [TG] Escuchando desde update_id > 454855054
+[2026-05-31 20:34:20] [MAIN] Hilo DISCORD iniciado.
+[2026-05-31 20:34:20] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-05-31 20:34:20] [DISCORD] Subproceso PID 16472
+[2026-05-31 20:34:20] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-31 20:34:20] [DISCORD] [2026-05-31 20:34:20] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-05-31 20:34:23] [DISCORD] [2026-05-31 20:34:23] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-01 08:15:41] [MAIN] ============================================================
+[2026-06-01 08:15:41] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-01 08:15:41] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-01 08:15:41] [MAIN] ============================================================
+[2026-06-01 08:15:41] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-01 08:15:41] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-01 08:15:41] [TG] Escuchando desde update_id > 454855054
+[2026-06-01 08:15:41] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-06-01 08:15:41] [MAIN] Hilo WEB iniciado.
+[2026-06-01 08:15:41] [MAIN] Hilo DISCORD iniciado.
+[2026-06-01 08:15:41] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-01 08:15:41] [DISCORD] Subproceso PID 34124
+[2026-06-01 08:15:42] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-01 08:15:42] [DISCORD] [2026-06-01 08:15:42] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-01 08:15:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-01 08:15:45] [DISCORD] [2026-06-01 08:15:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-01 08:23:07] [TG] MSG: [TELEGRAM 08:23:07] Nora, esto es una prueba desde telegram
+[2026-06-01 08:23:07] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-06-01 08:23:48] [TG] MSG: [TELEGRAM 08:23:48] Nora, esto es una prueba desde telegram
+[2026-06-01 08:23:48] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-06-01 08:31:58] [TG] MSG: [TELEGRAM 08:31:58] Nora, esto es una prueba
+[2026-06-01 08:31:58] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-06-01 08:32:47] [TG] MSG: [TELEGRAM 08:32:47] Nora, esto es una prueba
+[2026-06-01 08:32:47] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-06-01 08:36:55] [MAIN] ============================================================
+[2026-06-01 08:36:55] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-01 08:36:55] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-01 08:36:55] [MAIN] ============================================================
+[2026-06-01 08:36:55] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-01 08:36:55] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-06-01 08:36:55] [MAIN] Hilo WEB iniciado.
+[2026-06-01 08:36:55] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-01 08:36:55] [MAIN] Hilo DISCORD iniciado.
+[2026-06-01 08:36:55] [TG] Escuchando desde update_id > 454855058
+[2026-06-01 08:36:55] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-01 08:36:55] [DISCORD] Subproceso PID 29552
+[2026-06-01 08:36:55] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-01 08:36:55] [DISCORD] [2026-06-01 08:36:55] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-01 08:36:58] [DISCORD] [2026-06-01 08:36:58] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-01 08:40:02] [TG] MSG: [TELEGRAM 08:40:02] Nora, esto es una prueba desde Telegram
+[2026-06-01 08:40:03] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-06-02 07:22:21] [TG] MSG: [TELEGRAM 07:22:21] Nora, cómo vas?
+[2026-06-02 07:22:22] [IDE] OK: Mensaje inyectado con éxito (fuente: telegram)
+[2026-06-02 07:56:31] [IDE] OK: Mensaje duplicado omitido (ya está en cola)
+[2026-06-02 07:57:00] [IDE] OK: Mensaje duplicado omitido (ya está en cola)
+[2026-06-02 07:57:16] [MAIN] ============================================================
+[2026-06-02 07:57:16] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-02 07:57:16] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-02 07:57:16] [MAIN] ============================================================
+[2026-06-02 07:57:16] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-02 07:57:16] [WEB] Hilo Web activo — procesando cola input_queue.json
+[2026-06-02 07:57:16] [MAIN] Hilo WEB iniciado.
+[2026-06-02 07:57:16] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-02 07:57:16] [MAIN] Hilo DISCORD iniciado.
+[2026-06-02 07:57:16] [TG] Escuchando desde update_id > 454855063
+[2026-06-02 07:57:16] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-02 07:57:16] [DISCORD] Subproceso PID 32388
+[2026-06-02 07:57:16] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-02 07:57:16] [DISCORD] [2026-06-02 07:57:16] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-02 07:57:20] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-02 07:57:20] [DISCORD] [2026-06-02 07:57:20] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-02 13:30:05] [IDE] OK: Mensaje duplicado omitido (ya está en cola)
+[2026-06-03 10:30:57] [MAIN] ============================================================
+[2026-06-03 10:30:57] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-03 10:30:57] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-03 10:30:57] [MAIN] ============================================================
+[2026-06-03 10:30:57] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-03 10:30:57] [WEB] Hilo Web activo — vigilando cola input_queue.json
+[2026-06-03 10:30:57] [MAIN] Hilo WEB iniciado.
+[2026-06-03 10:30:57] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-03 10:30:57] [MAIN] Hilo DISCORD iniciado.
+[2026-06-03 10:30:57] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-03 10:30:57] [TG] Escuchando desde update_id > 454855067
+[2026-06-03 10:30:57] [DISCORD] Subproceso PID 36016
+[2026-06-03 10:30:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-03 10:30:58] [DISCORD] [2026-06-03 10:30:58] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-03 10:31:01] [DISCORD] [2026-06-03 10:31:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-03 10:31:01] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-03 11:17:37] [TG] MSG: [TELEGRAM 11:17:37] Nora, ahora que la comunicación es directa podemos eliminar 
+[2026-06-03 12:03:56] [TG] MSG: [TELEGRAM 12:03:56] Nora, me lees desde telegram?
+[2026-06-03 12:18:05] [TG] MSG: [TELEGRAM 12:18:05] Tienes que asegurarte de que ese script arranca siempre cont
+[2026-06-04 07:50:43] [TG] MSG: [TELEGRAM 07:50:43] Nora, las comunicaciones desde Telegram siguen sin funcionar
+[2026-06-04 07:58:41] [MAIN] ============================================================
+[2026-06-04 07:58:41] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 07:58:41] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 07:58:41] [MAIN] ============================================================
+[2026-06-04 07:58:41] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 07:58:41] [WEB] Hilo Web activo — vigilando cola input_queue.json
+[2026-06-04 07:58:41] [MAIN] Hilo WEB iniciado.
+[2026-06-04 07:58:41] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 07:58:41] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 07:58:41] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 07:58:41] [TG] Escuchando desde update_id > 454855074
+[2026-06-04 07:58:41] [DISCORD] Subproceso PID 22320
+[2026-06-04 07:58:41] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 07:58:41] [DISCORD] [2026-06-04 07:58:41] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 07:58:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 07:58:45] [DISCORD] [2026-06-04 07:58:45] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 08:05:22] [TG] Error #1: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8784231970:AAFHcVnTJa0mKDBCalozQkCT7w_Y5twyw8k/getUpdates?offset=454855075&timeout=30 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000205AD1AAD50>: Failed to resolve 'api.telegram.org' ([Errno 11001] getaddrinfo failed)"))
+[2026-06-04 08:41:52] [MAIN] ============================================================
+[2026-06-04 08:41:52] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 08:41:52] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 08:41:52] [MAIN] ============================================================
+[2026-06-04 08:41:52] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 08:41:52] [WEB] Hilo Web activo — vigilando cola input_queue.json (Inyector GUI nativo)
+[2026-06-04 08:41:52] [MAIN] Hilo WEB iniciado.
+[2026-06-04 08:41:52] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 08:41:52] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 08:41:52] [TG] Escuchando desde update_id > 454855076
+[2026-06-04 08:41:52] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 08:41:52] [DISCORD] Subproceso PID 28496
+[2026-06-04 08:41:53] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 08:41:53] [DISCORD] [2026-06-04 08:41:53] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 08:41:56] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442
+[2026-06-04 08:43:19] [MAIN] ============================================================
+[2026-06-04 08:43:19] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 08:43:19] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 08:43:19] [MAIN] ============================================================
+[2026-06-04 08:43:19] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 08:43:19] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 08:43:19] [WEB] Hilo Web activo — vigilando cola input_queue.json (Inyector GUI nativo)
+[2026-06-04 08:43:19] [MAIN] Hilo WEB iniciado.
+[2026-06-04 08:43:19] [TG] Escuchando desde update_id > 454855076
+[2026-06-04 08:43:19] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 08:43:19] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 08:43:19] [DISCORD] Subproceso PID 11652
+[2026-06-04 08:43:19] [DISCORD] [2026-06-04 08:43:19] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 08:43:20] [INJECT] [web_test] GUI Inyección exitosa: Inyectado exitosamente
+[2026-06-04 08:43:22] [DISCORD] [2026-06-04 08:43:22] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 08:44:35] [MAIN] ============================================================
+[2026-06-04 08:44:35] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 08:44:35] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 08:44:35] [MAIN] ============================================================
+[2026-06-04 08:44:35] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 08:44:35] [WEB] Hilo Web activo — vigilando cola input_queue.json (Inyector GUI nativo)
+[2026-06-04 08:44:35] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 08:44:35] [MAIN] Hilo WEB iniciado.
+[2026-06-04 08:44:35] [TG] Escuchando desde update_id > 454855077
+[2026-06-04 08:44:35] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 08:44:35] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 08:44:35] [DISCORD] Subproceso PID 25800
+[2026-06-04 08:44:35] [INJECT] [telegram_sentinel] GUI Inyección fallida: No se encontró ventana destino
+[2026-06-04 08:44:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 08:44:36] [DISCORD] [2026-06-04 08:44:36] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 08:44:39] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 08:44:39] [DISCORD] [2026-06-04 08:44:39] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+[2026-06-04 08:52:27] [MAIN] ============================================================
+[2026-06-04 08:52:27] [MAIN] Unified Channel Daemon v2.0 — Nora
+[2026-06-04 08:52:27] [MAIN] Canales: Telegram + Web + Discord
+[2026-06-04 08:52:27] [MAIN] ============================================================
+[2026-06-04 08:52:27] [MAIN] Hilo TELEGRAM iniciado.
+[2026-06-04 08:52:27] [TG] Token: 8784231970... | Admin: 5034994867
+[2026-06-04 08:52:27] [WEB] Hilo Web activo — vigilando cola input_queue.json (Inyector GUI nativo)
+[2026-06-04 08:52:27] [MAIN] Hilo WEB iniciado.
+[2026-06-04 08:52:27] [TG] Escuchando desde update_id > 454855078
+[2026-06-04 08:52:27] [MAIN] Hilo DISCORD iniciado.
+[2026-06-04 08:52:27] [DISCORD] Iniciando subproceso discord_worker.py
+[2026-06-04 08:52:27] [DISCORD] Subproceso PID 28456
+[2026-06-04 08:52:28] [DISCORD] [2026-06-04 08:52:28] [DISCORD] Conectando con token MTQ3NjMzNz...
+[2026-06-04 08:52:31] [DISCORD] Bot conectado como Nora (Chask Swarm)#9442
+o como Nora (Chask Swarm)#9442

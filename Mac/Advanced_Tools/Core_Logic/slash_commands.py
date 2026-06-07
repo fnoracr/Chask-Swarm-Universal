@@ -221,7 +221,7 @@ def _cmd_status() -> dict:
 
     # Cola de mensajes
     try:
-        queue_path = os.path.join(SWARM_DIR, "Message_Queues", "pending_messages.json")
+        queue_path = os.path.join(SWARM_DIR, "Colas_Mensajes", "pending_messages.json")
         if os.path.exists(queue_path):
             with open(queue_path, encoding="utf-8") as f:
                 msgs = json.load(f)

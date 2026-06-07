@@ -9,7 +9,7 @@ description: >-
 
 ## Overview
 Esta skill proporciona una interfaz CLI segura para que el agente inyecte mensajes asíncronos en los canales de comunicación integrados de Chask Swarm (Web y Discord). 
-En Discord utiliza un Webhook configurado, y en Web envía los mensajes mediante HTTP POST al puerto local 7860. No contiene claves ni tokens harcodeados, leyendo todo directamente de `C:\Program Files\Chask_Swarm\Configuration\channels_config.json`.
+En Discord utiliza un Webhook configurado, y en Web envía los mensajes mediante HTTP POST al puerto local 7860. No contiene claves ni tokens harcodeados, leyendo todo directamente de `C:\Program Files\Chask_Swarm\Configuracion\channels_config.json`.
 
 ## Dependencies
 Ninguna dependencia externa. Usa bibliotecas nativas de Python (`urllib`, `argparse`, `json`).

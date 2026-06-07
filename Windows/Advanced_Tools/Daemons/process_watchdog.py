@@ -4,7 +4,7 @@ process_watchdog.py — Centinela del Enjambre Chask Swarm
 Vigila cada 30s que todos los daemons críticos estén vivos.
 - Si un daemon cae: INYECTA aviso directamente en el IDE (no via cola).
 - Si el IDE/Enjambre está caída: la REINICIA automáticamente.
-- Es el PRIMER daemon en cerrarse cuando el usuario cierra [Nombre_IA].
+- Es el PRIMER daemon en cerrarse cuando el usuario cierra Charm.
 
 Ejecutar con: python.exe Advanced_Tools\process_watchdog.py  (necesita UI para inyectar)
 Lanzar con:   start "ChaskWatchdog" /MIN python.exe Advanced_Tools\process_watchdog.py
@@ -23,11 +23,11 @@ os.chdir(r"C:\Program Files\Chask_Swarm")
 
 # ── CONFIGURACIÓN ──
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-LOG_FILE = os.path.join(BASE_DIR, "System_Logs", "watchdog.log")
+LOG_FILE = os.path.join(BASE_DIR, "Logs_Sistema", "watchdog.log")
 CHECK_INTERVAL = 30  # segundos
 COOLDOWN = 300  # 5 minutos entre alertas del mismo daemon
 SHUTDOWN_FLAG = os.path.join(BASE_DIR, "watchdog_shutdown.flag")
-KILL_SWITCH_LOCK = os.path.join(BASE_DIR, "kill_switch.lock")  # creado por Off [Nombre_IA], borrado por On [Nombre_IA]
+KILL_SWITCH_LOCK = os.path.join(BASE_DIR, "kill_switch.lock")  # creado por Off Charm, borrado por On Charm
 
 # Importar motor de inyección V8 (detección dinámica por proceso)
 HAS_INJECTOR = False
@@ -55,7 +55,7 @@ WATCHED_PROCESSES = [
         "restart": [PYTHONW_EXE, os.path.join(BASE_DIR, "Advanced_Tools", "web_monitor.py")],
     },
     {
-        "name": "[Nombre_IA] Panel (Web UI :7860)",
+        "name": "Charm Panel (Web UI :7860)",
         "match": "web_dashboard_pro.py",
         "critical": False,
         "restart": [PYTHONW_EXE, os.path.join(BASE_DIR, "Advanced_Tools", "dashboard", "web_dashboard_pro.py")],
@@ -67,7 +67,7 @@ WATCHED_PROCESSES = [
         "restart": [PYTHONW_EXE, os.path.join(BASE_DIR, "Advanced_Tools", "swarm_ai_watchdog.py")],
     },
     {
-        "name": "[Nombre_IA] Edu P2P Daemon",
+        "name": "Charm Edu P2P Daemon",
         "match": "learning_p2p_daemon.py",
         "critical": False,
         "restart": [PYTHONW_EXE, os.path.join(BASE_DIR, "Advanced_Tools", "learning_p2p_daemon.py")],
@@ -168,16 +168,16 @@ def restart_charm():
         return False
         
     try:
-        log("[RESTART] Lanzando instancia de Antigravity ([Nombre_IA] Workspace)...")
+        log("[RESTART] Lanzando instancia de Antigravity (Nora Workspace)...")
         # Instancia Normal
         subprocess.Popen(
-            [ide_path, "--user-data-dir=C:\\Users\\fnora\\Desktop\\[Nombre_IA]_Workspace\\.antigravity_data", "C:\\Users\\fnora\\Desktop\\[Nombre_IA]_Workspace"],
+            [ide_path, "--user-data-dir=C:\\Users\\fnora\\Desktop\\Nora_Workspace\\.antigravity_data", "C:\\Users\\fnora\\Desktop\\Nora_Workspace"],
             creationflags=subprocess.CREATE_NO_WINDOW | subprocess.DETACHED_PROCESS,
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL
         )
         log("[RESTART] Instancia de Antigravity lanzada exitosamente.")
     except Exception as e:
-        log(f"[ERROR] No se pudo reiniciar [Nombre_IA]: {e}")
+        log(f"[ERROR] No se pudo reiniciar Charm: {e}")
         
         time.sleep(8)  # Esperar a que arranque
         # Re-inyectar contexto
@@ -202,7 +202,7 @@ def inject_alert_to_ide(message):
     log(f"[WATCHDOG_ALERT] {message}")
     
     # 1. Encolar de forma puramente pasiva en pending_messages.json
-    pending_file = os.path.join(BASE_DIR, "Message_Queues", "pending_messages.json")
+    pending_file = os.path.join(BASE_DIR, "Colas_Mensajes", "pending_messages.json")
     try:
         messages = []
         if os.path.exists(pending_file):
@@ -447,7 +447,7 @@ def main():
                 if os.path.exists(KILL_SWITCH_LOCK):
                     log("[IDE] Kill Switch activo — NO se reinicia el IDE.")
                 elif not is_charm_running():
-                    log("IDE [Nombre_IA] NO detectado. Reiniciando...")
+                    log("IDE Charm NO detectado. Reiniciando...")
                     restart_charm()
 
             # Log periódico

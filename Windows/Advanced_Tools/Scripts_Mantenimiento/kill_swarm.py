@@ -6,7 +6,7 @@ from datetime import datetime
 import threading
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-AUDIT_LOG = os.path.join(BASE_DIR, "System_Logs", "swarm_power_audit.log")
+AUDIT_LOG = os.path.join(BASE_DIR, "Logs_Sistema", "swarm_power_audit.log")
 
 def audit(msg):
     try:
@@ -19,7 +19,7 @@ def audit(msg):
 def kill_swarm():
     try:
         audit("==================================================")
-        audit("[INICIO] Apagado completo del enjambre ejecutado por [Nombre_IA]")
+        audit("[INICIO] Apagado completo del enjambre ejecutado por Nora")
         
         lock_file = os.path.join(BASE_DIR, "kill_switch.lock")
         with open(lock_file, "w") as f:

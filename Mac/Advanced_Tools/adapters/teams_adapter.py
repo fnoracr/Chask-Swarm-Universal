@@ -23,7 +23,7 @@ if sys.stdout.encoding != 'utf-8':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONFIG_PATH = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
+CONFIG_PATH = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
 
 
 def _get_config() -> dict:

@@ -1,5 +1,5 @@
 """
-discord_worker.py — Worker Discord independiente para [Nombre_IA]
+discord_worker.py — Worker Discord independiente para Nora
 Ejecutado como subproceso por unified_channel_daemon para aislar asyncio.
 """
 import os, sys, io, json, time
@@ -8,8 +8,8 @@ from datetime import datetime
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 BASE_DIR        = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuration", "channels_config.json")
-QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Message_Queues", "input_queue.json")
+CHANNELS_CONFIG = os.path.join(BASE_DIR, "Configuracion", "channels_config.json")
+QUEUE_FILE      = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 LOG_FILE        = os.path.join(BASE_DIR, "Advanced_Tools", "unified_channel.log")
 
 def log(msg):

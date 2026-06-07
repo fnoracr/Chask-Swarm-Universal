@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 HANDOFF_FILE = os.path.join(BASE_DIR, "..", "handoff_context.json")
 ORCHESTRATOR_PATH = os.path.join(BASE_DIR, "local_orchestrator.py")
 
-def trigger_handoff(reason="Traspaso manual solicitado por [Nombre_IA]."):
+def trigger_handoff(reason="Traspaso manual solicitado por Charm."):
     print(f"Iniciando Protocolo de Traspaso (Handoff)...")
     
     # 1. Crear el contexto de handoff
@@ -44,7 +44,7 @@ def trigger_handoff(reason="Traspaso manual solicitado por [Nombre_IA]."):
 if __name__ == "__main__":
     msg = sys.argv[1] if len(sys.argv) > 1 else "Handoff de emergencia activado."
     if trigger_handoff(msg):
-        print("Traspaso completado. [Nombre_IA] cede el mando.")
+        print("Traspaso completado. Charm cede el mando.")
         sys.exit(0)
     else:
         sys.exit(1)

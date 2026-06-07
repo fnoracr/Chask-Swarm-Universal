@@ -37,7 +37,7 @@ def clean_file(file_path, country=DEFAULT_COUNTRY, mode="redact"):
         return f"Error al procesar el archivo: {e}"
 
 if __name__ == "__main__":
-    # Esta skill puede ser llamada por [Nombre_IA]
+    # Esta skill puede ser llamada por Charm
     if len(sys.argv) > 1:
         task = sys.argv[1]
         # Lógica de dispatching de la skill

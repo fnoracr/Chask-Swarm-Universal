@@ -1,7 +1,7 @@
 """
 auto_evolve_prompts.py — Pilar 2: Auto-Evolución de System Prompts
 ===================================================================
-Detecta cuando Administrador corrige a Enjambre y extrae automáticamente
+Detecta cuando Fernando corrige a Enjambre y extrae automáticamente
 una lección aprendida para añadirla a directives.md.
 
 Flujo:

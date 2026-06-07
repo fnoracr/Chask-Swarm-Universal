@@ -16,7 +16,7 @@ import json
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CATALOG_FILE = os.path.join(BASE_DIR, "Configuration", "skill_catalog.json")
+CATALOG_FILE = os.path.join(BASE_DIR, "Configuracion", "skill_catalog.json")
 ACTIONS_LOG = os.path.join(BASE_DIR, "action_frequency.json")
 SKILLS_DIR = os.path.join(BASE_DIR, "skills")
 

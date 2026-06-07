@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es" translate="yes"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chask Swarm — Arquitectura del Enjambre</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0a1a;color:#e0e0e0;overflow:hidden;height:100vh;width:100vw}
+#toolbar{position:fixed;top:0;left:0;right:0;height:56px;background:linear-gradient(135deg,#1a1a3e,#0d0d2b);
+  border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 24px;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.5)}
+#toolbar h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,#60a5fa,#a78bfa);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#toolbar .controls{margin-left:auto;display:flex;gap:8px}
+#toolbar button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);color:#ccc;
+  padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;transition:.2s}
+#toolbar button:hover{background:rgba(255,255,255,.15);color:#fff}
+#zoom-info{color:#888;font-size:12px;margin-right:16px}
+#tip{color:#666;font-size:11px;margin-right:12px}
+#canvas-wrap{position:absolute;top:56px;left:0;right:0;bottom:0;overflow:hidden;cursor:grab}
+#canvas{position:absolute;transform-origin:0 0}
+.group{position:absolute;border-radius:16px;border:1px solid rgba(255,255,255,.1);
+  padding:48px 16px 16px;min-width:240px;max-width:320px;transition:box-shadow .2s}
+.group-label{position:absolute;top:0;left:0;right:0;height:42px;line-height:42px;padding:0 16px;
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:.9;
+  cursor:default;border-radius:16px 16px 0 0;user-select:none}
+.group-label:hover{background:rgba(255,255,255,.05)}
+.group.dragging{box-shadow:0 0 40px rgba(96,165,250,.3);z-index:999;opacity:.92}
+.node{background:rgba(15,15,35,.85);border:1px solid rgba(255,255,255,.12);border-radius:12px;
+  padding:12px 16px;margin:6px 0;cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;backdrop-filter:blur(8px)}
+.node:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4);border-color:rgba(255,255,255,.25)}
+.node .icon{font-size:18px;margin-right:8px}
+.node .name{font-weight:600;font-size:13px}
+.node .desc{font-size:11px;color:#999;margin-top:4px;line-height:1.4}
+.node.highlight{border-color:#60a5fa;box-shadow:0 0 20px rgba(96,165,250,.3)}
+svg.conns{position:absolute;top:0;left:0;pointer-events:none;z-index:50;overflow:visible}
+svg.conns path{pointer-events:stroke;cursor:pointer}
+svg.conns path:hover{opacity:0.9!important;stroke-width:3!important}
+#conn-tooltip{position:fixed;background:rgba(20,20,50,.95);color:#ddd;padding:6px 12px;border-radius:8px;
+  font-size:11px;font-family:'Inter',sans-serif;pointer-events:none;z-index:300;display:none;
+  border:1px solid rgba(255,255,255,.15);box-shadow:0 4px 16px rgba(0,0,0,.5)}
+#detail{position:fixed;bottom:20px;right:20px;width:340px;background:rgba(20,20,50,.95);
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;z-index:200;
+  backdrop-filter:blur(12px);display:none;box-shadow:0 8px 32px rgba(0,0,0,.6)}
+#detail h3{font-size:15px;margin-bottom:8px;color:#60a5fa}
+#detail p{font-size:12px;color:#aaa;line-height:1.6}
+#detail .close{position:absolute;top:12px;right:16px;cursor:pointer;color:#666;font-size:18px}
+#legend{position:fixed;bottom:20px;left:20px;background:rgba(20,20,50,.9);border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:14px 18px;z-index:200;font-size:11px;backdrop-filter:blur(8px)}
+#legend div{display:flex;align-items:center;gap:8px;margin:4px 0}
+#legend .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+#toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:rgba(16,185,129,.9);color:#fff;
+  padding:8px 20px;border-radius:8px;font-size:13px;z-index:999;display:none;font-family:'Inter',sans-serif;
+  box-shadow:0 4px 12px rgba(0,0,0,.4);transition:opacity .3s}
+#toolbar .save-btn{background:rgba(16,185,129,.2);border-color:rgba(16,185,129,.4);color:#10b981}
+#toolbar .save-btn:hover{background:rgba(16,185,129,.35);color:#fff}
+</style></head><body>
+<div id="toolbar">
+  <h1>Chask Swarm — Arquitectura del Enjambre</h1>
+  <span id="tip">Scroll = zoom | Click = detail</span>
+  <span id="zoom-info">85%</span>
+  <div class="controls">
+    <button onclick="zoomTo(1)">Reset</button>
+    <button onclick="zoomTo(scale*1.3)">+</button>
+    <button onclick="zoomTo(scale/1.3)">-</button>
+    <button onclick="fitAll()">Fit All</button>
+    
+    
+  </div>
+</div>
+<div id="toast"></div>
+<div id="canvas-wrap"><div id="canvas"><svg class="conns" id="svg"></svg></div></div>
+<div id="conn-tooltip"></div>
+<div id="detail"><span class="close" onclick="this.parentElement.style.display='none'">&times;</span><h3 id="d-title"></h3><p id="d-desc"></p></div>
+<div id="legend"></div>
+<script>
+const GROUPS=[{"id": "boot", "label": "Arranque", "color": "#f59e0b", "x": 450, "y": 50, "nodes": [{"id": "inicio", "label": "Inicio.bat / chask_launcher.py", "desc": "Script de arranque del enjambre. Lanza Docker, daemons, IDE y boot_injection. Primer daemon que arranca: process_watchdog.", "icon": "⚡"}, {"id": "boot_inj", "label": "boot_injection.py", "desc": "Inyecta el mega-prompt de identidad (soul.md + memory.md + directives.md + catálogo de herramientas) en input_queue.json para que Enjambre despierte con contexto completo.", "icon": "💉"}]}, {"id": "comms", "label": "Comunicaciones", "color": "#3b82f6", "x": 850, "y": 900, "nodes": [{"id": "unified", "label": "unified_daemon.py", "desc": "Daemon unificado: gestiona Telegram (long polling), Discord (bot discord.py) y Web Queue Watcher en un solo proceso async. Reemplaza a telegram_daemon + discord_daemon.", "icon": "🌐"}, {"id": "tg_send", "label": "charm_telegram.py", "desc": "Utilidad CLI para enviar mensajes a Telegram. Usado por Enjambre y otros scripts para envío unidireccional. No es un daemon.", "icon": "📤"}, {"id": "channel", "label": "adapters/channel_adapter.py", "desc": "Router multicanal genérico. Adaptadores para Discord (webhook), Slack, Teams (Adaptive Cards), Monday.com (GraphQL), n8n (webhooks).", "icon": "🔀"}]}, {"id": "queue", "label": "Cola de Mensajes", "color": "#8b5cf6", "x": 850, "y": 50, "nodes": [{"id": "input_q", "label": "input_queue.json", "desc": "Cola principal con garantia de entrega. Los canales escriben con status 'pending'. El daemon inyecta y marca 'injected'. Enjambre BORRA cada mensaje solo cuando termina de procesarlo. Si se cuelga, los no procesados persisten para el siguiente arranque.", "icon": "📋"}, {"id": "pending", "label": "pending_messages.json", "desc": "Historial de mensajes para el dashboard. Se mantiene para auditoría y contexto visual.", "icon": "📑"}]}, {"id": "ide", "label": "IDE Charm", "color": "#10b981", "x": 1250, "y": 50, "nodes": [{"id": "charm", "label": "Charm IDE (Enjambre)", "desc": "Interfaz principal donde Enjambre opera. Los daemons inyectan mensajes aquí via pyautogui+pyperclip (ctrl+v). Enjambre (Claude) responde desde aquí.", "icon": "🖥️"}, {"id": "inject", "label": "inject_to_charm.py", "desc": "Módulo de inyección universal. Busca la ventana de Charm, obtiene foco con truco Alt, pega con Ctrl+V. 3 reintentos con verificación de foco.", "icon": "📌"}]}, {"id": "daemons", "label": "Daemons Secundarios", "color": "#06b6d4", "x": 450, "y": 900, "nodes": [{"id": "watchdog", "label": "process_watchdog.py", "desc": "CENTINELA: Vigila cada 30s que todos los daemons estén vivos. Si alguno cae, INYECTA aviso directamente en el IDE. Si Enjambre/IDE está caída, la REINICIA. Primer proceso en cerrarse al cerrar IDE.", "icon": "👁️"}, {"id": "shutdown", "label": "shutdown_cleanup.py", "desc": "Detecta cuando se cierra el IDE. Primero cierra process_watchdog, luego mata el resto de daemons ordenadamente.", "icon": "🛑"}, {"id": "backup", "label": "backup_system.py", "desc": "Backups automáticos periódicos del sistema completo a Chask_Backups/.", "icon": "💾"}, {"id": "daily", "label": "daily_report.py", "desc": "Genera y envía un reporte diario de estado del enjambre por Telegram.", "icon": "📊"}, {"id": "webmon", "label": "web_monitor.py", "desc": "Monitoriza URLs (webs del ecosistema Chask) y alerta si caen.", "icon": "🌍"}, {"id": "updater", "label": "auto_updater.py", "desc": "Verifica actualizaciones del repositorio GitHub y aplica cambios.", "icon": "🔄"}, {"id": "wakeup", "label": "1_wakeup_daemon.py", "desc": "Ejecuta tareas programadas (schedule_template.json) inyectándolas en la cola.", "icon": "⏰"}, {"id": "aiwdog", "label": "swarm_ai_watchdog.py", "desc": "Watchdog de los agentes IA del enjambre. Monitorea salud de los modelos del pool.", "icon": "🤖"}]}, {"id": "ai", "label": "Inteligencia Artificial", "color": "#ec4899", "x": 1250, "y": 900, "nodes": [{"id": "llm", "label": "llm_router.py", "desc": "Pool de IAs gratuitas. Enruta prompts a Gemini, Groq, Cohere, DeepSeek, SiliconFlow, ZhipuAI via OpenRouter. Failover automático entre modelos.", "icon": "🎯"}, {"id": "hive", "label": "core/hive_mind_executor.py", "desc": "Protocolo Mente Colmena. Alpha (planifica) -> Beta (investiga) -> Gamma (codifica) -> Delta (audita). Delegación multi-modelo.", "icon": "🐝"}, {"id": "orestes", "label": "protocolo_orestes.py", "desc": "Protocolo Orestes: forja evolutiva que muta prompts iterativamente hasta alcanzar perfección de Grado Militar. Generación de artefactos de alta calidad.", "icon": "⚔️"}, {"id": "elektra", "label": "Protocolo Elektra", "desc": "Protocolo independiente de actuación autónoma. Puede ejecutarse en cualquier momento sin depender de Orestes ni Colmena. Enjambre decide cuándo activarlo según el contexto.", "icon": "⚡"}, {"id": "qdrant", "label": "qdrant_memory_manager.py", "desc": "Memoria vectorial a largo plazo. Guarda/busca en Qdrant (Docker, puerto 6333) con embeddings. Backend de evolutionary_memory.", "icon": "🧬"}, {"id": "evomem", "label": "evolutionary_memory.py", "desc": "Aprendizaje continuo: aprende de correcciones de Fernando Y de sus propios aciertos/errores del día a día. Persiste lecciones en Qdrant para no repetir fallos.", "icon": "🧪"}]}, {"id": "mcp", "label": "MCPs e Integraciones", "color": "#14b8a6", "x": 1650, "y": 50, "nodes": [{"id": "mcp_server", "label": "chask_mcp_server.py", "desc": "Servidor MCP que expone TODAS las herramientas del ecosistema como tools MCP estándar. Permite a otros clientes consumir las capacidades de Enjambre.", "icon": "🔌"}, {"id": "mcp_client", "label": "mcp_client.py", "desc": "Cliente MCP para consumir tools de servidores externos. Soporta: discover, call, list-servers, add-server. Registro en mcp_servers.json.", "icon": "🔗"}, {"id": "mcp_config", "label": "mcp_config.json", "desc": "Configuración de servidores MCP registrados (propios y externos). Define comandos, args y rutas.", "icon": "⚙️"}]}, {"id": "security", "label": "Seguridad", "color": "#ef4444", "x": 1650, "y": 900, "nodes": [{"id": "audit", "label": "audit_logger.py", "desc": "Logger de auditoría. Se ejecuta ANTES de cualquier comando crítico (instalar, borrar, acceder a servidor).", "icon": "📝"}, {"id": "sandbox", "label": "sandbox.py", "desc": "Ejecución aislada en contenedor Docker sin internet para código sospechoso.", "icon": "🔒"}, {"id": "privacy", "label": "privacy_engine.py", "desc": "Escudo PII con Presidio. Anonimiza datos personales antes de procesarlos.", "icon": "🕶️"}, {"id": "authusers", "label": "authorized_users.json", "desc": "Lista de usuarios autorizados por plataforma (Discord ID, Telegram ID) con roles (Master/Admin).", "icon": "👤"}]}, {"id": "infra", "label": "Infraestructura", "color": "#f97316", "x": 1650, "y": 1500, "nodes": [{"id": "docker", "label": "Docker Desktop", "desc": "Runtime de contenedores. Auto-arranque con Windows. Gestiona Qdrant y sandbox.", "icon": "🐳"}, {"id": "qdrant_db", "label": "Qdrant (puerto 6333)", "desc": "Base de datos vectorial para memoria semántica de largo plazo. Backend de qdrant_memory_manager y evolutionary_memory.", "icon": "💎"}, {"id": "github", "label": "GitHub Repository", "desc": "Repositorio central del ecosistema. auto_updater.py sincroniza cambios.", "icon": "🐙"}]}, {"id": "data", "label": "Datos Persistentes", "color": "#84cc16", "x": 50, "y": 50, "nodes": [{"id": "memory", "label": "memory.md", "desc": "Estado actual de Enjambre: proyecto en curso, paso actual, hora. Los daemons lo leen en tiempo real.", "icon": "🧠"}, {"id": "directives", "label": "directives.md", "desc": "Reglas operativas permanentes: gestión de memoria, Hive Mind, seguridad, limpieza, autonomía.", "icon": "📜"}, {"id": "soul", "label": "soul.md", "desc": "Identidad evolutiva de Enjambre. Personalidad, adaptación emocional, directivas éticas. Se actualiza orgánicamente.", "icon": "👻"}, {"id": "security_md", "label": "security.md", "desc": "Protocolo de seguridad absoluta (Leyes de Asimov). Zero-Trust, Prompt Injection, Modo Cuarentena.", "icon": "🔐"}, {"id": "channels_cfg", "label": "channels_config.json", "desc": "Configuración de todos los canales: Discord webhook/bot token, Teams webhook, Monday API, n8n.", "icon": "⚙️"}]}, {"id": "integrations", "label": "Integraciones Externas", "color": "#a855f7", "x": 850, "y": 1500, "nodes": [{"id": "int_discord", "label": "Discord", "desc": "Bot discord.py integrado en unified_daemon. Recibe mensajes via bot y envia via webhook. Canal bidireccional en tiempo real.", "icon": "🎮"}, {"id": "int_telegram", "label": "Telegram", "desc": "Bot Telegram integrado en unified_daemon (long polling). Envio via charm_telegram.py. Canal principal de comunicacion con Fernando.", "icon": "✈️"}, {"id": "int_slack", "label": "Slack", "desc": "Adaptador via slack_adapter.py. Usa Incoming Webhooks para enviar mensajes formateados con bloques y adjuntos.", "icon": "💬"}, {"id": "int_teams", "label": "Microsoft Teams", "desc": "Adaptador via teams_adapter.py. Usa Adaptive Cards sobre Incoming Webhooks para notificaciones ricas.", "icon": "🟦"}, {"id": "int_n8n", "label": "n8n", "desc": "Automatizacion via webhooks HTTP. channel_adapter envia payloads JSON a flujos n8n para triggers de workflows externos.", "icon": "⚡"}, {"id": "int_monday", "label": "Monday.com", "desc": "Integracion via API GraphQL. Crea/actualiza items y notificaciones en tableros de Monday.", "icon": "📋"}]}, {"id": "redes", "label": "Arquitectura Descentralizada", "color": "#facc15", "x": 50, "y": 900, "nodes": [{"id": "red_multi", "label": "Multiusuario en Equipo", "desc": "Múltiples usuarios operando sus propias instancias de Enjambre en un mismo equipo. Perfiles independientes, memoria separada, sesiones simultáneas con aislamiento de contexto.", "icon": "👥"}, {"id": "red_wifi", "label": "Red de Enjambres via WiFi", "desc": "Enjambres domésticos conectados en red local. Múltiples PCs con Enjambre se descubren y colaboran vía WiFi, compartiendo tareas, memoria y recursos de forma descentralizada.", "icon": "📡"}, {"id": "red_global", "label": "Red de Colmenas Mundial", "desc": "Red global de enjambres interconectados vía servidor central o Discord. Colmenas de distintos usuarios colaboran a escala mundial, compartiendo conocimiento y capacidades distribuidas.", "icon": "🌍"}]}];
+const CONNS=[{"from": "inicio", "to": "unified", "label": "Lanza", "color": "#f59e0b"}, {"from": "inicio", "to": "boot_inj", "label": "Ejecuta", "color": "#f59e0b"}, {"from": "inicio", "to": "charm", "label": "Abre IDE", "color": "#f59e0b"}, {"from": "inicio", "to": "watchdog", "label": "1er daemon", "color": "#f59e0b"}, {"from": "boot_inj", "to": "input_q", "label": "Inyecta contexto", "color": "#8b5cf6"}, {"from": "unified", "to": "input_q", "label": "Lee/Escribe msgs", "color": "#3b82f6", "bidi": true}, {"from": "unified", "to": "inject", "label": "Inyecta en IDE", "color": "#3b82f6"}, {"from": "inject", "to": "charm", "label": "Ctrl+V", "color": "#10b981"}, {"from": "charm", "to": "tg_send", "label": "Envia/Recibe", "color": "#10b981", "bidi": true}, {"from": "charm", "to": "channel", "label": "Broadcast", "color": "#10b981", "bidi": true}, {"from": "tg_send", "to": "unified", "label": "Telegram API", "color": "#3b82f6", "dashed": true}, {"from": "channel", "to": "unified", "label": "Webhooks", "color": "#3b82f6", "dashed": true}, {"from": "watchdog", "to": "inject", "label": "Alerta directa", "color": "#06b6d4"}, {"from": "watchdog", "to": "charm", "label": "Reinicia si caida", "color": "#06b6d4", "dashed": true}, {"from": "wakeup", "to": "input_q", "label": "Tareas prog.", "color": "#06b6d4"}, {"from": "daily", "to": "tg_send", "label": "Reporte", "color": "#06b6d4"}, {"from": "webmon", "to": "tg_send", "label": "Alertas", "color": "#06b6d4"}, {"from": "shutdown", "to": "watchdog", "label": "Cierra 1ro", "color": "#06b6d4"}, {"from": "charm", "to": "llm", "label": "Delega", "color": "#ec4899", "dashed": true}, {"from": "llm", "to": "hive", "label": "Colmena", "color": "#ec4899", "dashed": true}, {"from": "charm", "to": "elektra", "label": "Activa autonomo", "color": "#ec4899", "dashed": true}, {"from": "charm", "to": "qdrant", "label": "Guarda/Busca", "color": "#ec4899", "bidi": true}, {"from": "evomem", "to": "qdrant", "label": "Persiste lecciones", "color": "#ec4899", "bidi": true}, {"from": "evomem", "to": "qdrant_db", "label": "Embeddings", "color": "#f97316", "dashed": true}, {"from": "charm", "to": "evomem", "label": "Aprende", "color": "#ec4899", "bidi": true}, {"from": "charm", "to": "audit", "label": "Pre-comando", "color": "#ef4444"}, {"from": "charm", "to": "mcp_server", "label": "Expone tools", "color": "#14b8a6", "bidi": true}, {"from": "charm", "to": "mcp_client", "label": "Consume tools", "color": "#14b8a6", "bidi": true}, {"from": "qdrant", "to": "qdrant_db", "label": "Vectores", "color": "#f97316", "bidi": true}, {"from": "docker", "to": "qdrant_db", "label": "Contiene", "color": "#f97316"}, {"from": "boot_inj", "to": "memory", "label": "Lee", "color": "#84cc16", "dashed": true}, {"from": "boot_inj", "to": "soul", "label": "Lee", "color": "#84cc16", "dashed": true}, {"from": "boot_inj", "to": "directives", "label": "Lee", "color": "#84cc16", "dashed": true}, {"from": "channel", "to": "int_discord", "label": "Webhook", "color": "#a855f7", "bidi": true}, {"from": "channel", "to": "int_slack", "label": "Webhook", "color": "#a855f7"}, {"from": "channel", "to": "int_teams", "label": "Adaptive Cards", "color": "#a855f7"}, {"from": "channel", "to": "int_n8n", "label": "HTTP Webhook", "color": "#a855f7"}, {"from": "channel", "to": "int_monday", "label": "GraphQL API", "color": "#a855f7"}, {"from": "unified", "to": "int_telegram", "label": "Long Polling", "color": "#a855f7", "bidi": true}, {"from": "unified", "to": "int_discord", "label": "Bot discord.py", "color": "#a855f7", "bidi": true}];
+const canvas=document.getElementById('canvas');
+const wrap=document.getElementById('canvas-wrap');
+const svg=document.getElementById('svg');
+let scale=0.85,tx=80,ty=80;
+const groupEls={};
+
+// Restore saved positions from localStorage
+const savedPos=null;
+
+// Build groups & nodes
+GROUPS.forEach(g=>{
+  const div=document.createElement('div');
+  div.className='group'; div.dataset.gid=g.id;
+  const sx=savedPos&&savedPos[g.id]?savedPos[g.id].x:g.x;
+  const sy=savedPos&&savedPos[g.id]?savedPos[g.id].y:g.y;
+  div.style.cssText=`left:${sx}px;top:${sy}px;background:${g.color}12;border-color:${g.color}40`;
+  const lbl=document.createElement('div');
+  lbl.className='group-label'; lbl.style.color=g.color; lbl.textContent=g.label;
+  div.appendChild(lbl);
+  (g.nodes||[]).forEach(n=>{
+    const nd=document.createElement('div');
+    nd.className='node'; nd.dataset.id=n.id;
+    nd.innerHTML=`<span class="icon">${n.icon||''}</span><span class="name">${n.label}</span><div class="desc">${n.desc||''}</div>`;
+    nd.addEventListener('click',e=>{
+      e.stopPropagation();
+      document.getElementById('d-title').textContent=n.label;
+      document.getElementById('d-desc').textContent=n.desc||'';
+      document.getElementById('detail').style.display='block';
+      document.querySelectorAll('.node').forEach(x=>x.classList.remove('highlight'));
+      nd.classList.add('highlight');
+    });
+    div.appendChild(nd);
+  });
+  canvas.appendChild(div);
+  groupEls[g.id]=div;
+  /* Dragging Disabled by User Request */
+  
+});
+
+// Legend
+document.getElementById('legend').innerHTML='<div style="font-weight:700;margin-bottom:4px">Legend</div>'+
+  GROUPS.map(g=>`<div><span class="dot" style="background:${g.color}"></span>${g.label}</div>`).join('');
+
+const tooltip=document.getElementById('conn-tooltip');
+let hoverArrows=[];
+function recalcAndDraw(){
+  const nodePos={};
+  let maxX=0,maxY=0;
+  document.querySelectorAll('.node').forEach(nd=>{
+    const r=nd.getBoundingClientRect();
+    const cr=canvas.getBoundingClientRect();
+    const px=(r.left+r.width/2-cr.left)/scale, py=(r.top+r.height/2-cr.top)/scale;
+    nodePos[nd.dataset.id]={x:px,y:py};
+    if(px>maxX)maxX=px; if(py>maxY)maxY=py;
+  });
+  svg.setAttribute('width',maxX+500); svg.setAttribute('height',maxY+500);
+  // Collect unique colors for markers
+  const colors=new Set();
+  CONNS.forEach(c=>colors.add(c.color||'#555'));
+  let defs='<defs>';
+  colors.forEach(col=>{
+    const id=col.replace('#','');
+    defs+=`<marker id="af_${id}" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0,0 10,3.5 0,7" fill="${col}"/></marker>`;
+    defs+=`<marker id="ar_${id}" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto"><polygon points="10,0 0,3.5 10,7" fill="${col}"/></marker>`;
+  });
+  defs+='</defs>';
+  let h=defs;
+  CONNS.forEach((c,i)=>{
+    const a=nodePos[c.from],b=nodePos[c.to];
+    if(!a||!b)return;
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    const dx=b.x-a.x,dy=b.y-a.y;
+    const cx=mx-dy*0.12,cy=my+dx*0.12;
+    const col=c.color||'#555';
+    const id=col.replace('#','');
+    const dash=c.dashed?'stroke-dasharray="6,4"':'';
+    const mEnd=`marker-end="url(#af_${id})"`;
+    const mStart=c.bidi?`marker-start="url(#ar_${id})"`:''  ;
+    h+=`<path id="conn${i}" d="M${a.x},${a.y} Q${cx},${cy} ${b.x},${b.y}" stroke="${col}" stroke-width="1.5" fill="none" opacity="0.4" ${dash} ${mEnd} ${mStart} data-label="${c.label||''}" data-idx="${i}" data-col="${col}" data-bidi="${c.bidi?1:0}"/>`;
+  });
+  svg.innerHTML=h;
+  // Hover: tooltip + flow arrows along path
+  svg.querySelectorAll('path[data-idx]').forEach(p=>{
+    p.addEventListener('mouseenter',e=>{
+      const lbl=p.getAttribute('data-label');
+      if(lbl){ tooltip.textContent=lbl; tooltip.style.display='block'; }
+      p.setAttribute('opacity','0.9'); p.setAttribute('stroke-width','3');
+      showFlowArrows(p);
+    });
+    p.addEventListener('mousemove',e=>{
+      tooltip.style.left=(e.clientX+12)+'px'; tooltip.style.top=(e.clientY-24)+'px';
+    });
+    p.addEventListener('mouseleave',()=>{
+      tooltip.style.display='none';
+      p.setAttribute('opacity','0.4'); p.setAttribute('stroke-width','1.5');
+      clearFlowArrows();
+    });
+  });
+}
+function showFlowArrows(pathEl){
+  clearFlowArrows();
+  const col=pathEl.getAttribute('data-col');
+  const bidi=pathEl.getAttribute('data-bidi')==='1';
+  const len=pathEl.getTotalLength();
+  const step=Math.max(40,len/10);
+  for(let d=step;d<len-10;d+=step){
+    const pt=pathEl.getPointAtLength(d);
+    const pt2=pathEl.getPointAtLength(Math.min(d+2,len));
+    const angle=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI;
+    const arrow=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    arrow.setAttribute('points','-5,-3.5 5,0 -5,3.5');
+    arrow.setAttribute('fill',col);arrow.setAttribute('opacity','0.8');
+    arrow.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+    arrow.classList.add('flow-arrow');
+    svg.appendChild(arrow);
+    hoverArrows.push(arrow);
+    if(bidi){
+      const arrowR=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+      arrowR.setAttribute('points','5,-3.5 -5,0 5,3.5');
+      arrowR.setAttribute('fill',col);arrowR.setAttribute('opacity','0.5');
+      arrowR.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${angle})`);
+      arrowR.classList.add('flow-arrow');
+      svg.appendChild(arrowR);
+      hoverArrows.push(arrowR);
+    }
+  }
+}
+function clearFlowArrows(){ hoverArrows.forEach(a=>a.remove()); hoverArrows=[]; }
+setTimeout(recalcAndDraw,300);
+
+// Pan & Zoom (canvas background only, not groups)
+function applyTransform(){canvas.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;document.getElementById('zoom-info').textContent=Math.round(scale*100)+'%'}
+applyTransform();
+let panning=false,psx,psy;
+wrap.addEventListener('mousedown',e=>{
+  if(e.target===wrap||e.target===canvas||e.target===svg){panning=true;psx=e.clientX-tx;psy=e.clientY-ty;wrap.style.cursor='grabbing'}
+});
+window.addEventListener('mousemove',e=>{if(panning){tx=e.clientX-psx;ty=e.clientY-psy;applyTransform()}});
+window.addEventListener('mouseup',()=>{panning=false;wrap.style.cursor='grab'});
+wrap.addEventListener('wheel',e=>{e.preventDefault();const d=e.deltaY>0?0.9:1.1;const ns=Math.max(0.15,Math.min(3,scale*d));
+  const rect=wrap.getBoundingClientRect();const mx=e.clientX-rect.left;const my=e.clientY-rect.top;
+  tx=mx-(mx-tx)*(ns/scale);ty=my-(my-ty)*(ns/scale);scale=ns;applyTransform();recalcAndDraw()});
+function zoomTo(s){scale=Math.max(0.15,Math.min(3,s));applyTransform();recalcAndDraw()}
+function fitAll(){scale=0.6;tx=40;ty=60;applyTransform();recalcAndDraw()}
+
+// Save & Load positions
+function savePositions(){
+  const pos={};
+  document.querySelectorAll('.group').forEach(g=>{
+    pos[g.dataset.gid]={x:parseInt(g.style.left)||0,y:parseInt(g.style.top)||0};
+  });
+  localStorage.setItem('chask_canvas_positions',JSON.stringify(pos));
+  // Download full HTML with positions baked in
+  const html=document.documentElement.outerHTML;
+  const blob=new Blob(['<!DOCTYPE html>'+html],{type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='chask_architecture.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  navigator.clipboard.writeText(JSON.stringify(pos,null,2)).catch(()=>{});
+  showToast('Canvas downloaded + positions copied to clipboard');
+}
+function loadPositions(){
+  const input=prompt('Paste the saved positions JSON here:');
+  if(!input)return;
+  try{
+    const pos=JSON.parse(input);
+    document.querySelectorAll('.group').forEach(g=>{
+      const p=pos[g.dataset.gid];
+      if(p){ g.style.left=p.x+'px'; g.style.top=p.y+'px'; }
+    });
+    localStorage.setItem('chask_canvas_positions',JSON.stringify(pos));
+    recalcAndDraw();
+    showToast('Positions restored');
+  }catch(e){ showToast('Invalid JSON'); }
+}
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.style.display='block'; t.style.opacity='1';
+  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.style.display='none',300)},2000);
+}
+</script></body></html>

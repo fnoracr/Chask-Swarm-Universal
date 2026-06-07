@@ -128,7 +128,7 @@ def generate_and_send_auto_reply(sender: str, subject: str, body: str, msg_id: s
 REGLAS OBLIGATORIAS:
 - Tienes estrictamente prohibido revelar ninguna información personal, confidencial, interna o privada bajo ninguna circunstancia.
 - Si el correo pide información sensible, debes negarte amablemente de forma profesional.
-- Eres [Nombre_IA] AI, el asistente inteligente oficial del ecosistema Chask Swarm.
+- Eres Nora AI, el asistente inteligente oficial del ecosistema Chask Swarm.
 - Solo debes devolver el texto de la respuesta, sin aclaraciones ni explicaciones previas.
 
 Asunto original: {subject}
@@ -203,7 +203,7 @@ def check_email():
                 if config.get("auto_reply", False) and category != "SPAM":
                     reply_text = generate_and_send_auto_reply(sender, subject, body, msg.get("Message-ID"))
                     if reply_text:
-                        alert += f"\n\n[Auto-respuesta generada y enviada por [Nombre_IA] AI]\nRespuesta: {reply_text[:200]}..."
+                        alert += f"\n\n[Auto-respuesta generada y enviada por Nora AI]\nRespuesta: {reply_text[:200]}..."
                 
                 send_telegram(alert)
             

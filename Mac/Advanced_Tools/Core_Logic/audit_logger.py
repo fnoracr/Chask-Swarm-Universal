@@ -8,7 +8,7 @@ from datetime import datetime
 # ==============================================================================
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-LOG_FILE = os.path.join(BASE_DIR, "System_Logs", "security_audit.log")
+LOG_FILE = os.path.join(BASE_DIR, "Logs_Sistema", "security_audit.log")
 
 def log_action(action):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

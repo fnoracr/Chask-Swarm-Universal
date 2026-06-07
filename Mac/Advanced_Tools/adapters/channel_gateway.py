@@ -46,7 +46,7 @@ def get_interaction_id(channel, user_id):
 def route_message(channel, user_id, message_text):
     """
     Recibe un mensaje de CUALQUIER canal (Telegram, Discord, Slack, Web)
-    y lo inyecta en el ecosistema [Nombre_IA] 2.0.
+    y lo inyecta en el ecosistema Charm 2.0.
     """
     print(f"\n[ChannelGateway] Mensaje entrante de {channel} (User: {user_id})")
     

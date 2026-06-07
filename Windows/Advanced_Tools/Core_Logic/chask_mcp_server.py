@@ -27,7 +27,7 @@ MEMORY_PATH = os.path.join(DATA_DIR, "memory.md")
 DIRECTIVES_PATH = os.path.join(DATA_DIR, "directives.md")
 MEMORY_CORE_PATH = os.path.join(CHASK_ROOT, "memory.md")
 DIRECTIVES_CORE_PATH = os.path.join(CHASK_ROOT, "directives.md")
-AGENTS_CONFIG_PATH = os.path.join(CHASK_ROOT, "Configuration", "master_credentials.json")
+AGENTS_CONFIG_PATH = os.path.join(CHASK_ROOT, "Configuracion", "master_credentials.json")
 TELEGRAM_SCRIPT = os.path.join(CHASK_ROOT, "charm_telegram.py")
 
 # ── Helpers ────────────────────────────────────────────────────────
@@ -84,7 +84,7 @@ async def handle_list_tools() -> list[types.Tool]:
         # ── Comunicación ──
         types.Tool(
             name="send_telegram",
-            description="Envía un mensaje al administrador (Administrador) por Telegram.",
+            description="Envía un mensaje al administrador (Fernando) por Telegram.",
             inputSchema={
                 "type": "object",
                 "properties": {

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "ts": "2026-05-14T00:50:44.496153",
+    "lesson": "No implementar optimizaciones como debounce sin que Fernando lo solicite explícitamente. Prefiere simplicidad sobre ingeniería prematura.",
+    "context": "",
+    "source": "user_correction",
+    "applied": false
+  },
+  {
+    "id": 2,
+    "ts": "2026-05-14T00:51:02.002505",
+    "lesson": "No implementar optimizaciones como debounce sin que Fernando lo solicite. Prefiere simplicidad sobre ingenieria prematura.",
+    "context": "",
+    "source": "user_correction",
+    "applied": false
+  },
+  {
+    "id": 3,
+    "ts": "2026-05-14T00:51:10.321696",
+    "lesson": "El daemon de Telegram reporta inyeccion exitosa pero el IDE puede no procesarla. Siempre usar cola persistente como respaldo.",
+    "context": "",
+    "source": "user_correction",
+    "applied": false
+  },
+  {
+    "id": 4,
+    "ts": "2026-05-14T00:51:18.698021",
+    "lesson": "Nombrar archivos de cola con nombres genericos (pending_messages.json) en vez de especificos (pending_telegram.json) para permitir uso multi-canal.",
+    "context": "",
+    "source": "user_correction",
+    "applied": false
+  }
+]

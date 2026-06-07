@@ -30,13 +30,13 @@ def init_privacy():
         print(f"[Router] Privacy Shield no disponible: {e}")
 
 BASE_DIR    = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONFIG_PATH = os.path.join(BASE_DIR, "Advanced_Tools", "llm_providers_config.json")
-USAGE_PATH  = os.path.join(BASE_DIR, "Advanced_Tools", "llm_usage_today.json")
+CONFIG_PATH = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_providers_config.json")
+USAGE_PATH  = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_usage_today.json")
 
 # ── Detección Dinámica de Nombre de la IA ─────────────────────────────────
 def get_ai_name() -> str:
     """Extrae el nombre de la IA del archivo soul.md o el prompt."""
-    default_name = "[Nombre_IA]"
+    default_name = "Charm"
     try:
         soul_path = os.path.join(BASE_DIR, "soul.md")
         if os.path.exists(soul_path):
@@ -102,7 +102,7 @@ def load_context() -> str:
 
     # Instrucciones de comportamiento + protocolo de escalado
     header = (
-        "Eres [Nombre_IA], asistente IA del ecosistema Chask Swarm de Administrador Enjambre.\n"
+        "Eres Charm, asistente IA del ecosistema Chask Swarm de Fernando Enjambre.\n"
         "Responde SIEMPRE en el mismo idioma que el usuario.\n\n"
         "PROTOCOLO DE ESCALADO (OBLIGATORIO):\n"
         "Si el usuario pide una ACCION que requiere herramientas del sistema "
@@ -126,14 +126,14 @@ def _norm(text: str) -> str:
 def complexity_score(prompt: str, cfg: dict) -> tuple[int, str]:
     """
     Devuelve (puntuación 0-100, razón).
-    >= 60 → [Nombre_IA]. < 60 → Pool gratuito.
+    >= 60 → Charm. < 60 → Pool gratuito.
     """
     p = _norm(prompt)
     score = 0
     reasons = []
 
     # ── 0. Mención Directa del Nombre (Escalado Inmediato) ──────────────────
-    # Si el mensaje EMPIEZA por un nombre de la IA -> [Nombre_IA] siempre
+    # Si el mensaje EMPIEZA por un nombre de la IA -> Charm siempre
     ai_name = _norm(get_ai_name())
     direct_names = {ai_name, "enjambre", "chask", "charm", "swarm"}
     first_token = p.split()[0].rstrip(",.;:!?" + chr(161) + chr(191)) if p.split() else ""
@@ -143,7 +143,7 @@ def complexity_score(prompt: str, cfg: dict) -> tuple[int, str]:
     if ai_name in p:
         return 100, f"mencion-directa-nombre('{ai_name}')"
 
-    # ── 1. Acciones que requieren herramientas del sistema (siempre [Nombre_IA])
+    # ── 1. Acciones que requieren herramientas del sistema (siempre Charm)
     ACTION_KEYWORDS = [
         "crea ", "crear ", "crea un", "genera ", "escribe un script", "escribe el codigo",
         "programa ", "implementa ", "desarrolla ", "despliega ",
@@ -160,7 +160,7 @@ def complexity_score(prompt: str, cfg: dict) -> tuple[int, str]:
         if _norm(kw.strip()) in p:
             score += 45
             reasons.append(f"accion-sistema('{kw.strip()}')")
-            break  # uno basta para ser [Nombre_IA]
+            break  # uno basta para ser Charm
 
     # ── 2. Análisis/síntesis profunda — ACUMULA todos los matches (sin break)
     DEEP_ANALYSIS = [
@@ -236,7 +236,7 @@ def complexity_score(prompt: str, cfg: dict) -> tuple[int, str]:
 def is_complex(prompt: str, cfg: dict) -> bool:
     score, reason = complexity_score(prompt, cfg)
     verdict = score >= 60  # Umbral de Enjambre: 60 = Solo tareas de sistema reales o mención directa de Enjambre
-    print(f"[Router] Complejidad: {score}/100 ({reason}) -> {'[Nombre_IA]' if verdict else 'Pool gratuito'}")
+    print(f"[Router] Complejidad: {score}/100 ({reason}) -> {'Charm' if verdict else 'Pool gratuito'}")
     return verdict
 
 # ── Elegir el mejor proveedor por CAPACIDAD para la tarea ─────────────────
@@ -325,14 +325,6 @@ def call_provider(provider: dict, prompt: str, system_prompt: str = "") -> str |
     try:
         # ── OpenAI-compatible (DeepSeek, Groq, OpenRouter, Mistral) ──────
         if compatible == "openai":
-            from openai import OpenAI
-            client = OpenAI(api_key=api_key,
-                            base_url=provider.get("base_url", "https://api.openai.com/v1"))
-            messages = []
-            if system_prompt:
-                messages.append({"role": "system", "content": system_prompt})
-            messages.append({"role": "user", "content": prompt})
-
             # Soporte para rotación de modelos si existe fallback_models
             models_to_try = [model]
             if "fallback_models" in provider:
@@ -341,20 +333,70 @@ def call_provider(provider: dict, prompt: str, system_prompt: str = "") -> str |
             # ¡NUEVO!: Aleatorizar si la config lo indica (ej: OpenRouter Pool)
             if provider.get("use_pool_randomly") and "fallback_models" in provider:
                 import random
-                unique_models = list(set([model] + provider["fallback_models"]))
+                unique_models = list(set([model] + provider.get("fallback_models", [])))
                 random.shuffle(unique_models)
                 models_to_try = unique_models
 
+            base_url = provider.get("base_url", "https://api.openai.com/v1")
+            
             for try_model in models_to_try:
                 try:
-                    resp = client.chat.completions.create(
-                        model=try_model, messages=messages, max_tokens=2048, timeout=30
-                    )
-                    content = resp.choices[0].message.content.strip()
-                    if content:
-                        if try_model != model:
-                            print(f"[Router] {name}: modelo {model} falló, usando {try_model}")
-                        return content
+                    is_anthropic = "claude" in try_model.lower() or "anthropic" in try_model.lower()
+                    
+                    if is_anthropic and "openrouter" in base_url.lower():
+                        # Usar requests.post nativo para OpenRouter/Anthropic y asegurar soporte de cache_control
+                        headers = {
+                            "Authorization": f"Bearer {api_key}",
+                            "Content-Type": "application/json"
+                        }
+                        messages = []
+                        if system_prompt:
+                            messages.append({
+                                "role": "system",
+                                "content": [
+                                    {
+                                        "type": "text",
+                                        "text": system_prompt,
+                                        "cache_control": {"type": "ephemeral"}
+                                    }
+                                ]
+                            })
+                        messages.append({"role": "user", "content": prompt})
+                        
+                        payload = {
+                            "model": try_model,
+                            "messages": messages,
+                            "max_tokens": 2048
+                        }
+                        
+                        r = requests.post(f"{base_url}/chat/completions", headers=headers, json=payload, timeout=30)
+                        if r.status_code == 200:
+                            content = r.json()["choices"][0]["message"]["content"].strip()
+                            if content:
+                                if try_model != model:
+                                    print(f"[Router] {name}: modelo {model} falló, usando {try_model}")
+                                return content
+                        else:
+                            print(f"[Router] {name} modelo {try_model} falló con HTTP {r.status_code}: {r.text}")
+                            continue
+
+                    else:
+                        # Uso normal mediante cliente OpenAI
+                        from openai import OpenAI
+                        client = OpenAI(api_key=api_key, base_url=base_url)
+                        messages = []
+                        if system_prompt:
+                            messages.append({"role": "system", "content": system_prompt})
+                        messages.append({"role": "user", "content": prompt})
+
+                        resp = client.chat.completions.create(
+                            model=try_model, messages=messages, max_tokens=2048, timeout=30
+                        )
+                        content = resp.choices[0].message.content.strip()
+                        if content:
+                            if try_model != model:
+                                print(f"[Router] {name}: modelo {model} falló, usando {try_model}")
+                            return content
                 except Exception as model_err:
                     print(f"[Router] {name} modelo {try_model} falló: {model_err}")
                     continue
@@ -364,6 +406,69 @@ def call_provider(provider: dict, prompt: str, system_prompt: str = "") -> str |
         elif compatible == "gemini":
             import google.generativeai as genai
             genai.configure(api_key=api_key)
+            
+            # Context Caching Logic for Google
+            # Only supported if context is >= ~120k chars (32k tokens)
+            CACHE_MIN_CHARS = 120000 
+            
+            if system_prompt and len(system_prompt) >= CACHE_MIN_CHARS:
+                from google.generativeai import caching
+                import datetime, time
+                
+                cache_file = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "gemini_cache.json")
+                cached_name = None
+                
+                # Check existing cache
+                if os.path.exists(cache_file):
+                    try:
+                        with open(cache_file, "r") as f:
+                            cdata = json.load(f)
+                        if cdata.get("expires_at", 0) > time.time():
+                            cached_name = cdata.get("name")
+                    except Exception:
+                        pass
+                
+                m = None
+                if cached_name:
+                    try:
+                        cache = caching.CachedContent.get(cached_name)
+                        m = genai.GenerativeModel.from_cached_content(cached_content=cache)
+                        print(f"[Router] Usando caché de Gemini: {cached_name}")
+                    except Exception as e:
+                        print(f"[Router] Caché previo expirado o no encontrado: {e}")
+                        cached_name = None
+                
+                if not cached_name:
+                    try:
+                        print("[Router] Creando nuevo Context Cache en Gemini...")
+                        # Google cache needs explicit 'models/' prefix
+                        caching_model = model
+                        if not caching_model.startswith("models/"): 
+                            caching_model = f"models/{caching_model}"
+                        
+                        cache = caching.CachedContent.create(
+                            model=caching_model,
+                            system_instruction=system_prompt,
+                            ttl=datetime.timedelta(minutes=60)
+                        )
+                        cached_name = cache.name
+                        with open(cache_file, "w") as f:
+                            json.dump({
+                                "name": cached_name,
+                                "expires_at": time.time() + 3500 # 60 min - buffer
+                            }, f)
+                        
+                        m = genai.GenerativeModel.from_cached_content(cached_content=cache)
+                        print(f"[Router] Nuevo caché creado exitosamente: {cached_name}")
+                    except Exception as e:
+                        print(f"[Router] Error creando caché Gemini: {e}")
+                        m = None
+                        
+                if m:
+                    resp = m.generate_content(prompt)
+                    return resp.text.strip()
+            
+            # Normal fallback for small contexts or failed cache creation
             m = genai.GenerativeModel(model)
             full = (system_prompt + "\n\n" + prompt) if system_prompt else prompt
             resp = m.generate_content(full)
@@ -476,7 +581,7 @@ def route(prompt: str, system_prompt: str = "", source: str = "", force_free: bo
     cfg   = load_config()
     usage = load_usage()
 
-    # -- PRIMERA BARRERA: Nombres directos -> [Nombre_IA] SIEMPRE --
+    # -- PRIMERA BARRERA: Nombres directos -> Charm SIEMPRE --
     p_lower = _norm(prompt)
     direct_names = {_norm(get_ai_name()), "enjambre", "chask", "charm", "swarm"}
     first_token = p_lower.split()[0].rstrip(",.;:!?" + chr(161) + chr(191)) if p_lower.split() else ""
@@ -484,16 +589,16 @@ def route(prompt: str, system_prompt: str = "", source: str = "", force_free: bo
         return {
             "engine": "charm",
             "response": None,
-            "reason": f"Nombre directo '{first_token}' -> [Nombre_IA]"
+            "reason": f"Nombre directo '{first_token}' -> Charm"
         }
 
-    # Tareas complejas → [Nombre_IA]
+    # Tareas complejas → Charm
     if not force_free and is_complex(prompt, cfg):
         score, reason = complexity_score(prompt, cfg)
         return {
             "engine": "charm",
             "response": None,
-            "reason": f"Tarea compleja ({score}/100: {reason}) -> [Nombre_IA]"
+            "reason": f"Tarea compleja ({score}/100: {reason}) -> Charm"
         }
 
     # Elegir proveedor gratuito
@@ -502,7 +607,7 @@ def route(prompt: str, system_prompt: str = "", source: str = "", force_free: bo
         return {
             "engine": "charm",
             "response": None,
-            "reason": "Sin proveedores disponibles -> [Nombre_IA]"
+            "reason": "Sin proveedores disponibles -> Charm"
         }
 
     # -- Enriquecer el system prompt con contexto real y REGLA DEL ESPEJO --
@@ -517,7 +622,7 @@ def route(prompt: str, system_prompt: str = "", source: str = "", force_free: bo
     mode_prompt = ""
     mode_preferred_model = None
     mode_result = None
-    is_forced_teacher = False  # True SOLO si Administrador eligió modo Profesor explícitamente
+    is_forced_teacher = False  # True SOLO si Fernando eligió modo Profesor explícitamente
     try:
         from mode_router import detect_mode, get_mode_by_id
         if forced_mode:
@@ -664,4 +769,4 @@ if __name__ == "__main__":
         if result["response"]:
             print(result["response"])
         else:
-            print("-> Redirigir a [Nombre_IA]")
+            print("-> Redirigir a Charm")

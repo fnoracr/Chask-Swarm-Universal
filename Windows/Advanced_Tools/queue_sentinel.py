@@ -1,5 +1,5 @@
 """
-Centinela de cola de mensajes para [Nombre_IA] v2.
+Centinela de cola de mensajes para Nora v2.
 Poll cada 3s. Al detectar pending:
   1. Extrae el mensaje real del usuario
   2. Marca como "processing"  
@@ -8,7 +8,17 @@ Poll cada 3s. Al detectar pending:
 """
 import json, time, os, re
 
-QUEUE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Message_Queues\input_queue.json"
+# === BLINDAJE DE INSTANCIA ÚNICA ===
+try:
+    import win32event, win32api, winerror, sys
+    mutex = win32event.CreateMutex(None, 1, "Global\\ChaskSwarmQueueSentinel")
+    if win32api.GetLastError() == winerror.ERROR_ALREADY_EXISTS:
+        # Ya hay un centinela activo. Salimos silenciosamente.
+        sys.exit(0)
+except ImportError:
+    pass
+
+QUEUE = r"C:\Program Files\Chask_Swarm\Advanced_Tools\Colas_Mensajes\input_queue.json"
 
 def extract_user_message(raw):
     """Extrae solo el texto del usuario del wrapper de contexto."""
@@ -16,7 +26,7 @@ def extract_user_message(raw):
     m = re.search(r'\[TELEGRAM \d{2}:\d{2}:\d{2}\] \[USER: \w+\] (.+)', raw, re.DOTALL)
     if m:
         return m.group(1).strip()
-    # Buscar patrón de comando del sistema [TELEGRAM] [Nombre_IA], ...
+    # Buscar patrón de comando del sistema [TELEGRAM] Nora, ...
     m = re.search(r'\[TELEGRAM\] (.+)', raw, re.DOTALL)
     if m:
         return m.group(1).strip()
