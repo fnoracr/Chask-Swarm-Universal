@@ -1,0 +1,10 @@
+{
+  "node_id": "node-test-123",
+  "node_public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1VqClb74nAFd7KbDZBMs\nvr3qS3vWgymH7D0i8T5T0D0GoKnuERvmBvejbWPkFAo8J1KqrZZUtWHWQor6MUJb\nlZtkLXi8hjez3pUAgGfDx8RHuBMvGQKott3XHCN6eX/1F6u/GTKNI8WVePhrjZ/n\n8o3gb8/ZuOzqZeTIeJKxrHAeRP5RThIaL1GZgh6Y/TGQ3GLVHXby7c6GRNjuR4E4\nFAcHZMKc11zBF+KF1epj+Pg0h4vTnIkZmu0ZOxyjKnRsDsVJ0T/vj+JhAxULG0aX\nwkjbUtxnc+qSOhIPdyawrpL00x0yIBJloCtgGv+liiYa5ct88u+x7iTFhsxj3BSW\n2QIDAQAB\n-----END PUBLIC KEY-----\n",
+  "supreme_laws_hash": "e41f81cfb21f6f4d25bfdf383799c14036132e8e0ed2d0e3d4d17ba1b709a626",
+  "issued_at": 1779205241.515282,
+  "authorized_roles": [
+    "mesh_member"
+  ],
+  "signature_by_creator": "frjWlQs3Fx1BOhpYOIYThsTNBKv+Tz3GS/HRvnnw44qTkxDsx7q14bPqSpqNHeZsQBkUjjofFLEb7YmD3+F+yQFOz8K3kZS21TZr28Rdh1TfwGrylHe3odOMOnpkHXu5/AUHRB/ine+T42lBJjJklC7WkCffvh0QSUy/1JKDdf5QYuLHpYjwWIBsd00Pj6qiNJpfmGG1gTKk85Klux1scQeFfDtNrrQjaFXshJgq+UHGKS0n5Ml/UrxbheCJ1OoYJ1g37Y2JD8dk8u8j7JUVBvYNiB9UYAVqHN+WbxYTI3JC/z5Cb/zSPFBUPkSH/FvcX7B3k/YzzfqlXcKdxjOv1w=="
+}

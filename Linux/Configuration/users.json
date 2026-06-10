@@ -1,0 +1,58 @@
+{
+  "users": {
+    "admin": {
+      "id": "618e5180",
+      "username": "admin",
+      "display_name": "Administrador",
+      "role": "admin",
+      "capabilities": [
+        "llm_chat",
+        "llm_vision",
+        "skill_run",
+        "skill_create",
+        "skill_learn",
+        "memory_read",
+        "memory_write",
+        "kb_create",
+        "kb_search",
+        "sandbox_run",
+        "deploy",
+        "system_status",
+        "scheduler_manage",
+        "services_manage",
+        "user_manage",
+        "config_write",
+        "audit_read",
+        "file_access",
+        "telegram_send",
+        "discord_send",
+        "email_send"
+      ],
+      "custom_capabilities": [],
+      "blocked_capabilities": [],
+      "age": null,
+      "age_category": "adult",
+      "content_filter": "none",
+      "channels": {
+        "telegram_id": "5034994867",
+        "discord_id": "",
+        "email": "",
+        "web_token": "ys4zHMTLySrijuug2CK461BaFkSEE41O6MEgAzio3kA"
+      },
+      "password_hash": "93b98eb16ea12d24c9c88de8c0840e42b0b955100c92fb0160b96727966646f8",
+      "password_salt": "d4d2190ea787e75e2a2c05f278fccac1",
+      "active": true,
+      "created_at": "2026-05-17T11:37:14.951423",
+      "created_by": "system",
+      "last_login": "2026-06-04T08:02:03.717233",
+      "login_count": 63,
+      "session_count": 0,
+      "email": "fnoracr@gmail.com"
+    }
+  },
+  "meta": {
+    "created": "2026-05-17T11:37:14.916561",
+    "version": "1.0",
+    "last_modified": "2026-06-04T08:02:03.717233"
+  }
+}

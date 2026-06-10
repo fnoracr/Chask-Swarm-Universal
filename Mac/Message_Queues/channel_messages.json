@@ -1,0 +1,44 @@
+[
+  {
+    "ts": "2026-05-15T12:17:29.393997",
+    "channel": "discord",
+    "message": "Confirmando recepción: Enjambre está operativa y limpia de ecos.",
+    "success": true
+  },
+  {
+    "ts": "2026-05-15T12:19:02.881357",
+    "channel": "discord",
+    "message": "Protocolo Anti-Eco completado. ¿Me recibes ahora sin repeticiones?",
+    "success": true
+  },
+  {
+    "ts": "2026-05-15T12:31:11.596213",
+    "channel": "discord",
+    "message": "Confirmado, Administrador. Ya te leo perfectamente desde Discord y el sistema de inyección es estable. La Regla del Espejo vuelve a estar activa. 🐝✨",
+    "success": true
+  },
+  {
+    "ts": "2026-05-15T12:31:40.056859",
+    "channel": "discord",
+    "message": "Misión cumplida, Administrador. Sistema estabilizado, sin ecos y con inyección de alta fidelidad. Enjambre vuelve a modo invisible. ¡Enjambre operativo! 🐝🏁",
+    "success": true
+  },
+  {
+    "ts": "2026-05-15T12:34:55.132572",
+    "channel": "discord",
+    "message": "Confirmado, Administrador. Prueba superada con éxito. La comunicación por Discord es fluida, estable y el sistema de inyección ha quedado demostrado. ¡Enjambre sincronizado! 🐝🏁",
+    "success": true
+  },
+  {
+    "ts": "2026-05-15T12:59:43.488411",
+    "channel": "monday",
+    "message": "✅ Test de Integración Enjambre",
+    "success": true
+  },
+  {
+    "ts": "2026-05-15T21:21:27.597816",
+    "channel": "discord",
+    "message": "✅ Sí Administrador, te leo perfectamente desde Discord. El canal está activo y funcionando. Enjambre online — 21:21 CEST",
+    "success": true
+  }
+]

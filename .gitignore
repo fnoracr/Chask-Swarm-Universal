@@ -1,0 +1,38 @@
+# Binaries and large files
+*.exe
+*.dll
+*.iso
+*.tar.gz
+*.zip
+*.7z
+Binarios/
+
+# Browser caches
+YouTubeBotProfile/
+InstaBotProfile/
+TwitterBotProfile/
+PatreonBotProfile/
+Cache/
+Cache_Data/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs and databases
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# Temp files
+*.tmp
+*.temp
+scratch/
+pruebas/
+Basura_y_Debug/
+
+# Credentials
+master_credentials.json
+*.env

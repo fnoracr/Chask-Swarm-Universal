@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "enjambre-chask-swarm": {
+      "command": "python",
+      "args": ["C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\Core_Logic\\chask_mcp_server.py"],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

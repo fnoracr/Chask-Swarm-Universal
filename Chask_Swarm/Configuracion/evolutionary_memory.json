@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "ts": "2026-05-14T00:55:33.077702",
+    "text": "Fernando prefiere simplicidad sobre ingenieria prematura",
+    "user_id": "fernando",
+    "active": true
+  },
+  {
+    "id": 2,
+    "ts": "2026-05-14T00:55:34.469047",
+    "text": "El canal principal de comunicacion con Fernando es Telegram",
+    "user_id": "fernando",
+    "active": true
+  },
+  {
+    "id": 3,
+    "ts": "2026-05-14T00:55:35.974280",
+    "text": "Fernando trabaja con Power Automate, Python, y Flutter",
+    "user_id": "fernando",
+    "active": true
+  },
+  {
+    "id": 4,
+    "ts": "2026-05-14T01:26:06.351466",
+    "text": "Fernando tiene una RTX 4060 con 8GB de VRAM. Los modelos de hasta 8B funcionan perfectamente en GPU completa.",
+    "user_id": "fernando",
+    "active": true
+  },
+  {
+    "id": 5,
+    "ts": "2026-05-14T01:27:09.467657",
+    "text": "Fernando tiene una RTX 4060 con 8GB VRAM. Modelos de 8B son el sweet spot.",
+    "user_id": "fernando",
+    "active": true
+  },
+  {
+    "id": 6,
+    "ts": "2026-05-14T01:27:24.616843",
+    "text": "Fernando tiene una RTX 4060 con 8GB VRAM. Modelos de 8B son el sweet spot para GPU completa.",
+    "user_id": "fernando",
+    "active": true
+  }
+]

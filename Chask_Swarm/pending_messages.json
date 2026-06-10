@@ -1,0 +1,8 @@
+[
+  {
+    "ts": "2026-06-04T10:18:49.837833",
+    "source": "watchdog",
+    "text": "[ENJAMBRE: WATCHDOG] [WATCHDOG 10:18:49] ALERTA: Unified Channel Daemon (Telegram+Discord+Web) ha caido. Estado: reiniciado.",
+    "status": "pending"
+  }
+]

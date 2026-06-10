@@ -1,0 +1,36 @@
+{
+    "channels": {
+        "discord": {
+            "enabled": true,
+            "webhook_url": "AQUI_VA_TU_WEBHOOK",
+            "bot_token": "AQUI_VA_TU_TOKEN",
+            "description": "Discord bot para comunicaci\u00f3n bidireccional"
+        },
+        "slack": {
+            "enabled": true,
+            "webhook_url": "AQUI_VA_TU_WEBHOOK",
+            "app_token": "AQUI_VA_TU_TOKEN",
+            "bot_token": "AQUI_VA_TU_TOKEN",
+            "description": "Slack webhook para notificaciones"
+        },
+        "teams": {
+            "enabled": true,
+            "webhook_url": "AQUI_VA_TU_WEBHOOK",
+            "power_automate_webhook": "AQUI_VA_TU_WEBHOOK",
+            "description": "Microsoft Teams via Power Automate"
+        },
+        "monday": {
+            "enabled": true,
+            "api_token": "AQUI_VA_TU_TOKEN",
+            "board_id": "5096524628",
+            "description": "Monday.com API para gesti\u00f3n de Sprints"
+        },
+        "n8n": {
+            "enabled": true,
+            "api_token": "AQUI_VA_TU_TOKEN",
+            "instance_url": "https://n8n.srv863122.hstgr.cloud/",
+            "webhook_url": "",
+            "description": "n8n Automation Hub Public API & Webhooks"
+        }
+    }
+}

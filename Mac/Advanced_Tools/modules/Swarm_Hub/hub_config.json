@@ -1,0 +1,9 @@
+{
+  "hub_port": 51400,
+  "api_key": "-hu_XMLg5hL58I1Etc_h_ndu3Krde-JzH1h7DktNpVw",
+  "ping_interval_minutes": 60,
+  "router_timeout_minutes": 120,
+  "max_swarms": 10000,
+  "hub_is_router": true,
+  "hub_name": "ChaskHub-Central"
+}

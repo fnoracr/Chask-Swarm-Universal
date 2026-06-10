@@ -1,0 +1,34 @@
+[
+  {
+    "ts": "2026-05-17T11:18:52.317702",
+    "source_id": "c8cd5e3d",
+    "source_type": "lessons",
+    "skill_name": "no_optimizaciones_prematuras",
+    "skill_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\no_optimizaciones_prematuras.md",
+    "description": "Evita implementar optimizaciones sin solicitud explícita, priorizando la simplicidad."
+  },
+  {
+    "ts": "2026-05-17T11:18:57.346929",
+    "source_id": "a5d792d4",
+    "source_type": "lessons",
+    "skill_name": "no_optimizaciones_prematuras",
+    "skill_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\no_optimizaciones_prematuras.md",
+    "description": "Evita implementar optimizaciones como debounce sin solicitud explícita, priorizando la simplicidad."
+  },
+  {
+    "ts": "2026-05-17T11:19:02.157754",
+    "source_id": "59d612b6",
+    "source_type": "lessons",
+    "skill_name": "telegram_injection_backup",
+    "skill_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\telegram_injection_backup.md",
+    "description": "Asegura la inyección de código en el IDE mediante una cola persistente."
+  },
+  {
+    "ts": "2026-05-17T11:19:07.777349",
+    "source_id": "3c3dfa73",
+    "source_type": "lessons",
+    "skill_name": "multi_channel_queue_management",
+    "skill_path": "C:\\Program Files\\Chask_Swarm\\skills\\learned\\multi_channel_queue_management.md",
+    "description": "Gestionar colas de mensajes para múltiples canales de comunicación."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "ts": "2026-06-04T08:42:33.563403",
+    "source": "web_test",
+    "message": "[WEB_TEST] Probando la inyección unificada desde el dashboard web",
+    "status": "processed"
+  },
+  {
+    "ts": "2026-06-04T08:44:25.884941",
+    "source": "telegram_sentinel",
+    "message": "[TELEGRAM 08:44:23] Nora, me recibes?",
+    "status": "processed"
+  }
+]

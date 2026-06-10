@@ -1,0 +1,410 @@
+"""
+slash_commands.py — Sistema de Slash Commands para Enjambre
+========================================================
+Parsea y ejecuta atajos rápidos desde cualquier canal (Telegram, IDE, Web).
+
+Comandos disponibles:
+  /status           — Estado del sistema (daemons, colecciones, cola)
+  /modo <id>        — Cambiar modo de agente (viper, ghost, hunter, oracle, enjambre)
+  /kb crear <tema>  — Crear base de conocimiento profundo sobre un tema
+  /kb listar        — Listar bases de conocimiento disponibles
+  /kb buscar <q>    — Buscar en todas las bases de conocimiento
+  /skill listar     — Listar skills registradas
+  /skill buscar <q> — Buscar una skill
+  /fix              — Analizar y corregir el último error reportado
+  /analiza <texto>  — Análisis profundo de un tema/código/problema
+  /resume <texto>   — Resumen ejecutivo de un texto largo
+  /deploy           — Estado de deployments activos
+  /help             — Lista de comandos disponibles
+  /memoria <q>      — Buscar en la memoria evolutiva
+  /reflexion        — Ejecutar reflexión de sesión ahora
+
+Uso desde otros módulos:
+    from slash_commands import parse_command, is_command
+    if is_command(user_input):
+        result = parse_command(user_input)
+        # result = {"handled": True, "response": "...", "raw_query": None}
+    else:
+        # Procesar como lenguaje natural
+"""
+
+import os
+import sys
+import json
+import logging
+import subprocess
+import time
+from datetime import datetime
+
+log = logging.getLogger("slash_commands")
+
+TOOLS_DIR  = r"C:\Program Files\Chask_Swarm\Advanced_Tools"
+SWARM_DIR  = r"C:\Program Files\Chask_Swarm"
+
+# ─── Aliases ──────────────────────────────────────────────────
+ALIASES = {
+    "/s":       "/status",
+    "/m":       "/modo",
+    "/k":       "/kb",
+    "/sk":      "/skill",
+    "/h":       "/help",
+    "/f":       "/fix",
+    "/a":       "/analiza",
+    "/r":       "/resume",
+    "/mem":     "/memoria",
+    "/ref":     "/reflexion",
+}
+
+
+def is_command(text: str) -> bool:
+    """Verifica si un texto es un slash command."""
+    t = text.strip()
+    if not t.startswith("/"):
+        return False
+    cmd = t.split()[0].lower()
+    return cmd in ALIASES or cmd in {
+        "/status", "/modo", "/kb", "/skill", "/fix",
+        "/analiza", "/resume", "/deploy", "/help",
+        "/memoria", "/reflexion",
+    }
+
+
+def _resolve_alias(text: str) -> str:
+    """Resuelve aliases a comandos completos."""
+    parts = text.strip().split(None, 1)
+    cmd   = parts[0].lower()
+    rest  = parts[1] if len(parts) > 1 else ""
+    if cmd in ALIASES:
+        cmd = ALIASES[cmd]
+    return f"{cmd} {rest}".strip()
+
+
+def parse_command(text: str) -> dict:
+    """
+    Parsea y ejecuta un slash command.
+    
+    Returns:
+        {
+            "handled": bool,   — True si se procesó como comando
+            "response": str,   — Respuesta directa (sin LLM)
+            "raw_query": str,  — Si handled=False, query para pasar al LLM
+            "mode": str,       — Modo de agente forzado (si /modo)
+        }
+    """
+    resolved = _resolve_alias(text)
+    parts    = resolved.split(None, 2)
+    cmd      = parts[0].lower()
+    arg1     = parts[1] if len(parts) > 1 else ""
+    arg2     = parts[2] if len(parts) > 2 else ""
+
+    try:
+        if cmd == "/help":
+            return _cmd_help()
+        elif cmd == "/status":
+            return _cmd_status()
+        elif cmd == "/modo":
+            return _cmd_modo(arg1)
+        elif cmd == "/kb":
+            return _cmd_kb(arg1, arg2)
+        elif cmd == "/skill":
+            return _cmd_skill(arg1, arg2)
+        elif cmd == "/fix":
+            return {"handled": False, "response": "", 
+                    "raw_query": "Analiza el último error que hemos tenido y propón una solución",
+                    "mode": "ghost"}
+        elif cmd == "/analiza":
+            topic = f"{arg1} {arg2}".strip()
+            return {"handled": False, "response": "",
+                    "raw_query": f"Haz un análisis profundo y detallado de: {topic}",
+                    "mode": "viper"}
+        elif cmd == "/resume":
+            topic = f"{arg1} {arg2}".strip()
+            return {"handled": False, "response": "",
+                    "raw_query": f"Haz un resumen ejecutivo breve y conciso de: {topic}",
+                    "mode": "enjambre"}
+        elif cmd == "/memoria":
+            return _cmd_memoria(f"{arg1} {arg2}".strip())
+        elif cmd == "/reflexion":
+            return _cmd_reflexion()
+        elif cmd == "/deploy":
+            return _cmd_deploy()
+        else:
+            return {"handled": False, "response": "",
+                    "raw_query": text}
+    except Exception as e:
+        log.error(f"Error en comando {cmd}: {e}")
+        return {"handled": True,
+                "response": f"⚠️ Error ejecutando `{cmd}`: {e}"}
+
+
+# ─── Implementación de Comandos ───────────────────────────────
+
+def _cmd_help() -> dict:
+    help_text = """📋 **Comandos disponibles:**
+
+🔧 **Sistema**
+  `/status` (`/s`) — Estado del sistema
+  `/modo <id>` (`/m`) — Cambiar agente (viper/ghost/hunter/oracle/enjambre)
+  `/deploy` — Estado de deployments
+
+🧠 **Conocimiento**
+  `/kb crear <tema>` — Crear base de conocimiento
+  `/kb listar` — Listar bases disponibles
+  `/kb buscar <query>` — Buscar en todas las bases
+  `/memoria <query>` (`/mem`) — Buscar memoria evolutiva
+
+⚡ **Acciones rápidas**
+  `/fix` (`/f`) — Analizar último error
+  `/analiza <tema>` (`/a`) — Análisis profundo
+  `/resume <texto>` (`/r`) — Resumen ejecutivo
+  `/reflexion` (`/ref`) — Ejecutar reflexión de sesión
+
+📦 **Skills**
+  `/skill listar` (`/sk listar`) — Listar skills
+  `/skill buscar <q>` — Buscar skill"""
+    return {"handled": True, "response": help_text}
+
+
+def _cmd_status() -> dict:
+    """Estado completo del sistema."""
+    lines = ["📊 **Estado del Sistema Chask Swarm**\n"]
+
+    # Daemons
+    try:
+        result = subprocess.run(
+            ["tasklist", "/FI", "IMAGENAME eq pythonw.exe", "/FO", "CSV"],
+            capture_output=True, text=True, timeout=5
+        )
+        daemon_count = result.stdout.count("pythonw.exe")
+        lines.append(f"🔄 **Daemons activos**: {daemon_count}")
+    except Exception:
+        lines.append("🔄 **Daemons**: no se pudo verificar")
+
+    # Qdrant colecciones
+    try:
+        from qdrant_client import QdrantClient
+        client = QdrantClient(host="localhost", port=6333)
+        cols = client.get_collections().collections
+        lines.append(f"\n📚 **Colecciones Qdrant** ({len(cols)}):")
+        for c in cols:
+            info = client.get_collection(c.name)
+            lines.append(f"  • `{c.name}` — {info.points_count} puntos")
+    except Exception as e:
+        lines.append(f"\n📚 **Qdrant**: error ({e})")
+
+    # Cola de mensajes
+    try:
+        queue_path = os.path.join(SWARM_DIR, "Colas_Mensajes", "pending_messages.json")
+        if os.path.exists(queue_path):
+            with open(queue_path, encoding="utf-8") as f:
+                msgs = json.load(f)
+            pending = sum(1 for m in msgs if m.get("status") == "pending")
+            lines.append(f"\n📨 **Cola de mensajes**: {pending} pendientes / {len(msgs)} total")
+    except Exception:
+        pass
+
+    # Knowledge jobs
+    try:
+        jobs_path = os.path.join(TOOLS_DIR, "knowledge_jobs.json")
+        if os.path.exists(jobs_path):
+            with open(jobs_path, encoding="utf-8") as f:
+                jobs = json.load(f)
+            active = [j for j in jobs.values() if j.get("status") not in ("done", "error")]
+            if active:
+                lines.append(f"\n⚙️ **Jobs de conocimiento activos**: {len(active)}")
+                for j in active:
+                    lines.append(f"  • {j.get('topic', '?')} — {j.get('status', '?')} ({j.get('progress', 0)}%)")
+    except Exception:
+        pass
+
+    # Skills
+    try:
+        sys.path.insert(0, TOOLS_DIR)
+        from skill_catalog import load_catalog
+        cat = load_catalog()
+        lines.append(f"\n🛠️ **Skills registradas**: {len(cat.get('skills', []))}")
+    except Exception:
+        pass
+
+    # Ollama
+    try:
+        import requests
+        r = requests.get("http://localhost:11434/api/tags", timeout=3)
+        models = r.json().get("models", [])
+        lines.append(f"\n🤖 **Modelos Ollama**: {len(models)} cargados")
+    except Exception:
+        lines.append("\n🤖 **Ollama**: no disponible")
+
+    lines.append(f"\n🕐 **Hora**: {datetime.now().strftime('%H:%M:%S %d/%m/%Y')}")
+
+    return {"handled": True, "response": "\n".join(lines)}
+
+
+def _cmd_modo(modo_id: str) -> dict:
+    """Cambiar modo de agente."""
+    if not modo_id:
+        # Listar modos
+        try:
+            modes_path = os.path.join(TOOLS_DIR, "agent_modes.json")
+            with open(modes_path, encoding="utf-8") as f:
+                data = json.load(f)
+            lines = ["🎭 **Modos disponibles**:\n"]
+            for m in data["modes"]:
+                icon = m.get("icon", "")
+                lines.append(f"  {icon} `{m['id']}` — {m['description']}")
+            lines.append(f"\nUso: `/modo <id>` para activar")
+            return {"handled": True, "response": "\n".join(lines)}
+        except Exception as e:
+            return {"handled": True, "response": f"Error cargando modos: {e}"}
+
+    valid_modes = {"viper", "ghost", "hunter", "oracle", "enjambre"}
+    if modo_id.lower() not in valid_modes:
+        return {"handled": True,
+                "response": f"⚠️ Modo '{modo_id}' no existe. Válidos: {', '.join(valid_modes)}"}
+
+    return {"handled": True,
+            "response": f"✅ Modo cambiado a **{modo_id.upper()}**. Las próximas respuestas usarán este agente.",
+            "mode": modo_id.lower()}
+
+
+def _cmd_kb(action: str, arg: str) -> dict:
+    """Gestión de bases de conocimiento."""
+    if not action or action == "listar":
+        try:
+            sys.path.insert(0, TOOLS_DIR)
+            from knowledge_orchestrator import KnowledgeOrchestrator
+            orch = KnowledgeOrchestrator()
+            cols = orch.list_collections()
+            if not cols:
+                return {"handled": True, "response": "📚 No hay bases de conocimiento indexadas."}
+            lines = ["📚 **Bases de Conocimiento**:\n"]
+            for c in cols:
+                lines.append(f"  • `{c['name']}` — {c['points']} puntos")
+            return {"handled": True, "response": "\n".join(lines)}
+        except Exception as e:
+            return {"handled": True, "response": f"Error: {e}"}
+
+    elif action == "crear" and arg:
+        return {"handled": False, "response": "",
+                "raw_query": f"Crea una base de conocimiento profundo sobre: {arg}"}
+
+    elif action == "buscar" and arg:
+        try:
+            sys.path.insert(0, TOOLS_DIR)
+            from knowledge_orchestrator import KnowledgeOrchestrator
+            orch = KnowledgeOrchestrator()
+            ctx  = orch.process_query(arg)
+            if ctx.rag_context:
+                return {"handled": True,
+                        "response": f"🔍 **Resultados de '{arg}'** (colección: `{ctx.collection_used}`):\n\n{ctx.rag_context[:1500]}"}
+            return {"handled": True, "response": f"🔍 Sin resultados para '{arg}'."}
+        except Exception as e:
+            return {"handled": True, "response": f"Error: {e}"}
+
+    return {"handled": True, "response": "Uso: `/kb listar`, `/kb crear <tema>`, `/kb buscar <query>`"}
+
+
+def _cmd_skill(action: str, arg: str) -> dict:
+    """Gestión de skills."""
+    try:
+        sys.path.insert(0, TOOLS_DIR)
+        from skill_catalog import list_skills, search_skills, load_catalog
+    except ImportError:
+        return {"handled": True, "response": "⚠️ skill_catalog no disponible"}
+
+    if not action or action == "listar":
+        cat = load_catalog()
+        skills = cat.get("skills", [])
+        if not skills:
+            return {"handled": True, "response": "🛠️ No hay skills registradas. Usa `bootstrap` para inicializar."}
+        lines = ["🛠️ **Catálogo de Skills**:\n"]
+        for s in skills:
+            used = f"(usado {s['usage_count']}x)" if s.get("usage_count", 0) > 0 else ""
+            lines.append(f"  • `{s['name']}` — {s['description']} {used}")
+        return {"handled": True, "response": "\n".join(lines)}
+
+    elif action == "buscar" and arg:
+        results = search_skills(arg)
+        if not results:
+            return {"handled": True, "response": f"🔍 Sin skills para '{arg}'."}
+        lines = [f"🔍 **Skills para '{arg}'**:\n"]
+        for s in results[:5]:
+            lines.append(f"  • `{s['name']}` — {s['description']}")
+        return {"handled": True, "response": "\n".join(lines)}
+
+    return {"handled": True, "response": "Uso: `/skill listar`, `/skill buscar <query>`"}
+
+
+def _cmd_memoria(query: str) -> dict:
+    """Buscar en memoria evolutiva."""
+    if not query:
+        return {"handled": True, "response": "Uso: `/memoria <query>` — busca en la memoria evolutiva"}
+    try:
+        sys.path.insert(0, TOOLS_DIR)
+        from evolutionary_memory import search_memory
+        results = search_memory(query, "fernando", 5)
+        if not results:
+            return {"handled": True, "response": f"🧠 Sin recuerdos para '{query}'."}
+        lines = [f"🧠 **Memoria evolutiva** — '{query}':\n"]
+        for r in results:
+            text = r.get("memory", r.get("text", str(r)))
+            lines.append(f"  • {text}")
+        return {"handled": True, "response": "\n".join(lines)}
+    except Exception as e:
+        return {"handled": True, "response": f"Error: {e}"}
+
+
+def _cmd_reflexion() -> dict:
+    """Ejecutar reflexión de sesión."""
+    try:
+        result = subprocess.run(
+            [sys.executable, os.path.join(TOOLS_DIR, "reflection_engine.py"), "reflect"],
+            capture_output=True, text=True, timeout=60
+        )
+        if result.returncode == 0:
+            return {"handled": True,
+                    "response": f"🔄 **Reflexión ejecutada**:\n```\n{result.stdout[:1000]}\n```"}
+        return {"handled": True,
+                "response": f"⚠️ Error en reflexión:\n```\n{result.stderr[:500]}\n```"}
+    except Exception as e:
+        return {"handled": True, "response": f"Error: {e}"}
+
+
+def _cmd_deploy() -> dict:
+    """Estado de deployments."""
+    lines = ["🚀 **Estado de Deployments**:\n"]
+
+    # Docker
+    try:
+        result = subprocess.run(
+            ["docker", "ps", "--format", "{{.Names}}: {{.Status}}"],
+            capture_output=True, text=True, timeout=5
+        )
+        if result.stdout.strip():
+            lines.append("🐳 **Docker**:")
+            for line in result.stdout.strip().split("\n"):
+                lines.append(f"  • {line}")
+        else:
+            lines.append("🐳 **Docker**: sin contenedores activos")
+    except Exception:
+        lines.append("🐳 **Docker**: no disponible")
+
+    return {"handled": True, "response": "\n".join(lines)}
+
+
+if __name__ == "__main__":
+    # Test directo
+    import sys
+    if len(sys.argv) > 1:
+        cmd = " ".join(sys.argv[1:])
+        result = parse_command(cmd)
+        print(result.get("response", "Sin respuesta"))
+    else:
+        # Test batch
+        tests = ["/help", "/status", "/s", "/modo", "/kb listar", "/skill listar"]
+        for t in tests:
+            print(f"\n{'='*50}")
+            print(f"CMD: {t}")
+            print(f"{'='*50}")
+            r = parse_command(t)
+            print(r.get("response", "→ raw_query: " + r.get("raw_query", "")))

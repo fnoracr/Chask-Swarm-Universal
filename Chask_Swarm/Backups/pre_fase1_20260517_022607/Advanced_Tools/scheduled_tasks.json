@@ -1,0 +1,29 @@
+{
+    "tasks": [
+        {
+            "name": "Informe Diario",
+            "schedule": "0 8 * * *",
+            "command": "python \"C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\daily_report.py\"",
+            "description": "Genera y envía por Telegram el resumen de actividad a las 8:00 AM",
+            "active": true
+        },
+        {
+            "name": "Limpieza de Temporales",
+            "schedule": "0 0 * * *",
+            "command": "python -c \"import os, glob; [os.remove(f) for f in glob.glob('_test_*') + glob.glob('_patch_*')]\"",
+            "description": "Limpia archivos basura cada medianoche",
+            "active": true
+        },
+        {
+            "name": "Backup del Sistema",
+            "schedule": "0 2 * * *",
+            "command": "python \"C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\backup_system.py\"",
+            "description": "Copia de seguridad de configuraciones y memoria a las 2:00 AM",
+            "active": false
+        }
+    ],
+    "settings": {
+        "timezone": "Local",
+        "log_path": "C:\\Program Files\\Chask_Swarm\\Advanced_Tools\\cron_log.txt"
+    }
+}

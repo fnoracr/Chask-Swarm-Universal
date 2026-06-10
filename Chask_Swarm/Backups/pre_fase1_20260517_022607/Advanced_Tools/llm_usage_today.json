@@ -1,0 +1,8 @@
+{
+  "date": "2026-05-16",
+  "counts": {
+    "ollama_local": 99999,
+    "deepseek": 500,
+    "groq": 14400
+  }
+}

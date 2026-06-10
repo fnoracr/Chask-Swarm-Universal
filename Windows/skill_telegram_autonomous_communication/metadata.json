@@ -1,0 +1,9 @@
+{
+    "title": "Telegram Autonomous Communication Workflow",
+    "summary": "This KI documents the established workflow for Charm AI to communicate with the user via Telegram without needing explicit terminal usage. It covers the architecture of charm_telegram.py and telegram_daemon.py, the handling of config files, parsing of text/images/voice notes, and the rule to always keep the daemon running.",
+    "created_at": "2026-05-08T05:48:14.003392+00:00",
+    "updated_at": "2026-05-08T05:48:14.003392+00:00",
+    "references": [
+        "Conversation: Scaling Global Mobility Ecosystem"
+    ]
+}

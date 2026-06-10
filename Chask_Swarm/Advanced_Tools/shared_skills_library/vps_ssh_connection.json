@@ -1,0 +1,13 @@
+{
+  "name": "vps_ssh_connection",
+  "description": "Procedimiento genérico y despersonalizado para conectarse mediante SSH a un servidor VPS usando Python y la librería paramiko. Ideal para ejecutar comandos de mantenimiento remotos.",
+  "tags": [
+    "REDES",
+    "VPS",
+    "SSH",
+    "MANTENIMIENTO"
+  ],
+  "code": "import paramiko\nimport sys\nimport io\n\ndef execute_remote_command(host, port, username, password, command, timeout=15):\n    '''\n    Conecta al VPS especificado y ejecuta un comando.\n    Devuelve la salida estandar o el error.\n    '''\n    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')\n    ssh = paramiko.SSHClient()\n    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n    \n    try:\n        ssh.connect(host, port=port, username=username, password=password, timeout=timeout)\n        stdin, stdout, stderr = ssh.exec_command(command, timeout=timeout)\n        out = stdout.read().decode(errors='replace').strip()\n        err = stderr.read().decode(errors='replace').strip()\n        ssh.close()\n        return out if out else f\"ERROR: {err}\"\n    except Exception as e:\n        return f\"FALLO_CONEXION: {str(e)}\"\n",
+  "author": "Nora Swarm",
+  "version": "1.0.0"
+}

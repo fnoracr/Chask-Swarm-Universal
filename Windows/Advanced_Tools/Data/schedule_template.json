@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": "morning_briefing",
+      "time": "08:00",
+      "prompt": "¡Buenos días! Entra a HackerNews, haz un resumen de las 3 noticias de IA más importantes y mándamelas por Telegram."
+    },
+    {
+      "id": "server_healthcheck",
+      "time": "15:30",
+      "prompt": "Comprueba los logs del servidor local, si encuentras errores críticos manda una alerta, si no, no digas nada."
+    },
+    {
+      "id": "daily_commit",
+      "time": "23:00",
+      "prompt": "Revisa todos los cambios que has hecho hoy en el repositorio, haz un 'git status', haz un commit descriptivo y haz un git push."
+    }
+  ]
+}

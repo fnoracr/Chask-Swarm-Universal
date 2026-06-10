@@ -1,0 +1,463 @@
+[
+  {
+    "updatedAt": "2026-05-26T10:29:31.357Z",
+    "createdAt": "2026-05-25T22:36:10.719Z",
+    "id": "6j3NMv2PnZSGLTD9",
+    "name": "Monitor Watchdog",
+    "description": null,
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+      {
+        "parameters": {
+          "rule": {
+            "interval": [
+              {
+                "field": "seconds",
+                "secondsInterval": 5
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          0,
+          0
+        ],
+        "id": "e00a30b4-1234-4b47-b89e-213c3b03658d",
+        "name": "Schedule Trigger"
+      },
+      {
+        "parameters": {
+          "url": "http://host.docker.internal:5679/status/api/check_watchdog",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 1,
+        "position": [
+          224,
+          0
+        ],
+        "id": "f5f5f5f5-1234-4b47-b89e-213c3b03658d",
+        "name": "Comprobar Proceso",
+        "continueOnFail": true,
+        "settings": {
+          "continueOnFail": true
+        }
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "boolean": [
+              {
+                "value1": "={{ .running }}"
+              }
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 1,
+        "position": [
+          448,
+          0
+        ],
+        "id": "a1a1a1a1-1234-4b47-b89e-213c3b03658d",
+        "name": "Si no esta activo"
+      },
+      {
+        "parameters": {
+          "requestMethod": "POST",
+          "url": "http://host.docker.internal:51339/api/start_watchdog",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 1,
+        "position": [
+          736,
+          -96
+        ],
+        "id": "b2b2b2b2-1234-4b47-b89e-213c3b03658d",
+        "name": "Arrancar Watchdog"
+      }
+    ],
+    "connections": {
+      "Schedule Trigger": {
+        "main": [
+          [
+            {
+              "node": "Comprobar Proceso",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Comprobar Proceso": {
+        "main": [
+          [
+            {
+              "node": "Si no esta activo",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Si no esta activo": {
+        "main": [
+          [
+            {
+              "node": "Arrancar Watchdog",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate"
+    },
+    "staticData": {
+      "node:Schedule Trigger": {
+        "recurrenceRules": []
+      }
+    },
+    "meta": {
+      "instanceId": "local"
+    },
+    "pinData": {},
+    "versionId": "1bf7f767-a42f-4853-be54-80e1971c90ac",
+    "activeVersionId": "1bf7f767-a42f-4853-be54-80e1971c90ac",
+    "versionCounter": 50,
+    "triggerCount": 1,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-05-25T22:36:10.723Z",
+        "createdAt": "2026-05-25T22:36:10.723Z",
+        "role": "workflow:owner",
+        "workflowId": "6j3NMv2PnZSGLTD9",
+        "projectId": "6M9oTy55lUIxXv4L",
+        "project": {
+          "updatedAt": "2026-05-26T05:22:36.778Z",
+          "createdAt": "2026-05-25T21:44:44.352Z",
+          "id": "6M9oTy55lUIxXv4L",
+          "name": "Fernando Nora <fnoracr@gmail.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "creatorId": "cfe272c1-af29-4cf7-a366-139ffcb3d689"
+        }
+      }
+    ],
+    "versionMetadata": {
+      "name": "Version 1bf7f767",
+      "description": ""
+    }
+  },
+  {
+    "updatedAt": "2026-05-26T17:00:13.000Z",
+    "createdAt": "2026-05-26T10:45:33.164Z",
+    "id": "UeJ3XwP8",
+    "name": "Chask Swarm - Webhook Kill Switch",
+    "description": null,
+    "active": false,
+    "isArchived": true,
+    "nodes": [
+      {
+        "parameters": {
+          "path": "chask-off",
+          "options": {}
+        },
+        "id": "1e7c5b1d-2b4a-4a6c-9d1a-4f5c3a2b1b01",
+        "name": "Webhook Off",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          208,
+          192
+        ],
+        "webhookId": "chask-swarm-kill-switch-off"
+      },
+      {
+        "parameters": {
+          "path": "chask-on",
+          "options": {}
+        },
+        "id": "1e7c5b1d-2b4a-4a6c-9d1a-4f5c3a2b1b02",
+        "name": "Webhook On",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          208,
+          432
+        ],
+        "webhookId": "chask-swarm-kill-switch-on"
+      },
+      {
+        "parameters": {
+          "command": "C:\\Program Files\\Chask_Swarm\\kill_all_from_n8n.bat"
+        },
+        "id": "4f0a8e4a-5e7d-7d9f-c04d-7a8f6d5e4e04",
+        "name": "Execute Kill Script",
+        "type": "n8n-nodes-base.executeCommand",
+        "typeVersion": 1,
+        "position": [
+          576,
+          144
+        ]
+      },
+      {
+        "parameters": {
+          "command": "C:\\Program Files\\Chask_Swarm\\start_all_from_n8n.bat"
+        },
+        "id": "5a1b9f5b-6f8e-8e0a-d15e-8b9a7e6f5f05",
+        "name": "Execute Start Script",
+        "type": "n8n-nodes-base.executeCommand",
+        "typeVersion": 1,
+        "position": [
+          512,
+          432
+        ]
+      }
+    ],
+    "connections": {
+      "Webhook Off": {
+        "main": [
+          [
+            {
+              "node": "Execute Kill Script",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Webhook On": {
+        "main": [
+          [
+            {
+              "node": "Execute Start Script",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate"
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": {},
+    "versionId": "aec45412-8b0b-4b10-a61b-21ca6d71edc0",
+    "activeVersionId": null,
+    "versionCounter": 6,
+    "triggerCount": 0,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-05-26T10:45:33.168Z",
+        "createdAt": "2026-05-26T10:45:33.168Z",
+        "role": "workflow:owner",
+        "workflowId": "UeJ3XwP8",
+        "projectId": "6M9oTy55lUIxXv4L",
+        "project": {
+          "updatedAt": "2026-05-26T05:22:36.778Z",
+          "createdAt": "2026-05-25T21:44:44.352Z",
+          "id": "6M9oTy55lUIxXv4L",
+          "name": "Fernando Nora <fnoracr@gmail.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "creatorId": "cfe272c1-af29-4cf7-a366-139ffcb3d689"
+        }
+      }
+    ],
+    "versionMetadata": {
+      "name": null,
+      "description": null
+    }
+  },
+  {
+    "updatedAt": "2026-05-26T21:21:59.000Z",
+    "createdAt": "2026-05-26T17:00:44.252Z",
+    "id": "C4V7OlEfHRk8e2jB",
+    "name": "Chask Swarm - OFF",
+    "description": null,
+    "active": false,
+    "isArchived": true,
+    "nodes": [
+      {
+        "parameters": {
+          "path": "chask-off",
+          "options": {}
+        },
+        "id": "035edc3f-50e8-428d-a57d-6eda52955fa4",
+        "name": "Webhook Off",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ],
+        "webhookId": "9b1c3e5d-4f2a-8b6c-1d0e-2f5a3b4c5d6e"
+      },
+      {
+        "parameters": {
+          "url": "http://localhost:5679/kill",
+          "options": {}
+        },
+        "id": "bef787dd-2fb4-40d2-8fcb-1bf391f0b185",
+        "name": "Local n8n Bridge - Kill",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 3,
+        "position": [
+          256,
+          0
+        ]
+      }
+    ],
+    "connections": {
+      "Webhook Off": {
+        "main": [
+          [
+            {
+              "node": "Local n8n Bridge - Kill",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate"
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": {},
+    "versionId": "d0b91ea9-29b6-4a02-a517-6223a07a3947",
+    "activeVersionId": null,
+    "versionCounter": 6,
+    "triggerCount": 1,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-05-26T17:00:44.256Z",
+        "createdAt": "2026-05-26T17:00:44.256Z",
+        "role": "workflow:owner",
+        "workflowId": "C4V7OlEfHRk8e2jB",
+        "projectId": "6M9oTy55lUIxXv4L",
+        "project": {
+          "updatedAt": "2026-05-26T05:22:36.778Z",
+          "createdAt": "2026-05-25T21:44:44.352Z",
+          "id": "6M9oTy55lUIxXv4L",
+          "name": "Fernando Nora <fnoracr@gmail.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "creatorId": "cfe272c1-af29-4cf7-a366-139ffcb3d689"
+        }
+      }
+    ],
+    "versionMetadata": {
+      "name": null,
+      "description": null
+    }
+  },
+  {
+    "updatedAt": "2026-05-26T21:21:55.000Z",
+    "createdAt": "2026-05-26T17:01:24.402Z",
+    "id": "xVhEciH11M0IMPuG",
+    "name": "Chask Swarm - ON",
+    "description": null,
+    "active": false,
+    "isArchived": true,
+    "nodes": [
+      {
+        "parameters": {
+          "path": "chask-on",
+          "options": {}
+        },
+        "id": "5af56f3c-251c-4a12-bbf5-ba8ae1d062b5",
+        "name": "Webhook On",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 1,
+        "position": [
+          0,
+          0
+        ],
+        "webhookId": "0c2d4f6e-5g3b-9c7d-2e1f-3g6b4c5d6e7f"
+      },
+      {
+        "parameters": {
+          "url": "http://localhost:5679/start",
+          "options": {}
+        },
+        "id": "421100df-0c6c-4e8e-9b49-1eabd85e4bfd",
+        "name": "Local n8n Bridge - Start",
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 3,
+        "position": [
+          256,
+          0
+        ]
+      }
+    ],
+    "connections": {
+      "Webhook On": {
+        "main": [
+          [
+            {
+              "node": "Local n8n Bridge - Start",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "settings": {
+      "executionOrder": "v1",
+      "binaryMode": "separate"
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": {},
+    "versionId": "767fcfe5-acee-4809-8787-55ae22d8f1a3",
+    "activeVersionId": null,
+    "versionCounter": 5,
+    "triggerCount": 1,
+    "tags": [],
+    "shared": [
+      {
+        "updatedAt": "2026-05-26T17:01:24.404Z",
+        "createdAt": "2026-05-26T17:01:24.404Z",
+        "role": "workflow:owner",
+        "workflowId": "xVhEciH11M0IMPuG",
+        "projectId": "6M9oTy55lUIxXv4L",
+        "project": {
+          "updatedAt": "2026-05-26T05:22:36.778Z",
+          "createdAt": "2026-05-25T21:44:44.352Z",
+          "id": "6M9oTy55lUIxXv4L",
+          "name": "Fernando Nora <fnoracr@gmail.com>",
+          "type": "personal",
+          "icon": null,
+          "description": null,
+          "creatorId": "cfe272c1-af29-4cf7-a366-139ffcb3d689"
+        }
+      }
+    ],
+    "versionMetadata": {
+      "name": null,
+      "description": null
+    }
+  }
+]
