@@ -71,7 +71,7 @@ def describe(image_path, prompt="Describe lo que ves en esta pantalla en espanol
     
     # 1. Try cloud vision via LLM Router (GPT-4V, Gemini Vision)
     try:
-        providers_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "llm_providers_config.json")
+        providers_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Data", "llm_providers_config.json")
         if os.path.exists(providers_path):
             with open(providers_path, "r") as f:
                 providers = json.load(f)

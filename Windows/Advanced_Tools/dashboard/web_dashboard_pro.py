@@ -24,13 +24,15 @@ except:
     sys.stdout = _log_f
     sys.stderr = _log_f
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CONFIG_FILE = os.path.join(BASE_DIR, "Configuracion", "master_credentials.json")
 MEMORY_FILE = os.path.join(BASE_DIR, "memory.md")
 QUEUE_FILE  = os.path.join(BASE_DIR, "Advanced_Tools", "Colas_Mensajes", "input_queue.json")
 
-# Agregar Advanced_Tools al path para importar modulos locales
+# Agregar rutas al path para importar modulos locales
 sys.path.insert(0, os.path.join(BASE_DIR, "Advanced_Tools"))
+sys.path.insert(0, os.path.join(BASE_DIR, "Advanced_Tools", "Core_Logic"))
+sys.path.insert(0, os.path.join(BASE_DIR, "Advanced_Tools", "Integrations"))
 
 # Router de IAs
 try:
@@ -3651,7 +3653,7 @@ def _extract_attachment_content(tmp_path: str, filename: str) -> tuple:
             vision_prompt = "Extrae y transcribe todo el texto que veas en esta imagen con máxima precisión. Si hay ejercicios matemáticos, fórmulas o ecuaciones, transcríbelas exactas. Si no hay texto, describe brevemente el contenido."
 
             # --- Cadena de proveedores con visión ---
-            cfg_path = os.path.join(BASE_DIR, "Advanced_Tools", "llm_providers_config.json")
+            cfg_path = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_providers_config.json")
             vision_providers = []  # (name, api_key, base_url, model)
             if os.path.exists(cfg_path):
                 with open(cfg_path, encoding="utf-8") as _f:
@@ -3834,9 +3836,7 @@ def send_message():
             
         prompt_extra = auth_res.get("system_prompt_extra", "")
         final_text = auth_res.get("text", full_message)
-        full_message = f"{prompt_extra}
-
-[WEB] {final_text}".strip()
+        full_message = f"{prompt_extra}\n\n[WEB] {final_text}".strip()
         
     except Exception as e:
         print(f"[Dashboard] Auth Middleware error: {e}")
@@ -4097,7 +4097,7 @@ def web_send_response():
 @app.route("/api/ai_providers")
 def get_ai_providers():
     """Devuelve la lista de proveedores del router de IA."""
-    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "llm_providers_config.json")
+    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_providers_config.json")
     if not os.path.exists(config_path):
         return jsonify([])
         
@@ -4159,7 +4159,7 @@ def get_ai_providers():
 @app.route("/api/ai_providers/add", methods=["POST"])
 def add_ai_provider():
     """Agrega un nuevo proveedor de IA al archivo de configuración."""
-    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "llm_providers_config.json")
+    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_providers_config.json")
     if not os.path.exists(config_path):
         return jsonify({"success": False, "error": "Archivo de configuración no encontrado"}), 404
         
@@ -4211,7 +4211,7 @@ def add_ai_provider():
 @app.route("/api/ai_providers/toggle", methods=["POST"])
 def toggle_ai_provider():
     """Activa o desactiva un proveedor de IA."""
-    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "llm_providers_config.json")
+    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_providers_config.json")
     if not os.path.exists(config_path):
         return jsonify({"success": False, "error": "Configuración no encontrada"}), 404
         
@@ -4244,7 +4244,7 @@ def toggle_ai_provider():
 @app.route("/api/ai_providers/delete", methods=["POST"])
 def delete_ai_provider():
     """Elimina un proveedor de IA."""
-    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "llm_providers_config.json")
+    config_path = os.path.join(BASE_DIR, "Advanced_Tools", "Data", "llm_providers_config.json")
     if not os.path.exists(config_path):
         return jsonify({"success": False, "error": "Configuración no encontrada"}), 404
         
@@ -4737,7 +4737,7 @@ def get_system_components():
     watchdog_active = False
     for p in psutil.process_iter(['name', 'cmdline']):
         try:
-            if p.info['cmdline'] and any('Advanced_Tools/Daemons/process_watchdog.py' in str(arg).lower() for arg in p.info['cmdline']):
+            if p.info['cmdline'] and any('process_watchdog.py' in str(arg).lower() for arg in p.info['cmdline']):
                 watchdog_active = True
                 break
         except: pass
@@ -4760,7 +4760,7 @@ def get_system_components():
 def api_start_watchdog():
     import subprocess
     try:
-        cmd = r'powershell -Command "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=\'pythonw.exe \"C:\Program Files\Chask_Swarm\Advanced_Tools\process_watchdog.py\"\'}"'
+        cmd = r'powershell -Command "Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine=\'pythonw.exe \"C:\Program Files\Chask_Swarm\Advanced_Tools\Daemons\process_watchdog.py\"\'}"'
         subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return jsonify({"success": True})
     except Exception as e:

@@ -424,7 +424,7 @@ def _cmd_config() -> dict:
     lines = ["Settings del sistema:\n"]
     try:
         # LLM Router config
-        cfg_path = os.path.join(TOOLS_DIR, "llm_providers_config.json")
+        cfg_path = os.path.join(TOOLS_DIR, "Data", "llm_providers_config.json")
         if os.path.exists(cfg_path):
             with open(cfg_path, encoding="utf-8") as f:
                 cfg = json.load(f)
